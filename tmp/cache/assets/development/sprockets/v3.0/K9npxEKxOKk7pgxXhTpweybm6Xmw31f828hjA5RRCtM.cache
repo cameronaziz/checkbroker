@@ -1,0 +1,18 @@
+I"ö(function() {
+  $(document).ready(function() {
+
+    $('#start').datetimepicker();
+
+    $('#end').datetimepicker();
+
+$('#no_end_true').change(function() {
+    if('#no_end_true' == checked)
+      $('#end').hide()
+    end
+});
+
+});;
+
+
+}).call(this);
+:ET

@@ -1,0 +1,18 @@
+I"ê(function() {
+  $(function () {
+    $('#start').datetimepicker();
+    $('#end').datetimepicker();
+
+
+
+});
+
+$('#to_do_all_day_start').change(function() {
+    $('#start').datetimepicker(
+        format: 'LT'
+    );
+});;
+
+
+}).call(this);
+:ET

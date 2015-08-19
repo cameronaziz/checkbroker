@@ -1,0 +1,27 @@
+I"9(function() {
+  $(document).ready(function() {
+
+    $('#master_submit').click(function() {
+        var data = "password=" + encodeURIComponent($('#master_password').val());
+
+        $.ajax({
+            url: '/passwords',
+            data: data,
+            type: 'get'
+        })
+          .done(function(response) {
+                alert("Master Password Set");
+                $('#master_password').attr("value", "Master Password Set");
+            })
+            .fail(function(error) {
+                alert(data);
+            });
+    });
+
+
+
+});;
+
+
+}).call(this);
+:ET

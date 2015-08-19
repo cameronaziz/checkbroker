@@ -1,0 +1,17 @@
+I"Í(function() {
+  $(document).ready(function() {
+
+    $('#start').datetimepicker();
+
+    $('#end').datetimepicker();
+
+$('#no_end_true').change(function() {
+    
+  $('#end').hide()
+});
+
+});;
+
+
+}).call(this);
+:ET

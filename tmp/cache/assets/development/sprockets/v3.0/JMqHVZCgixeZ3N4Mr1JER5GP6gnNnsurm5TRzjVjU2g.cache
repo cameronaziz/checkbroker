@@ -1,0 +1,14 @@
+I"—(function() {
+  $(document).ready(function() {
+
+    $('#master_submit').click(function() {
+        alert("sometext");
+    });
+
+
+
+});;
+
+
+}).call(this);
+:ET

@@ -1,0 +1,18 @@
+I"(function() {
+  $(document).ready(function() {
+$('#one_way').hide();
+$('#mapping').hide();
+
+    $('#one_way_button').click(function() {
+        $('#one_way').show();
+    });
+
+    $('#stored_button').click(function() {
+        $('#mapping').show();
+    });
+
+});;
+
+
+}).call(this);
+:ET

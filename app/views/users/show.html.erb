@@ -1,0 +1,16 @@
+<%= render partial: 'shared/notice' %>
+<h1>Hello, <%= @user.full_name %>!</h1>
+<p>
+  <strong>First Name: </strong><%= @user.first_name %><br>
+  <strong>Last Name: </strong><%= @user.last_name %><br>
+  <strong>Username: </strong><%= @user.username %><br>
+  <strong>Email: </strong><%= @user.email %><br>
+</p>
+<strong>Groups: </strong>
+<ul>
+  <% @groups.each do |group| %>
+      <li><%= group.name %></li>
+  <% end %>
+</ul>
+<%= link_to_button  'Edit', edit_user_path, 'btn-primary' %>
+<%= link_to 'Delete', user_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-primary' %>

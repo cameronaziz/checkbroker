@@ -1,0 +1,8 @@
+<% unless current_page?(login_path) %>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-center hidden-xs">This web application aims to <%= Faker::Company.bs %>. Make a <%= link_to 'suggestion', suggestion_path %>.</p>
+        <p class="text-muted text-center visible-xs">Make a <%= link_to 'suggestion' %>?</p>
+      </div>
+    </footer>
+<% end %>

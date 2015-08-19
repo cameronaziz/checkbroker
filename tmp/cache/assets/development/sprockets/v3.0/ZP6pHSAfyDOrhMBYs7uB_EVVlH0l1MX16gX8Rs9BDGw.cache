@@ -1,0 +1,18 @@
+I"S(function() {
+  $(document).ready(function() {
+$('#one_way').hide();
+$('#mapping').hide();
+
+    $('input[name="Distance"]').change(function() {
+        var isMapping = $('input:checked[name="Distance"]').val() == "stored";
+        $('#one_way').toggle(!isMapping);
+        $('#mapping').toggle(isMapping);
+    });
+
+
+
+});;
+
+
+}).call(this);
+:ET

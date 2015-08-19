@@ -1,0 +1,16 @@
+I"í(function() {
+  $(document).ready(function() {
+
+    $('#start').datetimepicker();
+
+    $('#end').datetimepicker();
+
+$('#no_end_true').change(function() {
+    this.checked ? $('#end').hide() : $('#end').show();
+});
+
+});;
+
+
+}).call(this);
+:ET

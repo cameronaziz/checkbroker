@@ -1,0 +1,19 @@
+<%= render partial: 'shared/notice' %>
+<h1>Group List</h1>
+<%= link_to_button 'Create Group', new_group_path, 'btn-primary' %>
+<table class='table'>
+  <thead>
+  <tr>
+    <th>Group</th>
+    <th colspan="2">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @groups.each do |group| %>
+      <tr>
+        <td><%=  group.name %></td>
+        <td><%= link_to 'Edit', edit_group_path(group) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

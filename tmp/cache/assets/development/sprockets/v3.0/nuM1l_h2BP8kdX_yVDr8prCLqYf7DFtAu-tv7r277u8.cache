@@ -1,0 +1,29 @@
+I"Ÿ(function() {
+  $(document).ready(function() {
+$('#one_way').hide();
+$('#mapping').hide();
+
+    $('#one_way_button').click(function() {
+        $('#one_way').show();
+        $('#mapping').hide();
+        $('#one_way_button').attr('class', 'btn btn-primary');
+        $('#stored_button').attr('class', 'btn btn-default');
+        $('#ButtonName').val('one_way')
+
+    });
+
+    $('#stored_button').click(function() {
+        $('#mapping').show();
+        $('#one_way').hide();
+        $('#stored_button').attr('class', 'btn btn-primary');
+        $('#one_way_button').attr('class', 'btn btn-default');
+        $('#ButtonName').val('stored')
+    });
+
+
+
+});;
+
+
+}).call(this);
+:ET

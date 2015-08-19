@@ -1,0 +1,16 @@
+I"�(function() {
+  $(document).ready(function() {
+$('#one_way').hide();
+$('#mapping').hide();
+
+    
+
+    $('#one_way_button').click(function() {
+        alert("button was clicked");
+    })​;​
+
+});;
+
+
+}).call(this);
+:ET

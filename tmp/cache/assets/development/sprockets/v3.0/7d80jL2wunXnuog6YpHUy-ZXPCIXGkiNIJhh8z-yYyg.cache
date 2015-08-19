@@ -1,0 +1,15 @@
+I"ç(function() {
+  $(document).ready(function() {
+
+    $('#start').datetimepicker();
+
+    $('#end').datetimepicker();
+
+
+
+});
+;
+
+
+}).call(this);
+:ET

@@ -1,0 +1,10 @@
+<% if object %>
+    <% if object.errors.any? %>
+        <% object.errors.full_messages.each do |message| %>
+            <div class='alert alert-danger error-box' role='alert'>
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <%= message %>
+            </div>
+        <% end %>
+    <% end %>
+<% end %>

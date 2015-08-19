@@ -1,0 +1,22 @@
+I"(function() {
+  $(document).ready(function() {
+    $('#no_end_true').change(function() {
+        if (this.checked) {
+            $('#end').hide()
+            $('#ticket_start_date').attr("placeholder", "Due Date");
+        } else {
+            $('#end').show();
+            $('#ticket_start_date').attr("placeholder", "Start Date");
+        }
+    });
+
+    if(noend == "noEnd") {
+        $('#end').hide()
+        $('#ticket_start_date').attr("placeholder", name);
+        $('#no_end_true').checked = true
+    }
+});;
+
+
+}).call(this);
+:ET

@@ -1,0 +1,17 @@
+I"Ž(function() {
+  $(document).ready(function() {
+    $('#no_end_true').change(function() {
+        if (this.checked) {
+            $('#end').hide()
+            name = "#{@test}";
+            $('#ticket_start_date').attr("placeholder", name);
+        } else {
+            $('#end').show();
+            $('#ticket_start_date').attr("placeholder", "Start Date");
+        }
+    });
+});;
+
+
+}).call(this);
+:ET

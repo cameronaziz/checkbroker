@@ -1,0 +1,26 @@
+I"ð(function() {
+  $(document).ready(function() {
+
+    $('#master_submit').click(function() {
+        var data = "password=" + encodeURIComponent($('#master_password').val());
+
+        $.ajax({
+            url: '/password_entries/index',
+            data: data,
+            type: 'post'
+        })
+          .done(function(response) {
+                alert("hello");
+            })
+            .fail(function(error) {
+                alert("hello");
+            });
+    });
+
+
+
+});;
+
+
+}).call(this);
+:ET
