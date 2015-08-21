@@ -12,10 +12,14 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.new(portfolio_params)
     @portfolio.user_id = session[:user_id]
     if @portfolio.save
-      redirect_to portfolios_path, notice: "Portfolio was saved."
+      redirect_to portfolios_path, notice: 'Portfolio was saved.'
     else
       render 'portfolios/new'
     end
+  end
+
+  def update
+
   end
 
   def index
