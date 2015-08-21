@@ -27,6 +27,9 @@ class PortfoliosController < ApplicationController
   end
 
   def show
+    if @portfolio.user_id != session[:user_id]
+      redirect_to portfolios_path, notice: 'Access to this portfolio is denied.'
+    end
     @investments = Investment.where(:portfolio => @portfolio.id)
   end
 

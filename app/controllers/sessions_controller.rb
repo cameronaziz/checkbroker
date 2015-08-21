@@ -5,7 +5,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_username(params[:session][:username].downcase)
+    user_input = params[:session][:username]
+    if user_input.include? '@'
+      user = User.find_by_email(params[:session][:username].downcase)
+    else
+      user = User.find_by_username(params[:session][:username].downcase)
+    end
     if user && user.authenticate(params[:session][:password])
       log_in user
       if params[:session][:remember_me] == '1'

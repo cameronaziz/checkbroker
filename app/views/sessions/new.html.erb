@@ -3,15 +3,15 @@
     <%= render partial: 'shared/alert' %>
     <div class="form-group">
       <%= f.label :username, class: 'sr-only'%>
-      <%= f.text_field :username,autofocus: true, class:'form-control input-lg top-input', placeholder: 'Username' %>
+      <%= f.text_field :username,autofocus: true, class:'form-control input-lg top-input', placeholder: 'Username or Email' %>
       <%= f.label :password, class: 'sr-only' %>
-      <%= f.password_field :password, autocomplete: "off", class:'form-control input-lg bottom-input', placeholder: 'Password' %>
+      <%= f.password_field :password, autocomplete: 'off', class:'form-control input-lg bottom-input', placeholder: 'Password' %>
       <div class="checkbox">
         <%= f.check_box :remember_me %>
         <%= f.label :remember_me %>
       </div>
     </div>
-    <%= f.submit "Log in", class:'btn btn-lg btn-primary btn-block' %>
+    <%= f.submit 'Log in', class:'btn btn-lg btn-primary btn-block' %>
     <div align="center">
       <%= link_to 'Create User Account', register_path %> <br/>
       Need help? Email: info@lucentdigital.com
