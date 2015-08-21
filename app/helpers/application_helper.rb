@@ -21,29 +21,12 @@ module ApplicationHelper
   end
 
   def full_title(page_title = '')
-
     if page_title.empty?
       SITENAME
     else
       "#{page_title} | #{SITENAME}"
     end
   end
-
-  def create_title(instance)
-    variable = "ticket_" + instance
-    if @ticket.send(variable).count > 0
-      "<h3>#{instance.capitalize}</h3>".html_safe
-    end
-  end
-
-  def lookup_ticket_name(ticket)
-    if ticket.name == ""
-      'Unnamed'
-    else
-      ticket.name
-    end
-  end
-
 
   def us_states
     [
@@ -103,13 +86,9 @@ module ApplicationHelper
   end
 
   def auth_button(groups, path, text)
-=begin
     if authenticate_group(groups, false)
-=end
         display_nav_item(text, path)
-=begin
     end
-=end
   end
 
 end

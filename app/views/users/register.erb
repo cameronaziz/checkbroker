@@ -1,0 +1,27 @@
+<%= render partial: 'shared/errors', :locals => {:object => @user}%>
+<div class="col-md-4">
+  <h1>Register User</h1>
+  <%= form_for @user do |f| %>
+      <div class="form-group">
+        <%= f.label :first_name, class: 'sr-only' %>
+        <%= f.text_field :first_name, class: 'form-control top-input', placeholder: 'First Name' %>
+
+        <%= f.label :last_name, class: 'sr-only' %>
+        <%= f.text_field :last_name, class: 'form-control bottom-input', placeholder: 'Last Name'%>
+      </div>
+      <div class="form-group">
+        <%= f.label :email, class: 'sr-only'  %>
+        <%= f.text_field :email, class: 'form-control', placeholder: 'Email Address' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password, class: 'sr-only'  %>
+        <%= f.password_field :password, class: 'form-control top-input', placeholder: 'Password' %>
+
+        <%= f.label :password_confirmation, 'Confirmation', class: 'sr-only'  %>
+        <%= f.password_field :password_confirmation, class: 'form-control bottom-input', placeholder: 'Confirm Password' %>
+      </div>
+      <div class="form-group">
+        <%= f.submit 'Register', class: 'btn btn-primary' %>
+      </div>
+  <% end %>
+</div>

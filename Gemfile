@@ -5,12 +5,11 @@ gem 'faker'
 gem 'google_directions'
 gem 'jquery-turbolinks'
 gem 'jquery-ui-rails'
-gem 'icalendar'
-gem 'activesupport'
 
-gem 'fedex'
+#to parse xml
+gem 'nokogiri'
 
-gem 'crypt'
+
 
 #date time picker
 

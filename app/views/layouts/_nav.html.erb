@@ -1,4 +1,4 @@
-<% unless current_page?(login_path)%>
+<% unless current_page?(login_path) || current_page?(register_path)%>
 <div class='container'>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -15,6 +15,13 @@
         <ul class="nav navbar-nav">
           <%= display_nav_item('Home', root_path) %>
           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Portfolio<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <%= display_nav_item('View All', portfolios_path) %>
+              <%= display_nav_item('Create New', new_portfolio_path) %>
+            </ul>
+          </li>
+          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li class="divider"></li>
@@ -23,7 +30,7 @@
             <%= auth_button(['Administrators'], groups_path, 'Groups') %>
             <li class="divider"></li>
           </ul>
-          </li>
+        </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <%= nav_li_link 'Help', help_path %>

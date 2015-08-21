@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :destroy, :update]
 
-  before_action do
+  before_action only: [:index, :new, :show, :create, :edit, :update, :destroy] do
     authenticate_user_and_group(['Administrators', 'Managers'], false)
   end
 
@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     @user = User.new
     @all_groups = Group.all
     @user_group = @user.memberships.build
+  end
+
+  def register
+    @user = User.new
   end
 
   def show

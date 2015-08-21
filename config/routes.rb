@@ -9,40 +9,19 @@ Rails.application.routes.draw do
   get 'suggestion' => 'static_pages#help'
   get 'help' => 'static_pages#help'
 
-  get 'calendar' => 'calendars#ical'
-  get 'hot_shots' => 'hot_shots#index'
-  post 'hot_shots/results'
-  get 'hot_shots/results'
-
-  resources :customers do
-    resources :customer_addresses
-  end
-
-  resources :warehouses
-  resources :shipping_companies
+  resources :portfolios
   resources :users
   resources :groups
-  get 'tickets/calendar' => 'tickets#ics_export'
-  resources :tickets
-  post 'tickets' => 'tickets#index'
-  patch 'tickets/:id/close' => 'tickets#close', as: 'close_ticket'
-  post 'tickets/:id' => 'ticket_comments#create'
-
-  resources :ticket_statuses, path: 'ticket_admin/statuses'
-  resources :ticket_priorities, path: 'ticket_admin/priorities'
-  resources :ticket_types, path: 'ticket_admin/types'
-  resources :password_entries, path: 'passwords'
-
-  get 'password_masters' => 'password_masters#pass'
-  post 'password_masters' => 'password_masters#update_password'
-
-  get 'mail' => 'emails#connect'
 
 
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  get 'register' => 'users#register'
+
+
+
 
 
   # Example of regular route:

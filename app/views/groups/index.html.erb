@@ -12,7 +12,8 @@
   <% @groups.each do |group| %>
       <tr>
         <td><%=  group.name %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
+        <td><%= (exclude_link_to group.id) ? link_to('Edit', edit_group_path(group)) : "" %></td>
+        <td><%= (exclude_link_to group.id) ? link_to('Delete', group, method: :delete, data: {confirm: 'Are you sure?'}) : ""  %></td>
       </tr>
   <% end %>
   </tbody>
