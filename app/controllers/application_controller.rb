@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
-  check_login = false
-  before_action :authenticate_user unless Rails.env.development? && check_login == false
+  before_action :authenticate_user
 
 end

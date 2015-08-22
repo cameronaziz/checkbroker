@@ -11054,3 +11054,132 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/sessions.js
   /Users/cameronaziz/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
 
 
+I, [2015-08-21T03:35:45.376718 #1917]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-21 03:35:45 -0700
+I, [2015-08-21T03:35:46.454056 #1917]  INFO -- : Processing by PortfoliosController#index as HTML
+I, [2015-08-21T03:35:46.463303 #1917]  INFO -- : Redirected to http://localhost:3000/login
+I, [2015-08-21T03:35:46.463362 #1917]  INFO -- : Filter chain halted as :authenticate_user rendered or redirected
+I, [2015-08-21T03:35:46.463454 #1917]  INFO -- : Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+I, [2015-08-21T03:35:46.468071 #1917]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-21 03:35:46 -0700
+I, [2015-08-21T03:35:46.694019 #1917]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-21T03:35:46.702010 #1917]  INFO -- :   Rendered shared/_alert.html.erb (0.3ms)
+I, [2015-08-21T03:35:46.897460 #1917]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (197.7ms)
+I, [2015-08-21T03:35:46.899895 #1917]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-08-21T03:35:46.901327 #1917]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-08-21T03:35:46.902390 #1917]  INFO -- :   Rendered layouts/_dev.html.erb (0.2ms)
+I, [2015-08-21T03:35:46.903501 #1917]  INFO -- :   Rendered layouts/_footer.html.erb (0.3ms)
+I, [2015-08-21T03:35:46.903677 #1917]  INFO -- : Completed 200 OK in 210ms (Views: 208.9ms | ActiveRecord: 0.0ms)
+I, [2015-08-21T03:35:46.910506 #1917]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-21 03:35:46 -0700
+I, [2015-08-21T03:35:47.011350 #1917]  INFO -- : Processing by PortfoliosController#index as HTML
+I, [2015-08-21T03:35:47.011985 #1917]  INFO -- : Redirected to http://localhost:3000/login
+I, [2015-08-21T03:35:47.012032 #1917]  INFO -- : Filter chain halted as :authenticate_user rendered or redirected
+I, [2015-08-21T03:35:47.012095 #1917]  INFO -- : Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+I, [2015-08-21T03:35:47.016202 #1917]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-21 03:35:47 -0700
+I, [2015-08-21T03:35:47.102386 #1917]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-21T03:35:47.106714 #1917]  INFO -- :   Rendered shared/_alert.html.erb (0.3ms)
+I, [2015-08-21T03:35:47.107774 #1917]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (3.0ms)
+I, [2015-08-21T03:35:47.109373 #1917]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-08-21T03:35:47.110711 #1917]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-08-21T03:35:47.111731 #1917]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-21T03:35:47.112671 #1917]  INFO -- :   Rendered layouts/_footer.html.erb (0.2ms)
+I, [2015-08-21T03:35:47.112863 #1917]  INFO -- : Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+I, [2015-08-21T03:35:47.121899 #1917]  INFO -- : Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2015-08-21 03:35:47 -0700
+F, [2015-08-21T03:35:47.183182 #1917] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-21T03:35:47.184573 #1917]  INFO -- : Started GET "/javascripts/sessions.js" for 127.0.0.1 at 2015-08-21 03:35:47 -0700
+F, [2015-08-21T03:35:47.264784 #1917] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/sessions.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-21T03:36:05.013977 #1917]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-08-21 03:36:05 -0700
+I, [2015-08-21T03:36:05.071333 #1917]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-08-21T03:36:05.071466 #1917]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"xs+HdektEiOLTce+0uceJu+apRZfJ3uFBX7dae1JIvSB6kSW5BGPdhUzh4Bf60I1UH2GpKSsUhLG8fCxh2KlqA==", "session"=>{"username"=>"cameron.aziz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+D, [2015-08-21T03:36:05.720561 #1917] DEBUG -- :   [1m[36mUser Load (113.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'cameron.aziz' LIMIT 1[0m
+I, [2015-08-21T03:36:06.028678 #1917]  INFO -- : Redirected to http://localhost:3000/portfolios
+I, [2015-08-21T03:36:06.028809 #1917]  INFO -- : Completed 302 Found in 957ms (ActiveRecord: 883.2ms)
+I, [2015-08-21T03:36:06.033591 #1917]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-21 03:36:06 -0700
+I, [2015-08-21T03:36:06.086369 #1917]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-08-21T03:36:06.171736 #1917] DEBUG -- :   [1m[35mUser Load (83.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+E, [2015-08-21T03:36:06.254104 #1917] ERROR -- : Mysql2::Error: Table 'cmb.portfolios' doesn't exist: SHOW FULL FIELDS FROM `portfolios`
+I, [2015-08-21T03:36:06.254271 #1917]  INFO -- : Completed 500 Internal Server Error in 168ms
+F, [2015-08-21T03:36:06.254948 #1917] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'cmb.portfolios' doesn't exist: SHOW FULL FIELDS FROM `portfolios`):
+  app/controllers/portfolios_controller.rb:26:in `index'
+
+
+I, [2015-08-21T03:37:23.071993 #1917]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-21 03:37:23 -0700
+I, [2015-08-21T03:37:23.741508 #1917]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-08-21T03:37:23.809462 #1917] DEBUG -- :   [1m[36mUser Load (67.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+E, [2015-08-21T03:37:23.891247 #1917] ERROR -- : Mysql2::Error: Table 'cmb.portfolios' doesn't exist: SHOW FULL FIELDS FROM `portfolios`
+I, [2015-08-21T03:37:23.891467 #1917]  INFO -- : Completed 500 Internal Server Error in 150ms
+F, [2015-08-21T03:37:23.892992 #1917] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'cmb.portfolios' doesn't exist: SHOW FULL FIELDS FROM `portfolios`):
+  app/controllers/portfolios_controller.rb:26:in `index'
+
+
+D, [2015-08-21T03:37:45.658920 #2079] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (482.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-08-21T03:37:45.731118 #2079]  INFO -- : Migrating to CreatePortfolios (20150820072822)
+D, [2015-08-21T03:37:46.962159 #2079] DEBUG -- :   [1m[35m (1227.0ms)[0m  CREATE TABLE `portfolios` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `management_fee` float, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-08-21T03:37:47.199588 #2079] DEBUG -- :   [1m[36m (171.9ms)[0m  [1mBEGIN[0m
+D, [2015-08-21T03:37:47.258127 #2079] DEBUG -- :   [1m[35mSQL (56.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150820072822')
+D, [2015-08-21T03:37:47.419378 #2079] DEBUG -- :   [1m[36m (160.8ms)[0m  [1mCOMMIT[0m
+I, [2015-08-21T03:37:47.419503 #2079]  INFO -- : Migrating to CreateInvestments (20150820080152)
+D, [2015-08-21T03:37:47.939331 #2079] DEBUG -- :   [1m[35m (516.5ms)[0m  CREATE TABLE `investments` (`id` int(11) auto_increment PRIMARY KEY, `ticker` varchar(255), `quantity` int(11), `portfolio_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-08-21T03:37:48.006146 #2079] DEBUG -- :   [1m[36m (66.2ms)[0m  [1mBEGIN[0m
+D, [2015-08-21T03:37:48.074151 #2079] DEBUG -- :   [1m[35mSQL (67.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150820080152')
+D, [2015-08-21T03:37:48.266113 #2079] DEBUG -- :   [1m[36m (191.6ms)[0m  [1mCOMMIT[0m
+I, [2015-08-21T03:37:48.266231 #2079]  INFO -- : Migrating to CreateMutualFunds (20150820111732)
+D, [2015-08-21T03:37:48.854966 #2079] DEBUG -- :   [1m[35m (585.4ms)[0m  CREATE TABLE `mutual_funds` (`id` int(11) auto_increment PRIMARY KEY, `ticker` varchar(255), `nav` float, `expense_ratio` float, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-08-21T03:37:48.948672 #2079] DEBUG -- :   [1m[36m (93.1ms)[0m  [1mBEGIN[0m
+D, [2015-08-21T03:37:49.049950 #2079] DEBUG -- :   [1m[35mSQL (100.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150820111732')
+D, [2015-08-21T03:37:49.297489 #2079] DEBUG -- :   [1m[36m (247.2ms)[0m  [1mCOMMIT[0m
+I, [2015-08-21T03:37:49.297569 #2079]  INFO -- : Migrating to AddNicknameToPortfolio (20150820112206)
+D, [2015-08-21T03:37:51.026380 #2079] DEBUG -- :   [1m[35m (1726.1ms)[0m  ALTER TABLE `portfolios` ADD `nickname` varchar(255)
+D, [2015-08-21T03:37:51.097956 #2079] DEBUG -- :   [1m[36m (71.0ms)[0m  [1mBEGIN[0m
+D, [2015-08-21T03:37:51.166118 #2079] DEBUG -- :   [1m[35mSQL (67.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150820112206')
+D, [2015-08-21T03:37:51.394505 #2079] DEBUG -- :   [1m[36m (228.0ms)[0m  [1mCOMMIT[0m

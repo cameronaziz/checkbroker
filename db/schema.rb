@@ -20,12 +20,11 @@ ActiveRecord::Schema.define(version: 20150820112206) do
   end
 
   create_table "investments", force: :cascade do |t|
-    t.string   "ticker",        limit: 255
-    t.integer  "quantity",      limit: 4
-    t.integer  "portfolio_id",  limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.float    "expense_ratio", limit: 24
+    t.string   "ticker",       limit: 255
+    t.integer  "quantity",     limit: 4
+    t.integer  "portfolio_id", limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "memberships", force: :cascade do |t|
