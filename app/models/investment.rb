@@ -3,8 +3,6 @@ class Investment < ActiveRecord::Base
   attr_accessor :nav
   attr_accessor :expense_ratio
 
-
-
   def nav
     return @nav if @nav
     record = get_mutual_fund
@@ -17,13 +15,11 @@ class Investment < ActiveRecord::Base
     @expense_ratio = record.expense_ratio
   end
 
-
   def market_value
     self.quantity * self.nav
   end
 
   private
-
   def get_mutual_fund
     record = MutualFund.find_by_ticker(self.ticker)
     if record.nil?
@@ -49,11 +45,17 @@ class Investment < ActiveRecord::Base
   end
 
   def nav_api
-    189
+    nav_url = 'http://navs.xignite.com/v2/xNAVs.xml/GetNAV?IdentifierType=Symbol&Identifier=' + self.ticker + '&_TOKEN=' + XIGNITE_TOKEN
+    require 'open-uri'
+    nav_doc = Nokogiri::XML(open(nav_url))
+    nav_doc.css('NAV').first.content.to_f
   end
 
   def er_api
-    9
+    r_url = 'http://fundfundamentals.xignite.com/xfundfundamentals.xml/GetFundExpenseRatios?IdentifierType=Symbol&Identifier=' + self.ticker.downcase + '&UpdatedSince=7/1/2012&_TOKEN=' + XIGNITE_TOKEN
+    require 'open-uri'
+    er_doc = Nokogiri::XML(open(er_url))
+    er_doc.css('ProspectusNetExpenseRatio').first.content.to_f
   end
 
 end
