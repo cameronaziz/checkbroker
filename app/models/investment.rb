@@ -1,64 +1,59 @@
 class Investment < ActiveRecord::Base
   belongs_to :portfolio
+  attr_accessor :nav
+  attr_accessor :expense_ratio
 
-  def expense_ratio
-    record = MutualFund.find_by_ticker(self.ticker)
-    if record
-      if record.expense_ratio == nil || record.updated_at < (Time.now - (24*60*60))
-        query_nav false, record
-        query_er false, record
-      else
-        record.expense_ratio
-      end
-    else
-      query_er true
-    end
-  end
+
 
   def nav
-    record = MutualFund.find_by_ticker(self.ticker)
-    if record
-      if record.nav == nil || record.updated_at < (Time.now - (15*60))
-        query_nav false, record
-      else
-        record.nav
-      end
-    else
-      query_nav true
-    end
+    return @nav if @nav
+    record = get_mutual_fund
+    @nav = record.nav
   end
+
+  def expense_ratio
+    return @expense_ratio if @expense_ratio
+    record = get_mutual_fund
+    @expense_ratio = record.expense_ratio
+  end
+
 
   def market_value
     self.quantity * self.nav
   end
 
+  private
 
-private
-  def query_nav(new_record, record = nil)
-    url = 'http://navs.xignite.com/v2/xNAVs.xml/GetNAV?IdentifierType=Symbol&Identifier=' + self.ticker + '&_TOKEN=' + XIGNITE_TOKEN
-    require 'open-uri'
-    doc = Nokogiri::XML(open(url))
-    nav_value = doc.css('NAV').first.content.to_f
-    if new_record
-      record = MutualFund.new
-      record.ticker = self.ticker
+  def get_mutual_fund
+    record = MutualFund.find_by_ticker(self.ticker)
+    if record.nil?
+      fund = MutualFund.new
+      fund.ticker = self.ticker
+      fund.nav = nav_api
+      fund.expense_ratio = er_api
+      fund.save
+      fund
+    else
+      date = record.updated_at
+      if date < (Time.now - (24*60*60))
+        record.nav = nav_api
+        record.expense_ratio = er_api
+        record.save
+      else if date < (Time.now - (15*60))
+        record.nav = nav_api
+        record.save
+           end
+      end
+      record
     end
-    record.nav = nav_value
-    record.save
-    nav_value
   end
 
-  def query_er(new_record, record = nil)
-    url = 'http://fundfundamentals.xignite.com/xfundfundamentals.xml/GetFundExpenseRatios?IdentifierType=Symbol&Identifier=' + self.ticker.downcase + '&UpdatedSince=7/1/2012&_TOKEN=' + XIGNITE_TOKEN
-    require 'open-uri'
-    doc = Nokogiri::XML(open(url))
-    er_value = doc.css('ProspectusNetExpenseRatio').first.content.to_f
-    if new_record
-      record = MutualFund.new
-      record.ticker = self.ticker
-    end
-    record.expense_ratio = er_value
-    record.save
-    er_value
+  def nav_api
+    189
   end
+
+  def er_api
+    9
+  end
+
 end

@@ -13,7 +13,7 @@
         <tr>
           <td><%= i.ticker.upcase %></td>
           <td><%= i.quantity %></td>
-          <td>$<%= i.nav %></td>
+          <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
         </tr>
@@ -22,7 +22,7 @@
 </table>
 <br/>
 <p style="font-size: medium">
-Manager Expense: $<%= @portfolio.management_fee %> <br>
+Manager Expense: <%= @portfolio.management_fee %>% <br>
 Portfolio Value: $<%= number_with_precision(@portfolio.market_value, precision: 2) %> <br>
 Average Expense Ratio: <%= number_with_precision(@portfolio.average_expense_ratio, precision: 2) %>% <br>
 Total Fee Rate: <%= number_with_precision(@portfolio.average_expense_ratio + @portfolio.management_fee, precision: 2)  %>% <br>

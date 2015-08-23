@@ -23,10 +23,9 @@ default: &default
 
 <% if no_internet %>
 development:
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
-  database: db/databases/development.sqlite3
+  <<: *default
+  host: 127.0.0.1
+  database: cmb_development
 <% else %>
 development:
   <<: *default
