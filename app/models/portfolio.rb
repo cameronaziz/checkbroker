@@ -5,15 +5,21 @@ class Portfolio < ActiveRecord::Base
   serialize :investments, Array
 
   def market_value
+    if @market_value
+      return @market_value
+    end
     total_value = 0
     investments = Investment.where(portfolio_id: self.id)
     investments.each do |investment|
       total_value = total_value + investment.market_value
     end
-    total_value
+    @market_value = total_value
   end
 
   def average_expense_ratio
+    if @average_expense_ratio
+      return @average_expense_ratio
+    end
     average_expense_ratio = 0
     investments = Investment.where(portfolio_id: self.id)
     investments.each do |investment|
@@ -21,6 +27,6 @@ class Portfolio < ActiveRecord::Base
       portion = percent * investment.expense_ratio
       average_expense_ratio = average_expense_ratio + portion
     end
-    average_expense_ratio
+    @average_expense_ratio = average_expense_ratio
   end
 end

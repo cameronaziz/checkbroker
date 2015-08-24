@@ -13885,3 +13885,495 @@ I, [2015-08-22T00:28:14.781680 #3583]  INFO -- : Filter chain halted as :authent
 I, [2015-08-22T00:28:14.781799 #3583]  INFO -- : Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
 D, [2015-08-22T15:51:59.700912 #3516] DEBUG -- :   [1m[36mMutualFund Load (1.9ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m
 E, [2015-08-22T15:51:59.701701 #3516] ERROR -- : Mysql2::Error: MySQL server has gone away: SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1
+I, [2015-08-23T14:46:16.423447 #12375]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-23 14:46:16 -0700
+I, [2015-08-23T14:46:17.157069 #12375]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-08-23T14:46:17.166070 #12375]  INFO -- : Redirected to http://localhost:3000/login
+I, [2015-08-23T14:46:17.166157 #12375]  INFO -- : Filter chain halted as :authenticate_user rendered or redirected
+I, [2015-08-23T14:46:17.166276 #12375]  INFO -- : Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+I, [2015-08-23T14:46:17.171500 #12375]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-23 14:46:17 -0700
+I, [2015-08-23T14:46:17.238524 #12375]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-23T14:46:17.246534 #12375]  INFO -- :   Rendered shared/_alert.html.erb (0.3ms)
+I, [2015-08-23T14:46:17.442051 #12375]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (197.5ms)
+I, [2015-08-23T14:46:17.444256 #12375]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-08-23T14:46:17.445559 #12375]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-08-23T14:46:17.446825 #12375]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-23T14:46:17.448020 #12375]  INFO -- :   Rendered layouts/_footer.html.erb (0.4ms)
+I, [2015-08-23T14:46:17.448251 #12375]  INFO -- : Completed 200 OK in 210ms (Views: 209.2ms | ActiveRecord: 0.0ms)
+I, [2015-08-23T14:46:17.461473 #12375]  INFO -- : Started GET "/javascripts/sessions.js" for 127.0.0.1 at 2015-08-23 14:46:17 -0700
+F, [2015-08-23T14:46:17.738293 #12375] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/sessions.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-23T14:46:21.986876 #12375]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:46:21 -0700
+I, [2015-08-23T14:46:22.251447 #12375]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:46:22.251501 #12375]  INFO -- :   Parameters: {"id"=>"2"}
+I, [2015-08-23T14:46:22.252091 #12375]  INFO -- : Redirected to http://localhost:3000/login
+I, [2015-08-23T14:46:22.252135 #12375]  INFO -- : Filter chain halted as :authenticate_user rendered or redirected
+I, [2015-08-23T14:46:22.252197 #12375]  INFO -- : Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+I, [2015-08-23T14:46:22.257077 #12375]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-23 14:46:22 -0700
+I, [2015-08-23T14:46:22.363659 #12375]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-23T14:46:22.365007 #12375]  INFO -- :   Rendered shared/_alert.html.erb (0.1ms)
+I, [2015-08-23T14:46:22.366072 #12375]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (1.5ms)
+I, [2015-08-23T14:46:22.366615 #12375]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-23T14:46:22.366766 #12375]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-23T14:46:22.366879 #12375]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-23T14:46:22.367009 #12375]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2015-08-23T14:46:22.367175 #12375]  INFO -- : Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+I, [2015-08-23T14:46:22.380206 #12375]  INFO -- : Started GET "/javascripts/sessions.js" for 127.0.0.1 at 2015-08-23 14:46:22 -0700
+F, [2015-08-23T14:46:22.453496 #12375] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/sessions.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-23T14:46:28.847453 #12375]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-08-23 14:46:28 -0700
+I, [2015-08-23T14:46:28.956655 #12375]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-08-23T14:46:28.956772 #12375]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"P1g7yHNTbURlRt+DOoGVCDu+h+t1EiLxkEW6YiR9Sm/gaKwGBmZhPQCw+qp5Dm7SBQgu48BMFvUXhAaUyWPAyg==", "session"=>{"username"=>"cameron.aziz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+D, [2015-08-23T14:46:29.560035 #12375] DEBUG -- :   [1m[36mUser Load (184.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'cameron.aziz' LIMIT 1[0m
+I, [2015-08-23T14:46:29.835984 #12375]  INFO -- : Redirected to http://localhost:3000/portfolios/2
+I, [2015-08-23T14:46:29.836184 #12375]  INFO -- : Completed 302 Found in 879ms (ActiveRecord: 805.0ms)
+I, [2015-08-23T14:46:29.841037 #12375]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:46:29 -0700
+I, [2015-08-23T14:46:29.988286 #12375]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:46:29.988378 #12375]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:46:30.262415 #12375] DEBUG -- :   [1m[35mUser Load (272.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-23T14:46:30.739460 #12375] DEBUG -- :   [1m[36mPortfolio Load (77.0ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-23T14:46:31.490622 #12375] DEBUG -- :   [1m[35mInvestment Load (100.1ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-23T14:46:31.887866 #12375] DEBUG -- :   [1m[36mMutualFund Load (86.6ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m
+I, [2015-08-23T14:46:33.674050 #12375]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (2284.3ms)
+I, [2015-08-23T14:46:33.674181 #12375]  INFO -- : Completed 500 Internal Server Error in 3686ms
+F, [2015-08-23T14:46:33.675281 #12375] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `er_url' for #<Investment:0x007f92a5a70cf8>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:57:in `er_api'
+  app/models/investment.rb:36:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb__867268344440213442_70133960658620'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb__867268344440213442_70133960658620'
+
+
+I, [2015-08-23T14:48:13.270890 #12375]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:48:13 -0700
+I, [2015-08-23T14:48:13.911273 #12375]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:48:13.911339 #12375]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:48:14.078479 #12375] DEBUG -- :   [1m[35mUser Load (166.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-23T14:48:14.137314 #12375] DEBUG -- :   [1m[36mPortfolio Load (58.1ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-23T14:48:14.281544 #12375] DEBUG -- :   [1m[35mInvestment Load (142.9ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-23T14:48:14.361809 #12375] DEBUG -- :   [1m[36mMutualFund Load (79.7ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m
+I, [2015-08-23T14:48:14.445172 #12375]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (306.9ms)
+I, [2015-08-23T14:48:14.445308 #12375]  INFO -- : Completed 500 Internal Server Error in 534ms
+F, [2015-08-23T14:48:14.446427 #12375] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `er_url' for #<Investment:0x007f92ac0c7380>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:57:in `er_api'
+  app/models/investment.rb:36:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb__867268344440213442_70133960658620'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb__867268344440213442_70133960658620'
+
+
+I, [2015-08-23T14:48:20.160188 #12403]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:48:20 -0700
+I, [2015-08-23T14:48:20.799464 #12403]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:48:20.799530 #12403]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:48:21.244056 #12403] DEBUG -- :   [1m[36mUser Load (126.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:48:21.817331 #12403] DEBUG -- :   [1m[35mPortfolio Load (82.6ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:48:22.053603 #12403] DEBUG -- :   [1m[36mInvestment Load (134.3ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:48:22.303950 #12403] DEBUG -- :   [1m[35mMutualFund Load (72.2ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1
+I, [2015-08-23T14:48:22.499182 #12403]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (581.0ms)
+I, [2015-08-23T14:48:22.499324 #12403]  INFO -- : Completed 500 Internal Server Error in 1700ms
+F, [2015-08-23T14:48:22.500526 #12403] FATAL -- : 
+ActionView::Template::Error (undefined method `push' for #<Investment:0x007f993de71f48>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:51:in `nav_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___4393315573391966842_70148056251300'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___4393315573391966842_70148056251300'
+
+
+I, [2015-08-23T14:48:36.974643 #12403]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:48:36 -0700
+I, [2015-08-23T14:48:37.025769 #12403]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:48:37.025837 #12403]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:48:37.476033 #12403] DEBUG -- :   [1m[36mUser Load (449.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:48:37.577588 #12403] DEBUG -- :   [1m[35mPortfolio Load (100.9ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:48:37.884387 #12403] DEBUG -- :   [1m[36mInvestment Load (305.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:48:38.252377 #12403] DEBUG -- :   [1m[35mMutualFund Load (367.4ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1
+I, [2015-08-23T14:48:38.413532 #12403]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (834.6ms)
+I, [2015-08-23T14:48:38.413670 #12403]  INFO -- : Completed 500 Internal Server Error in 1388ms
+F, [2015-08-23T14:48:38.414806 #12403] FATAL -- : 
+ActionView::Template::Error (undefined method `push' for #<Investment:0x007f993dd71968>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:51:in `nav_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___4393315573391966842_70148056251300'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___4393315573391966842_70148056251300'
+
+
+I, [2015-08-23T14:49:17.743023 #12403]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:49:17 -0700
+I, [2015-08-23T14:49:18.176652 #12403]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:49:18.176741 #12403]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:49:19.092945 #12403] DEBUG -- :   [1m[36mUser Load (915.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:49:19.535343 #12403] DEBUG -- :   [1m[35mPortfolio Load (441.8ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:49:20.011113 #12403] DEBUG -- :   [1m[36mInvestment Load (474.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:49:20.510491 #12403] DEBUG -- :   [1m[35mMutualFund Load (498.6ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1
+I, [2015-08-23T14:49:20.605876 #12403]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (1069.3ms)
+I, [2015-08-23T14:49:20.605989 #12403]  INFO -- : Completed 500 Internal Server Error in 2429ms
+F, [2015-08-23T14:49:20.606849 #12403] FATAL -- : 
+ActionView::Template::Error (undefined method `push' for #<Investment:0x007f993dcdc660>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:51:in `nav_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___4393315573391966842_70148056251300'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___4393315573391966842_70148056251300'
+
+
+I, [2015-08-23T14:49:27.490556 #12403]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:49:27 -0700
+I, [2015-08-23T14:49:27.718487 #12403]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:49:27.718552 #12403]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:49:27.958883 #12403] DEBUG -- :   [1m[36mUser Load (239.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:49:28.127882 #12403] DEBUG -- :   [1m[35mPortfolio Load (168.5ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:49:28.330870 #12403] DEBUG -- :   [1m[36mInvestment Load (202.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:49:28.690726 #12403] DEBUG -- :   [1m[35mMutualFund Load (358.9ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1
+I, [2015-08-23T14:49:28.872369 #12403]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (743.7ms)
+I, [2015-08-23T14:49:28.872501 #12403]  INFO -- : Completed 500 Internal Server Error in 1154ms
+F, [2015-08-23T14:49:28.873663 #12403] FATAL -- : 
+ActionView::Template::Error (undefined method `push' for #<Investment:0x007f993dc5c078>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:51:in `nav_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___4393315573391966842_70148056251300'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___4393315573391966842_70148056251300'
+
+
+I, [2015-08-23T14:49:58.572707 #12424]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:49:58 -0700
+I, [2015-08-23T14:49:59.382913 #12424]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:49:59.382978 #12424]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:50:00.061721 #12424] DEBUG -- :   [1m[36mUser Load (165.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:50:00.743785 #12424] DEBUG -- :   [1m[35mPortfolio Load (115.7ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:50:01.073681 #12424] DEBUG -- :   [1m[36mInvestment Load (102.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:50:01.520950 #12424] DEBUG -- :   [1m[35mMutualFund Load (159.2ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1
+I, [2015-08-23T14:50:01.600770 #12424]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (630.2ms)
+I, [2015-08-23T14:50:01.600904 #12424]  INFO -- : Completed 500 Internal Server Error in 2218ms
+F, [2015-08-23T14:50:01.601872 #12424] FATAL -- : 
+ActionView::Template::Error (undefined method `put' for #<Investment:0x007fc0055bf848>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:50:in `nav_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___998967875517356988_70231350455040'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___998967875517356988_70231350455040'
+
+
+I, [2015-08-23T14:50:56.547623 #12424]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:50:56 -0700
+I, [2015-08-23T14:50:56.618180 #12424]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:50:56.618245 #12424]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:50:57.129371 #12424] DEBUG -- :   [1m[36mUser Load (510.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:50:57.469901 #12424] DEBUG -- :   [1m[35mPortfolio Load (340.0ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:50:57.924964 #12424] DEBUG -- :   [1m[36mInvestment Load (453.9ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:50:58.417912 #12424] DEBUG -- :   [1m[35mMutualFund Load (492.4ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1
+I, [2015-08-23T14:50:58.420573 #12424]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (949.8ms)
+I, [2015-08-23T14:50:58.420708 #12424]  INFO -- : Completed 500 Internal Server Error in 1802ms
+F, [2015-08-23T14:50:58.421838 #12424] FATAL -- : 
+ActionView::Template::Error (undefined method `put' for #<Investment:0x007fc005edb5a8>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:50:in `nav_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___998967875517356988_70231350455040'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___998967875517356988_70231350455040'
+
+
+I, [2015-08-23T14:51:07.653444 #12424]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:51:07 -0700
+I, [2015-08-23T14:51:07.830048 #12424]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:51:07.830142 #12424]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:51:07.954732 #12424] DEBUG -- :   [1m[36mUser Load (123.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:51:08.053547 #12424] DEBUG -- :   [1m[35mPortfolio Load (98.2ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:51:08.116196 #12424] DEBUG -- :   [1m[36mInvestment Load (61.2ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:51:08.201900 #12424] DEBUG -- :   [1m[35mMutualFund Load (85.2ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1
+I, [2015-08-23T14:51:08.204481 #12424]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (149.8ms)
+I, [2015-08-23T14:51:08.204602 #12424]  INFO -- : Completed 500 Internal Server Error in 374ms
+F, [2015-08-23T14:51:08.205793 #12424] FATAL -- : 
+ActionView::Template::Error (undefined method `put' for #<Investment:0x007fc005e63760>):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:50:in `nav_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___998967875517356988_70231350455040'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___998967875517356988_70231350455040'
+
+
+I, [2015-08-23T14:51:16.152228 #12439]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:51:16 -0700
+I, [2015-08-23T14:51:16.823367 #12439]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:51:16.823427 #12439]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:51:17.359520 #12439] DEBUG -- :   [1m[36mUser Load (82.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:51:17.919660 #12439] DEBUG -- :   [1m[35mPortfolio Load (120.2ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:51:18.210022 #12439] DEBUG -- :   [1m[36mInvestment Load (76.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:51:18.575030 #12439] DEBUG -- :   [1m[35mMutualFund Load (77.3ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1
+D, [2015-08-23T14:51:20.156326 #12439] DEBUG -- :   [1m[36m (49.8ms)[0m  [1mBEGIN[0m
+D, [2015-08-23T14:51:20.299265 #12439] DEBUG -- :   [1m[35m (142.2ms)[0m  COMMIT
+D, [2015-08-23T14:51:20.497471 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:20.956123 #12439] DEBUG -- :   [1m[35m (144.8ms)[0m  BEGIN
+D, [2015-08-23T14:51:21.014264 #12439] DEBUG -- :   [1m[36m (57.5ms)[0m  [1mCOMMIT[0m
+D, [2015-08-23T14:51:21.096252 #12439] DEBUG -- :   [1m[35mInvestment Load (80.7ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-23T14:51:21.096932 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:21.470749 #12439] DEBUG -- :   [1m[35m (98.8ms)[0m  BEGIN
+D, [2015-08-23T14:51:21.562189 #12439] DEBUG -- :   [1m[36m (90.8ms)[0m  [1mCOMMIT[0m
+D, [2015-08-23T14:51:21.563349 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-08-23T14:51:21.563772 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:21.912110 #12439] DEBUG -- :   [1m[35m (102.1ms)[0m  BEGIN
+D, [2015-08-23T14:51:22.161926 #12439] DEBUG -- :   [1m[36m (249.1ms)[0m  [1mCOMMIT[0m
+D, [2015-08-23T14:51:22.162694 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-08-23T14:51:22.163129 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:22.533077 #12439] DEBUG -- :   [1m[35m (91.9ms)[0m  BEGIN
+D, [2015-08-23T14:51:22.664132 #12439] DEBUG -- :   [1m[36m (130.4ms)[0m  [1mCOMMIT[0m
+D, [2015-08-23T14:51:22.664534 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:22.971704 #12439] DEBUG -- :   [1m[36m (56.4ms)[0m  [1mBEGIN[0m
+D, [2015-08-23T14:51:23.067504 #12439] DEBUG -- :   [1m[35m (95.2ms)[0m  COMMIT
+D, [2015-08-23T14:51:23.068649 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m  [["portfolio_id", 2]]
+D, [2015-08-23T14:51:23.068984 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:23.433212 #12439] DEBUG -- :   [1m[36m (152.7ms)[0m  [1mBEGIN[0m
+D, [2015-08-23T14:51:23.540350 #12439] DEBUG -- :   [1m[35m (106.5ms)[0m  COMMIT
+D, [2015-08-23T14:51:23.541103 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m  [["portfolio_id", 2]]
+D, [2015-08-23T14:51:23.542337 #12439] DEBUG -- :   [1m[35mCACHE (0.1ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:23.863469 #12439] DEBUG -- :   [1m[36m (136.9ms)[0m  [1mBEGIN[0m
+D, [2015-08-23T14:51:23.947039 #12439] DEBUG -- :   [1m[35m (83.1ms)[0m  COMMIT
+D, [2015-08-23T14:51:23.947433 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:24.303160 #12439] DEBUG -- :   [1m[35m (82.5ms)[0m  BEGIN
+D, [2015-08-23T14:51:24.395605 #12439] DEBUG -- :   [1m[36m (91.8ms)[0m  [1mCOMMIT[0m
+D, [2015-08-23T14:51:24.396711 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-08-23T14:51:24.397146 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:24.834218 #12439] DEBUG -- :   [1m[35m (142.1ms)[0m  BEGIN
+D, [2015-08-23T14:51:24.927754 #12439] DEBUG -- :   [1m[36m (92.8ms)[0m  [1mCOMMIT[0m
+D, [2015-08-23T14:51:24.928434 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-08-23T14:51:24.928715 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1[0m  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:25.189845 #12439] DEBUG -- :   [1m[35m (77.9ms)[0m  BEGIN
+D, [2015-08-23T14:51:25.249889 #12439] DEBUG -- :   [1m[36m (59.5ms)[0m  [1mCOMMIT[0m
+D, [2015-08-23T14:51:25.250150 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:25.581401 #12439] DEBUG -- :   [1m[36m (94.8ms)[0m  [1mBEGIN[0m
+D, [2015-08-23T14:51:25.675922 #12439] DEBUG -- :   [1m[35m (94.0ms)[0m  COMMIT
+D, [2015-08-23T14:51:25.677462 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m  [["portfolio_id", 2]]
+D, [2015-08-23T14:51:25.678209 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'rsp' LIMIT 1  [["ticker", "rsp"]]
+D, [2015-08-23T14:51:26.090976 #12439] DEBUG -- :   [1m[36m (81.7ms)[0m  [1mBEGIN[0m
+D, [2015-08-23T14:51:26.158619 #12439] DEBUG -- :   [1m[35m (67.0ms)[0m  COMMIT
+I, [2015-08-23T14:51:26.159158 #12439]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (8026.0ms)
+I, [2015-08-23T14:51:26.162023 #12439]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-23T14:51:26.404441 #12439] DEBUG -- :   [1m[36mGroup Load (92.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-23T14:51:26.768298 #12439] DEBUG -- :   [1m[35mGroup Load (69.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-23T14:51:27.094678 #12439] DEBUG -- :   [1m[36mGroup Exists (321.6ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-23T14:51:27.095680 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-23T14:51:27.096227 #12439] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-23T14:51:27.096968 #12439] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-23T14:51:27.097245 #12439]  INFO -- :   Rendered layouts/_nav.html.erb (934.4ms)
+I, [2015-08-23T14:51:27.098682 #12439]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-23T14:51:27.100354 #12439]  INFO -- :   Rendered layouts/_footer.html.erb (0.9ms)
+I, [2015-08-23T14:51:27.100570 #12439]  INFO -- : Completed 200 OK in 10277ms (Views: 4755.0ms | ActiveRecord: 5500.4ms)
+I, [2015-08-23T14:51:27.108381 #12439]  INFO -- : Started GET "/javascripts/portfolios.js" for 127.0.0.1 at 2015-08-23 14:51:27 -0700
+F, [2015-08-23T14:51:27.243189 #12439] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/portfolios.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-23T14:52:42.312015 #12439]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 14:52:42 -0700
+I, [2015-08-23T14:52:42.436015 #12439]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T14:52:42.436103 #12439]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T14:52:42.521744 #12439] DEBUG -- :   [1m[36mUser Load (84.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T14:52:42.590035 #12439] DEBUG -- :   [1m[35mPortfolio Load (67.5ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T14:52:42.681998 #12439] DEBUG -- :   [1m[36mInvestment Load (90.7ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T14:52:42.781663 #12439] DEBUG -- :   [1m[35mMutualFund Load (99.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+I, [2015-08-23T14:52:43.607015 #12439]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (1016.0ms)
+I, [2015-08-23T14:52:43.607174 #12439]  INFO -- : Completed 500 Internal Server Error in 1171ms
+F, [2015-08-23T14:52:43.608772 #12439] FATAL -- : 
+ActionView::Template::Error (undefined method `content' for nil:NilClass):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:60:in `er_api'
+  app/models/investment.rb:36:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___2592244319987355429_70108598862780'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___2592244319987355429_70108598862780'
+
+
+I, [2015-08-23T15:21:17.305191 #12439]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 15:21:17 -0700
+I, [2015-08-23T15:21:17.493557 #12439]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T15:21:17.493645 #12439]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T15:21:17.984330 #12439] DEBUG -- :   [1m[36mUser Load (489.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T15:21:18.526763 #12439] DEBUG -- :   [1m[35mPortfolio Load (541.8ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T15:21:19.082063 #12439] DEBUG -- :   [1m[36mInvestment Load (554.3ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T15:21:19.693682 #12439] DEBUG -- :   [1m[35mMutualFund Load (610.9ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+I, [2015-08-23T15:21:21.107087 #12439]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (2579.5ms)
+I, [2015-08-23T15:21:21.107223 #12439]  INFO -- : Completed 500 Internal Server Error in 3614ms
+F, [2015-08-23T15:21:21.108354 #12439] FATAL -- : 
+ActionView::Template::Error (undefined method `content' for nil:NilClass):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:60:in `er_api'
+  app/models/investment.rb:36:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___2592244319987355429_70108598862780'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___2592244319987355429_70108598862780'
+
+
+I, [2015-08-23T15:21:35.353916 #12758]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 15:21:35 -0700
+I, [2015-08-23T15:21:36.214175 #12758]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T15:21:36.214264 #12758]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T15:21:36.827738 #12758] DEBUG -- :   [1m[36mUser Load (80.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T15:21:37.273716 #12758] DEBUG -- :   [1m[35mPortfolio Load (44.4ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T15:21:37.523185 #12758] DEBUG -- :   [1m[36mInvestment Load (119.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T15:21:37.932754 #12758] DEBUG -- :   [1m[35mMutualFund Load (91.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+I, [2015-08-23T15:21:38.102163 #12758]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (699.3ms)
+I, [2015-08-23T15:21:38.102304 #12758]  INFO -- : Completed 500 Internal Server Error in 1888ms
+F, [2015-08-23T15:21:38.103396 #12758] FATAL -- : 
+LoadError (cannot load such file -- open_uri):
+  app/models/investment.rb:49:in `nav_yahoo_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___642408449424441709_70144214202340'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___642408449424441709_70144214202340'
+
+
+I, [2015-08-23T15:22:17.713401 #12768]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-23 15:22:17 -0700
+I, [2015-08-23T15:22:18.852452 #12768]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-23T15:22:18.852506 #12768]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-23T15:22:19.294762 #12768] DEBUG -- :   [1m[36mUser Load (110.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-23T15:22:19.659350 #12768] DEBUG -- :   [1m[35mPortfolio Load (78.1ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-23T15:22:19.820592 #12768] DEBUG -- :   [1m[36mInvestment Load (70.3ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-23T15:22:20.068501 #12768] DEBUG -- :   [1m[35mMutualFund Load (79.2ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+I, [2015-08-23T15:22:20.155182 #12768]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (406.0ms)
+I, [2015-08-23T15:22:20.155356 #12768]  INFO -- : Completed 500 Internal Server Error in 1303ms
+F, [2015-08-23T15:22:20.156583 #12768] FATAL -- : 
+LoadError (cannot load such file -- open_uri):
+  app/models/investment.rb:50:in `nav_yahoo_api'
+  app/models/investment.rb:35:in `get_mutual_fund'
+  app/models/investment.rb:8:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb___4601638762116526494_70256501658040'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb___4601638762116526494_70256501658040'
+
+
