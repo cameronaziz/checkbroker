@@ -1,0 +1,20 @@
+<%= render partial: 'shared/errors', :locals => {:object => @mutual_fund}%>
+<div class="col-md-4">
+  <%= form_for @mutual_fund do |f| %>
+      <div class="form-group">
+        <%= f.label :ticker, class: 'sr-only' %>
+        <%= f.text_field :ticker, class: 'form-control', placeholder: 'Ticker' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :nav, class: 'sr-only'  %>
+        <%= f.text_field :nav, class: 'form-control', placeholder: 'Net Asset Value' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :expense_ratio, class: 'sr-only'  %>
+        <%= f.text_field :expense_ratio, class: 'form-control', placeholder: 'Expense Ratio' %>
+      </div>
+      <div class="form-group">
+        <%= f.submit 'Save', class: 'btn btn-primary' %>
+      </div>
+  <% end %>
+</div>

@@ -24,6 +24,8 @@
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
+            <li><b>&nbsp;&nbsp;Mutual Fund Admin</b></li>
+            <%= auth_button(['Administrators'], mutual_funds_path, 'Mutual Funds') %>
             <li class="divider"></li>
             <li><b>&nbsp;&nbsp;User Admin</b></li>
             <%= auth_button(['Administrators'], users_path, 'Users') %>

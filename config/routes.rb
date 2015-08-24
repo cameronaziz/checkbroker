@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :portfolios
   resources :users
   resources :groups
+  resources :mutual_funds
 
 
 

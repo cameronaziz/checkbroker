@@ -1,0 +1,25 @@
+<%= render partial: 'shared/notice' %>
+<h1>Mutual Fund List</h1>
+<%= link_to_button 'Create User', new_user_path, 'btn-primary' %>
+<table class='table'>
+  <thead>
+  <tr>
+    <th>Mutual Fund</th>
+    <th>NAV</th>
+    <th>Expense Ratio</th>
+    <th colspan="2">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @mutual_funds.each do |mutual_fund| %>
+      <tr>
+        <td><%= mutual_fund.ticker %></td>
+        <td>$<%= number_with_precision(mutual_fund.nav, precision: 2) %></td>
+        <td><%= mutual_fund.expense_ratio %>%</td>
+        <td><%= link_to 'Edit', edit_mutual_fund_path(mutual_fund) %></td>
+        <td><%= link_to 'Delete', mutual_fund, method: :delete, data: {confirm: 'Are you sure?'}  %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<br/>
