@@ -1,8 +1,7 @@
 class StaticPagesController < ApplicationController
 
-  before_action do
+  skip_before_action :authenticate_user, only: [:index]
 
-  end
 
   def index
   end
