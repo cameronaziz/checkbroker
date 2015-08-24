@@ -4,6 +4,9 @@ class UsersController < ApplicationController
   before_action only: [:index, :new, :show, :create, :edit, :update, :destroy] do
     authenticate_user_and_group(['Administrators', 'Managers'], false)
   end
+  
+  skip_before_action :authenticate_user, only: :register
+
 
   def index
     @users = User.all
