@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820112206) do
+ActiveRecord::Schema.define(version: 20150824013524) do
 
   create_table "groups", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150820112206) do
     t.float    "expense_ratio", limit: 24
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.datetime "auto_updated"
   end
 
   create_table "portfolios", force: :cascade do |t|

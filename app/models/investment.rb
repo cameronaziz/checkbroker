@@ -30,15 +30,18 @@ private
       fund.ticker = self.ticker
       fund.nav = nav_yahoo_api
       fund.expense_ratio = er_yahoo_api
+      fund.auto_updated = Time.now
       fund.save
       record = fund
     else
-      if record.updated_at < (Time.now - (24*60*60))
+      if record.auto_updated.to_datetime < (Time.now - (24*60*60))
         record.nav = nav_yahoo_api
         record.expense_ratio = er_yahoo_api
+        record.auto_updated = Time.now
         record.save
-      else if record.updated_at < (Time.now - (15*60))
+      else if record.auto_updated.to_datetime < (Time.now - (15*60))
         record.nav = nav_yahoo_api
+        record.auto_updated = Time.now
         record.save
            end
       end
