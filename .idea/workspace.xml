@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80527b7c-98d4-47eb-b4b8-6cbb655769eb" name="Default" comment="change to check broker">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mutual_funds/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mutual_funds/edit.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mutual_funds/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/UFprY51wcFxrOroWCnIcj2nTlaNErKikMzlfKHvGBPA.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/UFprY51wcFxrOroWCnIcj2nTlaNErKikMzlfKHvGBPA.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/aeUBH3gw20TPznSXIwaO0DkUUosYaliImMUo9Vq7Rw8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/aeUBH3gw20TPznSXIwaO0DkUUosYaliImMUo9Vq7Rw8.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/fYPfNiXvkUK3AZ_SqKEbuvjSSW7ByjZj0hdM6khfloo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/fYPfNiXvkUK3AZ_SqKEbuvjSSW7ByjZj0hdM6khfloo.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/rU-JgDhOOt3D6Dp2uTz5rZDwWVcQFr9fKHl4uHgOqoc.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/rU-JgDhOOt3D6Dp2uTz5rZDwWVcQFr9fKHl4uHgOqoc.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="80527b7c-98d4-47eb-b4b8-6cbb655769eb" name="Default" comment="change to check broker" />
     <ignored path="pfp.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/components/" />
