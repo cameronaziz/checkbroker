@@ -32,7 +32,8 @@ Rails.application.configure do
   config.assets.digest = true
 
   # Adds additional error checking when serving assets at runtime.
-  # Checks for improperly declared sprockets dependencies.
+  # Checks for
+  # improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
