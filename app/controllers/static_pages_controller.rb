@@ -4,9 +4,12 @@ class StaticPagesController < ApplicationController
 
 
   def index
+    @suggestion = Suggestion.new
   end
 
   def help
   end
 
+  def profile
+  end
 end

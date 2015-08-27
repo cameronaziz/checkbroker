@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
       if params[:session][:remember_me] == '1'
         remember(user)
       end
-      redirect_back_or root_path
+      redirect_back_or profile_path
     else
       flash[:alert] = 'Incorrect username or password.'
       redirect_to login_path
