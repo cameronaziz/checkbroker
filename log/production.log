@@ -188,3 +188,898 @@ D, [2015-08-28T00:42:47.811883 #3900] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  S
 I, [2015-08-28T00:42:47.812226 #3900]  INFO -- :   Rendered layouts/_nav.html.erb (267.3ms)
 I, [2015-08-28T00:42:47.813705 #3900]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
 I, [2015-08-28T00:42:47.813940 #3900]  INFO -- : Completed 200 OK in 839ms (Views: 232.9ms | ActiveRecord: 572.6ms)
+I, [2015-08-28T00:43:40.102860 #3937]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:43:40 -0700
+I, [2015-08-28T00:43:40.526567 #3937]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:43:40.644928 #3937] DEBUG -- :   [1m[36mUser Load (47.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:43:40.929591 #3937]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.5ms)
+I, [2015-08-28T00:43:40.931280 #3937]  INFO -- :   Rendered investments/_table_form.html.erb (0.7ms)
+I, [2015-08-28T00:43:41.117694 #3937]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (191.4ms)
+I, [2015-08-28T00:43:41.119810 #3937]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-28T00:43:41.204076 #3937] DEBUG -- :   [1m[35mGroup Load (42.7ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:43:41.334674 #3937] DEBUG -- :   [1m[36mGroup Load (43.2ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:43:41.378559 #3937] DEBUG -- :   [1m[35mGroup Exists (38.2ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:43:41.379332 #3937] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:43:41.380075 #3937] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:43:41.381159 #3937] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:43:41.381623 #3937] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:43:41.382170 #3937] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:43:41.382655 #3937] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:43:41.382952 #3937]  INFO -- :   Rendered layouts/_nav.html.erb (262.5ms)
+I, [2015-08-28T00:43:41.384409 #3937]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:43:41.384661 #3937]  INFO -- : Completed 200 OK in 858ms (Views: 223.3ms | ActiveRecord: 598.4ms)
+I, [2015-08-28T00:44:05.018830 #3937]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:44:05 -0700
+I, [2015-08-28T00:44:05.060446 #3937]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:44:05.103780 #3937] DEBUG -- :   [1m[36mUser Load (42.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:44:05.107223 #3937]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.3ms)
+I, [2015-08-28T00:44:05.107766 #3937]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:44:05.108484 #3937]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (2.6ms)
+I, [2015-08-28T00:44:05.109405 #3937]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:44:05.149187 #3937] DEBUG -- :   [1m[35mGroup Load (39.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:44:05.192290 #3937] DEBUG -- :   [1m[36mGroup Load (41.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:44:05.237236 #3937] DEBUG -- :   [1m[35mGroup Exists (43.7ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:44:05.237927 #3937] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:44:05.238672 #3937] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:44:05.239686 #3937] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:44:05.240026 #3937] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:44:05.240685 #3937] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:44:05.241198 #3937] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:44:05.241454 #3937]  INFO -- :   Rendered layouts/_nav.html.erb (131.9ms)
+I, [2015-08-28T00:44:05.241715 #3937]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:44:05.241911 #3937]  INFO -- : Completed 200 OK in 181ms (Views: 12.0ms | ActiveRecord: 166.8ms)
+I, [2015-08-28T00:44:10.900030 #3950]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:44:10 -0700
+I, [2015-08-28T00:44:11.210831 #3950]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:44:11.302399 #3950] DEBUG -- :   [1m[36mUser Load (40.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:44:11.581835 #3950]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.4ms)
+I, [2015-08-28T00:44:11.583494 #3950]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T00:44:11.795204 #3950]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (216.5ms)
+I, [2015-08-28T00:44:11.798304 #3950]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T00:44:11.886069 #3950] DEBUG -- :   [1m[35mGroup Load (42.1ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:44:12.020053 #3950] DEBUG -- :   [1m[36mGroup Load (42.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:44:12.066869 #3950] DEBUG -- :   [1m[35mGroup Exists (41.1ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:44:12.067600 #3950] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:44:12.068414 #3950] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:44:12.069568 #3950] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:44:12.069919 #3950] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:44:12.070331 #3950] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:44:12.070843 #3950] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:44:12.071107 #3950]  INFO -- :   Rendered layouts/_nav.html.erb (271.9ms)
+I, [2015-08-28T00:44:12.072593 #3950]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:44:12.072842 #3950]  INFO -- : Completed 200 OK in 862ms (Views: 249.0ms | ActiveRecord: 577.5ms)
+I, [2015-08-28T00:44:30.867188 #3963]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:44:30 -0700
+I, [2015-08-28T00:44:31.163817 #3963]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:44:31.254561 #3963] DEBUG -- :   [1m[36mUser Load (39.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:44:31.543386 #3963]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.5ms)
+I, [2015-08-28T00:44:31.544963 #3963]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T00:44:31.731235 #3963]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (190.8ms)
+I, [2015-08-28T00:44:31.733606 #3963]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T00:44:31.826528 #3963] DEBUG -- :   [1m[35mGroup Load (50.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:44:31.962561 #3963] DEBUG -- :   [1m[36mGroup Load (45.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:44:32.007800 #3963] DEBUG -- :   [1m[35mGroup Exists (39.4ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:44:32.008523 #3963] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:44:32.009309 #3963] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:44:32.010370 #3963] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:44:32.010714 #3963] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:44:32.011169 #3963] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:44:32.011651 #3963] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:44:32.011938 #3963]  INFO -- :   Rendered layouts/_nav.html.erb (277.6ms)
+I, [2015-08-28T00:44:32.013352 #3963]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:44:32.013592 #3963]  INFO -- : Completed 200 OK in 850ms (Views: 222.0ms | ActiveRecord: 593.4ms)
+I, [2015-08-28T00:44:46.741196 #3975]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:44:46 -0700
+I, [2015-08-28T00:44:47.057053 #3975]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:44:47.147690 #3975] DEBUG -- :   [1m[36mUser Load (40.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:44:47.425073 #3975]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.4ms)
+I, [2015-08-28T00:44:47.426629 #3975]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T00:44:47.609390 #3975]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (187.2ms)
+I, [2015-08-28T00:44:47.611655 #3975]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T00:44:47.698748 #3975] DEBUG -- :   [1m[35mGroup Load (42.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:44:47.832003 #3975] DEBUG -- :   [1m[36mGroup Load (40.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:44:47.886614 #3975] DEBUG -- :   [1m[35mGroup Exists (49.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:44:47.887347 #3975] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:44:47.888165 #3975] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:44:47.889269 #3975] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:44:47.889625 #3975] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:44:47.890182 #3975] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:44:47.890669 #3975] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:44:47.890975 #3975]  INFO -- :   Rendered layouts/_nav.html.erb (278.7ms)
+I, [2015-08-28T00:44:47.892429 #3975]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:44:47.892669 #3975]  INFO -- : Completed 200 OK in 835ms (Views: 218.4ms | ActiveRecord: 582.5ms)
+I, [2015-08-28T00:45:04.995877 #3985]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:45:04 -0700
+I, [2015-08-28T00:45:05.307248 #3985]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:45:05.406658 #3985] DEBUG -- :   [1m[36mUser Load (41.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:45:05.692586 #3985]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.4ms)
+I, [2015-08-28T00:45:05.694094 #3985]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T00:45:05.898605 #3985]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (209.0ms)
+I, [2015-08-28T00:45:05.901965 #3985]  INFO -- :   Rendered layouts/_shiv.html.erb (0.3ms)
+D, [2015-08-28T00:45:05.999035 #3985] DEBUG -- :   [1m[35mGroup Load (43.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:45:06.147624 #3985] DEBUG -- :   [1m[36mGroup Load (53.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:45:06.191840 #3985] DEBUG -- :   [1m[35mGroup Exists (39.1ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:45:06.192597 #3985] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:45:06.193424 #3985] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:45:06.194516 #3985] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:45:06.194874 #3985] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:45:06.195282 #3985] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:45:06.195764 #3985] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:45:06.196075 #3985]  INFO -- :   Rendered layouts/_nav.html.erb (293.2ms)
+I, [2015-08-28T00:45:06.197549 #3985]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:45:06.197778 #3985]  INFO -- : Completed 200 OK in 890ms (Views: 241.4ms | ActiveRecord: 614.1ms)
+I, [2015-08-28T00:46:02.430415 #4035]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:46:02 -0700
+I, [2015-08-28T00:46:02.762034 #4035]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:46:02.889963 #4035] DEBUG -- :   [1m[36mUser Load (50.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:46:03.168239 #4035]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.4ms)
+I, [2015-08-28T00:46:03.169721 #4035]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T00:46:03.365917 #4035]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (200.5ms)
+I, [2015-08-28T00:46:03.368354 #4035]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T00:46:03.467115 #4035] DEBUG -- :   [1m[35mGroup Load (42.7ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:46:03.608370 #4035] DEBUG -- :   [1m[36mGroup Load (42.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:46:03.653065 #4035] DEBUG -- :   [1m[35mGroup Exists (40.5ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:46:03.653773 #4035] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:46:03.654537 #4035] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:46:03.655616 #4035] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:46:03.655966 #4035] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:46:03.656563 #4035] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:46:03.657102 #4035] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:46:03.657401 #4035]  INFO -- :   Rendered layouts/_nav.html.erb (288.4ms)
+I, [2015-08-28T00:46:03.658810 #4035]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:46:03.659047 #4035]  INFO -- : Completed 200 OK in 897ms (Views: 230.0ms | ActiveRecord: 631.6ms)
+I, [2015-08-28T00:48:37.634064 #4085]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:48:37 -0700
+I, [2015-08-28T00:48:37.965142 #4085]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:48:38.073297 #4085] DEBUG -- :   [1m[36mUser Load (42.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:48:38.344845 #4085]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.4ms)
+I, [2015-08-28T00:48:38.346315 #4085]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T00:48:38.519009 #4085]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (177.2ms)
+I, [2015-08-28T00:48:38.521267 #4085]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T00:48:38.610563 #4085] DEBUG -- :   [1m[35mGroup Load (45.9ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:48:38.743393 #4085] DEBUG -- :   [1m[36mGroup Load (40.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:48:38.789616 #4085] DEBUG -- :   [1m[35mGroup Exists (40.3ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:48:38.790361 #4085] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:48:38.791173 #4085] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:48:38.792257 #4085] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:48:38.792607 #4085] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:48:38.793064 #4085] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:48:38.793542 #4085] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:48:38.793843 #4085]  INFO -- :   Rendered layouts/_nav.html.erb (271.9ms)
+I, [2015-08-28T00:48:38.795327 #4085]  INFO -- :   Rendered layouts/_dev.html.erb (0.5ms)
+I, [2015-08-28T00:48:38.795581 #4085]  INFO -- : Completed 200 OK in 830ms (Views: 208.7ms | ActiveRecord: 586.8ms)
+I, [2015-08-28T00:49:03.922773 #4085]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:49:03 -0700
+I, [2015-08-28T00:49:03.965603 #4085]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:49:04.009868 #4085] DEBUG -- :   [1m[36mUser Load (43.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:49:04.011885 #4085]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.1ms)
+I, [2015-08-28T00:49:04.012323 #4085]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:49:04.012904 #4085]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (1.8ms)
+I, [2015-08-28T00:49:04.013618 #4085]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:49:04.056347 #4085] DEBUG -- :   [1m[35mGroup Load (42.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:49:04.100222 #4085] DEBUG -- :   [1m[36mGroup Load (42.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:49:04.143352 #4085] DEBUG -- :   [1m[35mGroup Exists (41.8ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:49:04.144054 #4085] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:49:04.144773 #4085] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:49:04.145788 #4085] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:49:04.146194 #4085] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:49:04.146782 #4085] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:49:04.147352 #4085] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:49:04.147609 #4085]  INFO -- :   Rendered layouts/_nav.html.erb (133.9ms)
+I, [2015-08-28T00:49:04.147863 #4085]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:49:04.148060 #4085]  INFO -- : Completed 200 OK in 182ms (Views: 10.3ms | ActiveRecord: 170.4ms)
+I, [2015-08-28T00:49:11.711762 #4101]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:49:11 -0700
+I, [2015-08-28T00:49:12.010067 #4101]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:49:12.100332 #4101] DEBUG -- :   [1m[36mUser Load (38.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:49:12.374222 #4101]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.4ms)
+I, [2015-08-28T00:49:12.375715 #4101]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T00:49:12.582725 #4101]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (211.5ms)
+I, [2015-08-28T00:49:12.585137 #4101]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T00:49:12.672995 #4101] DEBUG -- :   [1m[35mGroup Load (41.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:49:12.806092 #4101] DEBUG -- :   [1m[36mGroup Load (41.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:49:12.852951 #4101] DEBUG -- :   [1m[35mGroup Exists (41.2ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:49:12.853683 #4101] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:49:12.854490 #4101] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:49:12.855612 #4101] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:49:12.855983 #4101] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:49:12.856612 #4101] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:49:12.857409 #4101] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:49:12.857868 #4101]  INFO -- :   Rendered layouts/_nav.html.erb (271.9ms)
+I, [2015-08-28T00:49:12.859615 #4101]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:49:12.859866 #4101]  INFO -- : Completed 200 OK in 850ms (Views: 243.5ms | ActiveRecord: 571.0ms)
+I, [2015-08-28T00:50:02.039661 #4101]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:50:02 -0700
+I, [2015-08-28T00:50:02.083967 #4101]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:50:02.129792 #4101] DEBUG -- :   [1m[36mUser Load (45.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:50:02.134278 #4101]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.2ms)
+I, [2015-08-28T00:50:02.134857 #4101]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:50:02.135637 #4101]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (2.3ms)
+I, [2015-08-28T00:50:02.136537 #4101]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:50:02.176219 #4101] DEBUG -- :   [1m[35mGroup Load (39.1ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:50:02.219375 #4101] DEBUG -- :   [1m[36mGroup Load (41.5ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:50:02.262289 #4101] DEBUG -- :   [1m[35mGroup Exists (41.6ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:50:02.263044 #4101] DEBUG -- :   [1m[36mCACHE (0.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:50:02.263809 #4101] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:50:02.264822 #4101] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:50:02.265194 #4101] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:50:02.265782 #4101] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:50:02.266263 #4101] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:50:02.266517 #4101]  INFO -- :   Rendered layouts/_nav.html.erb (129.9ms)
+I, [2015-08-28T00:50:02.266738 #4101]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:50:02.266965 #4101]  INFO -- : Completed 200 OK in 183ms (Views: 11.5ms | ActiveRecord: 167.4ms)
+I, [2015-08-28T00:50:06.763817 #4120]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-28 00:50:06 -0700
+I, [2015-08-28T00:50:07.099939 #4120]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-28T00:50:07.267966 #4120] DEBUG -- :   [1m[36mUser Load (42.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:50:07.546565 #4120]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.5ms)
+I, [2015-08-28T00:50:07.548172 #4120]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T00:50:07.751102 #4120]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (207.5ms)
+I, [2015-08-28T00:50:07.753458 #4120]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-28T00:50:07.849908 #4120] DEBUG -- :   [1m[35mGroup Load (51.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:50:07.980541 #4120] DEBUG -- :   [1m[36mGroup Load (41.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:50:08.027711 #4120] DEBUG -- :   [1m[35mGroup Exists (41.5ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:50:08.028451 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:50:08.029262 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:50:08.030459 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:50:08.030839 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:50:08.031351 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:50:08.031864 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:50:08.032173 #4120]  INFO -- :   Rendered layouts/_nav.html.erb (278.0ms)
+I, [2015-08-28T00:50:08.033635 #4120]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:50:08.033868 #4120]  INFO -- : Completed 200 OK in 934ms (Views: 238.5ms | ActiveRecord: 660.4ms)
+I, [2015-08-28T00:50:21.642868 #4120]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-28 00:50:21 -0700
+I, [2015-08-28T00:50:21.686275 #4120]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-08-28T00:50:21.729987 #4120] DEBUG -- :   [1m[36mUser Load (43.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:50:21.735749 #4120]  INFO -- :   Rendered shared/_notice.html.erb (0.3ms)
+D, [2015-08-28T00:50:21.780522 #4120] DEBUG -- :   [1m[35mPortfolio Load (44.2ms)[0m  SELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` = 1
+I, [2015-08-28T00:50:21.781544 #4120]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (47.6ms)
+I, [2015-08-28T00:50:21.783220 #4120]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:50:21.826677 #4120] DEBUG -- :   [1m[36mGroup Load (42.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T00:50:21.872457 #4120] DEBUG -- :   [1m[35mGroup Load (44.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:50:21.917974 #4120] DEBUG -- :   [1m[36mGroup Exists (44.2ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T00:50:21.918596 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:50:21.919352 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:50:21.920402 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:50:21.920750 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:50:21.921388 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:50:21.921901 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:50:21.922213 #4120]  INFO -- :   Rendered layouts/_nav.html.erb (138.8ms)
+I, [2015-08-28T00:50:21.922435 #4120]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:50:21.922615 #4120]  INFO -- : Completed 200 OK in 236ms (Views: 16.3ms | ActiveRecord: 218.2ms)
+I, [2015-08-28T00:50:23.054044 #4120]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-28 00:50:23 -0700
+I, [2015-08-28T00:50:23.095988 #4120]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-28T00:50:23.096054 #4120]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:50:23.140102 #4120] DEBUG -- :   [1m[35mUser Load (43.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:50:23.185784 #4120] DEBUG -- :   [1m[36mPortfolio Load (44.8ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-28T00:50:23.233059 #4120] DEBUG -- :   [1m[35mInvestment Load (40.8ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-28T00:50:23.323317 #4120] DEBUG -- :   [1m[36mMutualFund Load (45.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+I, [2015-08-28T00:50:23.371353 #4120]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (180.7ms)
+I, [2015-08-28T00:50:23.371504 #4120]  INFO -- : Completed 500 Internal Server Error in 275ms
+F, [2015-08-28T00:50:23.372628 #4120] FATAL -- : 
+ActionView::Template::Error (undefined method `to_datetime' for nil:NilClass):
+    13:         <tr>
+    14:           <td><%= i.ticker.upcase %></td>
+    15:           <td><%= i.quantity %></td>
+    16:           <td>$<%= number_with_precision(i.nav, precision: 2) %></td>
+    17:           <td>$<%= number_with_precision(i.nav * i.quantity, precision: 2) %></td>
+    18:           <td><%= number_with_precision(i.expense_ratio, precision: 2) %>%</td>
+    19:         </tr>
+  app/models/investment.rb:37:in `get_mutual_fund'
+  app/models/investment.rb:10:in `nav'
+  app/views/portfolios/show.html.erb:16:in `block in _app_views_portfolios_show_html_erb__2810774172355583067_70200215803240'
+  app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb__2810774172355583067_70200215803240'
+
+
+I, [2015-08-28T00:52:42.375869 #4120]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-28 00:52:42 -0700
+I, [2015-08-28T00:52:42.416402 #4120]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-28T00:52:42.416467 #4120]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:52:42.461594 #4120] DEBUG -- :   [1m[35mUser Load (44.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:52:42.506236 #4120] DEBUG -- :   [1m[36mPortfolio Load (42.8ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-28T00:52:42.551971 #4120] DEBUG -- :   [1m[35mInvestment Load (44.1ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-28T00:52:42.597742 #4120] DEBUG -- :   [1m[36mMutualFund Load (45.3ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-28T00:52:44.069085 #4120] DEBUG -- :   [1m[35m (41.4ms)[0m  BEGIN
+D, [2015-08-28T00:52:44.114734 #4120] DEBUG -- :   [1m[36mSQL (43.3ms)[0m  [1mUPDATE `mutual_funds` SET `nav` = 10.36, `expense_ratio` = 1.0, `auto_updated` = '2015-08-28 07:52:44.027413', `updated_at` = '2015-08-28 07:52:44.069466' WHERE `mutual_funds`.`id` = 4[0m
+D, [2015-08-28T00:52:44.173949 #4120] DEBUG -- :   [1m[35m (58.6ms)[0m  COMMIT
+D, [2015-08-28T00:52:44.218757 #4120] DEBUG -- :   [1m[36mMutualFund Load (41.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-28T00:52:44.263487 #4120] DEBUG -- :   [1m[35mInvestment Load (43.2ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-28T00:52:44.264104 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-28T00:52:44.266882 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-08-28T00:52:44.267128 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-28T00:52:44.267362 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+I, [2015-08-28T00:52:44.267949 #4120]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (1760.5ms)
+I, [2015-08-28T00:52:44.268964 #4120]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:52:44.308049 #4120] DEBUG -- :   [1m[36mGroup Load (38.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T00:52:44.352088 #4120] DEBUG -- :   [1m[35mGroup Load (42.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:52:44.395301 #4120] DEBUG -- :   [1m[36mGroup Exists (41.8ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T00:52:44.395912 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:52:44.396650 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:52:44.397813 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:52:44.398164 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:52:44.398829 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:52:44.399660 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:52:44.400041 #4120]  INFO -- :   Rendered layouts/_nav.html.erb (131.0ms)
+I, [2015-08-28T00:52:44.400364 #4120]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-28T00:52:44.400653 #4120]  INFO -- : Completed 200 OK in 1984ms (Views: 1454.0ms | ActiveRecord: 526.7ms)
+I, [2015-08-28T00:52:49.805863 #4120]  INFO -- : Started GET "/mutual_funds" for 127.0.0.1 at 2015-08-28 00:52:49 -0700
+I, [2015-08-28T00:52:49.850323 #4120]  INFO -- : Processing by MutualFundsController#index as HTML
+D, [2015-08-28T00:52:49.896065 #4120] DEBUG -- :   [1m[35mUser Load (44.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-28T00:52:49.905242 #4120]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-08-28T00:52:49.954832 #4120] DEBUG -- :   [1m[36mMutualFund Load (49.1ms)[0m  [1mSELECT `mutual_funds`.* FROM `mutual_funds`[0m
+I, [2015-08-28T00:52:49.958226 #4120]  INFO -- :   Rendered mutual_funds/index.html.erb within layouts/application (53.7ms)
+I, [2015-08-28T00:52:49.959221 #4120]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:52:49.999523 #4120] DEBUG -- :   [1m[35mGroup Load (39.7ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:52:50.042966 #4120] DEBUG -- :   [1m[36mGroup Load (41.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:52:50.086501 #4120] DEBUG -- :   [1m[35mGroup Exists (42.2ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:52:50.087052 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:52:50.087559 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:52:50.088239 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:52:50.088506 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:52:50.088994 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:52:50.089782 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:52:50.090060 #4120]  INFO -- :   Rendered layouts/_nav.html.erb (130.7ms)
+I, [2015-08-28T00:52:50.090297 #4120]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:52:50.090494 #4120]  INFO -- : Completed 200 OK in 240ms (Views: 20.1ms | ActiveRecord: 217.6ms)
+I, [2015-08-28T00:52:52.892136 #4120]  INFO -- : Started GET "/mutual_funds/3/edit" for 127.0.0.1 at 2015-08-28 00:52:52 -0700
+I, [2015-08-28T00:52:52.934313 #4120]  INFO -- : Processing by MutualFundsController#edit as HTML
+I, [2015-08-28T00:52:52.934377 #4120]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-28T00:52:52.977812 #4120] DEBUG -- :   [1m[36mUser Load (42.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:52:53.021673 #4120] DEBUG -- :   [1m[35mMutualFund Load (42.7ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`id` = 3 LIMIT 1
+I, [2015-08-28T00:52:53.030698 #4120]  INFO -- :   Rendered shared/_errors.html.erb (0.4ms)
+I, [2015-08-28T00:52:53.032769 #4120]  INFO -- :   Rendered mutual_funds/_form.html.erb (4.3ms)
+I, [2015-08-28T00:52:53.032826 #4120]  INFO -- :   Rendered mutual_funds/edit.html.erb within layouts/application (6.7ms)
+I, [2015-08-28T00:52:53.033659 #4120]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:52:53.074009 #4120] DEBUG -- :   [1m[36mGroup Load (39.8ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T00:52:53.117728 #4120] DEBUG -- :   [1m[35mGroup Load (42.1ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:52:53.158072 #4120] DEBUG -- :   [1m[36mGroup Exists (39.4ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T00:52:53.158800 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:52:53.159509 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:52:53.160654 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:52:53.161021 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:52:53.161542 #4120] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:52:53.162114 #4120] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:52:53.162416 #4120]  INFO -- :   Rendered layouts/_nav.html.erb (128.7ms)
+I, [2015-08-28T00:52:53.162624 #4120]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:52:53.162795 #4120]  INFO -- : Completed 200 OK in 228ms (Views: 19.2ms | ActiveRecord: 206.8ms)
+I, [2015-08-28T00:53:04.261583 #4120]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 00:53:04 -0700
+I, [2015-08-28T00:53:04.303588 #4120]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T00:53:04.303654 #4120]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:53:04.348043 #4120] DEBUG -- :   [1m[35mUser Load (43.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:53:04.392119 #4120] DEBUG -- :   [1m[36mPortfolio Load (42.4ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+I, [2015-08-28T00:53:04.395454 #4120]  INFO -- : Completed 500 Internal Server Error in 92ms
+F, [2015-08-28T00:53:04.397148 #4120] FATAL -- : 
+ActionView::MissingTemplate (Missing template portfolios/edit, application/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/cameronaziz/Development/checkbroker/app/views"
+):
+  actionview (4.2.0) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.0) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.0) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.0) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.0) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.0) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.0) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-28T00:56:30.584173 #4236]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-28 00:56:30 -0700
+I, [2015-08-28T00:56:31.359682 #4236]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-08-28T00:56:31.469377 #4236] DEBUG -- :   [1m[36mUser Load (41.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T00:56:31.609076 #4236]  INFO -- :   Rendered shared/_notice.html.erb (0.3ms)
+D, [2015-08-28T00:56:31.652349 #4236] DEBUG -- :   [1m[35mPortfolio Load (42.7ms)[0m  SELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` = 1
+I, [2015-08-28T00:56:31.696680 #4236]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (89.4ms)
+I, [2015-08-28T00:56:31.699513 #4236]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T00:56:31.787663 #4236] DEBUG -- :   [1m[36mGroup Load (44.5ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T00:56:31.927577 #4236] DEBUG -- :   [1m[35mGroup Load (41.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:56:31.973779 #4236] DEBUG -- :   [1m[36mGroup Exists (40.2ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T00:56:31.974599 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:56:31.975398 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:56:31.976586 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:56:31.976989 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:56:31.977514 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:56:31.978079 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:56:31.978386 #4236]  INFO -- :   Rendered layouts/_nav.html.erb (278.1ms)
+I, [2015-08-28T00:56:31.979870 #4236]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:56:31.980109 #4236]  INFO -- : Completed 200 OK in 620ms (Views: 47.5ms | ActiveRecord: 554.5ms)
+I, [2015-08-28T00:56:33.624825 #4236]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 00:56:33 -0700
+I, [2015-08-28T00:56:33.667278 #4236]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T00:56:33.667345 #4236]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:56:33.710976 #4236] DEBUG -- :   [1m[35mUser Load (43.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:56:33.751840 #4236] DEBUG -- :   [1m[36mPortfolio Load (39.6ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-28T00:56:33.893126 #4236] DEBUG -- :   [1m[35mInvestment Load (43.2ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+I, [2015-08-28T00:56:33.896148 #4236]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (1.0ms)
+I, [2015-08-28T00:56:33.896876 #4236]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.3ms)
+I, [2015-08-28T00:56:33.898645 #4236]  INFO -- :   Rendered investments/_table_form.html.erb (0.7ms)
+I, [2015-08-28T00:56:34.074469 #4236]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (226.4ms)
+I, [2015-08-28T00:56:34.075276 #4236]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:56:34.123593 #4236] DEBUG -- :   [1m[36mGroup Load (47.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T00:56:34.166507 #4236] DEBUG -- :   [1m[35mGroup Load (41.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:56:34.212140 #4236] DEBUG -- :   [1m[36mGroup Exists (44.2ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T00:56:34.212787 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:56:34.213528 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:56:34.214596 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:56:34.214949 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:56:34.215605 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:56:34.216106 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:56:34.216356 #4236]  INFO -- :   Rendered layouts/_nav.html.erb (141.0ms)
+I, [2015-08-28T00:56:34.216579 #4236]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:56:34.216795 #4236]  INFO -- : Completed 200 OK in 549ms (Views: 193.5ms | ActiveRecord: 346.7ms)
+I, [2015-08-28T00:56:59.867378 #4236]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 00:56:59 -0700
+I, [2015-08-28T00:56:59.912866 #4236]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T00:56:59.912935 #4236]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:56:59.955522 #4236] DEBUG -- :   [1m[35mUser Load (41.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:57:00.008935 #4236] DEBUG -- :   [1m[36mPortfolio Load (52.9ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-28T00:57:00.062084 #4236] DEBUG -- :   [1m[35mInvestment Load (50.9ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+I, [2015-08-28T00:57:00.063146 #4236]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.4ms)
+I, [2015-08-28T00:57:00.063939 #4236]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.3ms)
+I, [2015-08-28T00:57:00.064823 #4236]  INFO -- :   Rendered investments/_table_form.html.erb (0.5ms)
+I, [2015-08-28T00:57:00.065752 #4236]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (55.5ms)
+I, [2015-08-28T00:57:00.066625 #4236]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:57:00.106541 #4236] DEBUG -- :   [1m[36mGroup Load (39.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T00:57:00.151344 #4236] DEBUG -- :   [1m[35mGroup Load (42.9ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:57:00.194926 #4236] DEBUG -- :   [1m[36mGroup Exists (42.2ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T00:57:00.195569 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:57:00.196462 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:57:00.197522 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:57:00.197893 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:57:00.198492 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:57:00.199027 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:57:00.199315 #4236]  INFO -- :   Rendered layouts/_nav.html.erb (132.6ms)
+I, [2015-08-28T00:57:00.199533 #4236]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:57:00.199741 #4236]  INFO -- : Completed 200 OK in 287ms (Views: 14.1ms | ActiveRecord: 270.4ms)
+I, [2015-08-28T00:57:01.155216 #4236]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 00:57:01 -0700
+I, [2015-08-28T00:57:01.199004 #4236]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T00:57:01.199094 #4236]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:57:01.242276 #4236] DEBUG -- :   [1m[35mUser Load (42.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:57:01.287060 #4236] DEBUG -- :   [1m[36mPortfolio Load (44.1ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-28T00:57:01.334787 #4236] DEBUG -- :   [1m[35mInvestment Load (44.8ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+I, [2015-08-28T00:57:01.335868 #4236]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.5ms)
+I, [2015-08-28T00:57:01.336505 #4236]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.3ms)
+I, [2015-08-28T00:57:01.337344 #4236]  INFO -- :   Rendered investments/_table_form.html.erb (0.4ms)
+I, [2015-08-28T00:57:01.338409 #4236]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (49.5ms)
+I, [2015-08-28T00:57:01.339285 #4236]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:57:01.381237 #4236] DEBUG -- :   [1m[36mGroup Load (41.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T00:57:01.425727 #4236] DEBUG -- :   [1m[35mGroup Load (42.9ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T00:57:01.470461 #4236] DEBUG -- :   [1m[36mGroup Exists (43.4ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T00:57:01.471088 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:57:01.471853 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:57:01.473021 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:57:01.473353 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:57:01.474014 #4236] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:57:01.474571 #4236] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:57:01.474816 #4236]  INFO -- :   Rendered layouts/_nav.html.erb (135.4ms)
+I, [2015-08-28T00:57:01.475038 #4236]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:57:01.475240 #4236]  INFO -- : Completed 200 OK in 276ms (Views: 14.3ms | ActiveRecord: 259.0ms)
+I, [2015-08-28T00:57:07.140654 #4249]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 00:57:07 -0700
+I, [2015-08-28T00:57:07.458708 #4249]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T00:57:07.458771 #4249]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:57:07.552612 #4249] DEBUG -- :   [1m[36mUser Load (39.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:57:07.770700 #4249] DEBUG -- :   [1m[35mPortfolio Load (43.3ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T00:57:07.916360 #4249] DEBUG -- :   [1m[36mInvestment Load (39.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T00:57:07.919695 #4249]  INFO -- :   Rendered investments/_table_form.html.erb (1.2ms)
+I, [2015-08-28T00:57:07.920280 #4249]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:57:07.920843 #4249]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:57:08.099225 #4249]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (224.0ms)
+I, [2015-08-28T00:57:08.101352 #4249]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T00:57:08.185888 #4249] DEBUG -- :   [1m[35mGroup Load (42.1ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:57:08.319342 #4249] DEBUG -- :   [1m[36mGroup Load (41.8ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:57:08.362707 #4249] DEBUG -- :   [1m[35mGroup Exists (39.5ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:57:08.363453 #4249] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:57:08.364265 #4249] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:57:08.365362 #4249] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:57:08.365709 #4249] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:57:08.366296 #4249] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:57:08.366758 #4249] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:57:08.367062 #4249]  INFO -- :   Rendered layouts/_nav.html.erb (265.1ms)
+I, [2015-08-28T00:57:08.368491 #4249]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:57:08.368739 #4249]  INFO -- : Completed 200 OK in 910ms (Views: 211.7ms | ActiveRecord: 661.7ms)
+I, [2015-08-28T00:58:19.285793 #4276]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 00:58:19 -0700
+I, [2015-08-28T00:58:19.599410 #4276]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T00:58:19.599472 #4276]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:58:19.707478 #4276] DEBUG -- :   [1m[36mUser Load (40.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:58:19.922195 #4276] DEBUG -- :   [1m[35mPortfolio Load (42.5ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T00:58:20.067547 #4276] DEBUG -- :   [1m[36mInvestment Load (39.7ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T00:58:20.071142 #4276]  INFO -- :   Rendered investments/_table_form.html.erb (1.4ms)
+I, [2015-08-28T00:58:20.071770 #4276]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:58:20.072362 #4276]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:58:20.249730 #4276]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (224.4ms)
+I, [2015-08-28T00:58:20.251796 #4276]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-28T00:58:20.337344 #4276] DEBUG -- :   [1m[35mGroup Load (42.8ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:58:20.468570 #4276] DEBUG -- :   [1m[36mGroup Load (41.8ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:58:20.515190 #4276] DEBUG -- :   [1m[35mGroup Exists (40.9ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:58:20.515942 #4276] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:58:20.516719 #4276] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:58:20.517803 #4276] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:58:20.518206 #4276] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:58:20.518821 #4276] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:58:20.519303 #4276] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:58:20.519600 #4276]  INFO -- :   Rendered layouts/_nav.html.erb (267.2ms)
+I, [2015-08-28T00:58:20.521038 #4276]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:58:20.521274 #4276]  INFO -- : Completed 200 OK in 922ms (Views: 215.6ms | ActiveRecord: 670.8ms)
+I, [2015-08-28T00:58:22.304444 #4276]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 00:58:22 -0700
+I, [2015-08-28T00:58:22.347741 #4276]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T00:58:22.347831 #4276]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:58:22.392309 #4276] DEBUG -- :   [1m[36mUser Load (43.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:58:22.435544 #4276] DEBUG -- :   [1m[35mPortfolio Load (41.6ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T00:58:22.478808 #4276] DEBUG -- :   [1m[36mInvestment Load (40.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T00:58:22.480165 #4276]  INFO -- :   Rendered investments/_table_form.html.erb (0.7ms)
+I, [2015-08-28T00:58:22.480988 #4276]  INFO -- :   Rendered investments/_table_form.html.erb (0.4ms)
+I, [2015-08-28T00:58:22.481768 #4276]  INFO -- :   Rendered investments/_table_form.html.erb (0.5ms)
+I, [2015-08-28T00:58:22.482593 #4276]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (45.1ms)
+I, [2015-08-28T00:58:22.483475 #4276]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T00:58:22.523698 #4276] DEBUG -- :   [1m[35mGroup Load (39.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:58:22.567418 #4276] DEBUG -- :   [1m[36mGroup Load (41.8ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:58:22.611282 #4276] DEBUG -- :   [1m[35mGroup Exists (42.6ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:58:22.611971 #4276] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:58:22.612709 #4276] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:58:22.613713 #4276] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:58:22.614042 #4276] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:58:22.614581 #4276] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:58:22.615054 #4276] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:58:22.615298 #4276]  INFO -- :   Rendered layouts/_nav.html.erb (131.7ms)
+I, [2015-08-28T00:58:22.615511 #4276]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T00:58:22.615700 #4276]  INFO -- : Completed 200 OK in 268ms (Views: 14.5ms | ActiveRecord: 249.0ms)
+I, [2015-08-28T00:58:54.053295 #4311]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 00:58:54 -0700
+I, [2015-08-28T00:58:54.370459 #4311]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T00:58:54.370520 #4311]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T00:58:54.459890 #4311] DEBUG -- :   [1m[36mUser Load (39.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:58:54.685395 #4311] DEBUG -- :   [1m[35mPortfolio Load (43.3ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T00:58:54.828492 #4311] DEBUG -- :   [1m[36mInvestment Load (38.6ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T00:58:54.832129 #4311]  INFO -- :   Rendered investments/_table_form.html.erb (1.4ms)
+I, [2015-08-28T00:58:54.832762 #4311]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:58:54.833299 #4311]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T00:58:55.004374 #4311]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (216.7ms)
+I, [2015-08-28T00:58:55.006463 #4311]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-28T00:58:55.136602 #4311] DEBUG -- :   [1m[35mGroup Load (42.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T00:58:55.269345 #4311] DEBUG -- :   [1m[36mGroup Load (41.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T00:58:55.314125 #4311] DEBUG -- :   [1m[35mGroup Exists (39.1ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T00:58:55.314847 #4311] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T00:58:55.315664 #4311] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T00:58:55.316726 #4311] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T00:58:55.317097 #4311] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T00:58:55.317634 #4311] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T00:58:55.318109 #4311] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T00:58:55.318369 #4311]  INFO -- :   Rendered layouts/_nav.html.erb (311.3ms)
+I, [2015-08-28T00:58:55.319817 #4311]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T00:58:55.320051 #4311]  INFO -- : Completed 200 OK in 949ms (Views: 208.6ms | ActiveRecord: 705.6ms)
+I, [2015-08-28T01:01:00.835814 #4311]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-28 01:01:00 -0700
+I, [2015-08-28T01:01:00.878835 #4311]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-08-28T01:01:00.997892 #4311]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (3.2ms)
+I, [2015-08-28T01:01:00.998573 #4311]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-28T01:01:00.998773 #4311]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-28T01:01:00.998930 #4311]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T01:01:00.999093 #4311]  INFO -- : Completed 200 OK in 120ms (Views: 9.3ms | ActiveRecord: 105.7ms)
+I, [2015-08-28T01:01:58.521511 #4391]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 01:01:58 -0700
+I, [2015-08-28T01:01:58.834488 #4391]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T01:01:58.834553 #4391]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:01:58.930402 #4391] DEBUG -- :   [1m[36mUser Load (42.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:01:59.148292 #4391] DEBUG -- :   [1m[35mPortfolio Load (44.7ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T01:01:59.294650 #4391] DEBUG -- :   [1m[36mInvestment Load (41.4ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T01:01:59.298194 #4391]  INFO -- :   Rendered investments/_table_form.html.erb (1.4ms)
+I, [2015-08-28T01:01:59.298817 #4391]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:01:59.299381 #4391]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:01:59.484885 #4391]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (234.1ms)
+I, [2015-08-28T01:01:59.487096 #4391]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-28T01:01:59.618632 #4391] DEBUG -- :   [1m[35mGroup Load (41.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T01:01:59.754937 #4391] DEBUG -- :   [1m[36mGroup Load (42.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:01:59.800167 #4391] DEBUG -- :   [1m[35mGroup Exists (39.5ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T01:01:59.800901 #4391] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:01:59.801735 #4391] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:01:59.802854 #4391] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:01:59.803240 #4391] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:01:59.803876 #4391] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:01:59.804387 #4391] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:01:59.804653 #4391]  INFO -- :   Rendered layouts/_nav.html.erb (316.9ms)
+I, [2015-08-28T01:01:59.806132 #4391]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T01:01:59.806378 #4391]  INFO -- : Completed 200 OK in 972ms (Views: 224.1ms | ActiveRecord: 711.2ms)
+I, [2015-08-28T01:02:00.941730 #4391]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 01:02:00 -0700
+I, [2015-08-28T01:02:00.984530 #4391]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T01:02:00.984620 #4391]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:02:01.027755 #4391] DEBUG -- :   [1m[36mUser Load (42.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:02:01.067878 #4391] DEBUG -- :   [1m[35mPortfolio Load (39.4ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T01:02:01.112119 #4391] DEBUG -- :   [1m[36mInvestment Load (40.9ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T01:02:01.113442 #4391]  INFO -- :   Rendered investments/_table_form.html.erb (0.7ms)
+I, [2015-08-28T01:02:01.114287 #4391]  INFO -- :   Rendered investments/_table_form.html.erb (0.5ms)
+I, [2015-08-28T01:02:01.115091 #4391]  INFO -- :   Rendered investments/_table_form.html.erb (0.4ms)
+I, [2015-08-28T01:02:01.116089 #4391]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (46.2ms)
+I, [2015-08-28T01:02:01.117008 #4391]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T01:02:01.164002 #4391] DEBUG -- :   [1m[35mGroup Load (46.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T01:02:01.208240 #4391] DEBUG -- :   [1m[36mGroup Load (42.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:02:01.249986 #4391] DEBUG -- :   [1m[35mGroup Exists (40.4ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T01:02:01.250623 #4391] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:02:01.251349 #4391] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:02:01.252525 #4391] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:02:01.252930 #4391] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:02:01.253560 #4391] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:02:01.254105 #4391] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:02:01.254375 #4391]  INFO -- :   Rendered layouts/_nav.html.erb (137.2ms)
+I, [2015-08-28T01:02:01.254601 #4391]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T01:02:01.254790 #4391]  INFO -- : Completed 200 OK in 270ms (Views: 14.9ms | ActiveRecord: 252.0ms)
+I, [2015-08-28T01:02:08.343247 #4398]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 01:02:08 -0700
+I, [2015-08-28T01:02:08.579672 #4398]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T01:02:08.579736 #4398]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:02:08.671871 #4398] DEBUG -- :   [1m[36mUser Load (39.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:02:08.892915 #4398] DEBUG -- :   [1m[35mPortfolio Load (42.8ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T01:02:09.040994 #4398] DEBUG -- :   [1m[36mInvestment Load (41.3ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T01:02:09.044445 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (1.3ms)
+I, [2015-08-28T01:02:09.045030 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:02:09.045598 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:02:09.223443 #4398]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (226.0ms)
+I, [2015-08-28T01:02:09.225597 #4398]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-28T01:02:09.306826 #4398] DEBUG -- :   [1m[35mGroup Load (38.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T01:02:09.454662 #4398] DEBUG -- :   [1m[36mGroup Load (56.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:02:09.507558 #4398] DEBUG -- :   [1m[35mGroup Exists (47.2ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T01:02:09.508336 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:02:09.509091 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:02:09.510192 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:02:09.510543 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:02:09.511174 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:02:09.511656 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:02:09.511913 #4398]  INFO -- :   Rendered layouts/_nav.html.erb (285.7ms)
+I, [2015-08-28T01:02:09.513362 #4398]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T01:02:09.513604 #4398]  INFO -- : Completed 200 OK in 934ms (Views: 215.6ms | ActiveRecord: 682.4ms)
+I, [2015-08-28T01:04:23.932013 #4398]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 01:04:23 -0700
+I, [2015-08-28T01:04:23.975794 #4398]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T01:04:23.975882 #4398]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:04:24.020960 #4398] DEBUG -- :   [1m[36mUser Load (44.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:04:24.061995 #4398] DEBUG -- :   [1m[35mPortfolio Load (40.6ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T01:04:24.105415 #4398] DEBUG -- :   [1m[36mInvestment Load (41.4ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T01:04:24.106247 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (0.4ms)
+I, [2015-08-28T01:04:24.106727 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:04:24.107157 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (0.2ms)
+I, [2015-08-28T01:04:24.107797 #4398]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (44.5ms)
+I, [2015-08-28T01:04:24.108473 #4398]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T01:04:24.151223 #4398] DEBUG -- :   [1m[35mGroup Load (42.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T01:04:24.193888 #4398] DEBUG -- :   [1m[36mGroup Load (41.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:04:24.238238 #4398] DEBUG -- :   [1m[35mGroup Exists (43.5ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T01:04:24.238787 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:04:24.239395 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:04:24.240209 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:04:24.240687 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:04:24.241356 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:04:24.241977 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:04:24.242386 #4398]  INFO -- :   Rendered layouts/_nav.html.erb (133.8ms)
+I, [2015-08-28T01:04:24.242628 #4398]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T01:04:24.242802 #4398]  INFO -- : Completed 200 OK in 267ms (Views: 10.9ms | ActiveRecord: 253.6ms)
+I, [2015-08-28T01:04:25.554538 #4398]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 01:04:25 -0700
+I, [2015-08-28T01:04:25.597311 #4398]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T01:04:25.597403 #4398]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:04:25.643695 #4398] DEBUG -- :   [1m[36mUser Load (45.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:04:25.688432 #4398] DEBUG -- :   [1m[35mPortfolio Load (44.1ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T01:04:25.732617 #4398] DEBUG -- :   [1m[36mInvestment Load (40.9ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T01:04:25.733858 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T01:04:25.734671 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (0.5ms)
+I, [2015-08-28T01:04:25.735485 #4398]  INFO -- :   Rendered investments/_table_form.html.erb (0.5ms)
+I, [2015-08-28T01:04:25.736350 #4398]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (46.0ms)
+I, [2015-08-28T01:04:25.738405 #4398]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T01:04:25.778007 #4398] DEBUG -- :   [1m[35mGroup Load (39.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T01:04:25.821598 #4398] DEBUG -- :   [1m[36mGroup Load (41.8ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:04:25.868984 #4398] DEBUG -- :   [1m[35mGroup Exists (46.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T01:04:25.869596 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:04:25.870320 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:04:25.871374 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:04:25.871715 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:04:25.872376 #4398] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:04:25.872919 #4398] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:04:25.873191 #4398]  INFO -- :   Rendered layouts/_nav.html.erb (134.7ms)
+I, [2015-08-28T01:04:25.873391 #4398]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T01:04:25.873574 #4398]  INFO -- : Completed 200 OK in 276ms (Views: 15.8ms | ActiveRecord: 257.4ms)
+I, [2015-08-28T01:04:38.731773 #4477]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 01:04:38 -0700
+I, [2015-08-28T01:04:39.030926 #4477]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T01:04:39.030991 #4477]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:04:39.134133 #4477] DEBUG -- :   [1m[36mUser Load (39.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:04:39.351724 #4477] DEBUG -- :   [1m[35mPortfolio Load (46.0ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T01:04:39.495492 #4477] DEBUG -- :   [1m[36mInvestment Load (42.3ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T01:04:39.498935 #4477]  INFO -- :   Rendered investments/_table_form.html.erb (1.3ms)
+I, [2015-08-28T01:04:39.499536 #4477]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:04:39.500046 #4477]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:04:39.695156 #4477]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (244.2ms)
+I, [2015-08-28T01:04:39.697547 #4477]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-28T01:04:39.783893 #4477] DEBUG -- :   [1m[35mGroup Load (42.9ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T01:04:39.916392 #4477] DEBUG -- :   [1m[36mGroup Load (40.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:04:39.964560 #4477] DEBUG -- :   [1m[35mGroup Exists (41.6ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T01:04:39.965408 #4477] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:04:39.966239 #4477] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:04:39.967298 #4477] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:04:39.967644 #4477] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:04:39.968276 #4477] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:04:39.968757 #4477] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:04:39.969007 #4477]  INFO -- :   Rendered layouts/_nav.html.erb (270.8ms)
+I, [2015-08-28T01:04:39.970406 #4477]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T01:04:39.970641 #4477]  INFO -- : Completed 200 OK in 940ms (Views: 233.7ms | ActiveRecord: 668.8ms)
+I, [2015-08-28T01:05:19.354880 #4516]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 01:05:19 -0700
+I, [2015-08-28T01:05:19.667479 #4516]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T01:05:19.667543 #4516]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:05:19.757899 #4516] DEBUG -- :   [1m[36mUser Load (38.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:05:19.987609 #4516] DEBUG -- :   [1m[35mPortfolio Load (43.1ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-08-28T01:05:20.134744 #4516] DEBUG -- :   [1m[36mInvestment Load (41.2ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+I, [2015-08-28T01:05:20.138143 #4516]  INFO -- :   Rendered investments/_table_form.html.erb (1.2ms)
+I, [2015-08-28T01:05:20.138732 #4516]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:05:20.139254 #4516]  INFO -- :   Rendered investments/_table_form.html.erb (0.3ms)
+I, [2015-08-28T01:05:20.315487 #4516]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (224.1ms)
+I, [2015-08-28T01:05:20.317580 #4516]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-28T01:05:20.453686 #4516] DEBUG -- :   [1m[35mGroup Load (43.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T01:05:20.583507 #4516] DEBUG -- :   [1m[36mGroup Load (41.9ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:05:20.627959 #4516] DEBUG -- :   [1m[35mGroup Exists (38.9ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T01:05:20.628730 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:05:20.629459 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:05:20.630583 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:05:20.630943 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:05:20.631565 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:05:20.632043 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:05:20.632296 #4516]  INFO -- :   Rendered layouts/_nav.html.erb (314.1ms)
+I, [2015-08-28T01:05:20.633715 #4516]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-28T01:05:20.633943 #4516]  INFO -- : Completed 200 OK in 966ms (Views: 213.4ms | ActiveRecord: 717.7ms)
+I, [2015-08-28T01:05:28.348560 #4516]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-28 01:05:28 -0700
+I, [2015-08-28T01:05:28.391488 #4516]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-08-28T01:05:28.440849 #4516] DEBUG -- :   [1m[36mUser Load (48.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T01:05:28.445530 #4516]  INFO -- :   Rendered shared/_notice.html.erb (0.4ms)
+D, [2015-08-28T01:05:28.484355 #4516] DEBUG -- :   [1m[35mPortfolio Load (38.4ms)[0m  SELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` = 1
+I, [2015-08-28T01:05:28.485397 #4516]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (41.9ms)
+I, [2015-08-28T01:05:28.486935 #4516]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T01:05:28.527748 #4516] DEBUG -- :   [1m[36mGroup Load (40.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T01:05:28.572901 #4516] DEBUG -- :   [1m[35mGroup Load (43.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T01:05:28.618358 #4516] DEBUG -- :   [1m[36mGroup Exists (44.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T01:05:28.619026 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:05:28.619828 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:05:28.620867 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:05:28.621178 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:05:28.621545 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:05:28.622052 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:05:28.622300 #4516]  INFO -- :   Rendered layouts/_nav.html.erb (135.2ms)
+I, [2015-08-28T01:05:28.622572 #4516]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T01:05:28.622758 #4516]  INFO -- : Completed 200 OK in 231ms (Views: 14.9ms | ActiveRecord: 214.8ms)
+I, [2015-08-28T01:05:32.666301 #4516]  INFO -- : Started GET "/portfolios/2/edit" for 127.0.0.1 at 2015-08-28 01:05:32 -0700
+I, [2015-08-28T01:05:32.709541 #4516]  INFO -- : Processing by PortfoliosController#edit as HTML
+I, [2015-08-28T01:05:32.709607 #4516]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:05:32.755029 #4516] DEBUG -- :   [1m[35mUser Load (44.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-28T01:05:32.805714 #4516] DEBUG -- :   [1m[36mPortfolio Load (50.0ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-28T01:05:32.850827 #4516] DEBUG -- :   [1m[35mInvestment Load (41.9ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+I, [2015-08-28T01:05:32.852033 #4516]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-28T01:05:32.852874 #4516]  INFO -- :   Rendered investments/_table_form.html.erb (0.4ms)
+I, [2015-08-28T01:05:32.853690 #4516]  INFO -- :   Rendered investments/_table_form.html.erb (0.5ms)
+I, [2015-08-28T01:05:32.854710 #4516]  INFO -- :   Rendered portfolios/edit.html.erb within layouts/application (47.1ms)
+I, [2015-08-28T01:05:32.855555 #4516]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T01:05:32.901554 #4516] DEBUG -- :   [1m[36mGroup Load (45.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T01:05:32.942917 #4516] DEBUG -- :   [1m[35mGroup Load (39.8ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T01:05:32.986983 #4516] DEBUG -- :   [1m[36mGroup Exists (42.7ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T01:05:32.987734 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:05:32.988869 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:05:32.990028 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:05:32.990389 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:05:32.990980 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:05:32.992010 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:05:32.992526 #4516]  INFO -- :   Rendered layouts/_nav.html.erb (136.8ms)
+I, [2015-08-28T01:05:32.992747 #4516]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T01:05:32.992949 #4516]  INFO -- : Completed 200 OK in 283ms (Views: 15.9ms | ActiveRecord: 264.6ms)
+I, [2015-08-28T01:05:34.947864 #4516]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-28 01:05:34 -0700
+I, [2015-08-28T01:05:34.990455 #4516]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-28T01:05:34.990517 #4516]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-28T01:05:35.031434 #4516] DEBUG -- :   [1m[35mUser Load (40.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-28T01:05:35.070938 #4516] DEBUG -- :   [1m[36mPortfolio Load (38.9ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-28T01:05:35.115716 #4516] DEBUG -- :   [1m[35mInvestment Load (41.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-28T01:05:35.205671 #4516] DEBUG -- :   [1m[36mMutualFund Load (44.6ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-28T01:05:35.254042 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-28T01:05:35.294044 #4516] DEBUG -- :   [1m[36mInvestment Load (39.2ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-28T01:05:35.294635 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-28T01:05:35.295827 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m  [["portfolio_id", 2]]
+D, [2015-08-28T01:05:35.296129 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-28T01:05:35.296512 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-28T01:05:35.297408 #4516]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (223.8ms)
+I, [2015-08-28T01:05:35.298512 #4516]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T01:05:35.339689 #4516] DEBUG -- :   [1m[35mGroup Load (40.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-28T01:05:35.383985 #4516] DEBUG -- :   [1m[36mGroup Load (42.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+D, [2015-08-28T01:05:35.428277 #4516] DEBUG -- :   [1m[35mGroup Exists (42.9ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+D, [2015-08-28T01:05:35.428896 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:05:35.429679 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:05:35.430691 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:05:35.431030 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:05:35.431660 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:05:35.432174 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:05:35.432444 #4516]  INFO -- :   Rendered layouts/_nav.html.erb (133.8ms)
+I, [2015-08-28T01:05:35.432654 #4516]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T01:05:35.432886 #4516]  INFO -- : Completed 200 OK in 442ms (Views: 24.0ms | ActiveRecord: 416.1ms)
+I, [2015-08-28T01:05:40.207658 #4516]  INFO -- : Started GET "/mutual_funds" for 127.0.0.1 at 2015-08-28 01:05:40 -0700
+I, [2015-08-28T01:05:40.251535 #4516]  INFO -- : Processing by MutualFundsController#index as HTML
+D, [2015-08-28T01:05:40.294639 #4516] DEBUG -- :   [1m[36mUser Load (42.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-28T01:05:40.300404 #4516]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-08-28T01:05:40.340638 #4516] DEBUG -- :   [1m[35mMutualFund Load (39.8ms)[0m  SELECT `mutual_funds`.* FROM `mutual_funds`
+I, [2015-08-28T01:05:40.343893 #4516]  INFO -- :   Rendered mutual_funds/index.html.erb within layouts/application (44.1ms)
+I, [2015-08-28T01:05:40.344914 #4516]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-28T01:05:40.386638 #4516] DEBUG -- :   [1m[36mGroup Load (41.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-28T01:05:40.431528 #4516] DEBUG -- :   [1m[35mGroup Load (43.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-28T01:05:40.475223 #4516] DEBUG -- :   [1m[36mGroup Exists (42.4ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+D, [2015-08-28T01:05:40.475908 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-28T01:05:40.476603 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-28T01:05:40.477615 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+D, [2015-08-28T01:05:40.477906 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-28T01:05:40.478258 #4516] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-28T01:05:40.478728 #4516] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+I, [2015-08-28T01:05:40.479015 #4516]  INFO -- :   Rendered layouts/_nav.html.erb (134.0ms)
+I, [2015-08-28T01:05:40.479238 #4516]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-28T01:05:40.479436 #4516]  INFO -- : Completed 200 OK in 228ms (Views: 17.5ms | ActiveRecord: 208.9ms)

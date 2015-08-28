@@ -1,0 +1,32 @@
+<% provide(:title, 'Input Data') %>
+<h1>Create Portfolio</h1>
+<%= form_for @portfolio do |f| %>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="col-md-3 col-sm-5 col-xs-8">
+        <%= label_tag('Nickname', 'Nickname') %>
+        <%= f.text_field :nickname, placeholder: '', class: 'form-control' %> <br>
+        <%= label_tag('ManagementFee', 'Management Fee') %>
+        <%= f.text_field :management_fee, placeholder: 'XX.XX%', class: 'form-control' %> <br>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-md-8 col-sm-8 col-xs-8">
+        <h3>Investments</h3>
+        <table style="margin-bottom: 6px">
+          <thead>
+          <tr>
+            <td>Ticker Symbol</td>
+            <td>Shares</td>
+            <td>Remove Investment</td>
+          </tr>
+          </thead>
+          <%= f.fields_for :investments do |builder| %>
+              <%= render 'investments/table_form', f: builder  %>
+          <% end %>
+        </table>
+        <%= add_investment 'Add Investment', f, :investments %>
+      </div>
+      <div class="clearfix"></div>
+      <br>
+      <%= f.submit class: 'btn btn-default'  %>
+    </div>
+<% end %>

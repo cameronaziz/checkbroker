@@ -5,6 +5,7 @@
  */
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
 html {
   font-family: 'Lato', sans-serif;
   -ms-text-size-adjust: 100%;
@@ -3323,7 +3324,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #339999;
 }
 .navbar-default .navbar-brand {
-  color: #339999;
+  color: #777777;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {

@@ -35,11 +35,13 @@ class PortfoliosController < ApplicationController
 
 
   def edit
-
+    @investments = @portfolio.investments.build
   end
 
   def destroy
-
+    deleted_portfolio = @portfolio.nickname
+    @portfolio.destroy
+    redirect_to portfolios_url, notice: "#{deleted_portfolio} was successfully deleted."
   end
 
 private
