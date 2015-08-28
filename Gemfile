@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass'
 gem 'faker'
 gem 'google_directions'
 gem 'jquery-turbolinks'
