@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass'
 gem 'faker'
 gem 'google_directions'
 gem 'jquery-turbolinks'
@@ -15,7 +15,6 @@ gem "font-awesome-rails"
 
 #date time picker
 
-gem 'bootstrap-datepicker-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
