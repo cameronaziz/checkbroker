@@ -1,0 +1,248 @@
+/* Slider */
+/* line 3, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 5, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-list:focus {
+  outline: none;
+}
+
+/* line 7, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-loading .slick-list {
+  background: white url(/assets/ajax-loader-aebc793d0064383ee6b1625bf3bb32532ec30a5c12bf9117066107d412119123.gif) center no-repeat;
+}
+
+/* line 8, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 10, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 12, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  zoom: 1;
+}
+
+/* line 13, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+/* line 14, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-track:after {
+  clear: both;
+}
+
+/* line 15, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 17, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+/* line 18, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-slide img {
+  display: block;
+}
+
+/* line 19, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+/* line 20, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+/* line 21, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* line 22, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+/* line 23, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* Arrows */
+/* line 26, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-prev, .slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0;
+  font-size: 0;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* line 27, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-prev:focus, .slick-next:focus {
+  outline: none;
+}
+
+/* line 28, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+/* line 30, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-prev:before, .slick-next:before {
+  font-family: FontAwesome;
+  font-size: 40px;
+  line-height: 1;
+  color: #ccc;
+  opacity: 0.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 32, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-prev {
+  left: -25px;
+}
+
+/* line 33, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-prev:before {
+  content: "\f137";
+}
+
+/* line 35, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-next {
+  right: -25px;
+}
+
+/* line 36, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-next:before {
+  content: "\f138";
+}
+
+/* Dots */
+/* line 39, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-slider {
+  margin-bottom: 30px;
+}
+
+/* line 41, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0px;
+  width: 100%;
+}
+
+/* line 42, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0px 5px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+/* line 43, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 44, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-dots li button:focus {
+  outline: none;
+}
+
+/* line 45, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\2022";
+  width: 20px;
+  height: 20px;
+  font-family: FontAwesome;
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 46, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/slick.css.scss */
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+}
