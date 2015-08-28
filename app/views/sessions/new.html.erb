@@ -1,6 +1,9 @@
 <%= form_for :session, url: login_path, html: {class:'form-signin'} do |f| %>
-    <h2 class="form-signin-heading">Login to <br><%= SITENAME %></h2>
-    <%= render partial: 'shared/alert' %>
+    <div align="center">
+        <h2 style="color: #66cc99" class="form-signin-heading">Login to <br>
+        <%= image_tag 'logo-green.png' %></h2>
+        <%= render partial: 'shared/alert' %>
+    </div>
     <div class="form-group">
       <%= f.label :username, class: 'sr-only'%>
       <%= f.text_field :username,autofocus: true, class:'form-control input-lg top-input', placeholder: 'Username or Email' %>
@@ -11,9 +14,8 @@
         <%= f.label :remember_me %>
       </div>
     </div>
-    <%= f.submit 'Log in', class:'btn btn-lg btn-primary btn-block' %>
+    <%= f.submit 'Log in', class:'btn btn-lg btn-success btn-block' %>
     <div align="center">
-      <%= link_to 'Create User Account', register_path %> <br/>
-      Need help? Email: info@lucentdigital.com
+      <%= link_to 'Create User Account', register_path, class: 'btn btn-lg btn-primary btn-block' %> <br/>
     </div>
 <% end %>
