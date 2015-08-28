@@ -4,6 +4,9 @@ class StaticPagesController < ApplicationController
 
 
   def index
+    if logged_in?
+      @user = User.find(session[:user_id])
+    end
     @suggestion = Suggestion.new
   end
 

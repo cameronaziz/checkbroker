@@ -1,0 +1,371 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 01:35:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (132.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (113.9ms)
+  Rendered layouts/_shiv.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+  Rendered layouts/_dev.html.erb (1.3ms)
+Completed 200 OK in 569ms (Views: 231.6ms | ActiveRecord: 320.2ms)
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-28 01:35:36 -0700
+
+
+Started GET "/assets/eco/eco.self-bd4878d51a3904c830ac23b87c1cf566c97137dec59654d4809e6d15f8c989a8.css?body=1" for 127.0.0.1 at 2015-08-28 01:35:36 -0700
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-28 01:35:38 -0700
+Processing by SessionsController#new as HTML
+  Rendered shared/_alert.html.erb (0.6ms)
+  Rendered sessions/new.html.erb within layouts/application (256.3ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.1ms)
+  Rendered layouts/_dev.html.erb (0.3ms)
+Completed 200 OK in 337ms (Views: 335.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-28 01:35:44 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K69xH88+FmMz+8xgwYjx+GnjTh3jrQEDXdsPt/IFKhh82WOcB4Y6NwN9Iqpt56tSuQ3SzlUsibEdr0rM/TF9uw==", "session"=>{"username"=>"cameron.aziz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (44.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`username` = 'cameron.aziz' LIMIT 1
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 207ms (ActiveRecord: 125.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2015-08-28 01:35:45 -0700
+Processing by StaticPagesController#profile as HTML
+  [1m[36mUser Load (41.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered static_pages/profile.erb within layouts/application (0.4ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[35mGroup Load (43.8ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[36mGroup Load (39.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  [1m[35mGroup Exists (41.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+  Rendered layouts/_nav.html.erb (287.8ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 389ms (Views: 104.8ms | ActiveRecord: 282.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 01:35:51 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (44.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered static_pages/index.html.erb within layouts/application (21.0ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.1ms)
+  Rendered layouts/_dev.html.erb (0.3ms)
+Completed 200 OK in 125ms (Views: 77.5ms | ActiveRecord: 44.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (43.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered static_pages/index.html.erb within layouts/application (23.1ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.1ms)
+  Rendered layouts/_dev.html.erb (0.3ms)
+Completed 200 OK in 129ms (Views: 83.6ms | ActiveRecord: 43.1ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:18 -0700
+
+
+Started GET "/assets/eco/placeholdem.min.self-39a89c2932e07a12cb5cfc1a01b614e9080790aed20f933764adc4d123528358.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/assets/eco/rs-plugin/js/jquery.themepunch.revolution.min.self-fa29d965b10a6ec9eaac41d017d4bb6c2bea7c1de791863b031788709fdd894c.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/assets/eco/eco.self-bd4878d51a3904c830ac23b87c1cf566c97137dec59654d4809e6d15f8c989a8.css?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/assets/eco/slick.min.self-3bf5fd13d08a9644dae8752017bed7ee4dd30403a2683d7baa1c72c47cc071e1.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/assets/eco/rs-plugin/js/jquery.themepunch.plugins.min.self-8b0754d8d6483b664b0e6589c61521c7761f656f3008af13e130bfc19940c019.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/assets/eco/scripts.self-0ac3074b783e788b0a053ed02fc4a2084551207eb377b6b725a3ccc32f411753.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/assets/eco/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for 127.0.0.1 at 2015-08-28 01:36:19 -0700
+
+
+Started GET "/profile" for 127.0.0.1 at 2015-08-28 01:36:25 -0700
+Processing by StaticPagesController#profile as HTML
+  [1m[36mUser Load (42.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered static_pages/profile.erb within layouts/application (0.0ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[35mGroup Load (47.7ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[36mGroup Load (42.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  [1m[35mGroup Exists (42.1ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+  Rendered layouts/_nav.html.erb (139.7ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 239ms (Views: 63.6ms | ActiveRecord: 174.7ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2015-08-28 01:37:06 -0700
+Processing by StaticPagesController#profile as HTML
+  [1m[36mUser Load (42.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered static_pages/profile.erb within layouts/application (0.0ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[35mGroup Load (39.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[36mGroup Load (41.9ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  [1m[35mGroup Exists (42.8ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+  Rendered layouts/_nav.html.erb (132.0ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 230ms (Views: 61.7ms | ActiveRecord: 167.1ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2015-08-28 01:37:07 -0700
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (38.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_notice.html.erb (0.3ms)
+  [1m[35mPortfolio Load (41.0ms)[0m  SELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` = 1
+  Rendered portfolios/index.html.erb within layouts/application (88.9ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (39.8ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[35mGroup Load (41.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+  [1m[36mGroup Exists (42.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1  [["user_id", 1], ["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from block in authenticate_group at /Users/cameronaziz/Development/checkbroker/app/helpers/sessions_helper.rb:68)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1 AND `groups`.`id` = 1[0m  [["user_id", 1], ["id", 1]]
+  Rendered layouts/_nav.html.erb (132.0ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 405ms (Views: 77.5ms | ActiveRecord: 321.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 01:37:08 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (39.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/index.html.erb within layouts/application (33.9ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.2ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 169ms (Views: 118.9ms | ActiveRecord: 39.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 01:37:08 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (42.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/index.html.erb within layouts/application (29.6ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.3ms)
+  Rendered layouts/_dev.html.erb (0.3ms)
+Completed 200 OK in 144ms (Views: 100.3ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-28 01:37:15 -0700
+Processing by SessionsController#new as HTML
+  Rendered shared/_alert.html.erb (0.1ms)
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.1ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (40.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/index.html.erb within layouts/application (28.7ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.2ms)
+  Rendered layouts/_dev.html.erb (0.7ms)
+Completed 200 OK in 145ms (Views: 102.1ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/placeholdem.min.self-39a89c2932e07a12cb5cfc1a01b614e9080790aed20f933764adc4d123528358.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/rs-plugin/js/jquery.themepunch.revolution.min.self-fa29d965b10a6ec9eaac41d017d4bb6c2bea7c1de791863b031788709fdd894c.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/eco.self-bd4878d51a3904c830ac23b87c1cf566c97137dec59654d4809e6d15f8c989a8.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/slick.min.self-3bf5fd13d08a9644dae8752017bed7ee4dd30403a2683d7baa1c72c47cc071e1.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:05 -0700
+
+
+Started GET "/assets/eco/rs-plugin/js/jquery.themepunch.plugins.min.self-8b0754d8d6483b664b0e6589c61521c7761f656f3008af13e130bfc19940c019.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:06 -0700
+
+
+Started GET "/assets/eco/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:06 -0700
+
+
+Started GET "/assets/eco/scripts.self-0ac3074b783e788b0a053ed02fc4a2084551207eb377b6b725a3ccc32f411753.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:06 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-28 01:38:37 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (39.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered static_pages/index.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.2ms)
+  Rendered layouts/_dev.html.erb (0.9ms)
+Completed 200 OK in 129ms (Views: 86.6ms | ActiveRecord: 39.4ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:37 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/placeholdem.min.self-39a89c2932e07a12cb5cfc1a01b614e9080790aed20f933764adc4d123528358.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/rs-plugin/js/jquery.themepunch.revolution.min.self-fa29d965b10a6ec9eaac41d017d4bb6c2bea7c1de791863b031788709fdd894c.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/eco.self-bd4878d51a3904c830ac23b87c1cf566c97137dec59654d4809e6d15f8c989a8.css?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/slick.min.self-3bf5fd13d08a9644dae8752017bed7ee4dd30403a2683d7baa1c72c47cc071e1.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/rs-plugin/js/jquery.themepunch.plugins.min.self-8b0754d8d6483b664b0e6589c61521c7761f656f3008af13e130bfc19940c019.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700
+
+
+Started GET "/assets/eco/scripts.self-0ac3074b783e788b0a053ed02fc4a2084551207eb377b6b725a3ccc32f411753.js?body=1" for 127.0.0.1 at 2015-08-28 01:38:38 -0700

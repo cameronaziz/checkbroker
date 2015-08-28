@@ -25,8 +25,12 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">about</a></li>
         <li><a href="#reviews">reviews</a></li>
-        <li><%= link_to 'sign up', register_path, class: 'getApp' %></li>
-        <li><%= link_to 'login', login_path %></li>
+        <% if logged_in? %>
+            <li><%= link_to @user.full_name + ' Profile', profile_path, class: 'getApp' %></li>
+        <% else %>
+            <li><%= link_to 'sign up', register_path, class: 'getApp' %></li>
+            <li><%= link_to 'login', login_path %></li>
+        <% end %>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -71,12 +75,14 @@
         <div class="tp-caption large_white_light sfb" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
           Investment Management
         </div>
+        <% unless logged_in? %>
         <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
           <a href="/login" class="btn btn-primary inverse btn-lg">LOGIN</a>
         </div>
         <div class="tp-caption sfr hidden-xs" data-x="670" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
           <a href="/register" class="btn btn-default btn-lg">SIGNUP</a>
         </div>
+            <% end %>
       </li>
       <!-- SLIDE 2 -->
       <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" >
@@ -140,9 +146,11 @@
         <div class="tp-caption small_light_white sfb hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="80" data-speed="1000" data-start="1600" data-easing="Power4.easeOut">
           <p>Make sure that youre not overcharged for fees. <br> Ensure your broker follows the rules. <br>It is your money.</p>
         </div>
-        <div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1800" data-easing="Power4.easeOut">
+        <% unless logged_in? %>
+      <div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1800" data-easing="Power4.easeOut">
           <a href="#" class="btn btn-primary inverse btn-lg">Signup</a>
         </div>
+            <% end %>
       </li>
     </ul>
   </div>
