@@ -42847,3 +42847,31 @@ I, [2015-08-27T22:21:31.951952 #8350]  INFO -- :   Rendered layouts/_shiv.html.e
 I, [2015-08-27T22:21:31.953169 #8350]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
 I, [2015-08-27T22:21:31.954044 #8350]  INFO -- :   Rendered layouts/_dev.html.erb (0.2ms)
 I, [2015-08-27T22:21:31.954216 #8350]  INFO -- : Completed 200 OK in 145ms (Views: 12.5ms | ActiveRecord: 119.8ms)
+I, [2015-08-27T22:34:41.232157 #9022]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-27 22:34:41 -0700
+I, [2015-08-27T22:34:41.903533 #9022]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-08-27T22:34:42.048657 #9022]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (3.1ms)
+I, [2015-08-27T22:34:42.050451 #9022]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-08-27T22:34:42.051834 #9022]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-08-27T22:34:42.052875 #9022]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-27T22:34:42.053101 #9022]  INFO -- : Completed 200 OK in 149ms (Views: 13.0ms | ActiveRecord: 123.3ms)
+I, [2015-08-27T22:35:03.349377 #9022]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-27 22:35:03 -0700
+I, [2015-08-27T22:35:03.392412 #9022]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-08-27T22:35:03.394941 #9022]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (1.6ms)
+I, [2015-08-27T22:35:03.395607 #9022]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-27T22:35:03.395821 #9022]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-27T22:35:03.396009 #9022]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-27T22:35:03.396150 #9022]  INFO -- : Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+I, [2015-08-27T22:35:04.598948 #9022]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-27 22:35:04 -0700
+I, [2015-08-27T22:35:04.639167 #9022]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-08-27T22:35:04.643118 #9022]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (2.7ms)
+I, [2015-08-27T22:35:04.643822 #9022]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-27T22:35:04.644060 #9022]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-27T22:35:04.644247 #9022]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-27T22:35:04.644432 #9022]  INFO -- : Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+I, [2015-08-27T22:35:09.343650 #9036]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-27 22:35:09 -0700
+I, [2015-08-27T22:35:09.704392 #9036]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-08-27T22:35:09.846693 #9036]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (3.3ms)
+I, [2015-08-27T22:35:09.848956 #9036]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-08-27T22:35:09.850315 #9036]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-08-27T22:35:09.851318 #9036]  INFO -- :   Rendered layouts/_dev.html.erb (0.2ms)
+I, [2015-08-27T22:35:09.851509 #9036]  INFO -- : Completed 200 OK in 147ms (Views: 14.5ms | ActiveRecord: 120.6ms)
