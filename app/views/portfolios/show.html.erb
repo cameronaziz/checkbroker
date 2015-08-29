@@ -10,7 +10,7 @@
     </tr>
     <tr>
       <td>Current Management Fee</td>
-      <td><%= @portfolio.management_fee %>%</td>
+      <td><%= number_with_precision(@portfolio.management_fee, precision: 2) %>%</td>
     </tr>
     <tr>
       <th colspan="2" style="text-align: center;">Fees to Fund</th>
@@ -35,11 +35,11 @@
     </tr>
     <tr>
       <td>Total Fee Rate</td>
-      <td><%= number_with_precision(@portfolio.average_expense_ratio + @portfolio.management_fee, precision: 2)  %>% </td>
+      <td><%= number_with_precision(@portfolio.average_expense_ratio + @portfolio.management_fee + @portfolio.average_12b1_fee + @portfolio.average_load_fee, precision: 2)  %>% </td>
     </tr>
     <tr>
       <td>Total Fees Paid</td>
-      <td>$<%= number_with_precision(((@portfolio.average_expense_ratio + @portfolio.management_fee) * @portfolio.market_value) / 100, precision: 2 )%></td>
+      <td>$<%= number_with_precision(((@portfolio.average_expense_ratio + @portfolio.management_fee + @portfolio.average_12b1_fee + @portfolio.average_load_fee) * @portfolio.market_value) / 100, precision: 2 )%></td>
     </tr>
   </table>
 </div>

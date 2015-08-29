@@ -11224,3 +11224,559 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'users'
 [0m
   [1m[35m (44.7ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-29 16:10:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (44.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (123.7ms)
+  Rendered layouts/_shiv.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+  Rendered layouts/_dev.html.erb (0.7ms)
+Completed 200 OK in 542ms (Views: 403.1ms | ActiveRecord: 122.8ms)
+
+
+Started GET "/assets/application.self-9e4e92925f0485c3b92db1c49086e61d2facb72ba1cbd2c008e77a5d8b03ee1d.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:09 -0700
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:09 -0700
+
+
+Started GET "/assets/eco/placeholdem.min.self-39a89c2932e07a12cb5cfc1a01b614e9080790aed20f933764adc4d123528358.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:09 -0700
+
+
+Started GET "/assets/eco/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:09 -0700
+
+
+Started GET "/assets/eco/rs-plugin/js/jquery.themepunch.revolution.min.self-fa29d965b10a6ec9eaac41d017d4bb6c2bea7c1de791863b031788709fdd894c.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:09 -0700
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-29 16:10:12 -0700
+Processing by SessionsController#new as HTML
+  Rendered shared/_alert.html.erb (0.3ms)
+  Rendered sessions/new.html.erb within layouts/application (231.1ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.1ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 302ms (Views: 301.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:12 -0700
+
+
+Started POST "/login" for 127.0.0.1 at 2015-08-29 16:10:16 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NKwwilWGfCiaO3WuuXYhes3v/3dUYWpv9S6A7Yov8dvpaUXqGSxqiEyheo67/EbhsZSl2JqvfcnqT4zXqiez8A==", "session"=>{"username"=>"cameron.aziz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (45.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`username` = 'cameron.aziz' LIMIT 1
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 209ms (ActiveRecord: 127.6ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2015-08-29 16:10:17 -0700
+Processing by StaticPagesController#profile as HTML
+  Rendered static_pages/profile.erb within layouts/application (0.3ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (46.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mUser Load (43.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (185.6ms)
+  Rendered layouts/_dev.html.erb (0.8ms)
+Completed 200 OK in 247ms (Views: 69.9ms | ActiveRecord: 176.3ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2015-08-29 16:10:19 -0700
+Processing by PortfoliosController#index as HTML
+  Rendered shared/_notice.html.erb (0.3ms)
+  [1m[35mPortfolio Load (41.3ms)[0m  SELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` = 1
+  Rendered portfolios/index.html.erb within layouts/application (94.4ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (44.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mUser Load (46.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (93.4ms)
+  Rendered layouts/_dev.html.erb (0.7ms)
+Completed 200 OK in 315ms (Views: 91.6ms | ActiveRecord: 217.6ms)
+
+
+Started GET "/portfolios/7" for 127.0.0.1 at 2015-08-29 16:10:22 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPortfolio Load (43.3ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 7 LIMIT 1
+  [1m[36mInvestment Load (49.9ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m
+  [1m[35mMutualFund Load (44.2ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1
+  [1m[36m (41.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (40.7ms)[0m  UPDATE `mutual_funds` SET `auto_updated` = '2015-08-29 23:10:23.492917', `updated_at` = '2015-08-29 23:10:23.537372' WHERE `mutual_funds`.`id` = 31
+  [1m[36m (57.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mInvestment Load (44.1ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7
+  [1m[36mMutualFund Load (44.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m
+  [1m[35mMutualFund Load (40.3ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1
+  [1m[36m (42.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (44.0ms)[0m  UPDATE `mutual_funds` SET `nav` = 32.59, `twelve_b_1` = 1.0, `load` = 1.0, `auto_updated` = '2015-08-29 23:10:24.028263', `updated_at` = '2015-08-29 23:10:24.071522' WHERE `mutual_funds`.`id` = 3
+  [1m[36m (63.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mMutualFund Load (44.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+  [1m[36m (42.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (45.9ms)[0m  UPDATE `mutual_funds` SET `auto_updated` = '2015-08-29 23:10:24.535468', `updated_at` = '2015-08-29 23:10:24.578920' WHERE `mutual_funds`.`id` = 4
+  [1m[36m (58.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mMutualFund Load (44.9ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1
+  [1m[36m (42.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (42.9ms)[0m  UPDATE `mutual_funds` SET `nav` = 9.86, `twelve_b_1` = 1.0, `load` = 1.0, `auto_updated` = '2015-08-29 23:10:25.027700', `updated_at` = '2015-08-29 23:10:25.070614' WHERE `mutual_funds`.`id` = 15
+  [1m[36m (57.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mMutualFund Load (45.2ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1
+  [1m[36mMutualFund Load (45.7ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mMutualFund Load (44.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mMutualFund Load (43.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mInvestment Load (40.6ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mInvestment Load (40.6ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  Rendered portfolios/show.html.erb within layouts/application (54.6ms)
+  Rendered layouts/_shiv.html.erb (0.1ms)
+  [1m[36mGroup Load (42.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mUser Load (43.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (88.2ms)
+  Rendered layouts/_dev.html.erb (0.5ms)
+Completed 200 OK in 2738ms (Views: 82.0ms | ActiveRecord: 1450.0ms)
+
+
+Started GET "/portfolios/7" for 127.0.0.1 at 2015-08-29 16:10:35 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPortfolio Load (42.7ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 7 LIMIT 1
+  [1m[36mInvestment Load (42.9ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m
+  [1m[35mMutualFund Load (40.9ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m  [["portfolio_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mMutualFund Load (43.9ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m
+  [1m[35mMutualFund Load (55.8ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+  [1m[36mMutualFund Load (47.1ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m  [["portfolio_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mInvestment Load (43.4ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  Rendered portfolios/show.html.erb within layouts/application (53.1ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (40.8ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mUser Load (42.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (86.0ms)
+  Rendered layouts/_dev.html.erb (0.7ms)
+Completed 200 OK in 500ms (Views: 87.6ms | ActiveRecord: 400.5ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/application.self-9e4e92925f0485c3b92db1c49086e61d2facb72ba1cbd2c008e77a5d8b03ee1d.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/portfolios.self-c1bde25b2f57105f30b50f110ad45a8ac0cf509fb50c83392833aa8a16d451fa.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:36 -0700
+
+
+Started GET "/assets/eco/eco.self-dbb63f534a916a964b9290c6e29202fa5c823d63d932a24a36fa53cdc1302e75.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:37 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:37 -0700
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:37 -0700
+
+
+Started GET "/portfolios/7" for 127.0.0.1 at 2015-08-29 16:10:37 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPortfolio Load (48.0ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 7 LIMIT 1
+  [1m[36mInvestment Load (45.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m
+  [1m[35mMutualFund Load (43.3ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m  [["portfolio_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mMutualFund Load (43.6ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m
+  [1m[35mMutualFund Load (41.1ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+  [1m[36mMutualFund Load (44.3ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m  [["portfolio_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mInvestment Load (41.8ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  Rendered portfolios/show.html.erb within layouts/application (50.7ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (40.5ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mUser Load (44.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (88.2ms)
+  Rendered layouts/_dev.html.erb (0.5ms)
+Completed 200 OK in 498ms (Views: 90.1ms | ActiveRecord: 393.0ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/application.self-9e4e92925f0485c3b92db1c49086e61d2facb72ba1cbd2c008e77a5d8b03ee1d.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/portfolios.self-c1bde25b2f57105f30b50f110ad45a8ac0cf509fb50c83392833aa8a16d451fa.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:38 -0700
+
+
+Started GET "/assets/eco/eco.self-dbb63f534a916a964b9290c6e29202fa5c823d63d932a24a36fa53cdc1302e75.css?body=1" for 127.0.0.1 at 2015-08-29 16:10:39 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:39 -0700
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for 127.0.0.1 at 2015-08-29 16:10:39 -0700
+
+
+Started GET "/portfolios/7" for 127.0.0.1 at 2015-08-29 16:12:14 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPortfolio Load (54.1ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 7 LIMIT 1
+  [1m[36mInvestment Load (43.9ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m
+  [1m[35mMutualFund Load (40.8ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m  [["portfolio_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mMutualFund Load (41.7ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m
+  [1m[35mMutualFund Load (44.6ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+  [1m[36mMutualFund Load (44.4ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m  [["portfolio_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mInvestment Load (40.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  Rendered portfolios/show.html.erb within layouts/application (49.9ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (38.5ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mUser Load (42.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (83.0ms)
+  Rendered layouts/_dev.html.erb (0.5ms)
+Completed 200 OK in 480ms (Views: 78.1ms | ActiveRecord: 390.6ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/application.self-9e4e92925f0485c3b92db1c49086e61d2facb72ba1cbd2c008e77a5d8b03ee1d.js?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/portfolios.self-c1bde25b2f57105f30b50f110ad45a8ac0cf509fb50c83392833aa8a16d451fa.js?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/eco/eco.self-dbb63f534a916a964b9290c6e29202fa5c823d63d932a24a36fa53cdc1302e75.css?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for 127.0.0.1 at 2015-08-29 16:12:15 -0700
+
+
+Started GET "/portfolios/7" for 127.0.0.1 at 2015-08-29 16:13:20 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPortfolio Load (42.6ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 7 LIMIT 1
+  [1m[36mInvestment Load (44.2ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m
+  [1m[35mMutualFund Load (40.4ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m  [["portfolio_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mMutualFund Load (41.6ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m
+  [1m[35mMutualFund Load (47.2ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+  [1m[36mMutualFund Load (45.9ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7[0m  [["portfolio_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mInvestment Load (41.7ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 7
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1[0m  [["ticker", "IVWIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'IVWIX' LIMIT 1  [["ticker", "IVWIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+  Rendered portfolios/show.html.erb within layouts/application (52.3ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (39.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mUser Load (50.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered layouts/_nav.html.erb (92.4ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 476ms (Views: 72.1ms | ActiveRecord: 394.3ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/application.self-9e4e92925f0485c3b92db1c49086e61d2facb72ba1cbd2c008e77a5d8b03ee1d.js?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/portfolios.self-c1bde25b2f57105f30b50f110ad45a8ac0cf509fb50c83392833aa8a16d451fa.js?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/eco/eco.self-dbb63f534a916a964b9290c6e29202fa5c823d63d932a24a36fa53cdc1302e75.css?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for 127.0.0.1 at 2015-08-29 16:13:21 -0700
