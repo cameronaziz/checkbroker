@@ -7,10 +7,10 @@ gem 'jquery-ui-rails'
 
 #to parse xml
 gem 'nokogiri'
-
 #fonts
 gem "font-awesome-rails"
 
+gem 'gruff'
 
 #date time picker
 

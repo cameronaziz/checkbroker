@@ -14,63 +14,59 @@
 ActiveRecord::Schema.define(version: 20150827032425) do
 
   create_table "groups", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "investments", force: :cascade do |t|
-    t.string   "ticker",       limit: 255
-    t.integer  "quantity",     limit: 4
-    t.integer  "portfolio_id", limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "ticker"
+    t.integer  "quantity"
+    t.integer  "portfolio_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "memberships", force: :cascade do |t|
-    t.integer  "group_id",   limit: 4
-    t.integer  "user_id",    limit: 4
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.integer  "group_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "mutual_funds", force: :cascade do |t|
-    t.string   "ticker",        limit: 255
-    t.float    "nav",           limit: 24
-    t.float    "expense_ratio", limit: 24
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "ticker"
+    t.float    "nav"
+    t.float    "expense_ratio"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.datetime "auto_updated"
   end
 
   create_table "portfolios", force: :cascade do |t|
-    t.integer  "user_id",        limit: 4
-    t.float    "management_fee", limit: 24
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "nickname",       limit: 255
+    t.integer  "user_id"
+    t.float    "management_fee"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "nickname"
   end
 
   create_table "suggestions", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "email",      limit: 255
-    t.text     "message",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",        limit: 255
-    t.string   "first_name",      limit: 255
-    t.string   "last_name",       limit: 255
-    t.string   "email",           limit: 255
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "password_digest", limit: 255
-    t.string   "remember_digest", limit: 255
+    t.string   "username"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end

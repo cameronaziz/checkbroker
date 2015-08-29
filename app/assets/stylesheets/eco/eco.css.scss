@@ -600,10 +600,13 @@ form .form-control {
   border-radius: 5em;
   height: 40px;
   line-height: 40px;
-  padding: 20px;
+  /* padding: 20px; */
   color: #393939;
   border: 2px solid #cccccc;
   font-weight: 300;
+}
+form .password-form {
+  padding-top: initial;
 }
 form textarea.form-control {
   -webkit-border-radius: 20px;

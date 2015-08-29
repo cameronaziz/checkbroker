@@ -1,0 +1,1504 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+/* line 2, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 9, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 18, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+body {
+  font-family: 'Lato', Arial;
+  color: #666666;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 23, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+a {
+  font-family: 'Lato', Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 27, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+div.content {
+  overflow: hidden;
+}
+
+/* line 30, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #666666;
+}
+
+/* line 44, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default {
+  background: none;
+  border: none;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 55, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav {
+  padding-top: 55px;
+}
+
+/* line 58, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 7px 20px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 69, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a:after {
+  content: '';
+  width: 32px;
+  background: none;
+  height: 4px;
+  position: absolute;
+  bottom: 2px;
+  z-index: 99999;
+  left: 20px;
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  -ms-border-radius: 5em;
+  -o-border-radius: 5em;
+  border-radius: 5em;
+  color: #ffffff;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 90, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a:hover {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 97, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a:hover:after {
+  background: #ffffff;
+}
+
+/* line 100, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a.getApp {
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  -ms-border-radius: 5em;
+  -o-border-radius: 5em;
+  border-radius: 5em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 112, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a.getApp:after {
+  display: none;
+}
+
+/* line 115, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default .navbar-brand {
+  height: auto;
+  padding: 0;
+}
+
+/* line 119, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 131, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled .navbar-brand {
+  padding: 15px 20px;
+}
+
+/* line 134, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled .navbar-brand img {
+  width: auto;
+  max-height: 33px;
+}
+
+/* line 138, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled ul.navbar-nav {
+  padding-top: 15px;
+}
+
+/* line 141, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.scrollpoint {
+  opacity: 0;
+}
+
+/* line 144, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.scrollpoint.active {
+  opacity: 1 \0;
+}
+
+/* line 147, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.hanging-phone {
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  bottom: -70px;
+}
+
+/* line 153, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.section-heading {
+  margin: 60px 0 80px;
+  text-align: center;
+}
+
+/* line 157, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.section-heading h1 {
+  display: inline-block;
+  font-size: 55px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/* line 163, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.section-heading p {
+  font-size: 25px;
+  color: #999999;
+  font-weight: 300;
+}
+
+/* line 168, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.section-heading .divider:after {
+  content: "";
+  position: relative;
+  height: 4px;
+  width: 60px;
+  display: block;
+  text-align: center;
+  margin: 13px auto;
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  -ms-border-radius: 5em;
+  -o-border-radius: 5em;
+  border-radius: 5em;
+}
+
+/* line 182, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.section-heading.inverse h1,
+.section-heading.inverse p {
+  color: #ffffff;
+}
+
+/* line 186, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.section-heading.inverse .divider:after {
+  background: #ffffff;
+}
+
+/* line 189, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#about {
+  position: relative;
+}
+
+/* line 192, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#about .about-item {
+  text-align: center;
+  font-size: 17px;
+  line-height: 25px;
+  color: #999999;
+}
+
+/* line 198, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#about .about-item i.fa {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  padding: 35px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 104px;
+}
+
+/* line 212, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media > .pull-right {
+  margin-left: 20px;
+}
+
+/* line 215, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media i.fa {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  padding: 20px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 2.6em;
+  text-align: center;
+}
+
+/* line 230, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media .media-heading {
+  padding-top: 10px;
+  font-weight: 300;
+}
+
+/* line 234, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media .media-body {
+  color: #999999;
+}
+
+/* line 237, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media.media-left .media-body {
+  text-align: right;
+}
+
+/* line 240, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media.feature {
+  margin-top: 25px;
+}
+
+/* line 243, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media.feature:first-child {
+  margin-top: 0;
+}
+
+/* line 246, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features img {
+  margin: 0 auto 20px;
+}
+
+/* line 249, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 255, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering {
+  margin: 20px 0 100px 0;
+}
+
+/* line 258, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-person {
+  width: 100%;
+}
+
+/* line 261, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-person img {
+  width: 110px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+/* line 270, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment {
+  width: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px 40px 20px;
+  position: relative;
+}
+
+/* line 280, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment h3 {
+  margin-bottom: 15px;
+}
+
+/* line 283, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment p {
+  font-size: 16px;
+  color: #999999;
+}
+
+/* line 287, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment p span {
+  margin-left: 10px;
+}
+
+/* line 290, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-width: 15px;
+  margin-top: -10px;
+}
+
+/* line 303, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-person,
+section#reviews .review-filtering .review .review-comment {
+  float: left;
+}
+
+/* line 307, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .slick-dots {
+  bottom: -80px;
+}
+
+/* line 310, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .slick-dots li button {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 317, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .slick-dots li button:before {
+  display: none;
+}
+
+/* line 320, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slider {
+  margin: 50px 0;
+}
+
+/* line 323, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slider div img {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  display: inline;
+}
+
+/* line 332, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slider div h4 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+/* line 337, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slider .slick-dots li button {
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  -ms-border-radius: 5em;
+  -o-border-radius: 5em;
+  border-radius: 5em;
+}
+
+/* line 344, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slick-prev,
+section#screens .slick-next {
+  width: 50px;
+  height: 50px;
+  top: 44%;
+}
+
+/* line 350, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slick-slide {
+  text-align: center;
+}
+
+/* line 353, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slick-prev:before {
+  content: "\f104";
+}
+
+/* line 356, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slick-next:before {
+  content: "\f105";
+}
+
+/* line 359, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slick-prev:before,
+section#screens .slick-next:before {
+  font-size: 34px;
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  -ms-border-radius: 5em;
+  -o-border-radius: 5em;
+  border-radius: 5em;
+  line-height: 45px;
+  color: #CCC;
+  border: 2px solid #CCC;
+  width: 50px;
+  display: inline-block;
+  height: 50px;
+  text-align: center;
+}
+
+/* line 375, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .filter {
+  text-align: center;
+}
+
+/* line 378, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .filter a {
+  display: inline-block;
+  padding: 7px 20px;
+  text-decoration: none;
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  -ms-border-radius: 5em;
+  -o-border-radius: 5em;
+  border-radius: 5em;
+  margin: 10px 5px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* demo video Section */
+/* line 396, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#demo .video-container {
+  padding: 20px;
+  border: 1px solid #b3b3b3;
+  min-height: 450px;
+  overflow: hidden;
+}
+
+/* line 402, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#demo iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Get app Section */
+/* line 408, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 70px 0;
+}
+
+/* line 415, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp .platforms {
+  margin: 5px auto 120px auto;
+  text-align: center;
+}
+
+/* line 419, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp .platforms .btn {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* support section */
+/* line 424, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support {
+  padding: 0 0 150px 0;
+}
+
+/* line 427, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support .media {
+  margin-bottom: 10px;
+}
+
+/* line 430, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support .media i.fa {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  padding: 10px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 1.9em;
+  text-align: center;
+}
+
+/* line 445, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support .media .media-heading {
+  padding-top: 15px;
+  font-weight: 300;
+}
+
+/* line 449, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support .media .media-heading a {
+  font-weight: 400;
+}
+
+/* footer section */
+/* line 453, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer {
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* line 457, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer a > img {
+  width: 100px;
+}
+
+/* line 460, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .social {
+  display: block;
+  margin-top: 30px;
+}
+
+/* line 464, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .social a {
+  margin: 0 8px;
+  padding: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 479, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .social a i {
+  width: 1em;
+}
+
+/* line 482, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .rights {
+  margin-top: 30px;
+}
+
+/* line 485, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .rights a {
+  text-decoration: underline;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  font-weight: bold;
+}
+
+/* line 494, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .rights a:hover {
+  text-decoration: none;
+}
+
+/* line 497, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section {
+  position: relative;
+  padding-bottom: 90px;
+}
+
+/* Common style for pseudo-elements */
+/* line 502, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section::before,
+section::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* line 509, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+/* line 513, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+/* line 516, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* line 522, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+/* line 526, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/* line 529, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.tp-caption {
+  font-family: 'Lato', Arial !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 533, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.tp-caption.large_white_bold {
+  color: #ffffff;
+  font-size: 65px;
+  font-weight: 400;
+}
+
+/* line 538, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.tp-caption.large_white_light {
+  color: #ffffff;
+  font-size: 65px;
+  font-weight: 400;
+  font-weight: 300;
+}
+
+/* line 544, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn {
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  -ms-border-radius: 3em;
+  -o-border-radius: 3em;
+  border-radius: 3em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 5px 25px;
+}
+
+/* line 555, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-primary {
+  border: 2px solid #ffffff;
+  background: none;
+  color: #ffffff;
+}
+
+/* line 560, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-primary:hover {
+  color: #ffffff;
+}
+
+/* line 563, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-default {
+  border: none;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* IE10+ */
+  background: linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc, GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+/* line 582, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-lg {
+  padding: 10px 25px;
+}
+
+/* line 585, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn:hover {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 592, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+form .form-control {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  -ms-border-radius: 5em;
+  -o-border-radius: 5em;
+  border-radius: 5em;
+  height: 40px;
+  line-height: 40px;
+  /* padding: 20px; */
+  color: #393939;
+  border: 2px solid #cccccc;
+  font-weight: 300;
+}
+
+/* line 608, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+form .password-form {
+  padding-top: initial;
+}
+
+/* line 611, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+form textarea.form-control {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  height: auto;
+  line-height: normal;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 621, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+
+  /* line 625, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  .slick-next {
+    right: 0;
+  }
+
+  /* line 628, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  .slick-prev {
+    left: 0;
+  }
+
+  /* line 631, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  .contact-details {
+    margin-top: 20px;
+  }
+
+  /* line 634, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default {
+    padding: 20px;
+  }
+
+  /* line 637, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default .navbar-toggle {
+    margin-top: 0px;
+    margin-right: 0px;
+    background: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    -ms-border-radius: 5em;
+    -o-border-radius: 5em;
+    border-radius: 5em;
+  }
+
+  /* line 649, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default .navbar-toggle:hover,
+  header .navbar-default .navbar-toggle:focus {
+    background: none;
+  }
+
+  /* line 653, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default ul.navbar-nav {
+    padding-top: 0;
+    margin: 0;
+  }
+
+  /* line 657, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default ul.navbar-nav li a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* line 661, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default ul.navbar-nav li a.getApp {
+    background: none !important;
+    -webkit-border-radius: 0em;
+    -moz-border-radius: 0em;
+    -ms-border-radius: 0em;
+    -o-border-radius: 0em;
+    border-radius: 0em;
+  }
+
+  /* line 669, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default .navbar-collapse {
+    border-color: transparent;
+  }
+
+  /* line 672, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default.scrolled .navbar-collapse {
+    border-color: transparent;
+  }
+
+  /* line 675, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default.scrolled ul.navbar-nav {
+    padding-top: 0;
+    margin: 0;
+  }
+
+  /* line 679, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default.scrolled .navbar-toggle {
+    margin-top: 11px;
+    margin-right: 20px;
+    background: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    -ms-border-radius: 5em;
+    -o-border-radius: 5em;
+    border-radius: 5em;
+  }
+}
+/* line 692, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header {
+  background: #66cc99;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66cc99), color-stop(100%, #339999));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* IE10+ */
+  background: linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66cc99, endColorstr=#339999, GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+/* line 710, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a {
+  color: #ffffff;
+  background: none;
+}
+
+/* line 714, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a.getApp {
+  color: #3cb4b4;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #e0e0e0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
+  /* IE10+ */
+  background: linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#e0e0e0, GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+/* line 733, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a.getApp:hover {
+  color: #40bfbf;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* IE10+ */
+  background: linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc, GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 757, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default ul.navbar-nav li a:hover {
+  color: #ffffff;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+/* line 765, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled {
+  border-bottom: 3px solid #339999;
+}
+
+/* line 768, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled ul.navbar-nav li a {
+  color: #339999;
+}
+
+/* line 771, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled ul.navbar-nav li a:hover {
+  color: #339999;
+}
+
+/* line 774, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled ul.navbar-nav li a:hover:after {
+  background: #339999;
+}
+
+/* line 777, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+header .navbar-default.scrolled .navbar-brand {
+  background: #339999;
+}
+
+/* line 780, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section .section-heading .divider:after {
+  background: #66cc99;
+}
+
+/* line 783, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#about .about-item i.fa {
+  border: 2px solid #66cc99;
+  color: #66cc99;
+}
+
+/* line 787, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#about .about-item:hover i.fa {
+  color: #ffffff;
+  background: #66cc99;
+}
+
+/* line 791, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#about .about-item:hover h3 {
+  color: #66cc99;
+}
+
+/* line 794, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features {
+  background: #f6f6f6;
+}
+
+/* line 797, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features header h1:after {
+  background: #66cc99;
+}
+
+/* line 800, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media i.fa {
+  border: 2px solid #66cc99;
+  color: #66cc99;
+}
+
+/* line 804, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media:hover i.fa {
+  color: #ffffff;
+  background: #66cc99;
+}
+
+/* line 808, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media:hover h3 {
+  color: #66cc99;
+}
+
+/* line 811, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media.active i.fa {
+  color: #ffffff;
+  background: #66cc99;
+}
+
+/* line 815, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#features .media.active .media-heading {
+  color: #66cc99;
+}
+
+/* line 818, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews {
+  background: url(/assets/eco/eco/bk-eco-8be37cb15f01f04cc96d428ac4eb3412d5b4fefb51b59d9b1bba0873126d7fbd.jpg);
+}
+
+/* line 821, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews header {
+  color: #ffffff;
+}
+
+/* line 824, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews header h1:after {
+  background: #ffffff;
+}
+
+/* line 827, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-person img {
+  border: 3px solid #ffffff;
+}
+
+/* line 830, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment {
+  background: #ffffff;
+}
+
+/* line 833, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment h3 {
+  color: #66cc99;
+}
+
+/* line 836, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment p span i {
+  color: #66cc99;
+}
+
+/* line 839, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .review .review-comment:after {
+  border-right-color: #ffffff;
+}
+
+/* line 842, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .slick-dots li button {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* line 846, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#reviews .review-filtering .slick-dots li.slick-active button {
+  background: #66cc99;
+}
+
+/* line 849, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens header h1:after {
+  background: #66cc99;
+}
+
+/* line 852, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slider div img {
+  border: 2px solid #e5e5e5;
+}
+
+/* line 855, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slider div h4 {
+  color: #999999;
+}
+
+/* line 858, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slider .slick-dots li button {
+  background: #999999;
+}
+
+/* line 861, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .slider .slick-dots li.slick-active button {
+  background: #66cc99;
+}
+
+/* line 864, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .filter a {
+  border: 2px solid #cccccc;
+  color: #999999;
+}
+
+/* line 868, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .filter a:hover {
+  color: #ffffff;
+  background: #66cc99;
+  border-color: #66cc99;
+}
+
+/* line 873, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#screens .filter a.active {
+  color: #ffffff;
+  background: #66cc99;
+  border-color: #66cc99;
+}
+
+/* demo video Section */
+/* line 879, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#demo {
+  background: #f6f6f6;
+}
+
+/* line 882, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#demo header h1:after {
+  background: #66cc99;
+}
+
+/* Get app Section */
+/* line 886, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp {
+  background: url("../img/eco/bk-eco-ga.jpg");
+}
+
+/* line 889, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp header {
+  color: #ffffff;
+}
+
+/* line 892, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp header h1:after {
+  background: #ffffff;
+}
+
+/* line 895, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp .platforms .media {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+/* line 899, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp .platforms .media a i {
+  color: #ffffff;
+}
+
+/* line 902, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp .platforms .media a div.media-body {
+  color: #ffffff;
+}
+
+/* line 905, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp .platforms .media:hover {
+  background: #ffffff;
+}
+
+/* line 908, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#getApp .platforms .media:hover a i,
+section#getApp .platforms .media:hover a div.media-body {
+  color: #66cc99;
+}
+
+/* support section */
+/* line 913, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support header h1:after {
+  background: #66cc99;
+}
+
+/* line 916, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support .media i.fa {
+  border: 2px solid #66cc99;
+  color: #66cc99;
+}
+
+/* line 920, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support .media a {
+  color: #66cc99;
+}
+
+/* line 923, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support .media:hover i.fa {
+  color: #ffffff;
+  background: #66cc99;
+}
+
+/* line 927, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+section#support .media:hover h3 {
+  color: #66cc99;
+}
+
+/* footer section */
+/* line 931, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer {
+  background: #66cc99;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66cc99), color-stop(100%, #339999));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* IE10+ */
+  background: linear-gradient(-45deg, #66cc99 0%, #339999 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66cc99, endColorstr=#339999, GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+/* line 949, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .social a {
+  border: 2px solid #ffffff;
+}
+
+/* line 952, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .social a i {
+  color: #ffffff;
+}
+
+/* line 955, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .social a:hover {
+  background: #ffffff;
+}
+
+/* line 958, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .social a:hover i {
+  color: #66cc99;
+}
+
+/* line 961, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .rights {
+  color: #ffffff;
+}
+
+/* line 964, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+footer .rights a {
+  color: #ffffff;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+/* line 969, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.navbar-toggle {
+  background-color: #CCC;
+  border: 1px solid transparent;
+}
+
+/* line 973, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-primary {
+  color: #66cc99;
+  border-color: #66cc99;
+}
+
+/* line 977, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-primary:hover {
+  color: #ffffff;
+  background: #66cc99;
+  border-color: #66cc99;
+}
+
+/* line 982, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-primary.inverse {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* line 986, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-primary.inverse:hover {
+  color: #ffffff;
+  background: #66cc99;
+  border-color: #66cc99;
+}
+
+/* line 991, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-default {
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* IE10+ */
+  background: linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc, GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  color: #339999;
+}
+
+/* line 1010, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.btn.btn-default:hover {
+  color: #339999;
+}
+
+/* line 1013, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+form .form-control:focus {
+  border-color: #66cc99;
+  color: #999999;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 1018, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default .navbar-toggle:hover,
+  header .navbar-default .navbar-toggle:focus {
+    background: none;
+  }
+
+  /* line 1022, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default ul.navbar-nav li a {
+    color: #ffffff;
+    border-bottom: 1px solid #37a4a4;
+  }
+
+  /* line 1026, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default ul.navbar-nav li a.getApp {
+    color: #ffffff;
+  }
+
+  /* line 1029, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default ul.navbar-nav li a:after {
+    display: none;
+  }
+
+  /* line 1032, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default ul.navbar-nav li a:hover {
+    color: #66cc99;
+  }
+
+  /* line 1035, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default .navbar-collapse {
+    background: #339999;
+  }
+
+  /* line 1038, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default.scrolled {
+    background: #339999;
+  }
+
+  /* line 1041, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default.scrolled ul.navbar-nav li a {
+    color: #ffffff;
+  }
+
+  /* line 1044, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+  header .navbar-default.scrolled ul.navbar-nav li a:hover {
+    color: #66cc99;
+  }
+}
+/* line 1050, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.pre-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  display: block;
+}
+
+/* line 1057, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.pre-loader .load-con {
+  margin: 20% auto;
+  position: relative;
+  text-align: center;
+}
+
+/* line 1062, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.spinner {
+  margin: 50px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+/* line 1067, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 1079, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+/* line 1083, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* line 1109, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/eco/eco.css.scss */
+.pre-loader {
+  background: #339999;
+}

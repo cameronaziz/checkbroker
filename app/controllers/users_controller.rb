@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     authenticate_user_and_group(['Administrators', 'Managers'], false)
   end
 
-  skip_before_action :authenticate_user, only: :register
+  skip_before_action :authenticate_user
 
 
   def index

@@ -27,4 +27,6 @@ Portfolio Value: $<%= number_with_precision(@portfolio.market_value, precision: 
 Average Expense Ratio: <%= number_with_precision(@portfolio.average_expense_ratio, precision: 2) %>% <br>
 Total Fee Rate: <%= number_with_precision(@portfolio.average_expense_ratio + @portfolio.management_fee, precision: 2)  %>% <br>
 Total Fees Paid: $<%= number_with_precision(((@portfolio.average_expense_ratio + @portfolio.management_fee) * @portfolio.market_value) / 100, precision: 2 )%> <br>
+<% file_name = 'pie_charts/portfolio_' + @portfolio.id.to_s + '.png' %>
+<%= image_tag(file_name, height: 300 ) %>
 </p>

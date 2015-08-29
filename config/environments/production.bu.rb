@@ -40,5 +40,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.assets.precompile += [/.*\.js/,/.*\.css/]
+  config.serve_static_assets = true
 
 end

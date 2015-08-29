@@ -65,10 +65,15 @@ module SessionsHelper
           then group_id = group_name
           else group_id = Group.find_by_name(group)
         end
+        if NO_AUTHENTICATION
+          @authenticated_user = true
+          return true
+        else
         if current_user.groups.include?(Group.find(group_id))
         then
           @authenticated_user = true
           return true
+        end
         end
       end
     else
@@ -84,10 +89,12 @@ module SessionsHelper
   end
 
   def authenticate_user
-    unless logged_in?
-      store_location
-      flash[:alert] = 'Please log in to view that page.'
-      redirect_to login_url
+    unless NO_AUTHENTICATION
+      unless logged_in?
+        store_location
+        flash[:alert] = 'Please log in to view that page.'
+        redirect_to login_url
+      end
     end
   end
 

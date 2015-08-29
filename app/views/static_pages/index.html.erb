@@ -1,7 +1,7 @@
 <% provide(:title, 'Monitor your Investment Advisor') %>
 <div class="pre-loader">
 <div class="load-con">
-  <%= image_tag 'eco/eco/logobv.png', class: 'animated fadeInDown' %>
+  <%= image_tag 'logo-white.png', class: 'animated fadeInDown' %>
   <div class="spinner">
     <div class="bounce1"></div>
     <div class="bounce2"></div>
@@ -18,7 +18,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="fa fa-bars fa-lg"></span>
       </button>
-      <%= link_to image_tag('eco/eco/logobv.png', :border => 0), root_path, class: 'navbar-brand' %>
+      <%= link_to image_tag('logo-white.png', :border => 0), root_path, class: 'navbar-brand' %>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -64,8 +64,9 @@
              data-speed="500"
              data-start="700"
              data-easing="Power4.easeOut">
-          <%= image_tag 'eco/eco/Slides/hand-eco.png', alt: ''  %>
+          <%= image_tag 'eco/eco/Slides/hand-bv.png', alt: ''  %>
         </div>
+        <div class="hidden-xs">
         <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
           Transparency
         </div>
@@ -77,12 +78,13 @@
         </div>
         <% unless logged_in? %>
         <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
-          <a href="/login" class="btn btn-primary inverse btn-lg">LOGIN</a>
+          <% link_to 'LOG IN', login_path, class: 'btn btn-primary inverse btn-lg' %>
         </div>
         <div class="tp-caption sfr hidden-xs" data-x="670" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
-          <a href="/register" class="btn btn-default btn-lg">SIGNUP</a>
+          <% link_to 'SIGN UP', register_path, class: 'btn btn-default btn-lg' %>
         </div>
             <% end %>
+            </div>
       </li>
       <!-- SLIDE 2 -->
       <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" >
@@ -100,6 +102,16 @@
              data-easing="Power4.easeOut">
           <%= image_tag 'eco/eco/Slides/eco-slide2.png', alt: '' %>
         </div>
+        <div class="tp-caption lfb fadeout visible-xs"
+                           data-x="center"
+                           data-y="bottom"
+                           data-hoffset="0"
+                           data-voffset="0"
+                           data-speed="1000"
+                           data-start="700"
+                           data-easing="Power4.easeOut">
+        <%= image_tag 'eco/eco/Slides/eco-slide2.png', alt: '' %>
+      </div>
         <div class="tp-caption large_white_light sft" data-x="center" data-y="250" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1400" data-easing="Power4.easeOut">
           Keep your broker in check.
         </div>
@@ -135,7 +147,7 @@
           <%= image_tag 'eco/eco/Slides/family-eco.png', alt: '' %>
         </div>
         <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
-          <a href="#" class="btn btn-primary inverse btn-lg">Purchase</a>
+              <%= link_to 'Signup', register_path, class: 'btn btn-primary inverse btn-lg' %>
         </div>
         <div class="tp-caption mediumlarge_light_white sfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="-50" data-speed="1000" data-start="1000" data-easing="Power4.easeOut">
          Your broker works for you.
@@ -148,7 +160,7 @@
         </div>
         <% unless logged_in? %>
       <div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1800" data-easing="Power4.easeOut">
-          <a href="#" class="btn btn-primary inverse btn-lg">Signup</a>
+        <%= link_to 'Signup', register_path, class: 'btn btn-primary inverse btn-lg' %>
         </div>
             <% end %>
       </li>
@@ -169,21 +181,21 @@
         <div class="about-item scrollpoint sp-effect2">
           <%= fa_icon "money", class: "fa-2x" %>
           <h3>Monitor Fees</h3>
-          <p>Find out if your investments have the least amount of fees.</p>
+          <p>Find out if your underlying investments are charging you.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-3 col-xs-6" >
         <div class="about-item scrollpoint sp-effect5">
           <%= fa_icon "male", class: "fa-2x" %>
           <h3>Paying Whom</h3>
-          <p>Broker Verified tells you who you are paying every month.</p>
+          <p>BrokerVerified tells you who you are paying every month.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-3 col-xs-6" >
         <div class="about-item scrollpoint sp-effect5">
           <%= fa_icon "pie-chart", class: "fa-2x" %>
           <h3>Expense Breakdown</h3>
-          <p>What are your fees going towards? Are they management fees or commition kickbacks?</p>
+          <p>What are your fees going towards? Are they management fees or commission kickbacks?</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-3 col-xs-6" >
@@ -215,7 +227,7 @@
               </div>
               <div class="col-md-10">
                 <div class="review-comment">
-                  <h3>“Broker Verified helped me find even the smallest fees.”</h3>
+                  <h3>“BrokerVerified helped me find even the smallest fees.”</h3>
                   <p>
                     - Eric Muncal
                     <span>
@@ -239,7 +251,7 @@
               </div>
               <div class="col-md-10">
                 <div class="review-comment">
-                  <h3>“Broker Verified has made me keep my broker in check”</h3>
+                  <h3>“BrokerVerified has made me keep my broker in check”</h3>
                   <p>
                     - Micheal Villarmia
                     <span>
@@ -263,7 +275,7 @@
               </div>
               <div class="col-md-10">
                 <div class="review-comment">
-                  <h3>“I found my new broker through Broker Verified.”</h3>
+                  <h3>“I found my new broker through BrokerVerified.”</h3>
                   <p>
                     - Allen Roman
                     <span>
