@@ -7,6 +7,8 @@
     <th>Mutual Fund</th>
     <th>NAV</th>
     <th>Expense Ratio</th>
+    <th>Load %</th>
+    <th>12B-1 %</th>
     <th colspan="2">Actions</th>
   </tr>
   </thead>
@@ -16,6 +18,8 @@
         <td><%= mutual_fund.ticker %></td>
         <td>$<%= number_with_precision(mutual_fund.nav, precision: 2) %></td>
         <td><%= mutual_fund.expense_ratio %>%</td>
+        <td><%= mutual_fund.load %>%</td>
+        <td><%= mutual_fund.twelve_b_1 %>%</td>
         <td><%= link_to 'Edit', edit_mutual_fund_path(mutual_fund) %></td>
         <td><%= link_to 'Delete', mutual_fund, method: :delete, data: {confirm: 'Are you sure?'}  %></td>
       </tr>

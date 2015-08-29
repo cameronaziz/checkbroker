@@ -2033,3 +2033,274 @@ D, [2015-08-29T02:16:23.715285 #92832] DEBUG -- :   [1m[35mUser Load (44.6ms)
 I, [2015-08-29T02:16:23.821253 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (349.7ms)
 I, [2015-08-29T02:16:23.822361 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
 I, [2015-08-29T02:16:23.822581 #92832]  INFO -- : Completed 200 OK in 1181ms (Views: 307.9ms | ActiveRecord: 726.7ms)
+I, [2015-08-29T11:31:44.732905 #92832]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 11:31:44 -0700
+I, [2015-08-29T11:32:04.089492 #92832]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-08-29T11:32:04.197722 #92832]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (3.8ms)
+I, [2015-08-29T11:32:04.198434 #92832]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T11:32:04.198657 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T11:32:04.198827 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T11:32:04.199028 #92832]  INFO -- : Completed 200 OK in 109ms (Views: 11.0ms | ActiveRecord: 93.2ms)
+I, [2015-08-29T11:32:04.212593 #92832]  INFO -- : Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2015-08-29 11:32:04 -0700
+F, [2015-08-29T11:32:04.251616 #92832] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T11:32:04.254727 #92832]  INFO -- : Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2015-08-29 11:32:04 -0700
+F, [2015-08-29T11:32:04.296107 #92832] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T11:32:04.302534 #92832]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 11:32:04 -0700
+I, [2015-08-29T11:32:04.343972 #92832]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-08-29T11:32:04.345832 #92832]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (1.3ms)
+I, [2015-08-29T11:32:04.346295 #92832]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T11:32:04.346440 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T11:32:04.346562 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T11:32:04.346678 #92832]  INFO -- : Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+I, [2015-08-29T11:32:04.354175 #92832]  INFO -- : Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2015-08-29 11:32:04 -0700
+F, [2015-08-29T11:32:04.393962 #92832] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T11:32:04.398299 #92832]  INFO -- : Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2015-08-29 11:32:04 -0700
+F, [2015-08-29T11:32:04.441605 #92832] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T11:34:29.342983 #92832]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 11:34:29 -0700
+I, [2015-08-29T11:34:29.409045 #92832]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-08-29T11:34:29.454455 #92832] DEBUG -- :   [1m[36mUser Load (44.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-29T11:34:29.513914 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-29T11:34:29.570154 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-29T11:34:29.623105 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+I, [2015-08-29T11:34:29.677630 #92832]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (164.2ms)
+I, [2015-08-29T11:34:29.678126 #92832]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T11:34:29.678278 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T11:34:29.678400 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T11:34:29.678560 #92832]  INFO -- : Completed 200 OK in 269ms (Views: 165.4ms | ActiveRecord: 44.4ms)
+I, [2015-08-29T11:34:32.873203 #92832]  INFO -- : Started GET "/apple-touch-icon-precomposed.png" for 127.0.0.1 at 2015-08-29 11:34:32 -0700
+F, [2015-08-29T11:34:32.915935 #92832] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T11:34:32.918628 #92832]  INFO -- : Started GET "/apple-touch-icon.png" for 127.0.0.1 at 2015-08-29 11:34:32 -0700
+F, [2015-08-29T11:34:32.967204 #92832] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T11:34:34.770091 #92832]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-29 11:34:34 -0700
+I, [2015-08-29T11:34:34.812022 #92832]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-29T11:34:34.818615 #92832]  INFO -- :   Rendered shared/_alert.html.erb (0.3ms)
+I, [2015-08-29T11:34:34.819594 #92832]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (2.8ms)
+I, [2015-08-29T11:34:34.820183 #92832]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T11:34:34.820322 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T11:34:34.820459 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T11:34:34.820614 #92832]  INFO -- : Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+I, [2015-08-29T11:34:39.149675 #92832]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-08-29 11:34:39 -0700
+I, [2015-08-29T11:34:39.193069 #92832]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-08-29T11:34:39.193190 #92832]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"K2ASBHHm1vtUspQNMVmk4RDkiVpXqkYUv1WcHxMMXAz2sUUe4l0Ov5NDICp3RYaWWcfoLFVFR03oh90pF7svig==", "session"=>{"username"=>"cameron.aziz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+D, [2015-08-29T11:34:39.254697 #92832] DEBUG -- :   [1m[36mUser Load (60.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'cameron.aziz' LIMIT 1[0m
+I, [2015-08-29T11:34:39.316044 #92832]  INFO -- : Redirected to http://localhost:3000/profile
+I, [2015-08-29T11:34:39.316176 #92832]  INFO -- : Completed 302 Found in 123ms (ActiveRecord: 60.0ms)
+I, [2015-08-29T11:34:39.320301 #92832]  INFO -- : Started GET "/profile" for 127.0.0.1 at 2015-08-29 11:34:39 -0700
+I, [2015-08-29T11:34:39.361010 #92832]  INFO -- : Processing by StaticPagesController#profile as HTML
+I, [2015-08-29T11:34:39.363663 #92832]  INFO -- :   Rendered static_pages/profile.erb within layouts/application (0.3ms)
+I, [2015-08-29T11:34:39.368805 #92832]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T11:34:39.409941 #92832] DEBUG -- :   [1m[35mGroup Load (40.5ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T11:34:39.410559 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T11:34:39.411022 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T11:34:39.411412 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T11:34:39.454746 #92832] DEBUG -- :   [1m[35mUser Load (42.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T11:34:39.455370 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (86.4ms)
+I, [2015-08-29T11:34:39.455714 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-29T11:34:39.456002 #92832]  INFO -- : Completed 200 OK in 95ms (Views: 10.9ms | ActiveRecord: 83.3ms)
+I, [2015-08-29T11:34:41.505395 #92832]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-29 11:34:41 -0700
+I, [2015-08-29T11:34:41.548490 #92832]  INFO -- : Processing by PortfoliosController#index as HTML
+I, [2015-08-29T11:34:41.554143 #92832]  INFO -- :   Rendered shared/_notice.html.erb (0.4ms)
+D, [2015-08-29T11:34:41.595596 #92832] DEBUG -- :   [1m[36mPortfolio Load (41.0ms)[0m  [1mSELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` = 1[0m
+I, [2015-08-29T11:34:41.596607 #92832]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (46.1ms)
+I, [2015-08-29T11:34:41.597559 #92832]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T11:34:41.644200 #92832] DEBUG -- :   [1m[35mGroup Load (46.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T11:34:41.644811 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T11:34:41.645283 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T11:34:41.645628 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T11:34:41.689624 #92832] DEBUG -- :   [1m[35mUser Load (43.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T11:34:41.690160 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (92.5ms)
+I, [2015-08-29T11:34:41.690612 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-29T11:34:41.690897 #92832]  INFO -- : Completed 200 OK in 142ms (Views: 11.2ms | ActiveRecord: 130.4ms)
+I, [2015-08-29T11:34:44.128445 #92832]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-29 11:34:44 -0700
+I, [2015-08-29T11:34:44.172335 #92832]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T11:34:44.172433 #92832]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-29T11:34:44.217826 #92832] DEBUG -- :   [1m[36mPortfolio Load (44.8ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-29T11:34:44.265956 #92832] DEBUG -- :   [1m[35mInvestment Load (40.2ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-29T11:34:44.311311 #92832] DEBUG -- :   [1m[36mMutualFund Load (44.7ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T11:34:44.312381 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-08-29T11:34:44.312798 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T11:34:44.313185 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T11:34:44.451632 #92832] DEBUG -- :   [1m[36mInvestment Load (41.2ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-29T11:34:44.452222 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T11:34:44.453374 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T11:34:44.454629 #92832]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (44.5ms)
+I, [2015-08-29T11:34:44.455590 #92832]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T11:34:44.496369 #92832] DEBUG -- :   [1m[35mGroup Load (40.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T11:34:44.496937 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T11:34:44.497328 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T11:34:44.497766 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T11:34:44.539251 #92832] DEBUG -- :   [1m[35mUser Load (41.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T11:34:44.539965 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (84.3ms)
+I, [2015-08-29T11:34:44.540303 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T11:34:44.540575 #92832]  INFO -- : Completed 200 OK in 368ms (Views: 8.2ms | ActiveRecord: 252.2ms)
+I, [2015-08-29T11:35:15.386082 #92832]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-29 11:35:15 -0700
+I, [2015-08-29T11:35:15.428668 #92832]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T11:35:15.428759 #92832]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-29T11:35:15.472187 #92832] DEBUG -- :   [1m[36mPortfolio Load (42.6ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1[0m
+D, [2015-08-29T11:35:15.519942 #92832] DEBUG -- :   [1m[35mInvestment Load (39.1ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-08-29T11:35:15.564890 #92832] DEBUG -- :   [1m[36mMutualFund Load (44.4ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T11:35:15.565944 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-08-29T11:35:15.566287 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T11:35:15.566762 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T11:35:15.710419 #92832] DEBUG -- :   [1m[36mInvestment Load (40.7ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-29T11:35:15.711003 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T11:35:15.712023 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T11:35:15.713461 #92832]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (44.0ms)
+I, [2015-08-29T11:35:15.714493 #92832]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T11:35:15.754851 #92832] DEBUG -- :   [1m[35mGroup Load (39.8ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T11:35:15.755425 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T11:35:15.755815 #92832] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T11:35:15.756201 #92832] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T11:35:15.798276 #92832] DEBUG -- :   [1m[35mUser Load (41.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T11:35:15.798863 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (84.2ms)
+I, [2015-08-29T11:35:15.799218 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T11:35:15.799503 #92832]  INFO -- : Completed 200 OK in 371ms (Views: 8.0ms | ActiveRecord: 248.3ms)

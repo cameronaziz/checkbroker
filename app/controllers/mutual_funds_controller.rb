@@ -46,6 +46,6 @@ private
   end
 
   def mutual_fund_params
-    params.require(:mutual_fund).permit(:ticker, :nav, :expense_ratio)
+    params.require(:mutual_fund).permit(:ticker, :nav, :expense_ratio, :load, :twelve_b_1)
   end
 end

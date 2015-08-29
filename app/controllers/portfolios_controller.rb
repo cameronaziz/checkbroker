@@ -18,10 +18,6 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  def update
-
-  end
-
   def index
     @portfolios = Portfolio.where(:user_id => session[:user_id])
   end
@@ -31,15 +27,13 @@ class PortfoliosController < ApplicationController
       redirect_to portfolios_path, notice: 'Access to this portfolio is denied.'
     end
     @investments = Investment.where(:portfolio => @portfolio.id)
-    require 'gruff'
-    g = Gruff::Pie.new
-    g.title = 'Percentages of Fees'
-    mf_percent = @portfolio.management_fee / @portfolio.market_value
-    g.data 'Management Fees', mf_percent
-    of_percent = @portfolio.average_expense_ratio / @portfolio.market_value
-    g.data 'Other Fees', of_percent
-    file_name = 'public/images/pie_charts/portfolio_' + @portfolio.id.to_s + '.png'
-    g.write(file_name)
+
+    pie_data = [ ['Management Fees', @portfolio.management_fee],
+                 ['Other Fees', @portfolio.average_expense_ratio],
+                 ['Load Fees', @portfolio.average_load_fee],
+                 ['12B-1 Fees', @portfolio.average_12b1_fee]
+    ]
+    @portfolio.pie_data = pie_data
   end
 
 

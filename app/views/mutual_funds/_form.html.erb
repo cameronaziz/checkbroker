@@ -2,16 +2,24 @@
 <div class="col-md-4">
   <%= form_for @mutual_fund do |f| %>
       <div class="form-group">
-        <%= f.label :ticker, class: 'sr-only' %>
+        <%= f.label :ticker %>
         <%= f.text_field :ticker, class: 'form-control', placeholder: 'Ticker' %>
       </div>
       <div class="form-group">
-        <%= f.label :nav, class: 'sr-only'  %>
+        <%= f.label :nav %>
         <%= f.text_field :nav, class: 'form-control', placeholder: 'Net Asset Value' %>
       </div>
       <div class="form-group">
-        <%= f.label :expense_ratio, class: 'sr-only'  %>
+        <%= f.label :expense_ratio %>
         <%= f.text_field :expense_ratio, class: 'form-control', placeholder: 'Expense Ratio' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :load %>
+        <%= f.text_field :load, class: 'form-control', placeholder: 'Load %' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :twelve_b_1, '12B-1' %>
+        <%= f.text_field :twelve_b_1, class: 'form-control', placeholder: '12B-1 %' %>
       </div>
       <div class="form-group">
         <%= f.submit 'Save', class: 'btn btn-primary' %>

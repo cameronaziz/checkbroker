@@ -10,7 +10,9 @@ gem 'nokogiri'
 #fonts
 gem "font-awesome-rails"
 
+#charts
 gem 'gruff'
+gem 'chartkick'
 
 #date time picker
 
