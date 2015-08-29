@@ -2304,3 +2304,531 @@ D, [2015-08-29T11:35:15.798276 #92832] DEBUG -- :   [1m[35mUser Load (41.6ms)
 I, [2015-08-29T11:35:15.798863 #92832]  INFO -- :   Rendered layouts/_nav.html.erb (84.2ms)
 I, [2015-08-29T11:35:15.799218 #92832]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
 I, [2015-08-29T11:35:15.799503 #92832]  INFO -- : Completed 200 OK in 371ms (Views: 8.0ms | ActiveRecord: 248.3ms)
+I, [2015-08-29T15:22:52.322735 #97274]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-29 15:22:52 -0700
+I, [2015-08-29T15:22:52.667715 #97274]  INFO -- : Processing by PortfoliosController#index as HTML
+I, [2015-08-29T15:22:52.679435 #97274]  INFO -- :   Rendered shared/_notice.html.erb (0.2ms)
+D, [2015-08-29T15:22:52.722673 #97274] DEBUG -- :   [1m[36mPortfolio Load (42.7ms)[0m  [1mSELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` IS NULL[0m
+I, [2015-08-29T15:22:52.866269 #97274]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (188.2ms)
+I, [2015-08-29T15:22:52.869167 #97274]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T15:22:52.959357 #97274] DEBUG -- :   [1m[35mGroup Load (43.9ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:22:53.007316 #97274] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:22:53.007713 #97274] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:22:53.007943 #97274] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:22:53.101601 #97274] DEBUG -- :   [1m[35mUser Load (45.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:22:53.217144 #97274]  INFO -- :   Rendered layouts/_nav.html.erb (347.1ms)
+I, [2015-08-29T15:22:53.218441 #97274]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-29T15:22:53.218699 #97274]  INFO -- : Completed 200 OK in 551ms (Views: 102.1ms | ActiveRecord: 441.8ms)
+I, [2015-08-29T15:22:54.722716 #97274]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:22:54 -0700
+I, [2015-08-29T15:22:54.766747 #97274]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:22:54.766814 #97274]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:22:54.812633 #97274] DEBUG -- :   [1m[36mPortfolio Load (44.8ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:22:54.905499 #97274] DEBUG -- :   [1m[35mInvestment Load (44.9ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:22:55.048220 #97274] DEBUG -- :   [1m[36mMutualFund Load (45.5ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:22:55.097949 #97274] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:22:55.098249 #97274] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:22:55.098528 #97274] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:22:55.108831 #97274] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:22:55.109155 #97274] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:22:55.109482 #97274] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:22:55.110091 #97274]  INFO -- : Completed 500 Internal Server Error in 343ms
+F, [2015-08-29T15:22:55.110874 #97274] FATAL -- : 
+NoMethodError (private method `load' called for #<MutualFund:0x007f7f722e94a8>):
+  app/models/investment.rb:25:in `load'
+  app/models/portfolio.rb:54:in `block in average_load_fee'
+  app/models/portfolio.rb:52:in `average_load_fee'
+  app/controllers/portfolios_controller.rb:33:in `show'
+
+
+D, [2015-08-29T15:24:31.127223 #97334] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (45.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-08-29T15:24:31.176312 #97334]  INFO -- : Migrating to AddFeesToMutualFunds (20150829182131)
+D, [2015-08-29T15:24:31.378252 #97334] DEBUG -- :   [1m[35m (201.3ms)[0m  ALTER TABLE `mutual_funds` ADD `load` float
+D, [2015-08-29T15:24:31.544057 #97334] DEBUG -- :   [1m[36m (165.4ms)[0m  [1mALTER TABLE `mutual_funds` ADD `twelve_b_1` float[0m
+D, [2015-08-29T15:24:31.627514 #97334] DEBUG -- :   [1m[35m (38.8ms)[0m  BEGIN
+D, [2015-08-29T15:24:31.674145 #97334] DEBUG -- :   [1m[36mSQL (43.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150829182131')[0m
+D, [2015-08-29T15:24:31.726072 #97334] DEBUG -- :   [1m[35m (51.5ms)[0m  COMMIT
+I, [2015-08-29T15:24:38.235724 #97274]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:24:38 -0700
+I, [2015-08-29T15:24:38.277148 #97274]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:24:38.277239 #97274]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:24:38.320952 #97274] DEBUG -- :   [1m[35mPortfolio Load (42.9ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1
+D, [2015-08-29T15:24:38.364963 #97274] DEBUG -- :   [1m[36mInvestment Load (42.8ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:24:38.409435 #97274] DEBUG -- :   [1m[35mMutualFund Load (43.8ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-08-29T15:24:38.410557 #97274] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:24:38.410942 #97274] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:24:38.411387 #97274] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:24:38.412300 #97274] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:24:38.412759 #97274] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:24:38.413072 #97274] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+I, [2015-08-29T15:24:38.413673 #97274]  INFO -- : Completed 500 Internal Server Error in 136ms
+F, [2015-08-29T15:24:38.414524 #97274] FATAL -- : 
+NoMethodError (private method `load' called for #<MutualFund:0x007f7f728db050>):
+  app/models/investment.rb:25:in `load'
+  app/models/portfolio.rb:54:in `block in average_load_fee'
+  app/models/portfolio.rb:52:in `average_load_fee'
+  app/controllers/portfolios_controller.rb:33:in `show'
+
+
+I, [2015-08-29T15:24:46.653168 #97362]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:24:46 -0700
+I, [2015-08-29T15:24:46.938932 #97362]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:24:46.938998 #97362]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:24:47.108547 #97362] DEBUG -- :   [1m[36mPortfolio Load (40.2ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:24:47.198424 #97362] DEBUG -- :   [1m[35mInvestment Load (43.2ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:24:47.329574 #97362] DEBUG -- :   [1m[36mMutualFund Load (43.3ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:24:47.376501 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:24:47.376712 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:24:47.376918 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:24:47.383658 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:24:47.383919 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:24:47.384158 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:24:47.384504 #97362]  INFO -- : Completed 500 Internal Server Error in 445ms
+F, [2015-08-29T15:24:47.385164 #97362] FATAL -- : 
+TypeError (nil can't be coerced into Float):
+  app/models/portfolio.rb:54:in `*'
+  app/models/portfolio.rb:54:in `block in average_load_fee'
+  app/models/portfolio.rb:52:in `average_load_fee'
+  app/controllers/portfolios_controller.rb:33:in `show'
+
+
+I, [2015-08-29T15:25:30.497084 #97362]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:25:30 -0700
+I, [2015-08-29T15:25:30.539911 #97362]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:25:30.539977 #97362]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:25:30.583059 #97362] DEBUG -- :   [1m[35mPortfolio Load (42.5ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1
+D, [2015-08-29T15:25:30.626703 #97362] DEBUG -- :   [1m[36mInvestment Load (42.3ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:25:30.671786 #97362] DEBUG -- :   [1m[35mMutualFund Load (44.4ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-08-29T15:25:30.672916 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:25:30.673331 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:25:30.673768 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:25:30.674705 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:25:30.675066 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:25:30.675416 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:25:30.675696 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:25:30.903185 #97362] DEBUG -- :   [1m[35mInvestment Load (41.7ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:25:30.903895 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:25:30.904746 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:25:30.905435 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:25:30.906010 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+I, [2015-08-29T15:25:30.906842 #97362]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (226.6ms)
+I, [2015-08-29T15:25:30.909786 #97362]  INFO -- :   Rendered layouts/_shiv.html.erb (0.3ms)
+D, [2015-08-29T15:25:31.000340 #97362] DEBUG -- :   [1m[36mGroup Load (45.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T15:25:31.051218 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:25:31.051672 #97362] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:25:31.051925 #97362] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:25:31.141441 #97362] DEBUG -- :   [1m[36mUser Load (42.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T15:25:31.249691 #97362]  INFO -- :   Rendered layouts/_nav.html.erb (338.9ms)
+I, [2015-08-29T15:25:31.250897 #97362]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-29T15:25:31.251133 #97362]  INFO -- : Completed 200 OK in 711ms (Views: 275.0ms | ActiveRecord: 429.5ms)
+I, [2015-08-29T15:25:31.267796 #97362]  INFO -- : Started GET "/javascripts/chartkick.js" for 127.0.0.1 at 2015-08-29 15:25:31 -0700
+F, [2015-08-29T15:25:31.306991 #97362] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/chartkick.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T15:26:27.661453 #97392]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:26:27 -0700
+I, [2015-08-29T15:26:27.957614 #97392]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:26:27.957675 #97392]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:26:28.138035 #97392] DEBUG -- :   [1m[36mPortfolio Load (39.1ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:26:28.229340 #97392] DEBUG -- :   [1m[35mInvestment Load (42.8ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:26:28.369760 #97392] DEBUG -- :   [1m[36mMutualFund Load (42.4ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:26:28.414070 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:26:28.414360 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:26:28.414649 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:26:28.420817 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:26:28.421034 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:26:28.421284 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:26:28.421465 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:26:28.673967 #97392] DEBUG -- :   [1m[36mInvestment Load (73.9ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:26:28.674637 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:26:28.675494 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:26:28.676022 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:26:28.676431 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:26:28.677021 #97392]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (252.0ms)
+I, [2015-08-29T15:26:28.679987 #97392]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T15:26:28.766911 #97392] DEBUG -- :   [1m[35mGroup Load (42.9ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:26:28.810230 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:26:28.810586 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:26:28.810797 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:26:28.902840 #97392] DEBUG -- :   [1m[35mUser Load (46.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:26:29.007660 #97392]  INFO -- :   Rendered layouts/_nav.html.erb (326.9ms)
+I, [2015-08-29T15:26:29.008793 #97392]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-29T15:26:29.008992 #97392]  INFO -- : Completed 200 OK in 1051ms (Views: 257.4ms | ActiveRecord: 753.0ms)
+I, [2015-08-29T15:26:29.029722 #97392]  INFO -- : Started GET "/javascripts/chartkick.js" for 127.0.0.1 at 2015-08-29 15:26:29 -0700
+F, [2015-08-29T15:26:29.074411 #97392] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/chartkick.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T15:27:25.631097 #97392]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:27:25 -0700
+I, [2015-08-29T15:27:25.725343 #97392]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:27:25.725501 #97392]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:27:25.767125 #97392] DEBUG -- :   [1m[36mPortfolio Load (40.7ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:27:25.811078 #97392] DEBUG -- :   [1m[35mInvestment Load (42.6ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:27:25.854771 #97392] DEBUG -- :   [1m[36mMutualFund Load (43.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:27:25.855839 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:27:25.856264 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:27:25.856655 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:27:25.857548 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:27:25.857870 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:27:25.858235 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:27:25.858511 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:27:25.898342 #97392] DEBUG -- :   [1m[36mInvestment Load (38.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:27:25.898953 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:27:25.899798 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:27:25.900405 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:27:25.901042 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:27:25.901709 #97392]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (42.7ms)
+I, [2015-08-29T15:27:25.902725 #97392]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-29T15:27:25.943286 #97392] DEBUG -- :   [1m[35mGroup Load (40.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:27:25.943993 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:27:25.944402 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:27:25.944777 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:27:25.988301 #97392] DEBUG -- :   [1m[35mUser Load (42.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:27:26.045618 #97392]  INFO -- :   Rendered layouts/_nav.html.erb (142.8ms)
+I, [2015-08-29T15:27:26.045881 #97392]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T15:27:26.046054 #97392]  INFO -- : Completed 200 OK in 320ms (Views: 66.3ms | ActiveRecord: 247.4ms)
+I, [2015-08-29T15:27:26.068465 #97392]  INFO -- : Started GET "/javascripts/chartkick.js" for 127.0.0.1 at 2015-08-29 15:27:26 -0700
+F, [2015-08-29T15:27:26.107520 #97392] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/chartkick.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T15:28:43.326513 #97392]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:28:43 -0700
+I, [2015-08-29T15:28:43.369345 #97392]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:28:43.369412 #97392]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:28:43.415484 #97392] DEBUG -- :   [1m[36mPortfolio Load (45.5ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:28:43.466839 #97392] DEBUG -- :   [1m[35mInvestment Load (50.3ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:28:43.514058 #97392] DEBUG -- :   [1m[36mMutualFund Load (46.8ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:28:43.514750 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:28:43.514930 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:43.515147 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:43.515549 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:28:43.515699 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:43.515930 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:43.516100 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:43.559642 #97392] DEBUG -- :   [1m[36mInvestment Load (41.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:28:43.560367 #97392] DEBUG -- :   [1m[35mCACHE (0.1ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:43.561145 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:43.561734 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:43.562401 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:28:43.562997 #97392]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (46.5ms)
+I, [2015-08-29T15:28:43.563926 #97392]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T15:28:43.604288 #97392] DEBUG -- :   [1m[35mGroup Load (39.8ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:28:43.604891 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:28:43.605299 #97392] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:28:43.605646 #97392] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:28:43.649988 #97392] DEBUG -- :   [1m[35mUser Load (43.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:28:43.715184 #97392]  INFO -- :   Rendered layouts/_nav.html.erb (151.1ms)
+I, [2015-08-29T15:28:43.715571 #97392]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-29T15:28:43.715790 #97392]  INFO -- : Completed 200 OK in 346ms (Views: 74.7ms | ActiveRecord: 267.3ms)
+I, [2015-08-29T15:28:43.741273 #97392]  INFO -- : Started GET "/javascripts/chartkick.js" for 127.0.0.1 at 2015-08-29 15:28:43 -0700
+F, [2015-08-29T15:28:43.782480 #97392] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/chartkick.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T15:28:51.136712 #97460]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:28:51 -0700
+I, [2015-08-29T15:28:51.424160 #97460]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:28:51.424225 #97460]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:28:51.600329 #97460] DEBUG -- :   [1m[36mPortfolio Load (39.3ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:28:51.688069 #97460] DEBUG -- :   [1m[35mInvestment Load (41.9ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:28:51.823872 #97460] DEBUG -- :   [1m[36mMutualFund Load (41.1ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:28:51.876693 #97460] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:28:51.876980 #97460] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:51.877388 #97460] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:51.884033 #97460] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:28:51.884293 #97460] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:51.884528 #97460] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:51.884734 #97460] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:52.109600 #97460] DEBUG -- :   [1m[36mInvestment Load (38.3ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:28:52.110247 #97460] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:52.111135 #97460] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:52.111725 #97460] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:28:52.112383 #97460] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:28:52.113232 #97460]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (225.0ms)
+I, [2015-08-29T15:28:52.116016 #97460]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T15:28:52.200975 #97460] DEBUG -- :   [1m[35mGroup Load (41.8ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:28:52.247366 #97460] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:28:52.247898 #97460] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:28:52.248190 #97460] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:28:52.339005 #97460] DEBUG -- :   [1m[35mUser Load (38.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:28:52.441460 #97460]  INFO -- :   Rendered layouts/_nav.html.erb (324.6ms)
+I, [2015-08-29T15:28:52.442604 #97460]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-29T15:28:52.442795 #97460]  INFO -- : Completed 200 OK in 1019ms (Views: 271.0ms | ActiveRecord: 707.1ms)
+I, [2015-08-29T15:30:37.238832 #97500]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:30:37 -0700
+I, [2015-08-29T15:30:37.523321 #97500]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:30:37.523387 #97500]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:30:37.701280 #97500] DEBUG -- :   [1m[36mPortfolio Load (39.8ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:30:37.794785 #97500] DEBUG -- :   [1m[35mInvestment Load (39.4ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:30:37.922085 #97500] DEBUG -- :   [1m[36mMutualFund Load (42.2ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:30:37.972186 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:30:37.972466 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:37.972743 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:37.979714 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:30:37.979974 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:37.980290 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:37.980486 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:38.228938 #97500] DEBUG -- :   [1m[36mInvestment Load (42.5ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:30:38.229484 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:38.230044 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:38.230466 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:38.230832 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:30:38.231440 #97500]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (245.5ms)
+I, [2015-08-29T15:30:38.234260 #97500]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T15:30:38.319913 #97500] DEBUG -- :   [1m[35mGroup Load (43.1ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:30:38.366304 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:30:38.366705 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:30:38.366918 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:30:38.456017 #97500] DEBUG -- :   [1m[35mUser Load (44.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:30:38.570380 #97500]  INFO -- :   Rendered layouts/_nav.html.erb (335.2ms)
+I, [2015-08-29T15:30:38.571863 #97500]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-29T15:30:38.572080 #97500]  INFO -- : Completed 200 OK in 1049ms (Views: 293.5ms | ActiveRecord: 715.2ms)
+I, [2015-08-29T15:30:39.770822 #97500]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:30:39 -0700
+I, [2015-08-29T15:30:39.813589 #97500]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:30:39.813654 #97500]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:30:39.857597 #97500] DEBUG -- :   [1m[36mPortfolio Load (43.3ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:30:39.901693 #97500] DEBUG -- :   [1m[35mInvestment Load (42.8ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:30:39.941465 #97500] DEBUG -- :   [1m[36mMutualFund Load (39.1ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:30:39.944122 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:30:39.944680 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:39.945209 #97500] DEBUG -- :   [1m[35mCACHE (0.1ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:39.945783 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:30:39.946024 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:39.946270 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:39.946504 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:39.987353 #97500] DEBUG -- :   [1m[36mInvestment Load (39.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:30:39.988039 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:39.988854 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:39.989628 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:30:39.990244 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:30:39.991043 #97500]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (44.0ms)
+I, [2015-08-29T15:30:39.992102 #97500]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T15:30:40.041411 #97500] DEBUG -- :   [1m[35mGroup Load (48.7ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:30:40.042039 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:30:40.042456 #97500] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:30:40.042867 #97500] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:30:40.087337 #97500] DEBUG -- :   [1m[35mUser Load (43.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:30:40.145940 #97500]  INFO -- :   Rendered layouts/_nav.html.erb (153.7ms)
+I, [2015-08-29T15:30:40.146295 #97500]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T15:30:40.146512 #97500]  INFO -- : Completed 200 OK in 333ms (Views: 68.0ms | ActiveRecord: 257.0ms)
+I, [2015-08-29T15:31:15.190591 #97515]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:31:15 -0700
+I, [2015-08-29T15:31:15.497005 #97515]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:31:15.497070 #97515]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:31:15.670438 #97515] DEBUG -- :   [1m[36mPortfolio Load (39.6ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:31:15.759909 #97515] DEBUG -- :   [1m[35mInvestment Load (42.7ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:31:15.886971 #97515] DEBUG -- :   [1m[36mMutualFund Load (42.3ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:31:15.932285 #97515] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:31:15.932731 #97515] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:31:15.933075 #97515] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:31:15.939369 #97515] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:31:15.939615 #97515] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:31:15.939847 #97515] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:31:15.940087 #97515] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:31:16.192526 #97515] DEBUG -- :   [1m[36mInvestment Load (41.2ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:31:16.193311 #97515] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:31:16.194380 #97515] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:31:16.195095 #97515] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:31:16.195567 #97515] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:31:16.196189 #97515]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (252.3ms)
+I, [2015-08-29T15:31:16.199719 #97515]  INFO -- :   Rendered layouts/_shiv.html.erb (0.6ms)
+D, [2015-08-29T15:31:16.286364 #97515] DEBUG -- :   [1m[35mGroup Load (43.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:31:16.333356 #97515] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:31:16.333760 #97515] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:31:16.333980 #97515] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:31:16.422174 #97515] DEBUG -- :   [1m[35mUser Load (42.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:31:16.524299 #97515]  INFO -- :   Rendered layouts/_nav.html.erb (323.6ms)
+I, [2015-08-29T15:31:16.525738 #97515]  INFO -- :   Rendered layouts/_dev.html.erb (0.5ms)
+I, [2015-08-29T15:31:16.526055 #97515]  INFO -- : Completed 200 OK in 1029ms (Views: 291.8ms | ActiveRecord: 697.8ms)
+I, [2015-08-29T15:32:46.347688 #97564]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:32:46 -0700
+I, [2015-08-29T15:32:46.639663 #97564]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:32:46.639725 #97564]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:32:46.808283 #97564] DEBUG -- :   [1m[36mPortfolio Load (39.9ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:32:46.898459 #97564] DEBUG -- :   [1m[35mInvestment Load (42.2ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:32:47.032942 #97564] DEBUG -- :   [1m[36mMutualFund Load (42.9ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:32:47.077498 #97564] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:32:47.077776 #97564] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:32:47.078048 #97564] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:32:47.084598 #97564] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:32:47.084877 #97564] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:32:47.085106 #97564] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:32:47.085320 #97564] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:32:47.330205 #97564] DEBUG -- :   [1m[36mInvestment Load (42.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:32:47.330889 #97564] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:32:47.331784 #97564] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:32:47.332400 #97564] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:32:47.333066 #97564] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:32:47.333889 #97564]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (245.0ms)
+I, [2015-08-29T15:32:47.336921 #97564]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T15:32:47.423480 #97564] DEBUG -- :   [1m[35mGroup Load (43.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:32:47.465337 #97564] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:32:47.465797 #97564] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:32:47.466013 #97564] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:32:47.555355 #97564] DEBUG -- :   [1m[35mUser Load (43.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:32:47.659994 #97564]  INFO -- :   Rendered layouts/_nav.html.erb (322.2ms)
+I, [2015-08-29T15:32:47.661190 #97564]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-29T15:32:47.661401 #97564]  INFO -- : Completed 200 OK in 1022ms (Views: 285.0ms | ActiveRecord: 700.7ms)
+I, [2015-08-29T15:36:57.712043 #97632]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:36:57 -0700
+I, [2015-08-29T15:36:58.000686 #97632]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:36:58.000753 #97632]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:36:58.174733 #97632] DEBUG -- :   [1m[36mPortfolio Load (40.5ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:36:58.263224 #97632] DEBUG -- :   [1m[35mInvestment Load (43.7ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:36:58.409902 #97632] DEBUG -- :   [1m[36mMutualFund Load (42.5ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:36:58.456703 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:36:58.457019 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:36:58.457269 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:36:58.463950 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:36:58.464205 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:36:58.464501 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:36:58.464683 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:36:58.687086 #97632] DEBUG -- :   [1m[36mInvestment Load (40.4ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:36:58.687749 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:36:58.688645 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:36:58.689299 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:36:58.689960 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:36:58.690861 #97632]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (222.4ms)
+I, [2015-08-29T15:36:58.693943 #97632]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T15:36:58.779431 #97632] DEBUG -- :   [1m[35mGroup Load (42.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:36:58.821541 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:36:58.821870 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:36:58.822087 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:36:58.916847 #97632] DEBUG -- :   [1m[35mUser Load (50.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:36:59.015058 #97632]  INFO -- :   Rendered layouts/_nav.html.erb (320.2ms)
+I, [2015-08-29T15:36:59.016245 #97632]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-29T15:36:59.016447 #97632]  INFO -- : Completed 200 OK in 1016ms (Views: 262.0ms | ActiveRecord: 716.4ms)
+I, [2015-08-29T15:37:11.949281 #97632]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:37:11 -0700
+I, [2015-08-29T15:37:12.006643 #97632]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:37:12.006709 #97632]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:37:12.047510 #97632] DEBUG -- :   [1m[36mPortfolio Load (40.1ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:37:12.091306 #97632] DEBUG -- :   [1m[35mInvestment Load (42.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:37:12.144455 #97632] DEBUG -- :   [1m[36mMutualFund Load (52.5ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:37:12.145709 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:37:12.146123 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:12.146555 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:12.147673 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:37:12.148087 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:12.148607 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:12.148908 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:12.189459 #97632] DEBUG -- :   [1m[36mInvestment Load (38.9ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:37:12.190311 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:12.191080 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:12.191575 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:12.191929 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:37:12.192503 #97632]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (43.1ms)
+I, [2015-08-29T15:37:12.193553 #97632]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T15:37:12.235549 #97632] DEBUG -- :   [1m[35mGroup Load (41.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:37:12.235975 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:37:12.236234 #97632] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:37:12.236485 #97632] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:37:12.279294 #97632] DEBUG -- :   [1m[35mUser Load (42.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:37:12.338904 #97632]  INFO -- :   Rendered layouts/_nav.html.erb (145.2ms)
+I, [2015-08-29T15:37:12.339151 #97632]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T15:37:12.339326 #97632]  INFO -- : Completed 200 OK in 333ms (Views: 67.4ms | ActiveRecord: 257.4ms)
+I, [2015-08-29T15:37:16.826106 #97641]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:37:16 -0700
+I, [2015-08-29T15:37:17.110392 #97641]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T15:37:17.110460 #97641]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T15:37:17.294498 #97641] DEBUG -- :   [1m[36mPortfolio Load (47.1ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T15:37:17.391641 #97641] DEBUG -- :   [1m[35mInvestment Load (42.1ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T15:37:17.531827 #97641] DEBUG -- :   [1m[36mMutualFund Load (42.6ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T15:37:17.581345 #97641] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T15:37:17.581685 #97641] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:17.581973 #97641] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:17.588149 #97641] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T15:37:17.588347 #97641] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:17.588591 #97641] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:17.588797 #97641] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:17.873179 #97641] DEBUG -- :   [1m[36mInvestment Load (91.3ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T15:37:17.873861 #97641] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:17.874767 #97641] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:17.875407 #97641] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T15:37:17.875985 #97641] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T15:37:17.876540 #97641]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (284.3ms)
+I, [2015-08-29T15:37:17.879503 #97641]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T15:37:17.966889 #97641] DEBUG -- :   [1m[35mGroup Load (43.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T15:37:18.013430 #97641] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:37:18.013913 #97641] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T15:37:18.014133 #97641] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T15:37:18.100904 #97641] DEBUG -- :   [1m[35mUser Load (42.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T15:37:18.208149 #97641]  INFO -- :   Rendered layouts/_nav.html.erb (327.9ms)
+I, [2015-08-29T15:37:18.209276 #97641]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
+I, [2015-08-29T15:37:18.209475 #97641]  INFO -- : Completed 200 OK in 1099ms (Views: 282.0ms | ActiveRecord: 778.0ms)

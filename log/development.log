@@ -10921,3 +10921,306 @@ Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b098
 
 
 Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for 127.0.0.1 at 2015-08-29 15:02:16 -0700
+
+
+Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:22:28 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPortfolio Load (47.0ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1
+  [1m[36mInvestment Load (58.6ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+  [1m[35mMutualFund Load (45.2ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+  [1m[36m (41.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (43.3ms)[0m  UPDATE `mutual_funds` SET `auto_updated` = '2015-08-29 22:22:29.846842', `updated_at` = '2015-08-29 22:22:29.889590' WHERE `mutual_funds`.`id` = 4
+  [1m[36m (66.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mInvestment Load (46.5ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+  [1m[36mMutualFund Load (52.2ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mInvestment Load (41.6ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  Rendered portfolios/show.html.erb within layouts/application (51.9ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[35mGroup Load (50.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  Rendered layouts/_nav.html.erb (54.3ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 1372ms (Views: 72.1ms | ActiveRecord: 492.8ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/portfolios.self-c1bde25b2f57105f30b50f110ad45a8ac0cf509fb50c83392833aa8a16d451fa.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/eco/eco.self-dbb63f534a916a964b9290c6e29202fa5c823d63d932a24a36fa53cdc1302e75.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:30 -0700
+
+
+Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:22:37 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPortfolio Load (46.1ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1
+  [1m[36mInvestment Load (41.7ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+  [1m[35mMutualFund Load (53.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mInvestment Load (40.5ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  Rendered portfolios/show.html.erb within layouts/application (49.7ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (40.5ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  Rendered layouts/_nav.html.erb (44.0ms)
+  Rendered layouts/_dev.html.erb (0.5ms)
+Completed 200 OK in 304ms (Views: 74.1ms | ActiveRecord: 222.1ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/portfolios.self-c1bde25b2f57105f30b50f110ad45a8ac0cf509fb50c83392833aa8a16d451fa.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/eco/eco.self-dbb63f534a916a964b9290c6e29202fa5c823d63d932a24a36fa53cdc1302e75.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:38 -0700
+
+
+Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 15:22:41 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (51.3ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+  [1m[35mInvestment Load (44.6ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+  [1m[36mMutualFund Load (44.5ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mInvestment Load (40.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+  Rendered portfolios/show.html.erb within layouts/application (50.1ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[35mGroup Load (40.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  Rendered layouts/_nav.html.erb (44.5ms)
+  Rendered layouts/_dev.html.erb (0.5ms)
+Completed 200 OK in 301ms (Views: 73.1ms | ActiveRecord: 221.4ms)
+
+
+Started GET "/assets/application.self-9fa57c12b42b300bf023852d9afdeb4ad8a2dc6c04115cf659fb4b50ba6340a2.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/eco/bootstrap.self-1a1e48213145e8d06e909ebb7e2388d9c6725fb9fec468e6f74bd31f527ba0f5.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/eco/animate.self-0bf36e1a915966bf20555ee522a3bc106ca838c5aa71e4ccaf3184cb02de1968.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/eco/rs-plugin/css/settings.self-4c114dbc5659fe3ffcface86ab752e5abdddce60eab4c3e8b3306df05829a80b.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/portfolios.self-c1bde25b2f57105f30b50f110ad45a8ac0cf509fb50c83392833aa8a16d451fa.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/eco/modernizr.custom.32033.self-77bcfdaabe8183284282370704755ec828ee573a3493c3445facc5cca8b1a329.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/eco/slick.self-246d85768729e669e9b375af83a25b801a01df4916d3adbc745fe33f5f670a0e.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/eco/eco.self-dbb63f534a916a964b9290c6e29202fa5c823d63d932a24a36fa53cdc1302e75.css?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/assets/chartkick.self-c33f97212de7f499029d66ddf93fb10e12286d4bf207b6fbeaabb0e93a03e9f7.js?body=1" for 127.0.0.1 at 2015-08-29 15:22:42 -0700
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2015-08-29 15:22:44 -0700
+Processing by PortfoliosController#index as HTML
+  Rendered shared/_notice.html.erb (0.1ms)
+  [1m[35mPortfolio Load (42.3ms)[0m  SELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` IS NULL
+  Rendered portfolios/index.html.erb within layouts/application (45.7ms)
+  Rendered layouts/_shiv.html.erb (0.0ms)
+  [1m[36mGroup Load (42.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+  Rendered layouts/_nav.html.erb (46.3ms)
+  Rendered layouts/_dev.html.erb (0.4ms)
+Completed 200 OK in 157ms (Views: 71.2ms | ActiveRecord: 85.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (44.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (44.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (46.8ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'cmb_development'
+  AND fk.table_name = 'groups'
+[0m
+  [1m[35m (40.4ms)[0m  SHOW CREATE TABLE `groups`
+  [1m[36m (44.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'cmb_development'
+  AND fk.table_name = 'investments'
+[0m
+  [1m[35m (45.0ms)[0m  SHOW CREATE TABLE `investments`
+  [1m[36m (42.8ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'cmb_development'
+  AND fk.table_name = 'memberships'
+[0m
+  [1m[35m (40.0ms)[0m  SHOW CREATE TABLE `memberships`
+  [1m[36m (39.8ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'cmb_development'
+  AND fk.table_name = 'mutual_funds'
+[0m
+  [1m[35m (140.5ms)[0m  SHOW CREATE TABLE `mutual_funds`
+  [1m[36m (102.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'cmb_development'
+  AND fk.table_name = 'portfolios'
+[0m
+  [1m[35m (44.7ms)[0m  SHOW CREATE TABLE `portfolios`
+  [1m[36m (44.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'cmb_development'
+  AND fk.table_name = 'suggestions'
+[0m
+  [1m[35m (43.7ms)[0m  SHOW CREATE TABLE `suggestions`
+  [1m[36m (45.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'cmb_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (44.7ms)[0m  SHOW CREATE TABLE `users`
