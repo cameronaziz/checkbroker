@@ -28,7 +28,12 @@ class BrokersController < ApplicationController
   end
 
   def update
-
+    if @broker.update_attributes(broker_params)
+      broker_name = @broker.full_name
+      redirect_to brokers_path, notice: "The broker \"#{broker_name}\" was successfully updated."
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -43,7 +48,7 @@ class BrokersController < ApplicationController
   end
 
   def broker_params
-    params.require(:broker).permit(:first_name, :last_name, :email, :phone, :image)
+    params.require(:broker).permit(:first_name, :last_name, :about, :email, :phone, :image)
   end
 
   def clean_phone
