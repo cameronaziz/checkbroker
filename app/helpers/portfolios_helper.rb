@@ -5,6 +5,6 @@ module PortfoliosHelper
     fields = f.fields_for(association, new_object, child_index: id) do |builder|
       render('investments/table_form', f: builder)
     end
-    link_to(name, '#', class: 'btn btn-default add_field', data: {id: id, fields: fields.gsub("\n", '')})
+    link_to(name, '#', class: 'btn btn-primary add_field', data: {id: id, fields: fields.gsub("\n", '')})
   end
 end

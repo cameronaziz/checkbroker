@@ -38,7 +38,7 @@ class GroupsController < ApplicationController
   def destroy
     @group.destroy
     ##destroy relationship in Memberships
-    redirect_to groups_index_path
+    redirect_to groups_path
   end
 
   private

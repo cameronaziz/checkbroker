@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :users
   resources :groups
   resources :mutual_funds
+  resources :brokers
 
 
 
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   get 'profile' => 'static_pages#profile'
   get 'register' => 'users#register'
+  post 'registration' => 'users#create_register'
 
 
 

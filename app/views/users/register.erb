@@ -1,7 +1,12 @@
 <%= render partial: 'shared/errors', :locals => {:object => @user}%>
-<div class="col-md-4">
-  <h1>Register User</h1>
-  <%= form_for @user do |f| %>
+<div class="col-md-6">
+  <h1>Register for BrokerVerified</h1>
+  Already a user? <%= link_to 'Login', login_path %>.
+  </div>
+<div class="clearfix"></div>
+<div style="height: 15px"></div>
+  <div class="col-md-4">
+  <%= form_for @user, url: {action: 'create_register'} do |f| %>
       <div class="form-group">
         <%= f.label :first_name, class: 'sr-only' %>
         <%= f.text_field :first_name, class: 'form-control top-input', placeholder: 'First Name' %>
@@ -24,4 +29,4 @@
         <%= f.submit 'Register', class: 'btn btn-primary' %>
       </div>
   <% end %>
-</div>
+    </div>

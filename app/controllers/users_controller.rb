@@ -14,8 +14,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @all_groups = Group.all
-    @user_group = @user.memberships.build
   end
 
   def register
@@ -30,10 +28,25 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     create_username ## todo: fix so that it will error properly if username taken.
     if @user.save
+      log_in(@user)
       redirect_to users_url, notice: "User was successfully created. Username: #{@user.username}"
     else
       render 'users/new'
     end
+  end
+
+  def create_register
+    @user = User.new(register_params)
+    create_username ## todo: fix so that it will error properly if username taken.
+      if @user.save
+        membership = Membership.new
+        membership.group_id = '2'
+        membership.user_id = @user.id
+        membership.save
+        render 'sessions/new'
+      else
+        render 'users/register'
+      end
   end
 
   def edit
@@ -63,6 +76,11 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :first_name, :last_name, :email, :password, :password_confirmation, {:group_ids => []})
+  end
+
+  def register_params
+    params.require(:user).permit(:username, :first_name, :last_name, :email, :password, :password_confirmation)
+
   end
 
   def create_username

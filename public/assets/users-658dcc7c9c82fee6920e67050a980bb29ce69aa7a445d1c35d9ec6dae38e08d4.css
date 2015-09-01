@@ -1,0 +1,9 @@
+/* line 1, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/users.scss */
+.container {
+  margin-top: 20px;
+}
+
+/* line 5, /Users/cameronaziz/Development/checkbroker/app/assets/stylesheets/users.scss */
+input[type="password"] {
+  padding-top: -10px;
+}

@@ -1,3 +1,4 @@
 <% provide(:title, 'Register User') %>
+<%= render partial: 'shared/errors', :locals => {:object => @user}%>
 <h1>Register User</h1>
 <%= render partial: 'users/form' %>

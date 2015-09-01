@@ -4,7 +4,6 @@
       <div class="form-group">
         <%= f.label :first_name, class: 'sr-only' %>
         <%= f.text_field :first_name, class: 'form-control top-input', placeholder: 'First Name' %>
-
         <%= f.label :last_name, class: 'sr-only' %>
         <%= f.text_field :last_name, class: 'form-control bottom-input', placeholder: 'Last Name'%>
       </div>
@@ -22,13 +21,11 @@
       <div class="form-group">
         <h4>Groups</h4>
         <% hidden_field_tag "user[group_ids][]", nil %>
-        <% Group.all.each do |group|%>
+        <% Group.order('name').all.each do |group|%>
             <%= check_box_tag "user[group_ids][]", group.id, @user.group_ids.include?(group.id), id: dom_id(group) %>
             <%= label_tag dom_id(group), group.name %><br>
         <% end %>
       </div>
-
-
       <div class="form-group">
         <%= f.submit 'Save', class: 'btn btn-primary' %>
       </div>

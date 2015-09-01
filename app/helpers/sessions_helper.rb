@@ -46,6 +46,28 @@ module SessionsHelper
     session.delete(:forwarding_url)
   end
 
+
+  def auth_group(group_name)
+    if current_user
+      current_user.groups.each do |user_group|
+        if user_group.name == group_name
+          return true
+        end
+        return false
+      end
+    else
+      false
+    end
+  end
+
+  def auth_groups(groups)
+    groups.each do |group|
+      auth_group(group)
+    end
+  end
+
+  #todo: should not use authenticate_user_and_group or authenticate_group
+
   def authenticate_user_and_group(group_name, is_id = true)
     if logged_in?
       unless authenticate_group(group_name, is_id)

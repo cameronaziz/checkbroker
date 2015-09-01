@@ -4,7 +4,7 @@
   <%= pie_chart @portfolio.pie_data %>
 </div>
 <div class="col-xs-6">
-  <table class="table table-bordered">
+  <table class="table table-bordered breakdown-table">
     <tr>
       <th colspan="2" style="text-align: center;">Fees to Advisor</th>
     </tr>
@@ -23,11 +23,11 @@
       <th colspan="2" style="text-align: center;">Kickback to Advisor</th>
     </tr>
     <tr>
-      <td>12B-1 Fee</td>
+      <td>Average 12B-1 Fee</td>
       <td><%= number_with_precision(@portfolio.average_12b1_fee, precision: 2) %>%</td>
     </tr>
     <tr>
-      <td>Load Fee</td>
+      <td>Average Load Fee</td>
       <td><%= number_with_precision(@portfolio.average_load_fee, precision: 2) %>%</td>
     </tr>
     <tr>
@@ -38,7 +38,7 @@
       <td><%= number_with_precision(@portfolio.average_expense_ratio + @portfolio.management_fee + @portfolio.average_12b1_fee + @portfolio.average_load_fee, precision: 2)  %>% </td>
     </tr>
     <tr>
-      <td>Total Fees Paid</td>
+      <td>Total Fees Per Year</td>
       <td>$<%= number_with_precision(((@portfolio.average_expense_ratio + @portfolio.management_fee + @portfolio.average_12b1_fee + @portfolio.average_load_fee) * @portfolio.market_value) / 100, precision: 2 )%></td>
     </tr>
   </table>

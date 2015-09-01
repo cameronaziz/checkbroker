@@ -1,0 +1,26 @@
+<%= render partial: 'shared/notice' %>
+<h1>Broker List</h1>
+<%= link_to_button 'Create Broker', new_broker_path, 'btn-primary' %>
+<table class='table'>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @brokers.each do |broker| %>
+      <tr>
+        <td><%= broker.full_name %></td>
+        <td><%= broker.formatted_phone %></td>
+        <td><%= broker.email %></td>
+        <td><%= link_to 'Show', broker %></td>
+        <td><%= link_to 'Edit', edit_broker_path(broker) %></td>
+        <td><%= link_to 'Delete', broker, method: :delete, data: {confirm: 'Are you sure?'}  %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<br/>

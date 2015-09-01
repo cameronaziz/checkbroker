@@ -14,5 +14,6 @@ class StaticPagesController < ApplicationController
   end
 
   def profile
+    @user = User.find(session[:user_id])
   end
 end

@@ -2832,3 +2832,883 @@ D, [2015-08-29T15:37:18.100904 #97641] DEBUG -- :   [1m[35mUser Load (42.4ms)
 I, [2015-08-29T15:37:18.208149 #97641]  INFO -- :   Rendered layouts/_nav.html.erb (327.9ms)
 I, [2015-08-29T15:37:18.209276 #97641]  INFO -- :   Rendered layouts/_dev.html.erb (0.3ms)
 I, [2015-08-29T15:37:18.209475 #97641]  INFO -- : Completed 200 OK in 1099ms (Views: 282.0ms | ActiveRecord: 778.0ms)
+I, [2015-08-29T16:14:59.662168 #98737]  INFO -- : Started GET "/portfolios/7" for 127.0.0.1 at 2015-08-29 16:14:59 -0700
+I, [2015-08-29T16:15:04.201990 #98737]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T16:15:04.202053 #98737]  INFO -- :   Parameters: {"id"=>"7"}
+D, [2015-08-29T16:15:04.382356 #98737] DEBUG -- :   [1m[36mPortfolio Load (42.4ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 7 LIMIT 1[0m
+I, [2015-08-29T16:15:04.382791 #98737]  INFO -- : Completed 404 Not Found in 181ms
+F, [2015-08-29T16:15:04.383630 #98737] FATAL -- : 
+ActiveRecord::RecordNotFound (Couldn't find Portfolio with 'id'=7):
+  app/controllers/portfolios_controller.rb:62:in `set_portfolio'
+
+
+I, [2015-08-29T16:15:16.105329 #98737]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-08-29 16:15:16 -0700
+I, [2015-08-29T16:15:16.150732 #98737]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T16:15:16.150799 #98737]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-08-29T16:15:16.194055 #98737] DEBUG -- :   [1m[35mPortfolio Load (42.8ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+I, [2015-08-29T16:15:16.197957 #98737]  INFO -- : Redirected to http://localhost:3000/portfolios
+D, [2015-08-29T16:15:16.285873 #98737] DEBUG -- :   [1m[36mInvestment Load (44.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-08-29T16:15:16.415867 #98737] DEBUG -- :   [1m[35mMutualFund Load (44.4ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-08-29T16:15:16.464087 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m  [["portfolio_id", 2]]
+D, [2015-08-29T16:15:16.464395 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:16.464621 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:16.470936 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-08-29T16:15:16.471134 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:16.471379 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:16.471593 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T16:15:16.471825 #98737]  INFO -- : Completed 302 Found in 321ms (ActiveRecord: 296.5ms)
+I, [2015-08-29T16:15:16.472712 #98737]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-29 16:15:16 -0700
+I, [2015-08-29T16:15:16.511779 #98737]  INFO -- : Processing by PortfoliosController#index as HTML
+I, [2015-08-29T16:15:16.517789 #98737]  INFO -- :   Rendered shared/_notice.html.erb (0.2ms)
+D, [2015-08-29T16:15:16.565630 #98737] DEBUG -- :   [1m[35mPortfolio Load (47.3ms)[0m  SELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` IS NULL
+I, [2015-08-29T16:15:16.568352 #98737]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (52.0ms)
+I, [2015-08-29T16:15:16.571442 #98737]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T16:15:16.655824 #98737] DEBUG -- :   [1m[36mGroup Load (39.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:15:16.698199 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:15:16.698670 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:15:16.698950 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:15:16.787984 #98737] DEBUG -- :   [1m[36mUser Load (42.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T16:15:16.894754 #98737]  INFO -- :   Rendered layouts/_nav.html.erb (322.5ms)
+I, [2015-08-29T16:15:16.895991 #98737]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-29T16:15:16.896259 #98737]  INFO -- : Completed 200 OK in 384ms (Views: 86.9ms | ActiveRecord: 296.8ms)
+I, [2015-08-29T16:15:16.896879 #98737]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-08-29 16:15:16 -0700
+I, [2015-08-29T16:15:16.937641 #98737]  INFO -- : Processing by PortfoliosController#index as HTML
+I, [2015-08-29T16:15:16.938726 #98737]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-08-29T16:15:16.980570 #98737] DEBUG -- :   [1m[35mPortfolio Load (41.4ms)[0m  SELECT `portfolios`.* FROM `portfolios` WHERE `portfolios`.`user_id` IS NULL
+I, [2015-08-29T16:15:16.981195 #98737]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (42.6ms)
+I, [2015-08-29T16:15:16.982450 #98737]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:15:17.027464 #98737] DEBUG -- :   [1m[36mGroup Load (44.5ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:15:17.027915 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:15:17.028143 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:15:17.028363 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:15:17.070298 #98737] DEBUG -- :   [1m[36mUser Load (41.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T16:15:17.130811 #98737]  INFO -- :   Rendered layouts/_nav.html.erb (148.2ms)
+I, [2015-08-29T16:15:17.131094 #98737]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:15:17.131277 #98737]  INFO -- : Completed 200 OK in 194ms (Views: 65.5ms | ActiveRecord: 127.5ms)
+I, [2015-08-29T16:15:19.049187 #98737]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 16:15:19 -0700
+I, [2015-08-29T16:15:19.091192 #98737]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T16:15:19.091280 #98737]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T16:15:19.136088 #98737] DEBUG -- :   [1m[35mPortfolio Load (44.2ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:15:19.179589 #98737] DEBUG -- :   [1m[36mInvestment Load (42.2ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T16:15:19.218160 #98737] DEBUG -- :   [1m[35mMutualFund Load (37.9ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-08-29T16:15:19.219335 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T16:15:19.219714 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:19.220166 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:19.221118 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T16:15:19.221490 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:19.221809 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:19.222066 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:19.478112 #98737] DEBUG -- :   [1m[35mInvestment Load (51.8ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T16:15:19.478582 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:19.479104 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:19.479474 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:15:19.479770 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+I, [2015-08-29T16:15:19.480240 #98737]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (256.8ms)
+I, [2015-08-29T16:15:19.481146 #98737]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-29T16:15:19.524165 #98737] DEBUG -- :   [1m[36mGroup Load (42.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:15:19.524641 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:15:19.524960 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:15:19.525190 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:15:19.569831 #98737] DEBUG -- :   [1m[36mUser Load (44.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T16:15:19.632417 #98737]  INFO -- :   Rendered layouts/_nav.html.erb (151.2ms)
+I, [2015-08-29T16:15:19.632734 #98737]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-29T16:15:19.633014 #98737]  INFO -- : Completed 200 OK in 542ms (Views: 272.1ms | ActiveRecord: 262.9ms)
+I, [2015-08-29T16:20:43.799113 #98737]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 16:20:43 -0700
+I, [2015-08-29T16:20:43.841514 #98737]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T16:20:43.841606 #98737]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T16:20:43.884760 #98737] DEBUG -- :   [1m[35mPortfolio Load (42.3ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:20:43.929507 #98737] DEBUG -- :   [1m[36mInvestment Load (43.7ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T16:20:43.973398 #98737] DEBUG -- :   [1m[35mMutualFund Load (43.3ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-08-29T16:20:43.974489 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T16:20:43.974831 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:20:43.975222 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:20:43.976089 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T16:20:43.976419 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:20:43.976877 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:20:43.977186 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:20:44.026178 #98737] DEBUG -- :   [1m[35mInvestment Load (47.2ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T16:20:44.026808 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:20:44.027710 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:20:44.028484 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:20:44.029096 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+I, [2015-08-29T16:20:44.029885 #98737]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (52.2ms)
+I, [2015-08-29T16:20:44.030933 #98737]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:20:44.071176 #98737] DEBUG -- :   [1m[36mGroup Load (39.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:20:44.071829 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:20:44.072312 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:20:44.072682 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:20:44.114514 #98737] DEBUG -- :   [1m[36mUser Load (41.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T16:20:44.174973 #98737]  INFO -- :   Rendered layouts/_nav.html.erb (143.9ms)
+I, [2015-08-29T16:20:44.175198 #98737]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:20:44.175362 #98737]  INFO -- : Completed 200 OK in 334ms (Views: 69.9ms | ActiveRecord: 257.4ms)
+I, [2015-08-29T16:21:04.148753 #98737]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 16:21:04 -0700
+I, [2015-08-29T16:21:04.193129 #98737]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T16:21:04.193219 #98737]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T16:21:04.236779 #98737] DEBUG -- :   [1m[35mPortfolio Load (42.8ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:21:04.280804 #98737] DEBUG -- :   [1m[36mInvestment Load (42.8ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T16:21:04.325554 #98737] DEBUG -- :   [1m[35mMutualFund Load (44.1ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-08-29T16:21:05.103454 #98737] DEBUG -- :   [1m[36m (40.4ms)[0m  [1mBEGIN[0m
+D, [2015-08-29T16:21:05.146038 #98737] DEBUG -- :   [1m[35mSQL (40.2ms)[0m  UPDATE `mutual_funds` SET `expense_ratio` = 1.0, `twelve_b_1` = 1.0, `load` = 1.0, `auto_updated` = '2015-08-29 23:21:05.062689', `updated_at` = '2015-08-29 23:21:05.103850' WHERE `mutual_funds`.`id` = 4
+D, [2015-08-29T16:21:05.203191 #98737] DEBUG -- :   [1m[36m (56.6ms)[0m  [1mCOMMIT[0m
+D, [2015-08-29T16:21:05.248797 #98737] DEBUG -- :   [1m[35mInvestment Load (44.8ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T16:21:05.293150 #98737] DEBUG -- :   [1m[36mMutualFund Load (43.7ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T16:21:05.293901 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:05.295052 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m  [["portfolio_id", 3]]
+D, [2015-08-29T16:21:05.295396 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:05.295801 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:05.296289 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:05.338075 #98737] DEBUG -- :   [1m[36mInvestment Load (40.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T16:21:05.338684 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:05.339479 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:05.340159 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:05.340750 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+I, [2015-08-29T16:21:05.341682 #98737]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (44.9ms)
+I, [2015-08-29T16:21:05.342734 #98737]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:21:05.383534 #98737] DEBUG -- :   [1m[35mGroup Load (40.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T16:21:05.384148 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:21:05.384420 #98737] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:21:05.384711 #98737] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:21:05.427334 #98737] DEBUG -- :   [1m[35mUser Load (42.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T16:21:05.484210 #98737]  INFO -- :   Rendered layouts/_nav.html.erb (141.4ms)
+I, [2015-08-29T16:21:05.484498 #98737]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:21:05.484710 #98737]  INFO -- : Completed 200 OK in 1291ms (Views: 65.6ms | ActiveRecord: 478.0ms)
+I, [2015-08-29T16:21:29.000664 #98857]  INFO -- : Started GET "/portfolios/3" for 127.0.0.1 at 2015-08-29 16:21:29 -0700
+I, [2015-08-29T16:21:29.301214 #98857]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-08-29T16:21:29.301284 #98857]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T16:21:29.477933 #98857] DEBUG -- :   [1m[36mPortfolio Load (40.3ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T16:21:29.571131 #98857] DEBUG -- :   [1m[35mInvestment Load (42.7ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T16:21:29.707951 #98857] DEBUG -- :   [1m[36mMutualFund Load (42.1ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-08-29T16:21:30.112663 #98857] DEBUG -- :   [1m[35m (40.3ms)[0m  BEGIN
+D, [2015-08-29T16:21:30.156896 #98857] DEBUG -- :   [1m[36mSQL (41.8ms)[0m  [1mUPDATE `mutual_funds` SET `twelve_b_1` = 0.25, `load` = 0.25, `auto_updated` = '2015-08-29 23:21:30.071950', `updated_at` = '2015-08-29 23:21:30.113120' WHERE `mutual_funds`.`id` = 4[0m
+D, [2015-08-29T16:21:30.209317 #98857] DEBUG -- :   [1m[35m (51.9ms)[0m  COMMIT
+D, [2015-08-29T16:21:30.254261 #98857] DEBUG -- :   [1m[36mInvestment Load (44.1ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3[0m
+D, [2015-08-29T16:21:30.298497 #98857] DEBUG -- :   [1m[35mMutualFund Load (43.6ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-08-29T16:21:30.299258 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:30.307142 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3  [["portfolio_id", 3]]
+D, [2015-08-29T16:21:30.307385 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:30.307678 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:30.307913 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:30.526880 #98857] DEBUG -- :   [1m[35mInvestment Load (40.1ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 3
+D, [2015-08-29T16:21:30.527548 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:30.528414 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:30.529021 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-08-29T16:21:30.529671 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+I, [2015-08-29T16:21:30.530587 #98857]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (218.9ms)
+I, [2015-08-29T16:21:30.533517 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-08-29T16:21:30.621552 #98857] DEBUG -- :   [1m[36mGroup Load (45.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:21:30.663531 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:21:30.664043 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:21:30.664293 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:21:30.749861 #98857] DEBUG -- :   [1m[36mUser Load (41.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T16:21:30.857851 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (323.5ms)
+I, [2015-08-29T16:21:30.859762 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.4ms)
+I, [2015-08-29T16:21:30.860019 #98857]  INFO -- : Completed 200 OK in 1559ms (Views: 264.8ms | ActiveRecord: 930.1ms)
+I, [2015-08-29T16:21:39.974050 #98857]  INFO -- : Started GET "/mutual_funds" for 127.0.0.1 at 2015-08-29 16:21:39 -0700
+I, [2015-08-29T16:21:40.014508 #98857]  INFO -- : Processing by MutualFundsController#index as HTML
+I, [2015-08-29T16:21:40.019363 #98857]  INFO -- :   Rendered shared/_notice.html.erb (0.3ms)
+D, [2015-08-29T16:21:40.075154 #98857] DEBUG -- :   [1m[35mMutualFund Load (55.4ms)[0m  SELECT `mutual_funds`.* FROM `mutual_funds`
+I, [2015-08-29T16:21:40.077856 #98857]  INFO -- :   Rendered mutual_funds/index.html.erb within layouts/application (59.8ms)
+I, [2015-08-29T16:21:40.078973 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:21:40.119211 #98857] DEBUG -- :   [1m[36mGroup Load (39.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:21:40.119833 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:21:40.120298 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:21:40.120683 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:21:40.162924 #98857] DEBUG -- :   [1m[36mUser Load (41.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T16:21:40.227959 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (148.8ms)
+I, [2015-08-29T16:21:40.228208 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:21:40.228403 #98857]  INFO -- : Completed 200 OK in 214ms (Views: 76.8ms | ActiveRecord: 136.4ms)
+I, [2015-08-29T16:21:43.604671 #98857]  INFO -- : Started GET "/mutual_funds/4/edit" for 127.0.0.1 at 2015-08-29 16:21:43 -0700
+I, [2015-08-29T16:21:43.645538 #98857]  INFO -- : Processing by MutualFundsController#edit as HTML
+I, [2015-08-29T16:21:43.645600 #98857]  INFO -- :   Parameters: {"id"=>"4"}
+D, [2015-08-29T16:21:43.690047 #98857] DEBUG -- :   [1m[35mMutualFund Load (43.3ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`id` = 4 LIMIT 1
+I, [2015-08-29T16:21:43.695543 #98857]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-08-29T16:21:43.697768 #98857]  INFO -- :   Rendered mutual_funds/_form.html.erb (4.0ms)
+I, [2015-08-29T16:21:43.697821 #98857]  INFO -- :   Rendered mutual_funds/edit.html.erb within layouts/application (5.3ms)
+I, [2015-08-29T16:21:43.698623 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:21:43.747173 #98857] DEBUG -- :   [1m[36mGroup Load (48.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:21:43.747842 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:21:43.748248 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:21:43.748594 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:21:43.792434 #98857] DEBUG -- :   [1m[36mUser Load (43.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T16:21:43.856635 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (157.9ms)
+I, [2015-08-29T16:21:43.856921 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:21:43.857169 #98857]  INFO -- : Completed 200 OK in 212ms (Views: 74.9ms | ActiveRecord: 134.5ms)
+I, [2015-08-29T16:56:28.820577 #98857]  INFO -- : Started GET "/users" for 127.0.0.1 at 2015-08-29 16:56:28 -0700
+I, [2015-08-29T16:56:28.863899 #98857]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-08-29T16:56:28.905693 #98857] DEBUG -- :   [1m[35mUser Load (40.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T16:56:28.973924 #98857]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-08-29T16:56:29.013189 #98857] DEBUG -- :   [1m[36mUser Load (38.7ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+I, [2015-08-29T16:56:29.015182 #98857]  INFO -- :   Rendered users/index.html.erb within layouts/application (42.1ms)
+I, [2015-08-29T16:56:29.016691 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:56:29.056513 #98857] DEBUG -- :   [1m[35mGroup Load (39.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T16:56:29.057141 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:56:29.057737 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:56:29.058325 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:56:29.059012 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+I, [2015-08-29T16:56:29.117031 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (100.2ms)
+I, [2015-08-29T16:56:29.117318 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:56:29.117525 #98857]  INFO -- : Completed 200 OK in 254ms (Views: 71.8ms | ActiveRecord: 118.8ms)
+I, [2015-08-29T16:56:29.918552 #98857]  INFO -- : Started GET "/users/new" for 127.0.0.1 at 2015-08-29 16:56:29 -0700
+I, [2015-08-29T16:56:29.960118 #98857]  INFO -- : Processing by UsersController#new as HTML
+D, [2015-08-29T16:56:30.003229 #98857] DEBUG -- :   [1m[36mUser Load (42.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+I, [2015-08-29T16:56:30.157939 #98857]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+D, [2015-08-29T16:56:30.199803 #98857] DEBUG -- :   [1m[35mGroup Load (39.4ms)[0m  SELECT `groups`.* FROM `groups`
+I, [2015-08-29T16:56:30.208183 #98857]  INFO -- :   Rendered users/_form.html.erb (51.4ms)
+I, [2015-08-29T16:56:30.208310 #98857]  INFO -- :   Rendered users/new.html.erb within layouts/application (53.1ms)
+I, [2015-08-29T16:56:30.209759 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:56:30.248851 #98857] DEBUG -- :   [1m[36mGroup Load (38.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:56:30.249479 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:56:30.249891 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:56:30.250250 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:56:30.250993 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+I, [2015-08-29T16:56:30.312150 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (102.3ms)
+I, [2015-08-29T16:56:30.312397 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:56:30.312606 #98857]  INFO -- : Completed 200 OK in 352ms (Views: 80.9ms | ActiveRecord: 200.8ms)
+I, [2015-08-29T16:56:47.056000 #98857]  INFO -- : Started POST "/users" for 127.0.0.1 at 2015-08-29 16:56:47 -0700
+I, [2015-08-29T16:56:47.099328 #98857]  INFO -- : Processing by UsersController#create as HTML
+I, [2015-08-29T16:56:47.099414 #98857]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"TqdjntgPVBHCR7aAo/17UnoBV93CY2nRV87/Aj2eFfLfXOJMFektWXKmFlOCX2iwQcEpnNDzKd9+CH+PHfgUkg==", "user"=>{"first_name"=>"Test", "last_name"=>"User", "email"=>"info@brokerverified.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save"}
+D, [2015-08-29T16:56:47.141762 #98857] DEBUG -- :   [1m[35mUser Load (41.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:56:47.297817 #98857] DEBUG -- :   [1m[36m (38.7ms)[0m  [1mBEGIN[0m
+D, [2015-08-29T16:56:47.349167 #98857] DEBUG -- :   [1m[35mUser Exists (42.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = 'info@brokerverified.com' LIMIT 1
+D, [2015-08-29T16:56:47.392752 #98857] DEBUG -- :   [1m[36mUser Exists (42.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`username` = 'test.user' LIMIT 1[0m
+D, [2015-08-29T16:56:47.437496 #98857] DEBUG -- :   [1m[35mSQL (42.6ms)[0m  INSERT INTO `users` (`first_name`, `last_name`, `email`, `password_digest`, `username`, `created_at`, `updated_at`) VALUES ('Test', 'User', 'info@brokerverified.com', '$2a$10$eaKUQSvx57huRiWCd/5Ov.hA9JV9XqIKPT0kR5q6o2JuoxnpcDfUy', 'test.user', '2015-08-29 23:56:47.393275', '2015-08-29 23:56:47.393275')
+D, [2015-08-29T16:56:47.494570 #98857] DEBUG -- :   [1m[36m (56.3ms)[0m  [1mCOMMIT[0m
+I, [2015-08-29T16:56:47.495610 #98857]  INFO -- : Redirected to http://localhost:3000/users
+I, [2015-08-29T16:56:47.495803 #98857]  INFO -- : Completed 302 Found in 396ms (ActiveRecord: 264.0ms)
+I, [2015-08-29T16:56:47.502062 #98857]  INFO -- : Started GET "/users" for 127.0.0.1 at 2015-08-29 16:56:47 -0700
+I, [2015-08-29T16:56:47.540400 #98857]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-08-29T16:56:47.583119 #98857] DEBUG -- :   [1m[35mUser Load (41.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+I, [2015-08-29T16:56:47.648434 #98857]  INFO -- :   Rendered shared/_notice.html.erb (0.2ms)
+D, [2015-08-29T16:56:47.706118 #98857] DEBUG -- :   [1m[36mUser Load (57.1ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+I, [2015-08-29T16:56:47.708043 #98857]  INFO -- :   Rendered users/index.html.erb within layouts/application (59.9ms)
+I, [2015-08-29T16:56:47.709261 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:56:47.758578 #98857] DEBUG -- :   [1m[35mGroup Load (48.7ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T16:56:47.759216 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:56:47.759650 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:56:47.760026 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:56:47.760746 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+I, [2015-08-29T16:56:47.823463 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (114.1ms)
+I, [2015-08-29T16:56:47.823739 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:56:47.823931 #98857]  INFO -- : Completed 200 OK in 283ms (Views: 70.2ms | ActiveRecord: 147.5ms)
+I, [2015-08-29T16:56:50.562043 #98857]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 16:56:50 -0700
+I, [2015-08-29T16:56:50.602684 #98857]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-08-29T16:56:50.643904 #98857] DEBUG -- :   [1m[36mUser Load (40.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-08-29T16:56:50.842645 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+D, [2015-08-29T16:56:50.901393 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+D, [2015-08-29T16:56:50.955374 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+I, [2015-08-29T16:56:51.010426 #98857]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (170.5ms)
+I, [2015-08-29T16:56:51.011119 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:56:51.011327 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:56:51.011459 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:56:51.011653 #98857]  INFO -- : Completed 200 OK in 409ms (Views: 177.7ms | ActiveRecord: 164.2ms)
+I, [2015-08-29T16:56:53.240771 #98857]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-29 16:56:53 -0700
+I, [2015-08-29T16:56:53.283514 #98857]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-29T16:56:53.291710 #98857]  INFO -- :   Rendered shared/_alert.html.erb (0.3ms)
+I, [2015-08-29T16:56:53.292916 #98857]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (3.4ms)
+I, [2015-08-29T16:56:53.293688 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:56:53.293840 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:56:53.293984 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:56:53.294150 #98857]  INFO -- : Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+I, [2015-08-29T16:56:58.913447 #98857]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-08-29 16:56:58 -0700
+I, [2015-08-29T16:56:58.965094 #98857]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-08-29T16:56:58.965239 #98857]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"g0uyR/qQSB0WFL9w+umvQgOoI1NbJzzUxQwWcnQz8jQSsDOVN3YxVab1H6PbS7ygOGhdEkm3fNrsypb/VFXzVA==", "session"=>{"username"=>"test.user", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+D, [2015-08-29T16:56:59.008372 #98857] DEBUG -- :   [1m[36mUser Load (41.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'test.user' LIMIT 1[0m
+I, [2015-08-29T16:56:59.071392 #98857]  INFO -- : Redirected to http://localhost:3000/profile
+I, [2015-08-29T16:56:59.071631 #98857]  INFO -- : Completed 302 Found in 106ms (ActiveRecord: 41.7ms)
+I, [2015-08-29T16:56:59.076310 #98857]  INFO -- : Started GET "/profile" for 127.0.0.1 at 2015-08-29 16:56:59 -0700
+I, [2015-08-29T16:56:59.115576 #98857]  INFO -- : Processing by StaticPagesController#profile as HTML
+I, [2015-08-29T16:56:59.118452 #98857]  INFO -- :   Rendered static_pages/profile.erb within layouts/application (0.3ms)
+I, [2015-08-29T16:56:59.119364 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:56:59.158426 #98857] DEBUG -- :   [1m[35mGroup Load (38.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T16:56:59.159120 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:56:59.159597 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:56:59.159963 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:56:59.201279 #98857] DEBUG -- :   [1m[35mUser Load (40.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+I, [2015-08-29T16:56:59.201905 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (82.4ms)
+I, [2015-08-29T16:56:59.202249 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-29T16:56:59.202530 #98857]  INFO -- : Completed 200 OK in 87ms (Views: 7.2ms | ActiveRecord: 79.0ms)
+I, [2015-08-29T16:57:01.651017 #98857]  INFO -- : Started GET "/mutual_funds" for 127.0.0.1 at 2015-08-29 16:57:01 -0700
+I, [2015-08-29T16:57:01.698238 #98857]  INFO -- : Processing by MutualFundsController#index as HTML
+I, [2015-08-29T16:57:01.699228 #98857]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-08-29T16:57:01.744847 #98857] DEBUG -- :   [1m[36mMutualFund Load (45.2ms)[0m  [1mSELECT `mutual_funds`.* FROM `mutual_funds`[0m
+I, [2015-08-29T16:57:01.749423 #98857]  INFO -- :   Rendered mutual_funds/index.html.erb within layouts/application (50.4ms)
+I, [2015-08-29T16:57:01.750533 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:57:01.791623 #98857] DEBUG -- :   [1m[35mGroup Load (40.5ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+D, [2015-08-29T16:57:01.792240 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:57:01.792643 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:57:01.793031 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:57:01.836715 #98857] DEBUG -- :   [1m[35mUser Load (43.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+I, [2015-08-29T16:57:01.837296 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (86.6ms)
+I, [2015-08-29T16:57:01.837690 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-29T16:57:01.837978 #98857]  INFO -- : Completed 200 OK in 140ms (Views: 10.1ms | ActiveRecord: 128.9ms)
+I, [2015-08-29T16:57:08.424962 #98857]  INFO -- : Started GET "/users" for 127.0.0.1 at 2015-08-29 16:57:08 -0700
+I, [2015-08-29T16:57:08.466801 #98857]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-08-29T16:57:08.510569 #98857] DEBUG -- :   [1m[36mUser Load (43.1ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T16:57:08.550449 #98857] DEBUG -- :   [1m[35mGroup Load (39.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+I, [2015-08-29T16:57:08.551663 #98857]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-08-29T16:57:08.597949 #98857] DEBUG -- :   [1m[36mUser Load (45.7ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+I, [2015-08-29T16:57:08.599870 #98857]  INFO -- :   Rendered users/index.html.erb within layouts/application (48.4ms)
+I, [2015-08-29T16:57:08.601512 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:57:08.602056 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:57:08.602257 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:57:08.602472 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:57:08.602707 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+I, [2015-08-29T16:57:08.602959 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (1.3ms)
+I, [2015-08-29T16:57:08.603145 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:57:08.603327 #98857]  INFO -- : Completed 200 OK in 136ms (Views: 6.5ms | ActiveRecord: 128.1ms)
+I, [2015-08-29T16:57:09.932351 #98857]  INFO -- : Started GET "/users/3" for 127.0.0.1 at 2015-08-29 16:57:09 -0700
+I, [2015-08-29T16:57:09.973635 #98857]  INFO -- : Processing by UsersController#show as HTML
+I, [2015-08-29T16:57:09.973706 #98857]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T16:57:10.016217 #98857] DEBUG -- :   [1m[35mUser Load (41.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:57:10.057104 #98857] DEBUG -- :   [1m[36mUser Load (40.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T16:57:10.099996 #98857] DEBUG -- :   [1m[35mGroup Load (42.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+I, [2015-08-29T16:57:10.106698 #98857]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-08-29T16:57:10.146171 #98857] DEBUG -- :   [1m[36mGroup Load (38.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3[0m
+I, [2015-08-29T16:57:10.147104 #98857]  INFO -- :   Rendered users/show.html.erb within layouts/application (41.6ms)
+I, [2015-08-29T16:57:10.148766 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:57:10.149586 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:57:10.149858 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:57:10.150079 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:57:10.150320 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+I, [2015-08-29T16:57:10.150562 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (1.7ms)
+I, [2015-08-29T16:57:10.150782 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:57:10.150960 #98857]  INFO -- : Completed 200 OK in 177ms (Views: 11.2ms | ActiveRecord: 162.3ms)
+I, [2015-08-29T16:57:11.541230 #98857]  INFO -- : Started GET "/users/3/edit" for 127.0.0.1 at 2015-08-29 16:57:11 -0700
+I, [2015-08-29T16:57:11.583504 #98857]  INFO -- : Processing by UsersController#edit as HTML
+I, [2015-08-29T16:57:11.583593 #98857]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T16:57:11.625029 #98857] DEBUG -- :   [1m[35mUser Load (40.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:57:11.668095 #98857] DEBUG -- :   [1m[36mUser Load (42.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T16:57:11.712098 #98857] DEBUG -- :   [1m[35mGroup Load (43.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1
+I, [2015-08-29T16:57:11.718376 #98857]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+D, [2015-08-29T16:57:11.759045 #98857] DEBUG -- :   [1m[36mGroup Load (38.2ms)[0m  [1mSELECT `groups`.* FROM `groups`[0m
+D, [2015-08-29T16:57:11.803283 #98857] DEBUG -- :   [1m[35m (42.8ms)[0m  SELECT `groups`.id FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3
+I, [2015-08-29T16:57:11.804236 #98857]  INFO -- :   Rendered users/_form.html.erb (85.9ms)
+I, [2015-08-29T16:57:11.804339 #98857]  INFO -- :   Rendered users/edit.html.erb within layouts/application (86.6ms)
+I, [2015-08-29T16:57:11.805927 #98857]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:57:11.806766 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:57:11.807051 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+D, [2015-08-29T16:57:11.807274 #98857] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m  [["name", "Administrators"]]
+D, [2015-08-29T16:57:11.807522 #98857] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1  [["name", "Administrators"]]
+I, [2015-08-29T16:57:11.807790 #98857]  INFO -- :   Rendered layouts/_nav.html.erb (1.7ms)
+I, [2015-08-29T16:57:11.807969 #98857]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:57:11.808150 #98857]  INFO -- : Completed 200 OK in 224ms (Views: 13.2ms | ActiveRecord: 207.5ms)
+I, [2015-08-29T16:57:49.137621 #99442]  INFO -- : Started GET "/users/3" for 127.0.0.1 at 2015-08-29 16:57:49 -0700
+I, [2015-08-29T16:57:49.850986 #99442]  INFO -- : Processing by UsersController#show as HTML
+I, [2015-08-29T16:57:49.851050 #99442]  INFO -- :   Parameters: {"id"=>"3"}
+D, [2015-08-29T16:57:50.019498 #99442] DEBUG -- :   [1m[36mUser Load (39.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T16:57:50.063863 #99442] DEBUG -- :   [1m[35mUser Load (38.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:57:50.157162 #99442] DEBUG -- :   [1m[36mGroup Load (48.6ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:57:50.309362 #99442] DEBUG -- :   [1m[35mGroup Load (44.5ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:57:50.353564 #99442] DEBUG -- :   [1m[36mGroup Exists (38.4ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3 AND `groups`.`id` = 1[0m
+D, [2015-08-29T16:57:50.396857 #99442] DEBUG -- :   [1m[35mGroup Load (42.8ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Managers' LIMIT 1
+D, [2015-08-29T16:57:50.440713 #99442] DEBUG -- :   [1m[36mGroup Load (43.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = NULL LIMIT 1[0m
+I, [2015-08-29T16:57:50.441241 #99442]  INFO -- : Completed 404 Not Found in 590ms
+F, [2015-08-29T16:57:50.442612 #99442] FATAL -- : 
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=):
+  app/helpers/sessions_helper.rb:72:in `block in authenticate_group'
+  app/helpers/sessions_helper.rb:63:in `each'
+  app/helpers/sessions_helper.rb:63:in `authenticate_group'
+  app/helpers/sessions_helper.rb:51:in `authenticate_user_and_group'
+  app/controllers/users_controller.rb:5:in `block in <class:UsersController>'
+
+
+I, [2015-08-29T16:57:54.778596 #99442]  INFO -- : Started GET "/portfolios/new" for 127.0.0.1 at 2015-08-29 16:57:54 -0700
+I, [2015-08-29T16:57:54.821810 #99442]  INFO -- : Processing by PortfoliosController#new as HTML
+D, [2015-08-29T16:57:54.863629 #99442] DEBUG -- :   [1m[35mUser Load (41.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+I, [2015-08-29T16:57:55.059175 #99442]  INFO -- :   Rendered investments/_table_form_no_remove.html.erb (0.6ms)
+I, [2015-08-29T16:57:55.061089 #99442]  INFO -- :   Rendered investments/_table_form.html.erb (0.6ms)
+I, [2015-08-29T16:57:55.254410 #99442]  INFO -- :   Rendered portfolios/new.html.erb within layouts/application (199.0ms)
+I, [2015-08-29T16:57:55.256646 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+D, [2015-08-29T16:57:55.299535 #99442] DEBUG -- :   [1m[36mGroup Load (41.3ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:57:55.342444 #99442] DEBUG -- :   [1m[35mGroup Load (41.1ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:57:55.385785 #99442] DEBUG -- :   [1m[36mGroup Exists (41.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3 AND `groups`.`id` = 1[0m
+I, [2015-08-29T16:57:55.386605 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (129.2ms)
+I, [2015-08-29T16:57:55.391174 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.6ms)
+I, [2015-08-29T16:57:55.391586 #99442]  INFO -- : Completed 200 OK in 570ms (Views: 219.4ms | ActiveRecord: 336.5ms)
+I, [2015-08-29T16:58:00.785456 #99442]  INFO -- : Started GET "/users" for 127.0.0.1 at 2015-08-29 16:58:00 -0700
+I, [2015-08-29T16:58:00.831643 #99442]  INFO -- : Processing by UsersController#index as HTML
+D, [2015-08-29T16:58:00.875895 #99442] DEBUG -- :   [1m[35mUser Load (43.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:58:00.919618 #99442] DEBUG -- :   [1m[36mGroup Load (43.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:58:00.963785 #99442] DEBUG -- :   [1m[35mGroup Load (42.6ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:58:01.007536 #99442] DEBUG -- :   [1m[36mGroup Exists (42.4ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3 AND `groups`.`id` = 1[0m
+D, [2015-08-29T16:58:01.051042 #99442] DEBUG -- :   [1m[35mGroup Load (43.1ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Managers' LIMIT 1
+D, [2015-08-29T16:58:01.096018 #99442] DEBUG -- :   [1m[36mGroup Load (44.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = NULL LIMIT 1[0m
+I, [2015-08-29T16:58:01.096512 #99442]  INFO -- : Completed 404 Not Found in 265ms
+F, [2015-08-29T16:58:01.097750 #99442] FATAL -- : 
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=):
+  app/helpers/sessions_helper.rb:72:in `block in authenticate_group'
+  app/helpers/sessions_helper.rb:63:in `each'
+  app/helpers/sessions_helper.rb:63:in `authenticate_group'
+  app/helpers/sessions_helper.rb:51:in `authenticate_user_and_group'
+  app/controllers/users_controller.rb:5:in `block in <class:UsersController>'
+
+
+I, [2015-08-29T16:58:29.017265 #99442]  INFO -- : Started GET "/groups" for 127.0.0.1 at 2015-08-29 16:58:29 -0700
+I, [2015-08-29T16:58:29.058143 #99442]  INFO -- : Processing by GroupsController#index as HTML
+D, [2015-08-29T16:58:29.102249 #99442] DEBUG -- :   [1m[35mUser Load (43.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:58:29.146939 #99442] DEBUG -- :   [1m[36mGroup Load (44.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:58:29.191861 #99442] DEBUG -- :   [1m[35mGroup Load (43.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:58:29.235607 #99442] DEBUG -- :   [1m[36mGroup Exists (42.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3 AND `groups`.`id` = 1[0m
+D, [2015-08-29T16:58:29.274396 #99442] DEBUG -- :   [1m[35mGroup Load (38.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Managers' LIMIT 1
+D, [2015-08-29T16:58:29.315808 #99442] DEBUG -- :   [1m[36mGroup Load (41.0ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = NULL LIMIT 1[0m
+I, [2015-08-29T16:58:29.316288 #99442]  INFO -- : Completed 404 Not Found in 258ms
+F, [2015-08-29T16:58:29.317513 #99442] FATAL -- : 
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=):
+  app/helpers/sessions_helper.rb:72:in `block in authenticate_group'
+  app/helpers/sessions_helper.rb:63:in `each'
+  app/helpers/sessions_helper.rb:63:in `authenticate_group'
+  app/helpers/sessions_helper.rb:51:in `authenticate_user_and_group'
+  app/controllers/groups_controller.rb:5:in `block in <class:GroupsController>'
+
+
+I, [2015-08-29T16:58:36.812808 #99442]  INFO -- : Started GET "/groups" for 127.0.0.1 at 2015-08-29 16:58:36 -0700
+I, [2015-08-29T16:58:36.866474 #99442]  INFO -- : Processing by GroupsController#index as HTML
+D, [2015-08-29T16:58:36.909151 #99442] DEBUG -- :   [1m[35mUser Load (41.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:58:36.951798 #99442] DEBUG -- :   [1m[36mGroup Load (41.9ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:58:37.000490 #99442] DEBUG -- :   [1m[35mGroup Load (47.2ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:58:37.040635 #99442] DEBUG -- :   [1m[36mGroup Exists (38.8ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3 AND `groups`.`id` = 1[0m
+D, [2015-08-29T16:58:37.080444 #99442] DEBUG -- :   [1m[35mGroup Load (39.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Managers' LIMIT 1
+D, [2015-08-29T16:58:37.118951 #99442] DEBUG -- :   [1m[36mGroup Load (38.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = NULL LIMIT 1[0m
+I, [2015-08-29T16:58:37.119256 #99442]  INFO -- : Completed 404 Not Found in 253ms
+F, [2015-08-29T16:58:37.119907 #99442] FATAL -- : 
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=):
+  app/helpers/sessions_helper.rb:72:in `block in authenticate_group'
+  app/helpers/sessions_helper.rb:63:in `each'
+  app/helpers/sessions_helper.rb:63:in `authenticate_group'
+  app/helpers/sessions_helper.rb:51:in `authenticate_user_and_group'
+  app/controllers/groups_controller.rb:5:in `block in <class:GroupsController>'
+
+
+I, [2015-08-29T16:58:39.743285 #99442]  INFO -- : Started GET "/groups" for 127.0.0.1 at 2015-08-29 16:58:39 -0700
+I, [2015-08-29T16:58:39.785883 #99442]  INFO -- : Processing by GroupsController#index as HTML
+D, [2015-08-29T16:58:39.829736 #99442] DEBUG -- :   [1m[35mUser Load (43.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:58:39.873281 #99442] DEBUG -- :   [1m[36mGroup Load (43.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:58:39.916671 #99442] DEBUG -- :   [1m[35mGroup Load (42.4ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:58:39.960659 #99442] DEBUG -- :   [1m[36mGroup Exists (43.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3 AND `groups`.`id` = 1[0m
+D, [2015-08-29T16:58:40.004195 #99442] DEBUG -- :   [1m[35mGroup Load (43.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Managers' LIMIT 1
+D, [2015-08-29T16:58:40.050198 #99442] DEBUG -- :   [1m[36mGroup Load (45.7ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = NULL LIMIT 1[0m
+I, [2015-08-29T16:58:40.050501 #99442]  INFO -- : Completed 404 Not Found in 265ms
+F, [2015-08-29T16:58:40.051142 #99442] FATAL -- : 
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=):
+  app/helpers/sessions_helper.rb:72:in `block in authenticate_group'
+  app/helpers/sessions_helper.rb:63:in `each'
+  app/helpers/sessions_helper.rb:63:in `authenticate_group'
+  app/helpers/sessions_helper.rb:51:in `authenticate_user_and_group'
+  app/controllers/groups_controller.rb:5:in `block in <class:GroupsController>'
+
+
+I, [2015-08-29T16:58:40.616762 #99442]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 16:58:40 -0700
+I, [2015-08-29T16:58:40.660028 #99442]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-08-29T16:58:40.702052 #99442] DEBUG -- :   [1m[35mUser Load (41.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:58:40.702658 #99442] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+I, [2015-08-29T16:58:40.803999 #99442]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (3.4ms)
+I, [2015-08-29T16:58:40.804632 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:58:40.804828 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:58:40.804970 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:58:40.805121 #99442]  INFO -- : Completed 200 OK in 145ms (Views: 7.9ms | ActiveRecord: 130.5ms)
+I, [2015-08-29T16:58:41.046628 #99442]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-29 16:58:41 -0700
+I, [2015-08-29T16:58:41.094587 #99442]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-29T16:58:41.099547 #99442]  INFO -- :   Rendered shared/_alert.html.erb (0.3ms)
+I, [2015-08-29T16:58:41.100466 #99442]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (2.5ms)
+I, [2015-08-29T16:58:41.101112 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:58:41.101241 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:58:41.101398 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:58:41.101542 #99442]  INFO -- : Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+I, [2015-08-29T16:58:42.135787 #99442]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-29 16:58:42 -0700
+I, [2015-08-29T16:58:42.175046 #99442]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-29T16:58:42.175976 #99442]  INFO -- :   Rendered shared/_alert.html.erb (0.0ms)
+I, [2015-08-29T16:58:42.177600 #99442]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (1.9ms)
+I, [2015-08-29T16:58:42.178285 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:58:42.178412 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:58:42.178554 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:58:42.178682 #99442]  INFO -- : Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+I, [2015-08-29T16:58:42.347016 #99442]  INFO -- : Started GET "/logout" for 127.0.0.1 at 2015-08-29 16:58:42 -0700
+F, [2015-08-29T16:58:42.386492 #99442] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T16:58:42.628318 #99442]  INFO -- : Started GET "/logout" for 127.0.0.1 at 2015-08-29 16:58:42 -0700
+F, [2015-08-29T16:58:42.668130 #99442] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T16:58:48.276284 #99442]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 16:58:48 -0700
+I, [2015-08-29T16:58:49.122096 #99442]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-08-29T16:58:50.119400 #99442] DEBUG -- :   [1m[35mUser Load (996.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:58:50.119977 #99442] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+I, [2015-08-29T16:58:50.122805 #99442]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (2.2ms)
+I, [2015-08-29T16:58:50.123464 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:58:50.123656 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:58:50.123816 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-29T16:58:50.123972 #99442]  INFO -- : Completed 200 OK in 1002ms (Views: 3.6ms | ActiveRecord: 996.2ms)
+I, [2015-08-29T16:58:53.882536 #99442]  INFO -- : Started GET "/profile" for 127.0.0.1 at 2015-08-29 16:58:53 -0700
+I, [2015-08-29T16:58:54.650962 #99442]  INFO -- : Processing by StaticPagesController#profile as HTML
+D, [2015-08-29T16:58:55.709988 #99442] DEBUG -- :   [1m[35mUser Load (1058.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+I, [2015-08-29T16:58:55.712154 #99442]  INFO -- :   Rendered static_pages/profile.erb within layouts/application (0.3ms)
+I, [2015-08-29T16:58:55.712908 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:58:57.116586 #99442] DEBUG -- :   [1m[36mGroup Load (1403.1ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:58:57.855593 #99442] DEBUG -- :   [1m[35mGroup Load (737.8ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:58:58.147685 #99442] DEBUG -- :   [1m[36mGroup Exists (291.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3 AND `groups`.`id` = 1[0m
+I, [2015-08-29T16:58:58.148215 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (2435.2ms)
+I, [2015-08-29T16:58:58.148559 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.1ms)
+I, [2015-08-29T16:58:58.148851 #99442]  INFO -- : Completed 200 OK in 3498ms (Views: 6.4ms | ActiveRecord: 3490.5ms)
+I, [2015-08-29T16:58:59.556864 #99442]  INFO -- : Started DELETE "/logout" for 127.0.0.1 at 2015-08-29 16:58:59 -0700
+I, [2015-08-29T16:58:59.599688 #99442]  INFO -- : Processing by SessionsController#destroy as HTML
+W, [2015-08-29T16:58:59.599868 #99442]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-08-29T16:58:59.600076 #99442]  INFO -- : Completed 422 Unprocessable Entity in 0ms
+F, [2015-08-29T16:58:59.601282 #99442] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T16:59:14.361080 #99442]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 16:59:14 -0700
+I, [2015-08-29T16:59:14.401091 #99442]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-08-29T16:59:14.444350 #99442] DEBUG -- :   [1m[35mUser Load (42.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:59:14.444957 #99442] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+I, [2015-08-29T16:59:14.450670 #99442]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (4.9ms)
+I, [2015-08-29T16:59:14.451519 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:59:14.451744 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:59:14.451944 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:59:14.452138 #99442]  INFO -- : Completed 200 OK in 51ms (Views: 6.8ms | ActiveRecord: 42.6ms)
+I, [2015-08-29T16:59:14.452920 #99442]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 16:59:14 -0700
+I, [2015-08-29T16:59:14.492510 #99442]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-08-29T16:59:14.538253 #99442] DEBUG -- :   [1m[35mUser Load (45.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+D, [2015-08-29T16:59:14.538578 #99442] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+I, [2015-08-29T16:59:14.540430 #99442]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (1.4ms)
+I, [2015-08-29T16:59:14.541241 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:59:14.541553 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (0.2ms)
+I, [2015-08-29T16:59:14.541853 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:59:14.542031 #99442]  INFO -- : Completed 200 OK in 49ms (Views: 3.2ms | ActiveRecord: 45.2ms)
+I, [2015-08-29T16:59:16.017225 #99442]  INFO -- : Started GET "/profile" for 127.0.0.1 at 2015-08-29 16:59:16 -0700
+I, [2015-08-29T16:59:16.058959 #99442]  INFO -- : Processing by StaticPagesController#profile as HTML
+D, [2015-08-29T16:59:16.104829 #99442] DEBUG -- :   [1m[35mUser Load (45.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+I, [2015-08-29T16:59:16.105893 #99442]  INFO -- :   Rendered static_pages/profile.erb within layouts/application (0.1ms)
+I, [2015-08-29T16:59:16.107159 #99442]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-08-29T16:59:16.148528 #99442] DEBUG -- :   [1m[36mGroup Load (40.4ms)[0m  [1mSELECT  `groups`.* FROM `groups` WHERE `groups`.`name` = 'Administrators' LIMIT 1[0m
+D, [2015-08-29T16:59:16.197451 #99442] DEBUG -- :   [1m[35mGroup Load (47.3ms)[0m  SELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1
+D, [2015-08-29T16:59:16.242480 #99442] DEBUG -- :   [1m[36mGroup Exists (43.6ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 3 AND `groups`.`id` = 1[0m
+I, [2015-08-29T16:59:16.242890 #99442]  INFO -- :   Rendered layouts/_nav.html.erb (135.5ms)
+I, [2015-08-29T16:59:16.243110 #99442]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:59:16.243306 #99442]  INFO -- : Completed 200 OK in 184ms (Views: 6.6ms | ActiveRecord: 176.6ms)
+I, [2015-08-29T16:59:18.896946 #99442]  INFO -- : Started DELETE "/logout" for 127.0.0.1 at 2015-08-29 16:59:18 -0700
+I, [2015-08-29T16:59:18.940707 #99442]  INFO -- : Processing by SessionsController#destroy as HTML
+W, [2015-08-29T16:59:18.940883 #99442]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-08-29T16:59:18.941148 #99442]  INFO -- : Completed 422 Unprocessable Entity in 0ms
+F, [2015-08-29T16:59:18.942293 #99442] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T16:59:26.957588 #99495]  INFO -- : Started DELETE "/logout" for 127.0.0.1 at 2015-08-29 16:59:26 -0700
+I, [2015-08-29T16:59:27.246190 #99495]  INFO -- : Processing by SessionsController#destroy as HTML
+W, [2015-08-29T16:59:27.246410 #99495]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-08-29T16:59:27.246634 #99495]  INFO -- : Completed 422 Unprocessable Entity in 0ms
+F, [2015-08-29T16:59:27.247731 #99495] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T16:59:29.086193 #99495]  INFO -- : Started GET "/logout" for 127.0.0.1 at 2015-08-29 16:59:29 -0700
+F, [2015-08-29T16:59:29.125293 #99495] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-08-29T16:59:29.370152 #99495]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-08-29 16:59:29 -0700
+I, [2015-08-29T16:59:29.408682 #99495]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-08-29T16:59:29.419602 #99495]  INFO -- :   Rendered shared/_alert.html.erb (0.2ms)
+I, [2015-08-29T16:59:29.602129 #99495]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (184.3ms)
+I, [2015-08-29T16:59:29.604342 #99495]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-08-29T16:59:29.605520 #99495]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-08-29T16:59:29.606436 #99495]  INFO -- :   Rendered layouts/_dev.html.erb (0.2ms)
+I, [2015-08-29T16:59:29.606618 #99495]  INFO -- : Completed 200 OK in 198ms (Views: 192.2ms | ActiveRecord: 0.0ms)
+I, [2015-08-29T16:59:29.735686 #99495]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 16:59:29 -0700
+I, [2015-08-29T16:59:29.777331 #99495]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-08-29T16:59:29.863748 #99495] DEBUG -- :   [1m[36mUser Load (39.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T16:59:29.958770 #99495] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1  [["id", 3]]
+I, [2015-08-29T16:59:30.058811 #99495]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (4.1ms)
+I, [2015-08-29T16:59:30.059473 #99495]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:59:30.059640 #99495]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:59:30.059771 #99495]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:59:30.059914 #99495]  INFO -- : Completed 200 OK in 282ms (Views: 8.7ms | ActiveRecord: 256.8ms)
+I, [2015-08-29T16:59:30.060588 #99495]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-29 16:59:30 -0700
+I, [2015-08-29T16:59:30.099114 #99495]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-08-29T16:59:30.141449 #99495] DEBUG -- :   [1m[36mUser Load (41.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+D, [2015-08-29T16:59:30.141781 #99495] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1  [["id", 3]]
+I, [2015-08-29T16:59:30.143632 #99495]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (1.4ms)
+I, [2015-08-29T16:59:30.144246 #99495]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-08-29T16:59:30.144414 #99495]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-08-29T16:59:30.144576 #99495]  INFO -- :   Rendered layouts/_dev.html.erb (0.0ms)
+I, [2015-08-29T16:59:30.144709 #99495]  INFO -- : Completed 200 OK in 45ms (Views: 2.7ms | ActiveRecord: 41.7ms)

@@ -23,7 +23,7 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    if @portfolio.user_id != session[:user_id]
+    unless @portfolio.user_id == session[:user_id] || auth_groups(['Administrators'])
       redirect_to portfolios_path, notice: 'Access to this portfolio is denied.'
     end
     @investments = Investment.where(:portfolio => @portfolio.id)
@@ -39,6 +39,7 @@ class PortfoliosController < ApplicationController
 
   def edit
     @investments = @portfolio.investments.build
+    @users = User.all
   end
 
   def update

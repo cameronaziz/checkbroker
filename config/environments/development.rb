@@ -42,6 +42,6 @@ Rails.application.configure do
 
   config.assets.precompile += [/.*\.js/,/.*\.css/]
 
-  config.serve_static_assets = true
+  config.serve_static_files = true
 
 end

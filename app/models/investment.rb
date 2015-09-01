@@ -79,11 +79,11 @@ private
   end
 
   def load_yahoo_api
-    1
+    0.25
   end
 
   def twelve_b_1_yahoo_api
-    1
+    0.25
   end
 
   def nav_xignite_api

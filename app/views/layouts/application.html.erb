@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag params[:controler] %>
+  <%= stylesheet_link_tag params[:controller] %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag params[:controller] %>
@@ -23,6 +23,7 @@
   <%= stylesheet_link_tag 'eco/eco' %>
 
   <%= javascript_include_tag "//www.google.com/jsapi", 'chartkick' %>
+  <%= csrf_meta_tags %>
 
   <%= yield(:head) %>
   <%= render(partial: 'layouts/shiv') %>
@@ -86,13 +87,11 @@
 
 <%=	render(partial: 'layouts/nav') %>
 <% unless current_page?(root_path) %>
-<div class="container">
+<div class="container internal" style="padding-bottom: 50px; border: solid; border-color: #87c17f">
 <% end %>
-
-  <%= yield %>
+  <%= yield%>
+</div>
   <% unless current_page?(root_path) %>
-    </div>
 <% end %>
-<%= render(partial: 'layouts/dev') %>
 </body>
 </html>

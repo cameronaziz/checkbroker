@@ -19,10 +19,16 @@
 html {
   position: relative;
   min-height: 100%;
+
 }
 
 body {
   margin-bottom: 60px;
+  background-color: #b4ffa9 !important;
+}
+
+.internal {
+  background-color: #fcfcfc;
 }
 
 nav {

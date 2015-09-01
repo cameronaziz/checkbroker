@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :authenticate_user
+  skip_before_filter :verify_authenticity_token, only: :destroy
 
   def new
   end
@@ -7,9 +8,9 @@ class SessionsController < ApplicationController
   def create
     user_input = params[:session][:username]
     if user_input.include? '@'
-      user = User.find_by_email(params[:session][:username].downcase)
+      user = User.find_by(email: params[:session][:username].downcase)
     else
-      user = User.find_by_username(params[:session][:username].downcase)
+      user = User.find_by(username: params[:session][:username].downcase)
     end
     if user && user.authenticate(params[:session][:password])
       log_in user
