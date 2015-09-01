@@ -43,18 +43,30 @@ private
       fund = MutualFund.new
       fund.ticker = self.ticker
       fund.nav = nav_yahoo_api
-      fund.expense_ratio = er_yahoo_api
-      record.twelve_b_1 = twelve_b_1_yahoo_api
-      record.load = load_yahoo_api
+      if API_LIVE
+        fund.expense_ratio = er_yahoo_api
+        fund.twelve_b_1 = twelve_b_1_yahoo_api
+        fund.load = load_yahoo_api
+      else
+        fund.expense_ratio = er_local_api
+        fund.twelve_b_1 = twelve_b_1_local_api
+        fund.load = load_local_api
+      end
       fund.auto_updated = Time.now
       fund.save
       record = fund
     else
       if record.auto_updated.to_datetime < (Time.now - (24*60*60))
         record.nav = nav_yahoo_api
-        record.expense_ratio = er_yahoo_api
-        record.twelve_b_1 = twelve_b_1_yahoo_api
-        record.load = load_yahoo_api
+        if API_LIVE
+          record.expense_ratio = er_yahoo_api
+          record.twelve_b_1 = twelve_b_1_yahoo_api
+          record.load = load_yahoo_api
+        else
+          record.expense_ratio = er_local_api
+          record.twelve_b_1 = twelve_b_1_local_api
+          record.load = load_local_api
+        end
         record.auto_updated = Time.now
         record.save
       else if record.auto_updated.to_datetime < (Time.now - (15*60))
@@ -72,6 +84,26 @@ private
     print nav_url
     nav_doc = Nokogiri::XML(open(nav_url))
     nav_doc.css('LastTradePriceOnly').first.content.to_f
+  end
+
+  def warehouse_lookup
+    return @warehouse if @warehouse
+    @warehouse = MutualFundWarehouse.find_by_ticker(self.ticker)
+  end
+
+  def er_local_api
+    warehouse_lookup
+    @warehouse.expense_ratio
+  end
+
+  def load_local_api
+    warehouse_lookup
+    @warehouse.front_load + @warehouse.back_load
+  end
+
+  def twelve_b_1_local_api
+    warehouse_lookup
+    @warehouse.twelve_b_1
   end
 
   def er_yahoo_api

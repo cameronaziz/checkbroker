@@ -34,9 +34,7 @@ class PortfoliosController < ApplicationController
                  ['12B-1 Fees', @portfolio.average_12b1_fee]
     ]
     @portfolio.pie_data = pie_data
-    count = Broker.count
-    broker_lookup = 1 + rand(count)
-    @broker = Broker.find(broker_lookup)
+    @broker = Broker.offset(rand(Broker.count)).first
   end
 
 

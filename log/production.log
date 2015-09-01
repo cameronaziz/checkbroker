@@ -6213,3 +6213,9 @@ I, [2015-09-01T05:08:01.667961 #26000]  INFO -- :   Rendered layouts/_shiv.html.
 D, [2015-09-01T05:08:01.802919 #26000] DEBUG -- :   [1m[36mGroup Load (40.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1[0m
 I, [2015-09-01T05:08:01.845572 #26000]  INFO -- :   Rendered layouts/_nav.html.erb (176.8ms)
 I, [2015-09-01T05:08:01.845932 #26000]  INFO -- : Completed 200 OK in 1401ms (Views: 253.1ms | ActiveRecord: 1095.8ms)
+D, [2015-09-01T06:23:12.041941 #27787] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (51.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-01T06:23:12.103407 #27787]  INFO -- : Migrating to CreateMutualFundWarehouses (20150901123006)
+D, [2015-09-01T06:23:12.261677 #27787] DEBUG -- :   [1m[35m (157.0ms)[0m  CREATE TABLE `mutual_fund_warehouses` (`id` int(11) auto_increment PRIMARY KEY, `ticker` varchar(255), `name` varchar(255), `objective` varchar(255), `twelve_b_1` float, `back_load` float, `front_load` float, `expense_ratio` float, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-09-01T06:23:12.342720 #27787] DEBUG -- :   [1m[36m (37.8ms)[0m  [1mBEGIN[0m
+D, [2015-09-01T06:23:12.389411 #27787] DEBUG -- :   [1m[35mSQL (43.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150901123006')
+D, [2015-09-01T06:23:12.442657 #27787] DEBUG -- :   [1m[36m (52.8ms)[0m  [1mCOMMIT[0m

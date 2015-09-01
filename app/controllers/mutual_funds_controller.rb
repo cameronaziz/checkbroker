@@ -26,8 +26,8 @@ class MutualFundsController < ApplicationController
 
   def update
     ticker = @mutual_fund.ticker
-    if @mutual_fund.update_attributes(mutual_fund_params)
-      redirect_to mutual_funds_url, notice: "\"#{ticker}\" was successfully updated."
+    if @mutual_fund.update_attributes(params[:mutual_fund])
+      redirect_to @mutual_fund, notice: "\"#{ticker}\" was successfully updated."
     else
       render :edit
     end

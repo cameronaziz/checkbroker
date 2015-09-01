@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901110826) do
+ActiveRecord::Schema.define(version: 20150901123006) do
 
   create_table "brokers", force: :cascade do |t|
     t.string   "first_name", limit: 255
@@ -43,6 +43,18 @@ ActiveRecord::Schema.define(version: 20150901110826) do
     t.integer  "user_id",    limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "mutual_fund_warehouses", force: :cascade do |t|
+    t.string   "ticker",        limit: 255
+    t.string   "name",          limit: 255
+    t.string   "objective",     limit: 255
+    t.float    "twelve_b_1",    limit: 24
+    t.float    "back_load",     limit: 24
+    t.float    "front_load",    limit: 24
+    t.float    "expense_ratio", limit: 24
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "mutual_funds", force: :cascade do |t|
