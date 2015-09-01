@@ -1,4 +1,4 @@
-<div class="col-xs-5" style="margin-top: 20px">
+<div class="col-xs-5" style="margin-top: 40px;  background-color: #ffffff; border: solid; border-color: #dddddd">
   <h2 style="text-align: center">Fee Breakdown</h2>
   <%= pie_chart @portfolio.pie_data %>
 </div>
@@ -33,12 +33,12 @@
       <th colspan="2" style="text-align: center;">Total Fees</th>
     </tr>
     <tr>
-      <td>Total Fee Rate</td>
-      <td><%= number_with_precision(@portfolio.average_expense_ratio + @portfolio.management_fee + @portfolio.average_12b1_fee + @portfolio.average_load_fee, precision: 2)  %>% </td>
+      <td>Total Fees Per Year</td>
+      <td>$<%= number_with_precision(((@portfolio.average_expense_ratio + @portfolio.management_fee) * @portfolio.market_value) / 100, precision: 2 )%></td>
     </tr>
     <tr>
-      <td>Total Fees Per Year</td>
-      <td>$<%= number_with_precision(((@portfolio.average_expense_ratio + @portfolio.management_fee + @portfolio.average_12b1_fee + @portfolio.average_load_fee) * @portfolio.market_value) / 100, precision: 2 )%></td>
+      <td>Total Fees Per Sale</td>
+      <td>$<%= number_with_precision(((@portfolio.average_12b1_fee + @portfolio.average_load_fee) * @portfolio.market_value) / 100, precision: 2 )%></td>
     </tr>
   </table>
 </div>

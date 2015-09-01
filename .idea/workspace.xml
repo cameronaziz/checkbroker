@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80527b7c-98d4-47eb-b4b8-6cbb655769eb" name="Default" comment="change to check broker">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/default-broker.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/shared/_ads.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/brokers/edit.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/-um35O6s6LJIrP0Dhs-Aw9cblre8OL92_c2NZmWw0VY.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/-um35O6s6LJIrP0Dhs-Aw9cblre8OL92_c2NZmWw0VY.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/FZeTp8Aaxx5x_aMnicHJBMbeRFzVzY6mwz1XgNFKZ5o.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/FZeTp8Aaxx5x_aMnicHJBMbeRFzVzY6mwz1XgNFKZ5o.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/HlWr8kmaA80LMSC_hlV-huZRcwvOHPEyjs0-Xw0p_iw.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/HlWr8kmaA80LMSC_hlV-huZRcwvOHPEyjs0-Xw0p_iw.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/ihRZptLN0bKqCGFRKnvTWwsnE3YQEXNY7f5n04X_xu8.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/ihRZptLN0bKqCGFRKnvTWwsnE3YQEXNY7f5n04X_xu8.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/ywVzHD-LmcrwttbSBGUOoJn1PUqgsf7oCOKnurYLsbk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/ywVzHD-LmcrwttbSBGUOoJn1PUqgsf7oCOKnurYLsbk.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-f98984c38d236cc8de80272b1037c30d.json" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-f98984c38d236cc8de80272b1037c30d.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_alert.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_alert.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/brokers/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/brokers/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_notice.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_notice.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/brokers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/brokers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/production.log" afterPath="$PROJECT_DIR$/log/production.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/portfolios/show.html.erb" afterPath="$PROJECT_DIR$/app/views/portfolios/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,7 +26,7 @@
     <SUITE FILE_PATH="coverage/checkbroker@Development__checkbroker.coverage" NAME="Development: checkbroker Coverage Results" MODIFIED="1441101750942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="checkbroker" />
     <SUITE FILE_PATH="coverage/pfp@Development__pfp.coverage" NAME="Development: pfp Coverage Results" MODIFIED="1439957641119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pfp" />
     <SUITE FILE_PATH="coverage/pfp@Production__pfp.coverage" NAME="Production: pfp Coverage Results" MODIFIED="1433379590934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pfp" />
-    <SUITE FILE_PATH="coverage/checkbroker@Production__checkbroker.coverage" NAME="Production: checkbroker Coverage Results" MODIFIED="1441106864813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="checkbroker" />
+    <SUITE FILE_PATH="coverage/checkbroker@Production__checkbroker.coverage" NAME="Production: checkbroker Coverage Results" MODIFIED="1441109067425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="checkbroker" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -54,12 +37,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_nav.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/portfolios/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3942993">
-              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-              <folding />
+            <state vertical-scroll-proportion="0.3206651">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,10 +118,10 @@
         <option value="$PROJECT_DIR$/app/views/shared/_alert.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_notice.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/brokers_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/portfolios/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_ads.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/portfolios_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/portfolios/show.html.erb" />
       </list>
     </option>
   </component>
@@ -873,7 +859,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1602289" sideWeight="0.49156117" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3529412" sideWeight="0.4914163" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3529412" sideWeight="0.4914163" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23104435" sideWeight="0.5084388" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35430917" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1302,19 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/portfolios/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24940617">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20150901110826_add_about_to_broker.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16853933">
@@ -1341,9 +1314,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3942993">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+        <state vertical-scroll-proportion="1.4964371">
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/portfolios/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3206651">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
