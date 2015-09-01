@@ -28,7 +28,7 @@ class PortfoliosController < ApplicationController
     end
     @investments = Investment.where(:portfolio => @portfolio.id)
 
-    pie_data = [ ['Management Fees', @portfolio.management_fee],
+    pie_data = [ ['Broker Fees', @portfolio.management_fee],
                  ['Expense Fees', @portfolio.average_expense_ratio],
                  ['Load Fees', @portfolio.average_load_fee],
                  ['12B-1 Fees', @portfolio.average_12b1_fee]

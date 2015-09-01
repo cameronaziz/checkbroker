@@ -6186,3 +6186,30 @@ I, [2015-09-01T05:05:55.566320 #25785]  INFO -- :   Rendered layouts/_shiv.html.
 D, [2015-09-01T05:05:55.697781 #25785] DEBUG -- :   [1m[36mGroup Load (38.9ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1[0m
 I, [2015-09-01T05:05:55.741338 #25785]  INFO -- :   Rendered layouts/_nav.html.erb (174.2ms)
 I, [2015-09-01T05:05:55.741710 #25785]  INFO -- : Completed 200 OK in 1395ms (Views: 235.9ms | ActiveRecord: 1105.6ms)
+I, [2015-09-01T05:08:00.148010 #26000]  INFO -- : Started GET "/portfolios/2" for 127.0.0.1 at 2015-09-01 05:08:00 -0700
+I, [2015-09-01T05:08:00.444565 #26000]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-09-01T05:08:00.444623 #26000]  INFO -- :   Parameters: {"id"=>"2"}
+D, [2015-09-01T05:08:00.549409 #26000] DEBUG -- :   [1m[36mUser Load (41.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-09-01T05:08:00.868408 #26000] DEBUG -- :   [1m[35mPortfolio Load (105.9ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 2 LIMIT 1
+D, [2015-09-01T05:08:01.023601 #26000] DEBUG -- :   [1m[36mInvestment Load (42.2ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m
+D, [2015-09-01T05:08:01.160657 #26000] DEBUG -- :   [1m[35mMutualFund Load (43.3ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-09-01T05:08:01.206629 #26000] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2[0m  [["portfolio_id", 2]]
+D, [2015-09-01T05:08:01.206931 #26000] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-01T05:08:01.207920 #26000] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-01T05:08:01.213859 #26000] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2  [["portfolio_id", 2]]
+D, [2015-09-01T05:08:01.214060 #26000] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-01T05:08:01.214283 #26000] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-01T05:08:01.214479 #26000] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-01T05:08:01.299507 #26000] DEBUG -- :   [1m[35m (43.7ms)[0m  SELECT COUNT(*) FROM `brokers`
+D, [2015-09-01T05:08:01.383731 #26000] DEBUG -- :   [1m[36mBroker Load (43.9ms)[0m  [1mSELECT  `brokers`.* FROM `brokers` WHERE `brokers`.`id` = 1 LIMIT 1[0m
+I, [2015-09-01T05:08:01.619167 #26000]  INFO -- :   Rendered shared/_ads.html.erb (0.8ms)
+D, [2015-09-01T05:08:01.660742 #26000] DEBUG -- :   [1m[35mInvestment Load (41.1ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 2
+D, [2015-09-01T05:08:01.661447 #26000] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-01T05:08:01.662333 #26000] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-01T05:08:01.662983 #26000] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-01T05:08:01.663649 #26000] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+I, [2015-09-01T05:08:01.664828 #26000]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (271.6ms)
+I, [2015-09-01T05:08:01.667961 #26000]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+D, [2015-09-01T05:08:01.802919 #26000] DEBUG -- :   [1m[36mGroup Load (40.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1[0m
+I, [2015-09-01T05:08:01.845572 #26000]  INFO -- :   Rendered layouts/_nav.html.erb (176.8ms)
+I, [2015-09-01T05:08:01.845932 #26000]  INFO -- : Completed 200 OK in 1401ms (Views: 253.1ms | ActiveRecord: 1095.8ms)
