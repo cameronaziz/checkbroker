@@ -6,7 +6,6 @@
   <thead>
   <tr>
     <th>Name</th>
-    <%= auth_groups(['Administrators']) ? raw('<th>User</th>') : '' %>
     <th colspan="3">Actions</th>
   </tr>
   </thead>
@@ -14,7 +13,6 @@
   <% @portfolios.each do |portfolio| %>
       <tr>
         <td><%= portfolio.nickname %></td>
-        <%= auth_groups(['Administrators']) ? raw('<td>' + link_to(portfolio.user.full_name, user_path(portfolio.user)) + '</td>'): '' %>
         <td><%= link_to 'Show', portfolio %></td>
         <td><%= link_to 'Edit', edit_portfolio_path(portfolio) %></td>
         <td><%= link_to 'Delete', portfolio, method: :delete, data: {confirm: 'Are you sure?'}  %></td>

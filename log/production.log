@@ -6219,3 +6219,131 @@ D, [2015-09-01T06:23:12.261677 #27787] DEBUG -- :   [1m[35m (157.0ms)[0m  CRE
 D, [2015-09-01T06:23:12.342720 #27787] DEBUG -- :   [1m[36m (37.8ms)[0m  [1mBEGIN[0m
 D, [2015-09-01T06:23:12.389411 #27787] DEBUG -- :   [1m[35mSQL (43.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150901123006')
 D, [2015-09-01T06:23:12.442657 #27787] DEBUG -- :   [1m[36m (52.8ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T01:37:08.410758 #46760]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-09-03 01:37:08 -0700
+I, [2015-09-03T01:37:08.966164 #46760]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-09-03T01:37:08.981480 #46760]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (3.2ms)
+I, [2015-09-03T01:37:08.983397 #46760]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T01:37:08.984580 #46760]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T01:37:08.984826 #46760]  INFO -- : Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T01:37:20.952740 #46760]  INFO -- : Started GET "/login" for 127.0.0.1 at 2015-09-03 01:37:20 -0700
+I, [2015-09-03T01:37:20.996671 #46760]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-09-03T01:37:21.003392 #46760]  INFO -- :   Rendered shared/_alert.html.erb (0.2ms)
+I, [2015-09-03T01:37:21.220579 #46760]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (218.8ms)
+I, [2015-09-03T01:37:21.221421 #46760]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T01:37:21.221571 #46760]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T01:37:21.221812 #46760]  INFO -- : Completed 200 OK in 225ms (Views: 224.6ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T01:37:26.890895 #46760]  INFO -- : Started POST "/login" for 127.0.0.1 at 2015-09-03 01:37:26 -0700
+I, [2015-09-03T01:37:26.934610 #46760]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-09-03T01:37:26.934713 #46760]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"x7GxLXhLUSw7MbTNXCVjKkIBIaPwFk2Xk2zUcBX+TZhH8Foz1uVQapSAVlE5P6YCh7nUM2qES6mHlXjf9wIFYg==", "session"=>{"username"=>"cameron.aziz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+D, [2015-09-03T01:37:27.024783 #46760] DEBUG -- :   [1m[36mUser Load (40.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`username` = 'cameron.aziz' LIMIT 1[0m
+I, [2015-09-03T01:37:27.167698 #46760]  INFO -- : Redirected to http://localhost:3000/profile
+I, [2015-09-03T01:37:27.167839 #46760]  INFO -- : Completed 302 Found in 233ms (ActiveRecord: 166.4ms)
+I, [2015-09-03T01:37:27.172566 #46760]  INFO -- : Started GET "/profile" for 127.0.0.1 at 2015-09-03 01:37:27 -0700
+I, [2015-09-03T01:37:27.212832 #46760]  INFO -- : Processing by StaticPagesController#profile as HTML
+D, [2015-09-03T01:37:27.256926 #46760] DEBUG -- :   [1m[35mUser Load (42.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:37:27.257733 #46760] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+I, [2015-09-03T01:37:27.259409 #46760]  INFO -- :   Rendered static_pages/profile.html.erb within layouts/application (0.4ms)
+I, [2015-09-03T01:37:27.260235 #46760]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-09-03T01:37:27.399377 #46760] DEBUG -- :   [1m[35mGroup Load (39.2ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1
+I, [2015-09-03T01:37:27.440707 #46760]  INFO -- :   Rendered layouts/_nav.html.erb (180.3ms)
+I, [2015-09-03T01:37:27.441016 #46760]  INFO -- : Completed 200 OK in 228ms (Views: 21.2ms | ActiveRecord: 204.6ms)
+I, [2015-09-03T01:37:28.667503 #46760]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-09-03 01:37:28 -0700
+I, [2015-09-03T01:37:28.765094 #46760]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-09-03T01:37:28.855514 #46760] DEBUG -- :   [1m[36mUser Load (89.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-09-03T01:37:28.899489 #46760] DEBUG -- :   [1m[35mGroup Load (43.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1
+I, [2015-09-03T01:37:28.905710 #46760]  INFO -- :   Rendered shared/_notice.html.erb (0.2ms)
+D, [2015-09-03T01:37:28.944898 #46760] DEBUG -- :   [1m[36mPortfolio Load (38.7ms)[0m  [1mSELECT `portfolios`.* FROM `portfolios`[0m
+D, [2015-09-03T01:37:29.082606 #46760] DEBUG -- :   [1m[35mUser Load (41.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+D, [2015-09-03T01:37:29.083949 #46760] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+I, [2015-09-03T01:37:29.085266 #46760]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (181.4ms)
+I, [2015-09-03T01:37:29.085357 #46760]  INFO -- : Completed 500 Internal Server Error in 320ms
+F, [2015-09-03T01:37:29.086240 #46760] FATAL -- : 
+ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
+    14:   <% @portfolios.each do |portfolio| %>
+    15:       <tr>
+    16:         <td><%= portfolio.nickname %></td>
+    17:         <%= auth_groups(['Administrators']) ? raw('<td>' + link_to(portfolio.user.full_name, user_path(portfolio.user)) + '</td>'): '' %>
+    18:         <td><%= link_to 'Show', portfolio %></td>
+    19:         <td><%= link_to 'Edit', edit_portfolio_path(portfolio) %></td>
+    20:         <td><%= link_to 'Delete', portfolio, method: :delete, data: {confirm: 'Are you sure?'}  %></td>
+  app/views/portfolios/index.html.erb:17:in `block in _app_views_portfolios_index_html_erb__3324720928983504289_70135613632380'
+  app/views/portfolios/index.html.erb:14:in `_app_views_portfolios_index_html_erb__3324720928983504289_70135613632380'
+
+
+I, [2015-09-03T01:38:05.310272 #46760]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-09-03 01:38:05 -0700
+I, [2015-09-03T01:38:05.350797 #46760]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-09-03T01:38:05.396792 #46760] DEBUG -- :   [1m[35mUser Load (45.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:38:05.441278 #46760] DEBUG -- :   [1m[36mGroup Load (42.9ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1[0m
+I, [2015-09-03T01:38:05.442598 #46760]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-09-03T01:38:05.487394 #46760] DEBUG -- :   [1m[35mPortfolio Load (44.1ms)[0m  SELECT `portfolios`.* FROM `portfolios`
+D, [2015-09-03T01:38:05.530847 #46760] DEBUG -- :   [1m[36mUser Load (42.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2015-09-03T01:38:05.531778 #46760] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1  [["id", 1]]
+I, [2015-09-03T01:38:05.533131 #46760]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (90.8ms)
+I, [2015-09-03T01:38:05.533247 #46760]  INFO -- : Completed 500 Internal Server Error in 182ms
+F, [2015-09-03T01:38:05.534333 #46760] FATAL -- : 
+ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
+    14:       <tr>
+    15:         <td><%= portfolio.nickname %></td>
+    16:         <td><%= link_to 'Show', portfolio %></td>
+    17:         <td><%= link_to 'Edit', edit_portfolio_path(portfolio) %></td>
+    18:         <td><%= link_to 'Delete', portfolio, method: :delete, data: {confirm: 'Are you sure?'}  %></td>
+    19:       </tr>
+    20:   <% end %>
+  app/views/portfolios/index.html.erb:17:in `block in _app_views_portfolios_index_html_erb__3324720928983504289_70135613632380'
+  app/views/portfolios/index.html.erb:14:in `_app_views_portfolios_index_html_erb__3324720928983504289_70135613632380'
+
+
+I, [2015-09-03T01:38:22.572680 #46787]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-09-03 01:38:22 -0700
+I, [2015-09-03T01:38:22.876173 #46787]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-09-03T01:38:22.967704 #46787] DEBUG -- :   [1m[36mUser Load (40.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-09-03T01:38:23.204453 #46787] DEBUG -- :   [1m[35mGroup Load (39.5ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1
+I, [2015-09-03T01:38:23.258721 #46787]  INFO -- :   Rendered shared/_notice.html.erb (0.3ms)
+D, [2015-09-03T01:38:23.307174 #46787] DEBUG -- :   [1m[36mPortfolio Load (47.9ms)[0m  [1mSELECT `portfolios`.* FROM `portfolios`[0m
+I, [2015-09-03T01:38:23.395156 #46787]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (138.1ms)
+I, [2015-09-03T01:38:23.398310 #46787]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T01:38:23.400427 #46787]  INFO -- :   Rendered layouts/_nav.html.erb (1.3ms)
+I, [2015-09-03T01:38:23.400733 #46787]  INFO -- : Completed 200 OK in 524ms (Views: 18.2ms | ActiveRecord: 470.7ms)
+D, [2015-09-03T01:38:38.756127 #46923] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (116.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T01:38:38.872350 #46923]  INFO -- : Migrating to CreateBrokerages (20150902033632)
+D, [2015-09-03T01:38:38.917517 #46923] DEBUG -- :   [1m[35m (44.0ms)[0m  CREATE TABLE `brokers` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+E, [2015-09-03T01:38:38.917625 #46923] ERROR -- : Mysql2::Error: Table 'brokers' already exists: CREATE TABLE `brokers` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-09-03T01:40:06.781467 #46984] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (43.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T01:40:06.832284 #46984]  INFO -- : Migrating to CreateBrokerages (20150902033632)
+D, [2015-09-03T01:40:06.939872 #46984] DEBUG -- :   [1m[35m (106.3ms)[0m  CREATE TABLE `brokers` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-09-03T01:40:07.026975 #46984] DEBUG -- :   [1m[36m (42.3ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T01:40:07.073096 #46984] DEBUG -- :   [1m[35mSQL (42.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150902033632')
+D, [2015-09-03T01:40:07.140988 #46984] DEBUG -- :   [1m[36m (67.4ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T01:40:07.141115 #46984]  INFO -- : Migrating to CreateComments (20150902034808)
+D, [2015-09-03T01:40:07.251333 #46984] DEBUG -- :   [1m[35m (109.1ms)[0m  CREATE TABLE `comments` (`id` int(11) auto_increment PRIMARY KEY, `broker_id` int(11), `user_id` int(11), `rating` int(11), `comment` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-09-03T01:40:07.294978 #46984] DEBUG -- :   [1m[36m (43.0ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T01:40:07.342282 #46984] DEBUG -- :   [1m[35mSQL (46.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150902034808')
+D, [2015-09-03T01:40:07.394248 #46984] DEBUG -- :   [1m[36m (51.6ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T01:40:07.394432 #46984]  INFO -- : Migrating to AddAddressToBroker (20150902035032)
+D, [2015-09-03T01:40:07.555903 #46984] DEBUG -- :   [1m[35m (160.6ms)[0m  ALTER TABLE `brokers` ADD `address1` varchar(255)
+D, [2015-09-03T01:40:07.710310 #46984] DEBUG -- :   [1m[36m (153.9ms)[0m  [1mALTER TABLE `brokers` ADD `address2` varchar(255)[0m
+D, [2015-09-03T01:40:07.863490 #46984] DEBUG -- :   [1m[35m (152.7ms)[0m  ALTER TABLE `brokers` ADD `city` varchar(255)
+D, [2015-09-03T01:40:08.019553 #46984] DEBUG -- :   [1m[36m (155.7ms)[0m  [1mALTER TABLE `brokers` ADD `state` varchar(255)[0m
+D, [2015-09-03T01:40:08.257508 #46984] DEBUG -- :   [1m[35m (237.6ms)[0m  ALTER TABLE `brokers` ADD `zip` varchar(255)
+D, [2015-09-03T01:40:08.368392 #46984] DEBUG -- :   [1m[36m (110.2ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T01:40:08.418180 #46984] DEBUG -- :   [1m[35mSQL (49.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150902035032')
+D, [2015-09-03T01:40:08.478603 #46984] DEBUG -- :   [1m[36m (60.1ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T01:40:08.478722 #46984]  INFO -- : Migrating to CreateAdViews (20150902233805)
+D, [2015-09-03T01:40:08.583760 #46984] DEBUG -- :   [1m[35m (104.0ms)[0m  CREATE TABLE `ad_views` (`id` int(11) auto_increment PRIMARY KEY, `broker_id` int(11), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-09-03T01:40:08.628509 #46984] DEBUG -- :   [1m[36m (44.1ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T01:40:08.677909 #46984] DEBUG -- :   [1m[35mSQL (48.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150902233805')
+D, [2015-09-03T01:40:08.734140 #46984] DEBUG -- :   [1m[36m (55.9ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T01:40:08.734261 #46984]  INFO -- : Migrating to CreateBrokers (20150903022736)
+D, [2015-09-03T01:40:08.778624 #46984] DEBUG -- :   [1m[35m (41.1ms)[0m  CREATE TABLE `brokers` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `brokerage_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+E, [2015-09-03T01:40:08.778737 #46984] ERROR -- : Mysql2::Error: Table 'brokers' already exists: CREATE TABLE `brokers` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `brokerage_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-09-03T01:40:49.298393 #47014] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (87.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T01:40:49.350297 #47014]  INFO -- : Migrating to CreateBrokers (20150903022736)
+D, [2015-09-03T01:40:49.458315 #47014] DEBUG -- :   [1m[35m (106.8ms)[0m  CREATE TABLE `brokers` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `brokerage_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-09-03T01:40:49.542673 #47014] DEBUG -- :   [1m[36m (39.6ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T01:40:49.587502 #47014] DEBUG -- :   [1m[35mSQL (41.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150903022736')
+D, [2015-09-03T01:40:49.645109 #47014] DEBUG -- :   [1m[36m (57.2ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T01:40:49.645253 #47014]  INFO -- : Migrating to AddVerifiedToBrokerage (20150903073044)
+D, [2015-09-03T01:40:49.859999 #47014] DEBUG -- :   [1m[35m (213.9ms)[0m  ALTER TABLE `brokerages` ADD `is_verified` tinyint(1)
+D, [2015-09-03T01:40:49.939713 #47014] DEBUG -- :   [1m[36m (79.0ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T01:40:49.981632 #47014] DEBUG -- :   [1m[35mSQL (41.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150903073044')
+D, [2015-09-03T01:40:50.039387 #47014] DEBUG -- :   [1m[36m (57.4ms)[0m  [1mCOMMIT[0m
+D, [2015-09-03T01:41:01.783548 #47167] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (38.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
