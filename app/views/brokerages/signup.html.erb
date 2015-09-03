@@ -4,6 +4,10 @@
         margin-top: 20px;
     }
 </style>
+<div style="margin-top: 20px; height: 100px; position: relative">
+<%= image_tag 'logo-green.png', width: 200%><div style="font-size: 40px; bottom: 20px; display: inline; position: absolute;">Brokerage Registration</div>
+</div>
+<div class="clearfix"></div>
 <div class="col-xs-6"]>
   <%= render partial: 'shared/errors', :locals => {:object => @brokerage}%>
 <%= form_for @brokerage, url: {action: "create_brokerage"} do |f|  %>

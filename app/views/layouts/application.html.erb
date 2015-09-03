@@ -1,3 +1,4 @@
+<% unless current_page?(root_path) %>
 <!DOCTYPE html>
 <html lang="en" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 <head>
@@ -86,7 +87,6 @@
 <body>
 
 <%=	render(partial: 'layouts/nav') %>
-<% unless current_page?(root_path) %>
 <div class="container internal" style="padding-bottom: 50px; border: solid; border-color: #87c17f">
 <% end %>
   <%= yield%>

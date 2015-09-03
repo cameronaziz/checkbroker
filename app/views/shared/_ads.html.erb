@@ -1,13 +1,13 @@
-<h4>Meet <%= @broker.shortened_name %></h4>
-<% if @broker.image_url %>
-    <%= image_tag @broker.image_url.to_s, width: 150 %>
+<h4>Meet <%= @brokerage.shortened_name %></h4>
+<% if @brokerage.image_url %>
+    <%= image_tag @brokerage.image_url.to_s, width: 150 %>
     <% else %>
     <%= image_tag 'default-broker.gif', width: 150 %>
     <% end %>
-<% if @broker.about %>
-    About: <%= @broker.about %>
+<% if @brokerage.about %>
+    About: <%= @brokerage.about %>
     <br><br>
     <% end %>
 Contact Information:<br>
-<%= @broker.formatted_phone %><br>
-<span class="email"><%= @broker.email %></span>
+<%= @brokerage.formatted_phone %><br>
+<span class="email"><%= @brokerage.email %></span>

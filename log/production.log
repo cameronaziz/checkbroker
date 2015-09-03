@@ -6347,3 +6347,1042 @@ D, [2015-09-03T01:40:49.939713 #47014] DEBUG -- :   [1m[36m (79.0ms)[0m  [1m
 D, [2015-09-03T01:40:49.981632 #47014] DEBUG -- :   [1m[35mSQL (41.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150903073044')
 D, [2015-09-03T01:40:50.039387 #47014] DEBUG -- :   [1m[36m (57.4ms)[0m  [1mCOMMIT[0m
 D, [2015-09-03T01:41:01.783548 #47167] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (38.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2015-09-03T01:45:47.884088 #47461] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (40.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T01:50:23.451033 #46787]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-09-03 01:50:23 -0700
+I, [2015-09-03T01:50:25.472467 #46787]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-09-03T01:50:26.261671 #46787] DEBUG -- :   [1m[35mUser Load (788.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:50:26.262415 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+I, [2015-09-03T01:50:26.270134 #46787]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (4.0ms)
+I, [2015-09-03T01:50:26.270981 #46787]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T01:50:26.271168 #46787]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T01:50:26.271396 #46787]  INFO -- : Completed 200 OK in 799ms (Views: 8.8ms | ActiveRecord: 788.5ms)
+I, [2015-09-03T01:50:27.829972 #46787]  INFO -- : Started GET "/profile" for 127.0.0.1 at 2015-09-03 01:50:27 -0700
+I, [2015-09-03T01:50:28.709905 #46787]  INFO -- : Processing by StaticPagesController#profile as HTML
+D, [2015-09-03T01:50:29.703235 #46787] DEBUG -- :   [1m[35mUser Load (992.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:50:29.703904 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+I, [2015-09-03T01:50:29.705487 #46787]  INFO -- :   Rendered static_pages/profile.html.erb within layouts/application (0.4ms)
+I, [2015-09-03T01:50:29.706320 #46787]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+D, [2015-09-03T01:50:30.237331 #46787] DEBUG -- :   [1m[35mGroup Load (530.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1
+I, [2015-09-03T01:50:30.238413 #46787]  INFO -- :   Rendered layouts/_nav.html.erb (532.0ms)
+I, [2015-09-03T01:50:30.238747 #46787]  INFO -- : Completed 200 OK in 1529ms (Views: 4.6ms | ActiveRecord: 1522.4ms)
+I, [2015-09-03T01:53:44.318138 #46787]  INFO -- : Started GET "/portfolios" for 127.0.0.1 at 2015-09-03 01:53:44 -0700
+I, [2015-09-03T01:53:44.360181 #46787]  INFO -- : Processing by PortfoliosController#index as HTML
+D, [2015-09-03T01:53:44.402683 #46787] DEBUG -- :   [1m[36mUser Load (41.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-09-03T01:53:44.447598 #46787] DEBUG -- :   [1m[35mGroup Load (43.4ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1
+I, [2015-09-03T01:53:44.448847 #46787]  INFO -- :   Rendered shared/_notice.html.erb (0.1ms)
+D, [2015-09-03T01:53:44.492333 #46787] DEBUG -- :   [1m[36mPortfolio Load (42.9ms)[0m  [1mSELECT `portfolios`.* FROM `portfolios`[0m
+I, [2015-09-03T01:53:44.494024 #46787]  INFO -- :   Rendered portfolios/index.html.erb within layouts/application (45.4ms)
+I, [2015-09-03T01:53:44.495911 #46787]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T01:53:44.496864 #46787]  INFO -- :   Rendered layouts/_nav.html.erb (0.8ms)
+I, [2015-09-03T01:53:44.497099 #46787]  INFO -- : Completed 200 OK in 137ms (Views: 6.0ms | ActiveRecord: 128.2ms)
+I, [2015-09-03T01:53:46.511441 #46787]  INFO -- : Started GET "/portfolios/1" for 127.0.0.1 at 2015-09-03 01:53:46 -0700
+I, [2015-09-03T01:53:46.553474 #46787]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-09-03T01:53:46.553540 #46787]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-09-03T01:53:46.600810 #46787] DEBUG -- :   [1m[35mUser Load (46.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:53:46.644528 #46787] DEBUG -- :   [1m[36mPortfolio Load (42.5ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 1 LIMIT 1[0m
+D, [2015-09-03T01:53:46.690055 #46787] DEBUG -- :   [1m[35mGroup Load (44.0ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1
+D, [2015-09-03T01:53:46.776581 #46787] DEBUG -- :   [1m[36mInvestment Load (41.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m
+D, [2015-09-03T01:53:46.905411 #46787] DEBUG -- :   [1m[35mMutualFund Load (41.9ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1
+D, [2015-09-03T01:53:46.954770 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m  [["portfolio_id", 1]]
+D, [2015-09-03T01:53:46.955088 #46787] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:53:46.994028 #46787] DEBUG -- :   [1m[36mMutualFund Load (38.6ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-09-03T01:53:47.038844 #46787] DEBUG -- :   [1m[35mMutualFund Load (44.1ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1
+D, [2015-09-03T01:53:47.039614 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:53:47.040040 #46787] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:53:47.040423 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:53:47.040808 #46787] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:53:47.041207 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:53:47.043337 #46787] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1  [["portfolio_id", 1]]
+D, [2015-09-03T01:53:47.043673 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:53:47.043956 #46787] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:53:47.044209 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:53:47.044463 #46787] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:53:47.044711 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:53:47.044940 #46787] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:53:47.045211 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:53:47.045455 #46787] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:53:47.045702 #46787] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:53:47.129568 #46787] DEBUG -- :   [1m[35m (42.6ms)[0m  SELECT COUNT(*) FROM `brokers`
+D, [2015-09-03T01:53:47.211488 #46787] DEBUG -- :   [1m[36mBroker Load (41.9ms)[0m  [1mSELECT  `brokers`.* FROM `brokers`  ORDER BY `brokers`.`id` ASC LIMIT 1 OFFSET 0[0m
+I, [2015-09-03T01:53:47.212134 #46787]  INFO -- : Completed 500 Internal Server Error in 659ms
+F, [2015-09-03T01:53:47.213462 #46787] FATAL -- : 
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/helpers/brokers_helper.rb:5:in `broker_ad'
+  app/controllers/portfolios_controller.rb:49:in `show'
+
+
+I, [2015-09-03T01:54:38.945534 #47663]  INFO -- : Started GET "/portfolios/1" for 127.0.0.1 at 2015-09-03 01:54:38 -0700
+I, [2015-09-03T01:54:39.655524 #47663]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-09-03T01:54:39.655587 #47663]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-09-03T01:54:39.745140 #47663] DEBUG -- :   [1m[36mUser Load (39.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-09-03T01:54:39.957273 #47663] DEBUG -- :   [1m[35mPortfolio Load (43.7ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:54:40.110047 #47663] DEBUG -- :   [1m[36mGroup Load (39.4ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1[0m
+D, [2015-09-03T01:54:40.244476 #47663] DEBUG -- :   [1m[35mInvestment Load (43.7ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1
+D, [2015-09-03T01:54:40.377913 #47663] DEBUG -- :   [1m[36mMutualFund Load (43.7ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m
+D, [2015-09-03T01:54:40.422277 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1  [["portfolio_id", 1]]
+D, [2015-09-03T01:54:40.422583 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.461433 #47663] DEBUG -- :   [1m[35mMutualFund Load (38.5ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-09-03T01:54:40.505070 #47663] DEBUG -- :   [1m[36mMutualFund Load (42.9ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m
+D, [2015-09-03T01:54:40.505812 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.506256 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.506625 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.507041 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:54:40.507403 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:54:40.509530 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m  [["portfolio_id", 1]]
+D, [2015-09-03T01:54:40.509785 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.510050 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.510309 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.510565 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.510793 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:54:40.511054 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:54:40.511309 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.511563 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.511780 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:54:40.601984 #47663] DEBUG -- :   [1m[36m (48.4ms)[0m  [1mSELECT COUNT(*) FROM `brokerages`[0m
+D, [2015-09-03T01:54:40.689791 #47663] DEBUG -- :   [1m[35mBrokerage Load (42.6ms)[0m  SELECT  `brokerages`.* FROM `brokerages`  ORDER BY `brokerages`.`id` ASC LIMIT 1 OFFSET 0
+I, [2015-09-03T01:54:40.907705 #47663]  INFO -- :   Rendered shared/_ads.html.erb (0.8ms)
+D, [2015-09-03T01:54:40.950557 #47663] DEBUG -- :   [1m[36mInvestment Load (42.5ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m
+D, [2015-09-03T01:54:40.951324 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.952277 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.952872 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.953522 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:54:40.954321 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.954685 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.955076 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.955427 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:54:40.955954 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:54:40.956348 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:54:40.956697 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:54:40.957088 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+I, [2015-09-03T01:54:40.957617 #47663]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (254.5ms)
+I, [2015-09-03T01:54:40.960482 #47663]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T01:54:40.962535 #47663]  INFO -- :   Rendered layouts/_nav.html.erb (1.3ms)
+I, [2015-09-03T01:54:40.962802 #47663]  INFO -- : Completed 200 OK in 1307ms (Views: 224.6ms | ActiveRecord: 1001.5ms)
+I, [2015-09-03T01:55:04.638856 #47663]  INFO -- : Started GET "/portfolios/1" for 127.0.0.1 at 2015-09-03 01:55:04 -0700
+I, [2015-09-03T01:55:04.681785 #47663]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-09-03T01:55:04.681880 #47663]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-09-03T01:55:04.725566 #47663] DEBUG -- :   [1m[35mUser Load (42.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:55:04.770226 #47663] DEBUG -- :   [1m[36mPortfolio Load (44.1ms)[0m  [1mSELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 1 LIMIT 1[0m
+D, [2015-09-03T01:55:04.813753 #47663] DEBUG -- :   [1m[35mGroup Load (42.4ms)[0m  SELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1
+D, [2015-09-03T01:55:04.857218 #47663] DEBUG -- :   [1m[36mInvestment Load (42.7ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m
+D, [2015-09-03T01:55:04.896189 #47663] DEBUG -- :   [1m[35mMutualFund Load (38.5ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1
+D, [2015-09-03T01:55:04.896938 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m  [["portfolio_id", 1]]
+D, [2015-09-03T01:55:04.897151 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:04.939099 #47663] DEBUG -- :   [1m[36mMutualFund Load (41.7ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m
+D, [2015-09-03T01:55:04.984859 #47663] DEBUG -- :   [1m[35mMutualFund Load (45.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1
+D, [2015-09-03T01:55:04.985306 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:04.985502 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:04.985680 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:04.985907 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:04.986076 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:04.986606 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1  [["portfolio_id", 1]]
+D, [2015-09-03T01:55:04.986845 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:04.987023 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:04.987192 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:04.987349 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:04.987550 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:04.987707 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:04.987885 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:04.988089 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:04.988246 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:05.028711 #47663] DEBUG -- :   [1m[35m (40.0ms)[0m  SELECT COUNT(*) FROM `brokerages`
+D, [2015-09-03T01:55:05.073172 #47663] DEBUG -- :   [1m[36mBrokerage Load (43.9ms)[0m  [1mSELECT  `brokerages`.* FROM `brokerages`  ORDER BY `brokerages`.`id` ASC LIMIT 1 OFFSET 0[0m
+I, [2015-09-03T01:55:05.075655 #47663]  INFO -- :   Rendered shared/_ads.html.erb (0.2ms)
+D, [2015-09-03T01:55:05.118241 #47663] DEBUG -- :   [1m[35mInvestment Load (42.3ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1
+D, [2015-09-03T01:55:05.118959 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:05.119838 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:05.120438 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:05.121083 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:05.121949 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:05.122310 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:05.122663 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:05.123108 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:05.123689 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:05.124111 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:05.124502 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:05.124853 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+I, [2015-09-03T01:55:05.125490 #47663]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (51.5ms)
+I, [2015-09-03T01:55:05.126674 #47663]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T01:55:05.127446 #47663]  INFO -- :   Rendered layouts/_nav.html.erb (0.7ms)
+I, [2015-09-03T01:55:05.127703 #47663]  INFO -- : Completed 200 OK in 446ms (Views: 11.5ms | ActiveRecord: 423.6ms)
+I, [2015-09-03T01:55:06.129765 #47663]  INFO -- : Started GET "/portfolios/1" for 127.0.0.1 at 2015-09-03 01:55:06 -0700
+I, [2015-09-03T01:55:06.172681 #47663]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-09-03T01:55:06.172749 #47663]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-09-03T01:55:06.216090 #47663] DEBUG -- :   [1m[36mUser Load (42.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-09-03T01:55:06.261044 #47663] DEBUG -- :   [1m[35mPortfolio Load (44.3ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:55:06.304678 #47663] DEBUG -- :   [1m[36mGroup Load (42.1ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1[0m
+D, [2015-09-03T01:55:06.350622 #47663] DEBUG -- :   [1m[35mInvestment Load (44.8ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1
+D, [2015-09-03T01:55:06.393930 #47663] DEBUG -- :   [1m[36mMutualFund Load (42.6ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m
+D, [2015-09-03T01:55:06.395020 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1  [["portfolio_id", 1]]
+D, [2015-09-03T01:55:06.395403 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.437669 #47663] DEBUG -- :   [1m[35mMutualFund Load (41.8ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-09-03T01:55:06.479464 #47663] DEBUG -- :   [1m[36mMutualFund Load (41.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m
+D, [2015-09-03T01:55:06.480149 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.480550 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.480917 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.481344 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:06.481695 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:06.482732 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m  [["portfolio_id", 1]]
+D, [2015-09-03T01:55:06.483053 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.483294 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.483551 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.483783 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.484000 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:06.484211 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:06.484462 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.484679 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.484887 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:06.524921 #47663] DEBUG -- :   [1m[36m (39.5ms)[0m  [1mSELECT COUNT(*) FROM `brokerages`[0m
+D, [2015-09-03T01:55:06.569230 #47663] DEBUG -- :   [1m[35mBrokerage Load (43.6ms)[0m  SELECT  `brokerages`.* FROM `brokerages`  ORDER BY `brokerages`.`id` ASC LIMIT 1 OFFSET 0
+I, [2015-09-03T01:55:06.573282 #47663]  INFO -- :   Rendered shared/_ads.html.erb (0.3ms)
+D, [2015-09-03T01:55:06.613144 #47663] DEBUG -- :   [1m[36mInvestment Load (39.5ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m
+D, [2015-09-03T01:55:06.613823 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.614635 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.615281 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.615911 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:06.616742 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.617099 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.617478 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.617826 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:06.618352 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:06.618709 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:06.619099 #47663] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:06.619444 #47663] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+I, [2015-09-03T01:55:06.620016 #47663]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (49.8ms)
+I, [2015-09-03T01:55:06.621178 #47663]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T01:55:06.622011 #47663]  INFO -- :   Rendered layouts/_nav.html.erb (0.7ms)
+I, [2015-09-03T01:55:06.622230 #47663]  INFO -- : Completed 200 OK in 449ms (Views: 12.8ms | ActiveRecord: 422.4ms)
+I, [2015-09-03T01:55:10.514782 #47681]  INFO -- : Started GET "/portfolios/1" for 127.0.0.1 at 2015-09-03 01:55:10 -0700
+I, [2015-09-03T01:55:10.817677 #47681]  INFO -- : Processing by PortfoliosController#show as HTML
+I, [2015-09-03T01:55:10.817739 #47681]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2015-09-03T01:55:10.907992 #47681] DEBUG -- :   [1m[36mUser Load (40.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+D, [2015-09-03T01:55:11.118735 #47681] DEBUG -- :   [1m[35mPortfolio Load (41.8ms)[0m  SELECT  `portfolios`.* FROM `portfolios` WHERE `portfolios`.`id` = 1 LIMIT 1
+D, [2015-09-03T01:55:11.260823 #47681] DEBUG -- :   [1m[36mGroup Load (39.0ms)[0m  [1mSELECT `groups`.* FROM `groups` INNER JOIN `memberships` ON `groups`.`id` = `memberships`.`group_id` WHERE `memberships`.`user_id` = 1[0m
+D, [2015-09-03T01:55:11.393346 #47681] DEBUG -- :   [1m[35mInvestment Load (44.3ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1
+D, [2015-09-03T01:55:11.524965 #47681] DEBUG -- :   [1m[36mMutualFund Load (43.3ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m
+D, [2015-09-03T01:55:11.572757 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1  [["portfolio_id", 1]]
+D, [2015-09-03T01:55:11.573089 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:11.619204 #47681] DEBUG -- :   [1m[35mMutualFund Load (45.8ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1
+D, [2015-09-03T01:55:11.715466 #47681] DEBUG -- :   [1m[36mMutualFund Load (95.5ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m
+D, [2015-09-03T01:55:11.716155 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:11.716594 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:11.717001 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:11.717369 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:11.717749 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:11.719730 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m  [["portfolio_id", 1]]
+D, [2015-09-03T01:55:11.719998 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:11.720259 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:11.720488 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:11.720754 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:11.721002 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:11.721238 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:11.721464 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:11.721694 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:11.721932 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:11.809964 #47681] DEBUG -- :   [1m[36m (41.5ms)[0m  [1mSELECT COUNT(*) FROM `brokerages`[0m
+D, [2015-09-03T01:55:11.910309 #47681] DEBUG -- :   [1m[35mBrokerage Load (41.5ms)[0m  SELECT  `brokerages`.* FROM `brokerages`  ORDER BY `brokerages`.`id` ASC LIMIT 1 OFFSET 0
+I, [2015-09-03T01:55:12.125821 #47681]  INFO -- :   Rendered shared/_ads.html.erb (0.8ms)
+D, [2015-09-03T01:55:12.166728 #47681] DEBUG -- :   [1m[36mInvestment Load (40.5ms)[0m  [1mSELECT `investments`.* FROM `investments` WHERE `investments`.`portfolio_id` = 1[0m
+D, [2015-09-03T01:55:12.167470 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:12.168310 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:12.168997 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:12.169580 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'FPACX' LIMIT 1[0m  [["ticker", "FPACX"]]
+D, [2015-09-03T01:55:12.170456 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:12.170818 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:12.171211 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:12.171565 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'WABIX' LIMIT 1[0m  [["ticker", "WABIX"]]
+D, [2015-09-03T01:55:12.172088 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:12.172479 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:12.172832 #47681] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1  [["ticker", "JNBSX"]]
+D, [2015-09-03T01:55:12.173218 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mutual_funds`.* FROM `mutual_funds` WHERE `mutual_funds`.`ticker` = 'JNBSX' LIMIT 1[0m  [["ticker", "JNBSX"]]
+I, [2015-09-03T01:55:12.173777 #47681]  INFO -- :   Rendered portfolios/show.html.erb within layouts/application (253.4ms)
+I, [2015-09-03T01:55:12.176487 #47681]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T01:55:12.178463 #47681]  INFO -- :   Rendered layouts/_nav.html.erb (1.2ms)
+I, [2015-09-03T01:55:12.178708 #47681]  INFO -- : Completed 200 OK in 1361ms (Views: 222.0ms | ActiveRecord: 1066.4ms)
+D, [2015-09-03T01:55:21.765487 #47816] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (42.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T03:17:26.457535 #47681]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-09-03 03:17:26 -0700
+I, [2015-09-03T03:18:01.226105 #47681]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-09-03T03:18:01.272391 #47681] DEBUG -- :   [1m[35mUser Load (45.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-09-03T03:18:01.273871 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+I, [2015-09-03T03:18:01.287006 #47681]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (4.9ms)
+I, [2015-09-03T03:18:01.287936 #47681]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:18:01.288172 #47681]  INFO -- :   Rendered layouts/_nav.html.erb (0.2ms)
+I, [2015-09-03T03:18:01.288416 #47681]  INFO -- : Completed 200 OK in 62ms (Views: 14.2ms | ActiveRecord: 45.2ms)
+I, [2015-09-03T03:19:03.690131 #47681]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-09-03 03:19:03 -0700
+I, [2015-09-03T03:19:03.732656 #47681]  INFO -- : Processing by StaticPagesController#index as HTML
+D, [2015-09-03T03:19:03.775946 #47681] DEBUG -- :   [1m[35mUser Load (42.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+D, [2015-09-03T03:19:03.776551 #47681] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+I, [2015-09-03T03:19:03.779943 #47681]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (2.7ms)
+I, [2015-09-03T03:19:03.780938 #47681]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:19:03.781158 #47681]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:19:03.781425 #47681]  INFO -- : Completed 200 OK in 49ms (Views: 4.6ms | ActiveRecord: 42.1ms)
+I, [2015-09-03T03:36:44.738861 #49068]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-09-03 03:36:44 -0700
+I, [2015-09-03T03:36:45.092790 #49068]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-09-03T03:36:45.108428 #49068]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:36:45.110181 #49068]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (5.5ms)
+I, [2015-09-03T03:36:45.111009 #49068]  INFO -- : Completed 200 OK in 18ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:36:45.129203 #49068]  INFO -- : Started GET "/stylesheets/eco/font-awesome.css" for 127.0.0.1 at 2015-09-03 03:36:45 -0700
+F, [2015-09-03T03:36:45.172627 #49068] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/eco/font-awesome.css"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:36:55.750593 #49068]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:36:55 -0700
+I, [2015-09-03T03:36:55.797272 #49068]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:36:55.982624 #49068]  INFO -- :   Rendered shared/_errors.html.erb (0.6ms)
+I, [2015-09-03T03:36:56.384008 #49068]  INFO -- :   Rendered users/_form_elements.html.erb (245.0ms)
+I, [2015-09-03T03:36:56.386453 #49068]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (408.4ms)
+I, [2015-09-03T03:36:56.386581 #49068]  INFO -- : Completed 500 Internal Server Error in 589ms
+F, [2015-09-03T03:36:56.387528 #49068] FATAL -- : 
+ActionView::Template::Error (undefined method `address1' for #<Brokerage:0x007fabdf03c450>):
+    26:       </div>
+    27:       <div class="form-group">
+    28:         <%= f.label :address1, class: 'sr-only' %>
+    29:         <%= f.text_field :address1, class: 'form-control top-input', placeholder: 'Address' %>
+    30:         <%= f.label :address2, class: 'sr-only' %>
+    31:         <%= f.text_field :address2, class: 'form-control bottom-input', placeholder: 'Address 2'%>
+    32:       </div>
+  app/views/brokerages/signup.html.erb:29:in `block in _app_views_brokerages_signup_html_erb__432561591361441449_70188060079880'
+  app/views/brokerages/signup.html.erb:9:in `_app_views_brokerages_signup_html_erb__432561591361441449_70188060079880'
+
+
+D, [2015-09-03T03:37:32.573666 #49085] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (45.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T03:46:22.202066 #49068]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:46:22 -0700
+I, [2015-09-03T03:46:22.243258 #49068]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:46:22.246276 #49068]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:46:22.249426 #49068]  INFO -- :   Rendered users/_form_elements.html.erb (1.8ms)
+I, [2015-09-03T03:46:22.251725 #49068]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (6.4ms)
+I, [2015-09-03T03:46:22.251826 #49068]  INFO -- : Completed 500 Internal Server Error in 8ms
+F, [2015-09-03T03:46:22.252840 #49068] FATAL -- : 
+ActionView::Template::Error (undefined method `address1' for #<Brokerage:0x007fabe3906398>):
+    26:       </div>
+    27:       <div class="form-group">
+    28:         <%= f.label :address1, class: 'sr-only' %>
+    29:         <%= f.text_field :address1, class: 'form-control top-input', placeholder: 'Address' %>
+    30:         <%= f.label :address2, class: 'sr-only' %>
+    31:         <%= f.text_field :address2, class: 'form-control bottom-input', placeholder: 'Address 2'%>
+    32:       </div>
+  app/views/brokerages/signup.html.erb:29:in `block in _app_views_brokerages_signup_html_erb__432561591361441449_70188060079880'
+  app/views/brokerages/signup.html.erb:9:in `_app_views_brokerages_signup_html_erb__432561591361441449_70188060079880'
+
+
+D, [2015-09-03T03:47:54.582280 #49481] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (42.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T03:47:54.633920 #49481]  INFO -- : Migrating to AddAddressToBroker (20150903035032)
+D, [2015-09-03T03:47:54.799557 #49481] DEBUG -- :   [1m[35m (165.0ms)[0m  ALTER TABLE `brokerages` ADD `address1` varchar(255)
+D, [2015-09-03T03:47:54.956296 #49481] DEBUG -- :   [1m[36m (156.3ms)[0m  [1mALTER TABLE `brokerages` ADD `address2` varchar(255)[0m
+D, [2015-09-03T03:47:55.109157 #49481] DEBUG -- :   [1m[35m (152.5ms)[0m  ALTER TABLE `brokerages` ADD `city` varchar(255)
+D, [2015-09-03T03:47:55.265900 #49481] DEBUG -- :   [1m[36m (156.3ms)[0m  [1mALTER TABLE `brokerages` ADD `state` varchar(255)[0m
+D, [2015-09-03T03:47:55.422540 #49481] DEBUG -- :   [1m[35m (156.2ms)[0m  ALTER TABLE `brokerages` ADD `zip` varchar(255)
+D, [2015-09-03T03:47:55.505301 #49481] DEBUG -- :   [1m[36m (38.9ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T03:47:55.549679 #49481] DEBUG -- :   [1m[35mSQL (40.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150903035032')
+D, [2015-09-03T03:47:55.601434 #49481] DEBUG -- :   [1m[36m (51.3ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T03:47:55.601560 #49481]  INFO -- : Migrating to AddImageToBroker (20150903072004)
+D, [2015-09-03T03:47:55.645360 #49481] DEBUG -- :   [1m[35m (43.0ms)[0m  ALTER TABLE `brokerages` ADD `image` varchar(255)
+E, [2015-09-03T03:47:55.645474 #49481] ERROR -- : Mysql2::Error: Duplicate column name 'image': ALTER TABLE `brokerages` ADD `image` varchar(255)
+D, [2015-09-03T03:48:48.818458 #49535] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (38.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T03:48:48.867749 #49535]  INFO -- : Migrating to AddImageToBroker (20150903072004)
+D, [2015-09-03T03:48:49.031899 #49535] DEBUG -- :   [1m[35m (163.6ms)[0m  ALTER TABLE `brokerages` ADD `image` varchar(255)
+D, [2015-09-03T03:48:49.113383 #49535] DEBUG -- :   [1m[36m (38.0ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T03:48:49.159017 #49535] DEBUG -- :   [1m[35mSQL (42.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150903072004')
+D, [2015-09-03T03:48:49.216119 #49535] DEBUG -- :   [1m[36m (56.7ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T03:48:49.216243 #49535]  INFO -- : Migrating to AddAboutToBroker (20150903110826)
+D, [2015-09-03T03:48:49.259696 #49535] DEBUG -- :   [1m[35m (42.6ms)[0m  ALTER TABLE `brokerages` ADD `about` text
+E, [2015-09-03T03:48:49.259804 #49535] ERROR -- : Mysql2::Error: Duplicate column name 'about': ALTER TABLE `brokerages` ADD `about` text
+D, [2015-09-03T03:49:47.103862 #49576] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (42.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-03T03:49:47.153214 #49576]  INFO -- : Migrating to AddAboutToBroker (20150903110826)
+D, [2015-09-03T03:49:47.313168 #49576] DEBUG -- :   [1m[35m (159.3ms)[0m  ALTER TABLE `brokerages` ADD `about` text
+D, [2015-09-03T03:49:47.397926 #49576] DEBUG -- :   [1m[36m (42.2ms)[0m  [1mBEGIN[0m
+D, [2015-09-03T03:49:47.440769 #49576] DEBUG -- :   [1m[35mSQL (39.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150903110826')
+D, [2015-09-03T03:49:47.498525 #49576] DEBUG -- :   [1m[36m (57.3ms)[0m  [1mCOMMIT[0m
+I, [2015-09-03T03:49:51.116270 #49068]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:49:51 -0700
+I, [2015-09-03T03:49:51.159931 #49068]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:49:51.161305 #49068]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:49:51.163505 #49068]  INFO -- :   Rendered users/_form_elements.html.erb (1.5ms)
+I, [2015-09-03T03:49:51.165344 #49068]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (4.2ms)
+I, [2015-09-03T03:49:51.165438 #49068]  INFO -- : Completed 500 Internal Server Error in 5ms
+F, [2015-09-03T03:49:51.166223 #49068] FATAL -- : 
+ActionView::Template::Error (undefined method `address1' for #<Brokerage:0x007fabdcf980a0>):
+    26:       </div>
+    27:       <div class="form-group">
+    28:         <%= f.label :address1, class: 'sr-only' %>
+    29:         <%= f.text_field :address1, class: 'form-control top-input', placeholder: 'Address' %>
+    30:         <%= f.label :address2, class: 'sr-only' %>
+    31:         <%= f.text_field :address2, class: 'form-control bottom-input', placeholder: 'Address 2'%>
+    32:       </div>
+  app/views/brokerages/signup.html.erb:29:in `block in _app_views_brokerages_signup_html_erb__432561591361441449_70188060079880'
+  app/views/brokerages/signup.html.erb:9:in `_app_views_brokerages_signup_html_erb__432561591361441449_70188060079880'
+
+
+I, [2015-09-03T03:50:05.677169 #49601]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:50:05 -0700
+I, [2015-09-03T03:50:05.976430 #49601]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:50:06.133204 #49601]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:50:06.514817 #49601]  INFO -- :   Rendered users/_form_elements.html.erb (238.7ms)
+I, [2015-09-03T03:50:06.518296 #49601]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (387.1ms)
+I, [2015-09-03T03:50:06.521685 #49601]  INFO -- :   Rendered layouts/_shiv.html.erb (0.3ms)
+I, [2015-09-03T03:50:06.525544 #49601]  INFO -- :   Rendered layouts/_nav.html.erb (0.8ms)
+I, [2015-09-03T03:50:06.525833 #49601]  INFO -- : Completed 200 OK in 549ms (Views: 279.4ms | ActiveRecord: 253.0ms)
+I, [2015-09-03T03:50:06.538159 #49601]  INFO -- : Started GET "/stylesheets/brokerages.css" for 127.0.0.1 at 2015-09-03 03:50:06 -0700
+F, [2015-09-03T03:50:06.579514 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/brokerages.css"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:50:06.580525 #49601]  INFO -- : Started GET "/javascripts/brokerages.js" for 127.0.0.1 at 2015-09-03 03:50:06 -0700
+F, [2015-09-03T03:50:06.622654 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/brokerages.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:50:20.258774 #49601]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:50:20 -0700
+I, [2015-09-03T03:50:20.300332 #49601]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:50:20.301664 #49601]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:50:20.304264 #49601]  INFO -- :   Rendered users/_form_elements.html.erb (1.8ms)
+I, [2015-09-03T03:50:20.307634 #49601]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (6.1ms)
+I, [2015-09-03T03:50:20.308454 #49601]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:50:20.308645 #49601]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:50:20.308811 #49601]  INFO -- : Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:50:20.316612 #49601]  INFO -- : Started GET "/stylesheets/brokerages.css" for 127.0.0.1 at 2015-09-03 03:50:20 -0700
+F, [2015-09-03T03:50:20.355640 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/brokerages.css"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:50:20.356763 #49601]  INFO -- : Started GET "/javascripts/brokerages.js" for 127.0.0.1 at 2015-09-03 03:50:20 -0700
+F, [2015-09-03T03:50:20.398447 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/brokerages.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:50:21.964652 #49601]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:50:21 -0700
+I, [2015-09-03T03:50:22.005708 #49601]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:50:22.006758 #49601]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:50:22.009183 #49601]  INFO -- :   Rendered users/_form_elements.html.erb (1.7ms)
+I, [2015-09-03T03:50:22.012385 #49601]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (5.8ms)
+I, [2015-09-03T03:50:22.013215 #49601]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:50:22.013466 #49601]  INFO -- :   Rendered layouts/_nav.html.erb (0.2ms)
+I, [2015-09-03T03:50:22.013664 #49601]  INFO -- : Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:50:22.020115 #49601]  INFO -- : Started GET "/stylesheets/brokerages.css" for 127.0.0.1 at 2015-09-03 03:50:22 -0700
+F, [2015-09-03T03:50:22.059318 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/brokerages.css"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:50:22.060570 #49601]  INFO -- : Started GET "/javascripts/brokerages.js" for 127.0.0.1 at 2015-09-03 03:50:22 -0700
+F, [2015-09-03T03:50:22.101681 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/brokerages.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:51:29.939324 #49601]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:51:29 -0700
+I, [2015-09-03T03:51:29.988770 #49601]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:51:29.989593 #49601]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:51:29.992174 #49601]  INFO -- :   Rendered users/_form_elements.html.erb (1.7ms)
+I, [2015-09-03T03:51:29.994918 #49601]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (5.4ms)
+I, [2015-09-03T03:51:29.995660 #49601]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:51:29.995838 #49601]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:51:29.995995 #49601]  INFO -- : Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:51:30.018107 #49601]  INFO -- : Started GET "/javascripts/brokerages.js" for 127.0.0.1 at 2015-09-03 03:51:30 -0700
+F, [2015-09-03T03:51:30.056827 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/brokerages.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:51:30.060522 #49601]  INFO -- : Started GET "/stylesheets/brokerages.css" for 127.0.0.1 at 2015-09-03 03:51:30 -0700
+F, [2015-09-03T03:51:30.100458 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/brokerages.css"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:51:31.011128 #49601]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:51:31 -0700
+I, [2015-09-03T03:51:31.052423 #49601]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:51:31.053468 #49601]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:51:31.056000 #49601]  INFO -- :   Rendered users/_form_elements.html.erb (1.8ms)
+I, [2015-09-03T03:51:31.060744 #49601]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (7.4ms)
+I, [2015-09-03T03:51:31.061929 #49601]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:51:31.062154 #49601]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:51:31.062490 #49601]  INFO -- : Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:51:31.071641 #49601]  INFO -- : Started GET "/stylesheets/brokerages.css" for 127.0.0.1 at 2015-09-03 03:51:31 -0700
+F, [2015-09-03T03:51:31.123978 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/brokerages.css"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:51:31.125130 #49601]  INFO -- : Started GET "/javascripts/brokerages.js" for 127.0.0.1 at 2015-09-03 03:51:31 -0700
+F, [2015-09-03T03:51:31.182423 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/brokerages.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:52:00.830675 #49601]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:52:00 -0700
+I, [2015-09-03T03:52:00.873366 #49601]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:52:00.874340 #49601]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:52:00.876355 #49601]  INFO -- :   Rendered users/_form_elements.html.erb (1.4ms)
+I, [2015-09-03T03:52:00.879171 #49601]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (4.9ms)
+I, [2015-09-03T03:52:00.879859 #49601]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:52:00.880024 #49601]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:52:00.880182 #49601]  INFO -- : Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:52:00.911180 #49601]  INFO -- : Started GET "/javascripts/brokerages.js" for 127.0.0.1 at 2015-09-03 03:52:00 -0700
+F, [2015-09-03T03:52:00.951968 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/brokerages.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:52:00.952723 #49601]  INFO -- : Started GET "/stylesheets/brokerages.css" for 127.0.0.1 at 2015-09-03 03:52:00 -0700
+F, [2015-09-03T03:52:00.996381 #49601] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/brokerages.css"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/cameronaziz/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-09-03T03:53:06.895235 #49695]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:53:06 -0700
+I, [2015-09-03T03:53:07.263144 #49695]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:53:07.441623 #49695]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:53:07.823483 #49695]  INFO -- :   Rendered users/_form_elements.html.erb (234.7ms)
+I, [2015-09-03T03:53:07.827119 #49695]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (387.6ms)
+I, [2015-09-03T03:53:07.829292 #49695]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:53:07.830536 #49695]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:53:07.830756 #49695]  INFO -- : Completed 200 OK in 567ms (Views: 266.8ms | ActiveRecord: 283.6ms)
+I, [2015-09-03T03:53:17.982136 #49695]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:53:17 -0700
+I, [2015-09-03T03:53:18.033869 #49695]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:53:18.035545 #49695]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:53:18.040713 #49695]  INFO -- :   Rendered users/_form_elements.html.erb (2.0ms)
+I, [2015-09-03T03:53:18.043978 #49695]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (8.8ms)
+I, [2015-09-03T03:53:18.044980 #49695]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:53:18.045210 #49695]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:53:18.045398 #49695]  INFO -- : Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:53:18.600553 #49695]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:53:18 -0700
+I, [2015-09-03T03:53:18.642492 #49695]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:53:18.643414 #49695]  INFO -- :   Rendered shared/_errors.html.erb (0.1ms)
+I, [2015-09-03T03:53:18.645363 #49695]  INFO -- :   Rendered users/_form_elements.html.erb (1.3ms)
+I, [2015-09-03T03:53:18.648049 #49695]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (4.8ms)
+I, [2015-09-03T03:53:18.648717 #49695]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:53:18.648891 #49695]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:53:18.649039 #49695]  INFO -- : Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:53:23.071648 #49707]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:53:23 -0700
+I, [2015-09-03T03:53:23.352594 #49707]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:53:23.502449 #49707]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:53:23.850040 #49707]  INFO -- :   Rendered users/_form_elements.html.erb (209.6ms)
+I, [2015-09-03T03:53:23.853744 #49707]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (353.4ms)
+I, [2015-09-03T03:53:23.855922 #49707]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:53:23.857105 #49707]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:53:23.857327 #49707]  INFO -- : Completed 200 OK in 505ms (Views: 241.8ms | ActiveRecord: 246.6ms)
+I, [2015-09-03T03:53:38.392601 #49707]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:53:38 -0700
+I, [2015-09-03T03:53:38.434138 #49707]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:53:38.435442 #49707]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:53:38.437754 #49707]  INFO -- :   Rendered users/_form_elements.html.erb (1.5ms)
+I, [2015-09-03T03:53:38.440727 #49707]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (5.6ms)
+I, [2015-09-03T03:53:38.441623 #49707]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:53:38.441838 #49707]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:53:38.442046 #49707]  INFO -- : Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:53:39.136242 #49707]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:53:39 -0700
+I, [2015-09-03T03:53:39.179930 #49707]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:53:39.181351 #49707]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:53:39.183871 #49707]  INFO -- :   Rendered users/_form_elements.html.erb (1.8ms)
+I, [2015-09-03T03:53:39.187288 #49707]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (6.2ms)
+I, [2015-09-03T03:53:39.188080 #49707]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:53:39.188272 #49707]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:53:39.188496 #49707]  INFO -- : Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:53:44.110619 #49721]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:53:44 -0700
+I, [2015-09-03T03:53:44.406024 #49721]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:53:44.557517 #49721]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:53:44.945765 #49721]  INFO -- :   Rendered users/_form_elements.html.erb (244.5ms)
+I, [2015-09-03T03:53:44.949758 #49721]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (394.6ms)
+I, [2015-09-03T03:53:44.952053 #49721]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T03:53:44.953340 #49721]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:53:44.953558 #49721]  INFO -- : Completed 200 OK in 547ms (Views: 277.8ms | ActiveRecord: 252.9ms)
+I, [2015-09-03T03:54:22.815854 #49738]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:54:22 -0700
+I, [2015-09-03T03:54:23.101525 #49738]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:54:23.250509 #49738]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:54:23.602024 #49738]  INFO -- :   Rendered users/_form_elements.html.erb (210.4ms)
+I, [2015-09-03T03:54:23.605480 #49738]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (357.4ms)
+I, [2015-09-03T03:54:23.607667 #49738]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:54:23.608877 #49738]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:54:23.609091 #49738]  INFO -- : Completed 200 OK in 507ms (Views: 244.3ms | ActiveRecord: 247.1ms)
+I, [2015-09-03T03:54:38.182562 #49738]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:54:38 -0700
+I, [2015-09-03T03:54:38.226093 #49738]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:54:38.227821 #49738]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:54:38.230436 #49738]  INFO -- :   Rendered users/_form_elements.html.erb (1.7ms)
+I, [2015-09-03T03:54:38.234593 #49738]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (7.2ms)
+I, [2015-09-03T03:54:38.235924 #49738]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:54:38.236216 #49738]  INFO -- :   Rendered layouts/_nav.html.erb (0.2ms)
+I, [2015-09-03T03:54:38.236613 #49738]  INFO -- : Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:54:38.919803 #49738]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:54:38 -0700
+I, [2015-09-03T03:54:38.961824 #49738]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:54:38.963111 #49738]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:54:38.966100 #49738]  INFO -- :   Rendered users/_form_elements.html.erb (2.2ms)
+I, [2015-09-03T03:54:38.970101 #49738]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (7.3ms)
+I, [2015-09-03T03:54:38.970997 #49738]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:54:38.971200 #49738]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:54:38.971408 #49738]  INFO -- : Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:54:43.091204 #49758]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:54:43 -0700
+I, [2015-09-03T03:54:43.389559 #49758]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:54:43.539192 #49758]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:54:43.905022 #49758]  INFO -- :   Rendered users/_form_elements.html.erb (224.1ms)
+I, [2015-09-03T03:54:43.908485 #49758]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (371.4ms)
+I, [2015-09-03T03:54:43.910761 #49758]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:54:43.911977 #49758]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:54:43.912205 #49758]  INFO -- : Completed 200 OK in 523ms (Views: 256.4ms | ActiveRecord: 249.8ms)
+I, [2015-09-03T03:54:55.916119 #49758]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:54:55 -0700
+I, [2015-09-03T03:54:55.959046 #49758]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:54:55.960558 #49758]  INFO -- :   Rendered shared/_errors.html.erb (0.1ms)
+I, [2015-09-03T03:54:55.963000 #49758]  INFO -- :   Rendered users/_form_elements.html.erb (1.7ms)
+I, [2015-09-03T03:54:55.966301 #49758]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (6.0ms)
+I, [2015-09-03T03:54:55.967448 #49758]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:54:55.967711 #49758]  INFO -- :   Rendered layouts/_nav.html.erb (0.2ms)
+I, [2015-09-03T03:54:55.968024 #49758]  INFO -- : Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:54:59.821816 #49771]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:54:59 -0700
+I, [2015-09-03T03:55:00.112838 #49771]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:55:00.263468 #49771]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:55:00.641595 #49771]  INFO -- :   Rendered users/_form_elements.html.erb (225.1ms)
+I, [2015-09-03T03:55:00.645014 #49771]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (383.6ms)
+I, [2015-09-03T03:55:00.647185 #49771]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:55:00.648454 #49771]  INFO -- :   Rendered layouts/_nav.html.erb (0.7ms)
+I, [2015-09-03T03:55:00.648664 #49771]  INFO -- : Completed 200 OK in 536ms (Views: 256.8ms | ActiveRecord: 262.9ms)
+I, [2015-09-03T03:55:22.598952 #49784]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:55:22 -0700
+I, [2015-09-03T03:55:22.897512 #49784]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:55:23.049740 #49784]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:55:23.418462 #49784]  INFO -- :   Rendered users/_form_elements.html.erb (226.3ms)
+I, [2015-09-03T03:55:23.422175 #49784]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (374.5ms)
+I, [2015-09-03T03:55:23.424459 #49784]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:55:23.425814 #49784]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:55:23.426042 #49784]  INFO -- : Completed 200 OK in 528ms (Views: 257.3ms | ActiveRecord: 257.3ms)
+I, [2015-09-03T03:55:36.063528 #49792]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:55:36 -0700
+I, [2015-09-03T03:55:36.370389 #49792]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:55:36.522327 #49792]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:55:36.918735 #49792]  INFO -- :   Rendered users/_form_elements.html.erb (239.9ms)
+I, [2015-09-03T03:55:36.922338 #49792]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (402.3ms)
+I, [2015-09-03T03:55:36.924543 #49792]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:55:36.925723 #49792]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:55:36.925955 #49792]  INFO -- : Completed 200 OK in 555ms (Views: 272.7ms | ActiveRecord: 266.1ms)
+I, [2015-09-03T03:55:44.119997 #49802]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:55:44 -0700
+I, [2015-09-03T03:55:44.360108 #49802]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:55:44.506138 #49802]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:55:44.869972 #49802]  INFO -- :   Rendered users/_form_elements.html.erb (217.8ms)
+I, [2015-09-03T03:55:44.873611 #49802]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (369.6ms)
+I, [2015-09-03T03:55:44.875848 #49802]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:55:44.877076 #49802]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:55:44.877297 #49802]  INFO -- : Completed 200 OK in 517ms (Views: 250.3ms | ActiveRecord: 251.0ms)
+I, [2015-09-03T03:55:53.865952 #49809]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:55:53 -0700
+I, [2015-09-03T03:55:54.156384 #49809]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:55:54.304403 #49809]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:55:54.679143 #49809]  INFO -- :   Rendered users/_form_elements.html.erb (232.0ms)
+I, [2015-09-03T03:55:54.682616 #49809]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (380.3ms)
+I, [2015-09-03T03:55:54.684678 #49809]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T03:55:54.685894 #49809]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-09-03T03:55:54.686171 #49809]  INFO -- : Completed 200 OK in 530ms (Views: 263.2ms | ActiveRecord: 249.5ms)
+I, [2015-09-03T03:56:12.148384 #49821]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:56:12 -0700
+I, [2015-09-03T03:56:12.440076 #49821]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:56:12.590351 #49821]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:56:12.973869 #49821]  INFO -- :   Rendered users/_form_elements.html.erb (236.3ms)
+I, [2015-09-03T03:56:12.977449 #49821]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (389.2ms)
+I, [2015-09-03T03:56:12.979656 #49821]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:56:12.980853 #49821]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:56:12.981069 #49821]  INFO -- : Completed 200 OK in 541ms (Views: 267.8ms | ActiveRecord: 257.0ms)
+I, [2015-09-03T03:56:21.829923 #49831]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:56:21 -0700
+I, [2015-09-03T03:56:22.069441 #49831]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:56:22.216873 #49831]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:56:22.594832 #49831]  INFO -- :   Rendered users/_form_elements.html.erb (235.3ms)
+I, [2015-09-03T03:56:22.598413 #49831]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (383.6ms)
+I, [2015-09-03T03:56:22.600553 #49831]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:56:22.601811 #49831]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:56:22.602034 #49831]  INFO -- : Completed 200 OK in 532ms (Views: 266.8ms | ActiveRecord: 251.0ms)
+I, [2015-09-03T03:56:38.298653 #49843]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:56:38 -0700
+I, [2015-09-03T03:56:38.720120 #49843]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:56:38.913959 #49843]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:56:39.272293 #49843]  INFO -- :   Rendered users/_form_elements.html.erb (213.5ms)
+I, [2015-09-03T03:56:39.275702 #49843]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (364.0ms)
+I, [2015-09-03T03:56:39.277803 #49843]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T03:56:39.279047 #49843]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:56:39.279265 #49843]  INFO -- : Completed 200 OK in 559ms (Views: 245.5ms | ActiveRecord: 297.7ms)
+I, [2015-09-03T03:56:47.805770 #49853]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:56:47 -0700
+I, [2015-09-03T03:56:48.044726 #49853]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:56:48.196941 #49853]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:56:48.565475 #49853]  INFO -- :   Rendered users/_form_elements.html.erb (223.0ms)
+I, [2015-09-03T03:56:48.569878 #49853]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (375.1ms)
+I, [2015-09-03T03:56:48.572590 #49853]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:56:48.574070 #49853]  INFO -- :   Rendered layouts/_nav.html.erb (0.7ms)
+I, [2015-09-03T03:56:48.574384 #49853]  INFO -- : Completed 200 OK in 530ms (Views: 256.9ms | ActiveRecord: 255.8ms)
+I, [2015-09-03T03:57:10.378271 #49861]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:57:10 -0700
+I, [2015-09-03T03:57:10.678378 #49861]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:57:10.832217 #49861]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:57:11.190277 #49861]  INFO -- :   Rendered users/_form_elements.html.erb (213.1ms)
+I, [2015-09-03T03:57:11.193714 #49861]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (363.6ms)
+I, [2015-09-03T03:57:11.195819 #49861]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:57:11.196991 #49861]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:57:11.197248 #49861]  INFO -- : Completed 200 OK in 519ms (Views: 245.0ms | ActiveRecord: 257.4ms)
+I, [2015-09-03T03:57:19.074035 #49872]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:57:19 -0700
+I, [2015-09-03T03:57:19.312451 #49872]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:57:19.460636 #49872]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:57:19.838773 #49872]  INFO -- :   Rendered users/_form_elements.html.erb (232.3ms)
+I, [2015-09-03T03:57:19.843117 #49872]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (384.6ms)
+I, [2015-09-03T03:57:19.845666 #49872]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:57:19.847122 #49872]  INFO -- :   Rendered layouts/_nav.html.erb (0.7ms)
+I, [2015-09-03T03:57:19.847384 #49872]  INFO -- : Completed 200 OK in 535ms (Views: 265.7ms | ActiveRecord: 252.7ms)
+I, [2015-09-03T03:58:19.658681 #49899]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:58:19 -0700
+I, [2015-09-03T03:58:19.955456 #49899]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:58:20.100547 #49899]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:58:20.479855 #49899]  INFO -- :   Rendered users/_form_elements.html.erb (235.7ms)
+I, [2015-09-03T03:58:20.483511 #49899]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (385.3ms)
+I, [2015-09-03T03:58:20.485697 #49899]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T03:58:20.486921 #49899]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:58:20.487159 #49899]  INFO -- : Completed 200 OK in 532ms (Views: 268.6ms | ActiveRecord: 246.5ms)
+I, [2015-09-03T03:58:36.263698 #49906]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:58:36 -0700
+I, [2015-09-03T03:58:36.563883 #49906]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:58:36.709170 #49906]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:58:37.085330 #49906]  INFO -- :   Rendered users/_form_elements.html.erb (228.4ms)
+I, [2015-09-03T03:58:37.088824 #49906]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (382.0ms)
+I, [2015-09-03T03:58:37.092115 #49906]  INFO -- :   Rendered layouts/_shiv.html.erb (0.3ms)
+I, [2015-09-03T03:58:37.094445 #49906]  INFO -- :   Rendered layouts/_nav.html.erb (0.9ms)
+I, [2015-09-03T03:58:37.094713 #49906]  INFO -- : Completed 200 OK in 531ms (Views: 264.4ms | ActiveRecord: 249.6ms)
+I, [2015-09-03T03:58:57.308780 #49919]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:58:57 -0700
+I, [2015-09-03T03:58:57.611724 #49919]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:58:57.757704 #49919]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:58:58.140989 #49919]  INFO -- :   Rendered users/_form_elements.html.erb (237.6ms)
+I, [2015-09-03T03:58:58.144502 #49919]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (388.8ms)
+I, [2015-09-03T03:58:58.146637 #49919]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T03:58:58.147822 #49919]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-09-03T03:58:58.148042 #49919]  INFO -- : Completed 200 OK in 536ms (Views: 270.4ms | ActiveRecord: 249.5ms)
+I, [2015-09-03T03:59:17.294152 #49931]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:59:17 -0700
+I, [2015-09-03T03:59:17.588765 #49931]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:59:17.742237 #49931]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:59:18.126313 #49931]  INFO -- :   Rendered users/_form_elements.html.erb (241.1ms)
+I, [2015-09-03T03:59:18.129924 #49931]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (390.3ms)
+I, [2015-09-03T03:59:18.132387 #49931]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:59:18.133827 #49931]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:59:18.134065 #49931]  INFO -- : Completed 200 OK in 545ms (Views: 275.5ms | ActiveRecord: 253.4ms)
+I, [2015-09-03T03:59:32.053876 #49937]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:59:32 -0700
+I, [2015-09-03T03:59:32.345842 #49937]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:59:32.492997 #49937]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T03:59:32.869453 #49937]  INFO -- :   Rendered users/_form_elements.html.erb (232.0ms)
+I, [2015-09-03T03:59:32.873022 #49937]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (382.3ms)
+I, [2015-09-03T03:59:32.875363 #49937]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T03:59:32.876590 #49937]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:59:32.876846 #49937]  INFO -- : Completed 200 OK in 531ms (Views: 264.6ms | ActiveRecord: 249.9ms)
+I, [2015-09-03T03:59:41.065568 #49937]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:59:41 -0700
+I, [2015-09-03T03:59:41.108229 #49937]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:59:41.109578 #49937]  INFO -- :   Rendered shared/_errors.html.erb (0.1ms)
+I, [2015-09-03T03:59:41.112693 #49937]  INFO -- :   Rendered users/_form_elements.html.erb (1.6ms)
+I, [2015-09-03T03:59:41.116035 #49937]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (6.8ms)
+I, [2015-09-03T03:59:41.116983 #49937]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:59:41.117169 #49937]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:59:41.117360 #49937]  INFO -- : Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:59:41.574317 #49937]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:59:41 -0700
+I, [2015-09-03T03:59:41.629164 #49937]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:59:41.630727 #49937]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:59:41.633459 #49937]  INFO -- :   Rendered users/_form_elements.html.erb (1.7ms)
+I, [2015-09-03T03:59:41.636608 #49937]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (6.2ms)
+I, [2015-09-03T03:59:41.637313 #49937]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:59:41.637486 #49937]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:59:41.637679 #49937]  INFO -- : Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T03:59:46.202982 #49955]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:59:46 -0700
+I, [2015-09-03T03:59:46.502060 #49955]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:59:46.659582 #49955]  INFO -- :   Rendered shared/_errors.html.erb (0.4ms)
+I, [2015-09-03T03:59:47.011293 #49955]  INFO -- :   Rendered users/_form_elements.html.erb (212.2ms)
+I, [2015-09-03T03:59:47.016476 #49955]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (359.1ms)
+I, [2015-09-03T03:59:47.019052 #49955]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T03:59:47.020477 #49955]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T03:59:47.020714 #49955]  INFO -- : Completed 200 OK in 519ms (Views: 246.7ms | ActiveRecord: 256.1ms)
+I, [2015-09-03T03:59:56.886605 #49955]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 03:59:56 -0700
+I, [2015-09-03T03:59:56.928238 #49955]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T03:59:56.929446 #49955]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T03:59:56.931761 #49955]  INFO -- :   Rendered users/_form_elements.html.erb (1.6ms)
+I, [2015-09-03T03:59:56.934867 #49955]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (5.7ms)
+I, [2015-09-03T03:59:56.935581 #49955]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T03:59:56.935788 #49955]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T03:59:56.935947 #49955]  INFO -- : Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T04:00:02.468538 #49971]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 04:00:02 -0700
+I, [2015-09-03T04:00:02.776500 #49971]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T04:00:02.923554 #49971]  INFO -- :   Rendered shared/_errors.html.erb (0.2ms)
+I, [2015-09-03T04:00:03.289713 #49971]  INFO -- :   Rendered users/_form_elements.html.erb (222.7ms)
+I, [2015-09-03T04:00:03.293205 #49971]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (371.7ms)
+I, [2015-09-03T04:00:03.295528 #49971]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T04:00:03.296771 #49971]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T04:00:03.296983 #49971]  INFO -- : Completed 200 OK in 520ms (Views: 254.9ms | ActiveRecord: 248.8ms)
+I, [2015-09-03T04:00:19.681155 #49971]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 04:00:19 -0700
+I, [2015-09-03T04:00:19.725721 #49971]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T04:00:19.727410 #49971]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T04:00:19.729831 #49971]  INFO -- :   Rendered users/_form_elements.html.erb (1.6ms)
+I, [2015-09-03T04:00:19.733544 #49971]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (6.4ms)
+I, [2015-09-03T04:00:19.735055 #49971]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T04:00:19.735318 #49971]  INFO -- :   Rendered layouts/_nav.html.erb (0.2ms)
+I, [2015-09-03T04:00:19.735632 #49971]  INFO -- : Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T04:00:20.324592 #49971]  INFO -- : Started GET "/brokerages/signup" for 127.0.0.1 at 2015-09-03 04:00:20 -0700
+I, [2015-09-03T04:00:20.367865 #49971]  INFO -- : Processing by BrokeragesController#signup as HTML
+I, [2015-09-03T04:00:20.369170 #49971]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T04:00:20.371697 #49971]  INFO -- :   Rendered users/_form_elements.html.erb (1.9ms)
+I, [2015-09-03T04:00:20.374902 #49971]  INFO -- :   Rendered brokerages/signup.html.erb within layouts/application (6.0ms)
+I, [2015-09-03T04:00:20.375660 #49971]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T04:00:20.375857 #49971]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T04:00:20.376030 #49971]  INFO -- : Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)

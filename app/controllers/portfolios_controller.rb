@@ -46,7 +46,7 @@ class PortfoliosController < ApplicationController
     ]
     @portfolio.pie_data = pie_data
 
-    @broker = broker_ad
+    @brokerage = brokerage_ad
   end
 
 
