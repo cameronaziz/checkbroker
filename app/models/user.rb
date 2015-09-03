@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
   has_many :memberships
   has_many :groups, through: :memberships
   has_many :portfolios
+
+  has_many :brokerages, through: :brokers
+  has_many :brokers
+
   
   attr_accessor :remember_token
   before_save {self.email = email.downcase}
@@ -11,7 +15,6 @@ class User < ActiveRecord::Base
             uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, length: {minimum: 6}, allow_blank: true
-  validates :username, presence: true, uniqueness: {case_sensitive: false}
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

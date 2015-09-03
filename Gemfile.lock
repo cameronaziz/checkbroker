@@ -66,6 +66,7 @@ GEM
       railties (>= 3.2, < 5.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     google_directions (0.1.6.2)
       nokogiri (>= 1.4.1)
     i18n (0.7.0)
@@ -167,6 +168,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   faker
   font-awesome-rails
+  gmaps4rails
   google_directions
   jbuilder (~> 2.0)
   jquery-rails

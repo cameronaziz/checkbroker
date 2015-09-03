@@ -7,7 +7,6 @@ class StaticPagesController < ApplicationController
     if logged_in?
       @user = User.find(session[:user_id])
     end
-    @suggestion = Suggestion.new
   end
 
   def help
@@ -15,5 +14,6 @@ class StaticPagesController < ApplicationController
 
   def profile
     @user = User.find(session[:user_id])
+
   end
 end

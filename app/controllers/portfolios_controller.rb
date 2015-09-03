@@ -1,10 +1,15 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :destroy, :update]
+  include BrokersHelper
 
 
   def new
     @portfolio = Portfolio.new
     @investments = @portfolio.investments.build
+  end
+
+  def edit
+
   end
 
 
@@ -19,26 +24,33 @@ class PortfoliosController < ApplicationController
   end
 
   def index
-    @portfolios = Portfolio.where(:user_id => session[:user_id])
+    if auth_group('Administrators')
+      @portfolios = Portfolio.all
+    else
+      @portfolios = Portfolio.where(:user_id => session[:user_id])
+    end
   end
 
   def show
-    unless @portfolio.user_id == session[:user_id] || auth_groups(['Administrators'])
+    unless @portfolio.user_id == session[:user_id] || auth_group('Administrators')
       redirect_to portfolios_path, notice: 'Access to this portfolio is denied.'
     end
     @investments = Investment.where(:portfolio => @portfolio.id)
 
-    pie_data = [ ['Broker Fees', @portfolio.management_fee],
+    #todo: round values
+
+    pie_data = [ ['Broker Fees', @portfolio.management_fee ],
                  ['Expense Fees', @portfolio.average_expense_ratio],
                  ['Load Fees', @portfolio.average_load_fee],
                  ['12B-1 Fees', @portfolio.average_12b1_fee]
     ]
     @portfolio.pie_data = pie_data
-    @broker = Broker.offset(rand(Broker.count)).first
+
+    @broker = broker_ad
   end
 
 
-  def edit
+  def edit_old
     @investments = @portfolio.investments.build
     @users = User.all
   end
@@ -46,7 +58,6 @@ class PortfoliosController < ApplicationController
   def update
     nickname = @portfolio.nickname
     if @portfolio.update_attributes(portfolio_params)
-      #! input email user fu
       redirect_to portfolios_path, notice: "The portfolio \"#{nickname}\" was successfully updated."
     else
       render :edit
@@ -65,7 +76,7 @@ private
   end
 
   def portfolio_params
-    params.require(:portfolio).permit(:nickname, :management_fee, investments_attributes: [:ticker, :quantity, '_destroy'])
+    params.require(:portfolio).permit(:nickname, :management_fee, investments_attributes: [:id, :ticker, :quantity, :_destroy])
   end
 
 end

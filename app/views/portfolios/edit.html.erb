@@ -2,13 +2,13 @@
 <h1>Edit Portfolio</h1>
 <%= form_for @portfolio do |f| %>
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="col-md-3 col-sm-5 col-xs-8">
+      <div class="col-md-4 col-sm-5 col-xs-8">
         <%= label_tag('User', 'User') %><br>
-        Coming Soon<br>
+        Ability to reassign portfolios, coming soon<br>
         <%= label_tag('Nickname', 'Nickname') %>
         <%= f.text_field :nickname, placeholder: '', class: 'form-control' %> <br>
         <%= label_tag('ManagementFee', 'Management Fee') %>
-        <%= f.text_field :management_fee, placeholder: 'XX.XX%', class: 'form-control' %> <br>
+        <%= f.text_field :management_fee, size: 20, placeholder: 'XX.XX%', class: 'form-control' %> <br>
       </div>
       <div class="clearfix"></div>
       <div class="col-md-8 col-sm-8 col-xs-8">
@@ -19,6 +19,7 @@
             <td>Ticker Symbol</td>
             <td>Shares</td>
             <td>Remove Investment</td>
+            <td><%= f.text_field :id, class: 'hidden' %></td>
           </tr>
           </thead>
           <%= f.fields_for :investments do |builder| %>

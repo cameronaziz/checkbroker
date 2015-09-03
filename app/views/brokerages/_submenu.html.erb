@@ -1,0 +1,6 @@
+<br>
+<%= link_to_button 'View All Brokers', brokers_path, 'btn-primary' %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to_button 'Overview', broker_path, 'btn-primary' %>
+<%= link_to_button 'Edit ' + @broker.first_name, edit_broker_path, 'btn-primary' %>
+<%= link_to_button 'Raw Ad Data', broker_raw_path, 'btn-primary' %>
+<%= link_to 'Delete ' + @broker.first_name , @broker, method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-primary' %>

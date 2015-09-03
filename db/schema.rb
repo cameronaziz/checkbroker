@@ -11,17 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901123006) do
+ActiveRecord::Schema.define(version: 20150903073044) do
+
+  create_table "ad_views", force: :cascade do |t|
+    t.integer  "broker_id",  limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "brokerages", force: :cascade do |t|
+    t.string   "first_name",  limit: 255
+    t.string   "last_name",   limit: 255
+    t.string   "phone",       limit: 255
+    t.string   "email",       limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "image",       limit: 255
+    t.text     "about",       limit: 65535
+    t.string   "address1",    limit: 255
+    t.string   "address2",    limit: 255
+    t.string   "city",        limit: 255
+    t.string   "state",       limit: 255
+    t.string   "zip",         limit: 255
+    t.boolean  "is_verified", limit: 1
+  end
 
   create_table "brokers", force: :cascade do |t|
-    t.string   "first_name", limit: 255
-    t.string   "last_name",  limit: 255
-    t.string   "phone",      limit: 255
-    t.string   "email",      limit: 255
+    t.integer  "user_id",      limit: 4
+    t.integer  "brokerage_id", limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "broker_id",  limit: 4
+    t.integer  "user_id",    limit: 4
+    t.integer  "rating",     limit: 4
+    t.text     "comment",    limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.string   "image",      limit: 255
-    t.text     "about",      limit: 65535
   end
 
   create_table "groups", force: :cascade do |t|

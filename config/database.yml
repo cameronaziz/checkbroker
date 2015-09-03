@@ -10,8 +10,6 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 
-<% no_internet = true %>
-
 default: &default
   host: production-rds-1.ca3f335uwxny.us-west-2.rds.amazonaws.com
   adapter: mysql2
@@ -21,7 +19,7 @@ default: &default
   password: railstream
   socket: /tmp/mysql.sock
 
-<% if no_internet %>
+<% if NO_INTERNET || LOCAL_DB %>
 development:
   <<: *default
   host: 127.0.0.1

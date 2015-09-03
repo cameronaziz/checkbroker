@@ -1,9 +1,10 @@
 class Portfolio < ActiveRecord::Base
   belongs_to :user
   has_many :investments
-  accepts_nested_attributes_for :investments, :allow_destroy => true
-  serialize :investments, Array
+  accepts_nested_attributes_for :investments, allow_destroy: true, reject_if: proc { |attributes| attributes['ticker'].blank? }
   attr_accessor :pie_data
+  attr_accessor :alerts
+
 
   def market_value
     if @market_value

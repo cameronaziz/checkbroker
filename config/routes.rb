@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   resources :users
   resources :groups
   resources :mutual_funds
-  resources :brokers
 
 
 
@@ -23,6 +22,12 @@ Rails.application.routes.draw do
   get 'profile' => 'static_pages#profile'
   get 'register' => 'users#register'
   post 'registration' => 'users#create_register'
+
+  get 'reviews' => 'reviews#index'
+  get 'brokerages/signup' => 'brokerages#signup', as: :brokerages_signup
+  post 'brokerages/signup' => 'brokerages#create_brokerage'
+  get 'brokerages/:id/raw' => 'brokerages#raw', as: :brokerages_raw
+  resources :brokerages
 
 
 

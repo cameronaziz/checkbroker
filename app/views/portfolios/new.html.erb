@@ -20,7 +20,7 @@
           </tr>
           </thead>
           <%= f.fields_for :investments do |builder| %>
-                <%= render 'investments/table_form_no_remove', f: builder  %>
+                <%= render 'investments/table_form', f: builder  %>
           <% end %>
         </table>
         <%= add_investment 'Add Investment', f, :investments %>

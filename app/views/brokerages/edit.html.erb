@@ -1,0 +1,4 @@
+<% provide(:title, @broker.full_name) %>
+<%= render 'brokers/submenu' %>
+<h1>Edit <%= @broker.full_name %></h1>
+<%= render partial: 'brokers/form' %>

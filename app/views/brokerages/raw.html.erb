@@ -1,0 +1,16 @@
+<% provide(:title, @broker.full_name) %>
+<%= render 'brokers/submenu' %>
+<h1><%= @broker.full_name %></h1>
+
+<div class="col-xs-4">
+  <table class="table">
+    <tr>
+      <th>Ad Views</th>
+    </tr>
+    <% @broker.views.each do |view| %>
+        <tr>
+          <td><%= view.created_at %>UTC</td>
+        </tr>
+    <% end %>
+  </table>
+</div>

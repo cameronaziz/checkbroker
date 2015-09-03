@@ -1,11 +1,11 @@
 class Investment < ActiveRecord::Base
   require 'open-uri'
-
   belongs_to :portfolio
   attr_accessor :nav
   attr_accessor :expense_ratio
   attr_accessor :load
   attr_accessor :twelve_b_1
+  attr_accessor :alert
 
   def nav
     return @nav if @nav
@@ -80,10 +80,14 @@ private
   end
 
   def nav_yahoo_api
-    nav_url = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22' + self.ticker + '%22)%0A%09%09&diagnostics=true&env=http%3A%2F%2Fdatatables.org%2Falltables.env'
-    print nav_url
-    nav_doc = Nokogiri::XML(open(nav_url))
-    nav_doc.css('LastTradePriceOnly').first.content.to_f
+    if NO_INTERNET
+      99.69
+    else
+      nav_url = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22' + self.ticker + '%22)%0A%09%09&diagnostics=true&env=http%3A%2F%2Fdatatables.org%2Falltables.env'
+      print nav_url
+      nav_doc = Nokogiri::XML(open(nav_url))
+      nav_doc.css('LastTradePriceOnly').first.content.to_f
+    end
   end
 
   def warehouse_lookup
@@ -93,17 +97,29 @@ private
 
   def er_local_api
     warehouse_lookup
-    @warehouse.expense_ratio
+    if @warehouse
+      @warehouse.expense_ratio
+    else
+      0.01
+    end
   end
 
   def load_local_api
     warehouse_lookup
-    @warehouse.front_load + @warehouse.back_load
+    if @warehouse
+      @warehouse.front_load + @warehouse.back_load
+    else
+      0.00
+    end
   end
 
   def twelve_b_1_local_api
     warehouse_lookup
-    @warehouse.twelve_b_1
+    if @warehouse
+      @warehouse.twelve_b_1
+    else
+      0.00
+    end
   end
 
   def er_yahoo_api

@@ -7,4 +7,6 @@ module PortfoliosHelper
     end
     link_to(name, '#', class: 'btn btn-primary add_field', data: {id: id, fields: fields.gsub("\n", '')})
   end
+
+
 end

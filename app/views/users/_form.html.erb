@@ -1,23 +1,7 @@
 <%= render partial: 'shared/errors', :locals => {:object => @user}%>
 <div class="col-md-4">
   <%= form_for @user do |f| %>
-      <div class="form-group">
-        <%= f.label :first_name, class: 'sr-only' %>
-        <%= f.text_field :first_name, class: 'form-control top-input', placeholder: 'First Name' %>
-        <%= f.label :last_name, class: 'sr-only' %>
-        <%= f.text_field :last_name, class: 'form-control bottom-input', placeholder: 'Last Name'%>
-      </div>
-      <div class="form-group">
-        <%= f.label :email, class: 'sr-only'  %>
-        <%= f.text_field :email, class: 'form-control', placeholder: 'Email Address' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password, class: 'sr-only'  %>
-        <%= f.password_field :password, class: 'form-control password-form top-input', placeholder: 'Password' %>
-
-        <%= f.label :password_confirmation, 'Confirmation', class: 'sr-only'  %>
-        <%= f.password_field :password_confirmation, class: 'form-control password-form bottom-input', placeholder: 'Confirm Password' %>
-      </div>
+      <%= render 'users/form_elements', f: f %>
       <div class="form-group">
         <h4>Groups</h4>
         <% hidden_field_tag "user[group_ids][]", nil %>
