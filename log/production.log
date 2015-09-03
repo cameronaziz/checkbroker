@@ -7386,3 +7386,79 @@ I, [2015-09-03T04:00:20.374902 #49971]  INFO -- :   Rendered brokerages/signup.h
 I, [2015-09-03T04:00:20.375660 #49971]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
 I, [2015-09-03T04:00:20.375857 #49971]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
 I, [2015-09-03T04:00:20.376030 #49971]  INFO -- : Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T04:14:04.820363 #50610]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-09-03 04:14:04 -0700
+I, [2015-09-03T04:14:05.510842 #50610]  INFO -- : Processing by StaticPagesController#index as HTML
+I, [2015-09-03T04:14:05.526514 #50610]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T04:14:05.528166 #50610]  INFO -- :   Rendered static_pages/index.html.erb within layouts/application (5.8ms)
+I, [2015-09-03T04:14:05.528956 #50610]  INFO -- : Completed 200 OK in 18ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T04:14:09.459081 #50610]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:14:09 -0700
+I, [2015-09-03T04:14:09.504053 #50610]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:14:09.643813 #50610]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T04:14:09.889730 #50610]  INFO -- :   Rendered users/register.erb within layouts/application (247.8ms)
+I, [2015-09-03T04:14:09.890687 #50610]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T04:14:09.892182 #50610]  INFO -- :   Rendered layouts/_nav.html.erb (0.7ms)
+I, [2015-09-03T04:14:09.892396 #50610]  INFO -- : Completed 200 OK in 388ms (Views: 254.1ms | ActiveRecord: 125.9ms)
+I, [2015-09-03T04:14:31.684990 #50610]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:14:31 -0700
+I, [2015-09-03T04:14:31.728500 #50610]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:14:31.729968 #50610]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T04:14:31.733001 #50610]  INFO -- :   Rendered users/register.erb within layouts/application (3.2ms)
+I, [2015-09-03T04:14:31.734092 #50610]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T04:14:31.734255 #50610]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T04:14:31.734435 #50610]  INFO -- : Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T04:14:36.722666 #50629]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:14:36 -0700
+I, [2015-09-03T04:14:37.025801 #50629]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:14:37.170111 #50629]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T04:14:37.396700 #50629]  INFO -- :   Rendered users/register.erb within layouts/application (228.4ms)
+I, [2015-09-03T04:14:37.398964 #50629]  INFO -- :   Rendered layouts/_shiv.html.erb (0.2ms)
+I, [2015-09-03T04:14:37.400122 #50629]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T04:14:37.400339 #50629]  INFO -- : Completed 200 OK in 374ms (Views: 236.4ms | ActiveRecord: 124.1ms)
+I, [2015-09-03T04:14:46.327049 #50629]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:14:46 -0700
+I, [2015-09-03T04:14:46.371374 #50629]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:14:46.372637 #50629]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T04:14:46.374904 #50629]  INFO -- :   Rendered users/register.erb within layouts/application (2.4ms)
+I, [2015-09-03T04:14:46.375834 #50629]  INFO -- :   Rendered layouts/_shiv.html.erb (0.0ms)
+I, [2015-09-03T04:14:46.375999 #50629]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T04:14:46.376216 #50629]  INFO -- : Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T04:15:00.646785 #50645]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:15:00 -0700
+I, [2015-09-03T04:15:00.946829 #50645]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:15:01.097782 #50645]  INFO -- :   Rendered shared/_errors.html.erb (0.4ms)
+I, [2015-09-03T04:15:01.325323 #50645]  INFO -- :   Rendered users/register.erb within layouts/application (229.4ms)
+I, [2015-09-03T04:15:01.327458 #50645]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T04:15:01.328589 #50645]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-09-03T04:15:01.328795 #50645]  INFO -- : Completed 200 OK in 382ms (Views: 237.1ms | ActiveRecord: 130.8ms)
+I, [2015-09-03T04:15:15.508673 #50658]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:15:15 -0700
+I, [2015-09-03T04:15:15.796481 #50658]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:15:15.949134 #50658]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T04:15:16.160927 #50658]  INFO -- :   Rendered users/register.erb within layouts/application (213.5ms)
+I, [2015-09-03T04:15:16.163078 #50658]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T04:15:16.164296 #50658]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-09-03T04:15:16.164522 #50658]  INFO -- : Completed 200 OK in 368ms (Views: 221.3ms | ActiveRecord: 133.0ms)
+I, [2015-09-03T04:15:34.250385 #50673]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:15:34 -0700
+I, [2015-09-03T04:15:34.542026 #50673]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:15:34.692779 #50673]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T04:15:34.908252 #50673]  INFO -- :   Rendered users/register.erb within layouts/application (217.3ms)
+I, [2015-09-03T04:15:34.910418 #50673]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T04:15:34.911568 #50673]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-09-03T04:15:34.911796 #50673]  INFO -- : Completed 200 OK in 370ms (Views: 225.2ms | ActiveRecord: 130.9ms)
+I, [2015-09-03T04:15:45.405342 #50673]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:15:45 -0700
+I, [2015-09-03T04:15:45.446386 #50673]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:15:45.447436 #50673]  INFO -- :   Rendered shared/_errors.html.erb (0.0ms)
+I, [2015-09-03T04:15:45.449857 #50673]  INFO -- :   Rendered users/register.erb within layouts/application (2.5ms)
+I, [2015-09-03T04:15:45.450730 #50673]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T04:15:45.450888 #50673]  INFO -- :   Rendered layouts/_nav.html.erb (0.1ms)
+I, [2015-09-03T04:15:45.451083 #50673]  INFO -- : Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+I, [2015-09-03T04:15:49.136439 #50691]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:15:49 -0700
+I, [2015-09-03T04:15:49.434325 #50691]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:15:49.580811 #50691]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T04:15:49.812946 #50691]  INFO -- :   Rendered users/register.erb within layouts/application (233.9ms)
+I, [2015-09-03T04:15:49.815281 #50691]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T04:15:49.816465 #50691]  INFO -- :   Rendered layouts/_nav.html.erb (0.6ms)
+I, [2015-09-03T04:15:49.816712 #50691]  INFO -- : Completed 200 OK in 382ms (Views: 241.9ms | ActiveRecord: 126.3ms)
+I, [2015-09-03T04:16:02.451647 #50701]  INFO -- : Started GET "/register" for 127.0.0.1 at 2015-09-03 04:16:02 -0700
+I, [2015-09-03T04:16:02.747328 #50701]  INFO -- : Processing by UsersController#register as HTML
+I, [2015-09-03T04:16:02.899451 #50701]  INFO -- :   Rendered shared/_errors.html.erb (0.3ms)
+I, [2015-09-03T04:16:03.127474 #50701]  INFO -- :   Rendered users/register.erb within layouts/application (229.9ms)
+I, [2015-09-03T04:16:03.129670 #50701]  INFO -- :   Rendered layouts/_shiv.html.erb (0.1ms)
+I, [2015-09-03T04:16:03.130823 #50701]  INFO -- :   Rendered layouts/_nav.html.erb (0.5ms)
+I, [2015-09-03T04:16:03.131067 #50701]  INFO -- : Completed 200 OK in 384ms (Views: 237.8ms | ActiveRecord: 131.5ms)
+D, [2015-09-03T04:16:29.978819 #50841] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (47.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
