@@ -113,4 +113,18 @@ module ApplicationHelper
     end
   end
 
+  def non_nav_pages
+    pages = [
+        login_path,
+        register_path,
+        root_path,
+        brokerages_signup_path,
+        privacy_path,
+        legal_path
+    ]
+    pages.each do |page|
+      return true if current_page?(page)
+    end
+    false
+  end
 end

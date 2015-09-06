@@ -24,7 +24,6 @@
       <%= javascript_include_tag 'eco/modernizr.custom.32033' %>
       <%= stylesheet_link_tag 'eco/eco' %>
 
-      <%= javascript_include_tag "//www.google.com/jsapi", 'chartkick' %>
       <%= csrf_meta_tags %>
 
       <%= yield(:head) %>
@@ -385,18 +384,18 @@
 </section>
 <footer>
   <div class="container">
-    <div class="col-xs-2 col-xs-offset-4" >
+    <div class="col-lg-2 col-lg-offset-4 col-xs-12" >
       <%= link_to 'Signup', register_path, style: 'color: #f8f8f8' %><br>
       <%= link_to 'Login', login_path, style: 'color: #f8f8f8' %><br>
+      <%= link_to 'Legal', legal_path, style: 'color: #f8f8f8' %>
     </div>
-    <div class="col-xs-2" >
+    <div class="col-lg-2 col-xs-12" >
       <%= link_to 'Become a brokerage', brokerages_signup_path, style: 'color: #f8f8f8' %><br>
-      <%= link_to 'Advertise', brokerages_signup_path, style: 'color: #f8f8f8' %>
+      <%= link_to 'Advertise', brokerages_signup_path, style: 'color: #f8f8f8' %><br>
+      <%= link_to 'Privacy', privacy_path, style: 'color: #f8f8f8' %>
     </div>
     <div class="clearfix" style="margin-bottom: 65px">
     </div>
-
-
     <div class="rights" >
       <a href="#" class="scrollpoint sp-effect3">
         <%= image_tag 'eco/eco/logobv.png'%>
@@ -407,7 +406,6 @@
   </div>
 </footer>
 </div>
-
 <%= javascript_include_tag 'eco/slick.min' %>
 <%= javascript_include_tag 'eco/placeholdem.min' %>
 <%= javascript_include_tag 'eco/rs-plugin/js/jquery.themepunch.plugins.min' %>

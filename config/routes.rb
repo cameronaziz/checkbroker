@@ -6,31 +6,36 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'static_pages#index'
 
-  get 'suggestion' => 'static_pages#help'
-  get 'help' => 'static_pages#help'
-
   resources :portfolios
   resources :users
   resources :groups
   resources :mutual_funds
 
-
-
+  #Login / Logout
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+
+  #Brokerage Registration
+  get 'brokerage/signup' => 'users#brokerage_registration', as: :brokerages_signup
+  post 'brokerage/signup' => 'users#brokerage_registration_create'
+
+  #User Registration
+  get 'sign-up' => 'users#register', as: :register
+
+  #Useless Pages
   get 'profile' => 'static_pages#profile'
-  get 'register' => 'users#register'
-  post 'registration' => 'users#create_register'
+  get 'legal' => 'static_pages#legal'
+  get 'privacy' => 'static_pages#privacy'
+  get 'help' => 'static_pages#help'
 
+  #Future Needed
   get 'reviews' => 'reviews#index'
-  get 'brokerages/signup' => 'brokerages#signup', as: :brokerages_signup
-  post 'brokerages/signup' => 'brokerages#create_brokerage'
-  get 'brokerages/:id/raw' => 'brokerages#raw', as: :brokerages_raw
+
+  #View Brokerages
+  get 'brokerages/:id/raw' => 'brokerages#raw', as: :brokerage_raw
+  get 'brokerages/:id/verify' => 'brokerages#brokerage_verify', as: :brokerage_verify
   resources :brokerages
-
-
-
 
 
   # Example of regular route:

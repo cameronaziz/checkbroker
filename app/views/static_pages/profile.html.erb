@@ -1,5 +1,14 @@
 <h1>Welcome to BrokerVerified, <%= @user.full_name %> </h1>
 
+<% if @user.brokerages.any? %>
+    <% @user.brokerages.each do |brokerage| %>
+        <h2>Hello <%= brokerage.name %></h2>
+        <% unless brokerage.is_verified %>
+            <p><%= brokerage.name %> is not yet approved. BrokerVerified takes pride in ensuring that all brokerages meet our minimum standards and view them individually. Please check back soon.</p>
+            <% end %>
+    <% end %>
+<% end %>
+
 <div>
   <h2>About Us</h2>
   <p>We created Broker Verified to help you keep tabs on your Financial Advisor, and help you understand all of the fees you are being charged.

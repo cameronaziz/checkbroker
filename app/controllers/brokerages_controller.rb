@@ -1,45 +1,32 @@
 class BrokeragesController < ApplicationController
-  before_action :set_broker, only: [:show, :edit, :destroy, :update, :raw]
-  skip_before_action :authenticate_user, only: [:signup, :create_brokerage]
-
+  before_action :set_brokerage, only: [:show, :edit, :destroy, :update, :raw, :brokerage_verify]
 
   def index
-    @brokers = Brokerage.all
-  end
-
-  def signup
-    @brokerage = Brokerage.new
-  end
-
-  def create_brokerage
-    @brokerage = Brokerage.new(brokerage_params)
-    @brokerage.first_name = params[:brokerage][:users_attributes]['0'][:first_name]
-    @brokerage.last_name = params[:brokerage][:users_attributes]['0'][:last_name]
-    @brokerage.email = params[:brokerage][:users_attributes]['0'][:email]
-    @brokerage.is_verified = false
-    clean_phone
-    if @brokerage.save
-      redirect_to login_path, notice: 'Broker was saved.'
-    else
-      render 'brokerages/signup'
-    end
+    @brokerages = Brokerage.all
   end
 
   def show
   end
 
+  def brokerage_verify
+    @brokerage.is_verified = true
+    @brokerage.save
+    redirect_to brokerages_path
+  end
+
   def new
     @brokerage = Brokerage.new
+    @brokerage.is_verified = true
   end
 
   def raw
   end
 
   def create
-    @broker = Brokerage.new(brokerage_params)
-    clean_phone
-    if @broker.save
-      redirect_to brokers_path, notice: 'Broker was saved.'
+    @brokerage = Brokerage.new(brokerage_params)
+    broker_name = @brokerage.name
+    if @brokerage.save
+      redirect_to brokerages_path, notice: "Broker \"#{broker_name}\" was saved."
     else
       render 'brokerages/new'
     end
@@ -49,30 +36,28 @@ class BrokeragesController < ApplicationController
   end
 
   def update
-    if @broker.update_attributes(broker_params)
-      broker_name = @broker.full_name
-      redirect_to broker_path, notice: "The broker \"#{broker_name}\" was successfully updated."
+    if @brokerage.update_attributes(broker_params)
+      broker_name = @brokerage.name
+      redirect_to brokerage_path, notice: "The broker \"#{broker_name}\" was successfully updated."
     else
       render :edit
     end
   end
 
   def destroy
-    deleted_broker = @broker.full_name
-    @broker.destroy
-    redirect_to brokers_path, notice: "#{deleted_broker} was successfully deleted."
+    deleted_brokerage = @brokerage.name
+    @brokerage.destroy
+    redirect_to brokerages_path, notice: "#{deleted_brokerage} was successfully deleted."
   end
 
   private
-  def set_broker
-    @broker = Broker.find(params[:id])
+  def set_brokerage
+    @brokerage = Brokerage.find(params[:id])
   end
 
   def brokerage_params
-    params.require(:brokerage).permit(:first_name, :last_name, :about, :email, :phone, :image, :users_attributes => [:id, :first_name, :last_name, :email, :password, :password_confirmation])
+    params.require(:brokerage).permit(:name, :first_name, :last_name, :about, :email, :phone, :image, :is_verified, :address1, :address2, :city, :state, :zip)
   end
 
-  def clean_phone
-    @brokerage.phone = @brokerage.phone.gsub(/[^0-9a-z]/i, '')
-  end
+
 end

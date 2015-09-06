@@ -1,31 +1,15 @@
 <%= render partial: 'shared/errors', :locals => {:object => @brokerage}%>
-<div class="col-md-4">
+<div class="col-md-4 col-lg-4">
   <%= form_for @brokerage, :html => { :multipart => true} do |f| %>
-      <div class="form-group">
-        <%= f.label :first_name, class: 'sr-only' %>
-        <%= f.text_field :first_name, class: 'form-control top-input', placeholder: 'First Name' %>
-        <%= f.label :last_name, class: 'sr-only' %>
-        <%= f.text_field :last_name, class: 'form-control bottom-input', placeholder: 'Last Name'%>
+      <% if params[:action] == 'new' %>
+      <div class="form-group col-lg-12">
+        <%= f.check_box :is_verified %> <%= f.label :is_verified %>
       </div>
+      <% end %>
+      <%= render 'brokerages/sub_form', f: f %>
+      <div class="clearfix" style="margin-bottom: 10px"></div>
       <div class="form-group">
-        <%= f.label :about, class: 'sr-only'  %>
-        <%= f.text_area :about, rows: 7, class: 'form-control', placeholder: 'About' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :phone, class: 'sr-only'  %>
-        <%= f.text_field :phone, class: 'form-control', placeholder: 'Phone Number' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :email, class: 'sr-only'  %>
-        <%= f.text_field :email, class: 'form-control', placeholder: 'Email Address' %>
-      </div>
-      <div class="form-group">
-        <%= image_tag @brokerage.image_url.to_s, width: 150 %><br>
-        <%= f.label :image, 'Upload Image', class: 'btn btn-primary trigger'  %>
-        <%= f.file_field :image, style: 'display:none;', class: 'uploadBtn' %>
-      </div>
-      <div class="form-group">
-        <%= f.submit 'Save', class: 'btn btn-default' %>
+        <%= f.submit 'Save Brokerage', class: 'btn btn-success' %>
       </div>
   <% end %>
 </div>

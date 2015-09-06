@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   has_many :brokerages, through: :brokers
   has_many :brokers
+  accepts_nested_attributes_for :brokerages, allow_destroy: true
 
   
   attr_accessor :remember_token

@@ -2,15 +2,31 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :destroy, :update]
 
   before_action only: [:index, :new, :show, :create, :edit, :update, :destroy] do
-    authenticate_user_and_group(['Administrators', 'Managers'], false)
+    auth_group('Administrators')
   end
 
   skip_before_action :authenticate_user
 
-
   def index
     @users = User.all
   end
+
+  def brokerage_registration
+    @user = User.new
+  end
+
+  def brokerage_registration_create
+    @user = User.new(user_with_brokerage_params)
+    @user.brokerages.first.first_name = params[:user][:first_name]
+    @user.brokerages.first.last_name = params[:user][:last_name]
+    @user.brokerages.first.email = params[:user][:email]
+    if @user.save
+      redirect_to login_path, notice: 'Brokerage was saved.'
+    else
+      render 'users/brokerage_registration'
+    end
+  end
+
 
   def new
     @user = User.new
@@ -26,7 +42,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    create_username ## todo: fix so that it will error properly if username taken.
     if @user.save
       log_in(@user)
       redirect_to users_url, notice: "User was successfully created. Username: #{@user.username}"
@@ -37,7 +52,6 @@ class UsersController < ApplicationController
 
   def create_register
     @user = User.new(register_params)
-    create_username ## todo: fix so that it will error properly if username taken.
       if @user.save
         membership = Membership.new
         membership.group_id = '2'
@@ -54,7 +68,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    username = @user.username
     if @user.update_attributes(user_params)
       #! input email user fu
       redirect_to users_url, notice: "The user \"#{username}\" was successfully updated."
@@ -75,17 +88,15 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :first_name, :last_name, :email, :password, :password_confirmation, {:group_ids => []})
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, {:group_ids => []})
   end
 
   def register_params
-    params.require(:user).permit(:username, :first_name, :last_name, :email, :password, :password_confirmation)
-
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
 
-  def create_username
-    first_name = @user.first_name.downcase
-    last_name = @user.last_name.downcase
-    @user.username = "#{first_name}.#{last_name}"
+  def user_with_brokerage_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :brokerages_attributes => [:id, :name, :about, :phone, :image, :address1, :address2, :city, :state, :zip])
   end
+
 end

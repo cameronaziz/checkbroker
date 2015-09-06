@@ -1,4 +1,4 @@
-<% unless current_page?(login_path) || current_page?(register_path) || current_page?(root_path) || current_page?(registration_path) || current_page?(brokerages_signup_path)%>
+<% unless non_nav_pages %>
 <div class='container'>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -23,8 +23,8 @@
                   <li><b>&nbsp;&nbsp;Mutual Fund Admin</b></li>
                   <%= auth_button(['Administrators'], mutual_funds_path, 'Mutual Funds') %>
                   <li class="divider"></li>
-                  <li><b>&nbsp;&nbsp;Broker Admin</b></li>
-                  <%= auth_button(['Administrators', 'Managers'], brokerages_path, 'Brokers') %>
+                  <li><b>&nbsp;&nbsp;Brokerages Admin</b></li>
+                  <%= auth_button(['Administrators', 'Managers'], brokerages_path, 'Brokerages') %>
                   <li class="divider"></li>
                   <li><b>&nbsp;&nbsp;User Admin</b></li>
                   <%= auth_button(['Administrators'], users_path, 'Users') %>
@@ -45,4 +45,6 @@
     </div>
   </nav>
 </div>
+<% else %>
+    <div style="height: 25px"></div>
 <% end %>
