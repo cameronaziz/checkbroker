@@ -1,9 +1,12 @@
 class Portfolio < ActiveRecord::Base
+  include ActiveModel::Validations
+
   belongs_to :user
   has_many :investments
   accepts_nested_attributes_for :investments, allow_destroy: true, reject_if: proc { |attributes| attributes['ticker'].blank? }
   attr_accessor :pie_data
   attr_accessor :alerts
+  validates_presence_of :management_fee
 
 
   def market_value
@@ -57,4 +60,6 @@ class Portfolio < ActiveRecord::Base
     end
     @average_load_fee = average_load_fee
   end
+
+
 end

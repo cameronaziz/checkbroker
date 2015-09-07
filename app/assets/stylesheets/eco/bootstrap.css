@@ -3320,10 +3320,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default {
   background-color: #f8f8f8;
-  border-color: #339999;
+  border-color: #033617;
 }
 .navbar-default .navbar-brand {
-  color: #339999;
+  color: #033617;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {

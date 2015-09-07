@@ -6,28 +6,29 @@ class Investment < ActiveRecord::Base
   attr_accessor :load
   attr_accessor :twelve_b_1
   attr_accessor :alert
+  validates :ticker, :ticker_presence => true
 
   def nav
     return @nav if @nav
-    record = get_mutual_fund
+    record = get_mutual_fund(self.ticker)
     @nav = record.nav
   end
 
   def twelve_b_1
     return @twelve_b_1 if @twelve_b_1
-    record = get_mutual_fund
+    record = get_mutual_fund(self.ticker)
     @twelve_b_1 = record.twelve_b_1
     end
 
   def load
     return @load if @load
-    record = get_mutual_fund
+    record = get_mutual_fund(self.ticker)
     @load = record.load
   end
 
   def expense_ratio
     return @expense_ratio if @expense_ratio
-    record = get_mutual_fund
+    record = get_mutual_fund(self.ticker)
     @expense_ratio = record.expense_ratio
   end
 
@@ -36,12 +37,12 @@ class Investment < ActiveRecord::Base
     @market_value = self.quantity * self.nav
   end
 
-private
-  def get_mutual_fund
-    record = MutualFund.find_by_ticker(self.ticker)
+
+  def get_mutual_fund(ticker)
+    record = MutualFund.find_by_ticker(ticker)
     if record.nil?
       fund = MutualFund.new
-      fund.ticker = self.ticker
+      fund.ticker = ticker
       fund.nav = nav_yahoo_api
       if API_LIVE
         fund.expense_ratio = er_yahoo_api
@@ -78,6 +79,8 @@ private
     end
     record
   end
+
+  private
 
   def nav_yahoo_api
     if NO_INTERNET

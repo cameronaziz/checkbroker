@@ -39,6 +39,11 @@ class MutualFundsController < ApplicationController
     redirect_to mutual_funds_path, notice: "Mutual fund \"#{fund}\" was deleted."
   end
 
+  def update_mutual_fund
+    MutualFund.update_fund(params[:ticker])
+    redirect_to mutual_funds_path
+  end
+
 
 private
   def set_mutual_fund
@@ -48,4 +53,6 @@ private
   def mutual_fund_params
     params.require(:mutual_fund).permit(:ticker, :nav, :expense_ratio, :load, :twelve_b_1)
   end
+
+
 end

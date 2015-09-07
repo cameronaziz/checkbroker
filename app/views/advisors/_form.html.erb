@@ -1,0 +1,15 @@
+<%= render partial: 'shared/errors', :locals => {:object => @advisor}%>
+<div class="col-md-4 col-lg-4">
+  <%= form_for @advisor, :html => { :multipart => true} do |f| %>
+      <% if params[:action] == 'new' %>
+          <div class="form-group col-lg-12">
+            <%= f.check_box :is_verified %> <%= f.label :is_verified %>
+          </div>
+      <% end %>
+      <%= render 'advisors/sub_form', f: f %>
+      <div class="clearfix" style="margin-bottom: 10px"></div>
+      <div class="form-group">
+        <%= f.submit 'Save Investment Advisor', class: 'btn btn-success' %>
+      </div>
+  <% end %>
+</div>

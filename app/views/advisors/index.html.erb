@@ -1,0 +1,29 @@
+<%= render partial: 'shared/notice' %>
+<h1>Investment Advisor List</h1>
+<%= link_to_button 'Create Investment Advisor', new_advisor_path, 'btn-primary' %>
+<table class='table'>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th colspan="4">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @advisors.each do |advisor| %>
+      <tr>
+        <td><%= advisor.full_name %></td>
+        <td><%= advisor.formatted_phone %></td>
+        <td><%= link_to 'Show', advisor %></td>
+        <% if advisor.is_verified %>
+            <td></td>
+        <% else %>
+            <td></td>
+        <% end %>
+        <td><%= link_to 'Edit', edit_advisor_path(advisor) %></td>
+        <td><%= link_to 'Delete', advisor, method: :delete, data: {confirm: 'Are you sure?'}  %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<br/>

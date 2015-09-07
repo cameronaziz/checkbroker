@@ -2,12 +2,14 @@ class User < ActiveRecord::Base
   has_many :memberships
   has_many :groups, through: :memberships
   has_many :portfolios
-
   has_many :brokerages, through: :brokers
   has_many :brokers
   accepts_nested_attributes_for :brokerages, allow_destroy: true
+  validates :terms_of_service, :acceptance => true
 
-  
+  has_many :organizations, through: :organization_admins
+  has_many :organization_admins
+
   attr_accessor :remember_token
   before_save {self.email = email.downcase}
   validates :first_name, presence: true, length: {maximum: 50}
@@ -15,7 +17,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, length: {maximum: 255}, #todo: add email validation
             uniqueness: {case_sensitive: false}
   has_secure_password
-  validates :password, length: {minimum: 6}, allow_blank: true
+  validates :password, length: {minimum: 6}
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

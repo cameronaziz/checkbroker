@@ -32,9 +32,12 @@ Rails.application.routes.draw do
   #Future Needed
   get 'reviews' => 'reviews#index'
 
+  resources :advisors
+
   #View Brokerages
   get 'brokerages/:id/raw' => 'brokerages#raw', as: :brokerage_raw
   get 'brokerages/:id/verify' => 'brokerages#brokerage_verify', as: :brokerage_verify
+  get 'mutual_fund_update/:ticker' => 'mutual_funds#update_mutual_fund', as: :update_mutual_fund
   resources :brokerages
 
 

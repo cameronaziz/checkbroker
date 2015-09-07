@@ -11,13 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150905171007) do
+ActiveRecord::Schema.define(version: 20150907035555) do
 
   create_table "ad_views", force: :cascade do |t|
     t.integer  "brokerage_id", limit: 4
     t.integer  "user_id",      limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "advisors", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.string   "first_name",  limit: 255
+    t.string   "last_name",   limit: 255
+    t.string   "image",       limit: 255
+    t.string   "phone",       limit: 10
+    t.string   "email",       limit: 255
+    t.string   "address1",    limit: 255
+    t.string   "address2",    limit: 255
+    t.string   "city",        limit: 255
+    t.string   "state",       limit: 255
+    t.string   "zip",         limit: 5
+    t.boolean  "is_verified", limit: 1
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "brokerages", force: :cascade do |t|
@@ -94,6 +111,36 @@ ActiveRecord::Schema.define(version: 20150905171007) do
     t.datetime "auto_updated"
     t.float    "load",          limit: 24
     t.float    "twelve_b_1",    limit: 24
+  end
+
+  create_table "organization_admins", force: :cascade do |t|
+    t.integer  "organization_id", limit: 4
+    t.integer  "user_id",         limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "organization_advisors", force: :cascade do |t|
+    t.integer  "organization_id", limit: 4
+    t.integer  "advisor_id",      limit: 4
+    t.boolean  "is_verified",     limit: 1
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.string   "image",       limit: 255
+    t.string   "phone",       limit: 10
+    t.string   "email",       limit: 255
+    t.string   "address1",    limit: 255
+    t.string   "address2",    limit: 255
+    t.string   "city",        limit: 255
+    t.string   "state",       limit: 255
+    t.string   "zip",         limit: 5
+    t.boolean  "is_verified", limit: 1
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "portfolios", force: :cascade do |t|
