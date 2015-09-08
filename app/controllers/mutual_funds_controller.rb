@@ -1,6 +1,10 @@
 class MutualFundsController < ApplicationController
   before_action :set_mutual_fund, only: [:show, :edit, :destroy, :update]
 
+  before_action do
+    auth_groups_redirect(['Administrators', 'Managers'])
+  end
+
   def index
     @mutual_funds = MutualFund.all
   end

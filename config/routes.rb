@@ -15,13 +15,14 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  get 'sign-up' => 'users#register', as: :register
+  post 'sign-up' => 'users#create_register'
 
   #Brokerage Registration
   get 'brokerage/signup' => 'users#brokerage_registration', as: :brokerages_signup
   post 'brokerage/signup' => 'users#brokerage_registration_create'
 
   #User Registration
-  get 'sign-up' => 'users#register', as: :register
 
   #Useless Pages
   get 'profile' => 'static_pages#profile'

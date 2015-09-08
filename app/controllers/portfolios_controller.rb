@@ -22,7 +22,7 @@ class PortfoliosController < ApplicationController
   end
 
   def index
-    if auth_group('Administrators')
+    if auth_group('Managers')
       @portfolios = Portfolio.all
     else
       @portfolios = Portfolio.where(:user_id => session[:user_id])

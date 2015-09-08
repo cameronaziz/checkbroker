@@ -560,25 +560,7 @@ section::after {
 .btn.btn-primary:hover {
   color: #ffffff;
 }
-.btn.btn-default {
-  border: none;
-  background: #ffffff;
-  /* Old browsers */
-  background: -moz-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* IE10+ */
-  background: linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc, GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-}
+
 .btn.btn-lg {
   padding: 10px 25px;
 }
@@ -989,26 +971,23 @@ footer .rights a {
   border-color: #66cc99;
 }
 .btn.btn-default {
-  background: #ffffff;
-  /* Old browsers */
-  background: -moz-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* IE10+ */
-  background: linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc, GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-  color: #339999;
+  background: #f0cc65;
+  color: #3f7f58;
+  border-color: #3f7e5e;
 }
 .btn.btn-default:hover {
-  color: #339999;
+  color: #eaeaea;
+  background: #8f7c3c;
+  border-color: #66cc99;
+}
+.btn.btn-default.inverse {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.btn.btn-default.inverse:hover {
+  color: #ffffff;
+  background: #66cc99;
+  border-color: #66cc99;
 }
 form .form-control:focus {
   border-color: #66cc99;

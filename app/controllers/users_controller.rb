@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :destroy, :update]
 
-  before_action only: [:index, :new, :show, :create, :edit, :update, :destroy] do
-    auth_group('Administrators')
+  before_action except: [:brokerage_registration, :brokerage_registration_create, :register, :create_register] do
+    auth_group_redirect('Administrators')
   end
 
-  skip_before_action :authenticate_user
+  skip_before_action :authenticate_user, only: [:brokerage_registration, :brokerage_registration_create, :register, :create_register]
+
 
   def index
     @users = User.all
@@ -57,7 +58,8 @@ class UsersController < ApplicationController
         membership.group_id = '2'
         membership.user_id = @user.id
         membership.save
-        render 'sessions/new'
+        log_in(@user)
+        redirect_to '/profile'
       else
         render 'users/register'
       end
@@ -70,16 +72,16 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes(user_params)
       #! input email user fu
-      redirect_to users_url, notice: "The user \"#{username}\" was successfully updated."
+      redirect_to users_url, notice: "The user \"#{@user.full_name}\" was successfully updated."
     else
       render :edit
     end
   end
 
   def destroy
-    deleted_username = @user.username
+    deleted_user = @user.full_name
     @user.destroy
-    redirect_to users_url, notice: "#{deleted_username} was successfully deleted."
+    redirect_to users_url, notice: "#{deleted_user} was successfully deleted."
   end
 
   private

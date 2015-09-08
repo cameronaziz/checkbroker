@@ -1,6 +1,10 @@
 module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id
+    session[:groups] = nil
+    user.groups.each do |group|
+      (session[:groups] ||= []) << group.name
+    end
   end
 
   def current_user
@@ -49,87 +53,52 @@ module SessionsHelper
 
   def auth_group(group_name)
     if current_user
-      current_user.groups.each do |user_group|
-        if user_group.name == group_name
+      session[:groups].each do |user_group|
+        if user_group == group_name
           return true
         end
-        return false
       end
+      false
     else
       false
     end
   end
 
   def auth_groups(groups)
-    groups.each do |group|
-      auth_group(group)
-    end
-  end
-
-  #todo: should not use authenticate_user_and_group or authenticate_group
-
-  def authenticate_user_and_group(group_name, is_id = true)
-    if logged_in?
-      unless authenticate_group(group_name, is_id)
-        flash[:alert] = 'You do not have authorization to view that page.'
-        redirect_to root_path
+    if current_user
+      groups.each do |group_name|
+        session[:groups].each do |user_group|
+          if user_group == group_name
+            return true
+          end
+        end
       end
+      false
     else
-      authenticate_user
+      false
     end
   end
 
-  def authenticate_group(group_name, is_id = true)
-    ## todo: improve to not hit DB so many times.
-    if group_name.kind_of?(Array)
-      group_name.each do |group|
-        if is_id
-          then group_id = group_name
-          else group_id = Group.find_by_name(group)
-        end
-        if NO_AUTHENTICATION
-          @authenticated_user = true
-          return true
-        else
-        if current_user.groups.include?(Group.find(group_id))
-        then
-          @authenticated_user = true
-          return true
-        end
-        end
-      end
-    else
-      if
-      is_id ?
-          current_user.groups.include?(Group.find(group_name)) :
-          current_user.groups.include?(Group.find_by_name(group_name))
-        @authenticated_user = true
-        return true
-      end
+  def auth_group_redirect(group)
+    unless auth_group(group)
+      flash[:alert] = 'You do not have authorization to view that page.'
+      redirect_to profile_path
     end
-    false
   end
+
+  def auth_groups_redirect(groups)
+    unless auth_groups(groups)
+      flash[:alert] = 'You do not have authorization to view that page.'
+      redirect_to profile_path
+    end
+  end
+
 
   def authenticate_user
-    unless NO_AUTHENTICATION
-      unless logged_in?
-        store_location
-        flash[:alert] = 'Please log in to view that page.'
-        redirect_to login_url
-      end
+    unless logged_in?
+      store_location
+      flash[:alert] = 'Please log in to view that page.'
+      redirect_to login_url
     end
   end
-
-  def auth (user_id, group_id)
-    session[:user_id]
-  end
-
-  def lookup_user_id
-
-  end
-
-  def auth_user(user_id, allowed_id)
-
-  end
-
 end

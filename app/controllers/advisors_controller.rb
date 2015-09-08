@@ -1,6 +1,10 @@
 class AdvisorsController < ApplicationController
   before_action :set_advisor, only: [:show, :destroy]
 
+  before_action do
+    auth_groups_redirect(['Administrators', 'Managers'])
+  end
+
   def index
     @advisors = Advisor.all
   end

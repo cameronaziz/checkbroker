@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update, :destroy]
 
   before_action do
-    authenticate_user_and_group(%w(Administrators Managers), false)
+    auth_group_redirect('Administrators')
   end
 
   def index
@@ -21,7 +21,6 @@ class GroupsController < ApplicationController
       render new_group_path
     end
   end
-
 
 
   def edit
