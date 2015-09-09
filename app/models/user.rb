@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   has_many :organizations, through: :organization_admins
   has_many :organization_admins
+  has_many :advisors, through: :user_advisors
+  has_many :user_advisors
 
   attr_accessor :remember_token
   before_save {self.email = email.downcase}

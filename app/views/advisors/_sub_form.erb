@@ -1,4 +1,5 @@
 <div class="form-group col-lg-10">
+  <span style="font-weight: bold">Advisor Information</span>
   <%= f.label :first_name, class: 'sr-only' %>
   <%= f.text_field :first_name, class: 'form-control top-input', placeholder: 'First Name' %>
   <%= f.label :last_name, class: 'sr-only' %>
@@ -20,6 +21,7 @@
   <%= f.file_field :image, style: 'display:none;', class: 'uploadBtn' %>
 </div>
 <div class="form-group col-lg-12">
+  <span style="font-weight: bold">Advisor Address</span>
   <%= f.label :address1, class: 'sr-only' %>
   <%= f.text_field :address1, class: 'form-control top-input', placeholder: 'Address' %>
   <%= f.label :address2, class: 'sr-only' %>
@@ -38,4 +40,13 @@
     <%= f.label :zip, class: 'sr-only' %>
     <%= f.text_field :zip, class: 'form-control', placeholder: 'Zip' %>
   </div>
+  <div class="col-lg-6">
+    <%= f.label :organization, 'Associate with Organization' %>
+    <%= collection_select :organization, :organization_id,  Organization.order(:name), :id, :name, {:prompt => true}, {:class=>'form-control'}%>
+  </div>
+  <div class="col-lg-6">
+    <%= f.label :user, 'Give a User Authorization to Advisor (No Authorization to Organization)' %>
+    <%= collection_select :user, :user_id,  User.order(:last_name), :id, :full_name, {:prompt => true}, {:class=>'form-control'}%>
+  </div>
+
 </div>

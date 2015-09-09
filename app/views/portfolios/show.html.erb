@@ -50,20 +50,24 @@
       <td>Total Fees</td>
       <td colspan="2" style="text-align: center; color: red;">$<%= number_with_precision(((@portfolio.average_expense_ratio + @portfolio.management_fee + @portfolio.average_12b1_fee + @portfolio.average_load_fee) * @portfolio.market_value) / 100, precision: 2 )%></td>
     </tr>
-
   </table>
+
 </div>
+<div id="load-fees-info" style="display: none;">Load Fees Info</div>
+<div id="twelve-b-one-info" style="display: none;">12b1 Info </div>
+<div id="expense-ratio-info" style="display: none;">Expense Ratio Info</div>
+
 <div class="col-xs-12 col-lg-2" style="margin-top: 40px"><h2>Ad Coming Soon</h2></div>
-<div class="col-xs-10">
+< class="col-xs-10">
   <table class="table table-striped table-bordered">
       <thead>
         <tr>
           <th>Symbol</th>
           <th>Shares</th>
           <th>Current Price</th>
-          <th>Load Fees</th>
-          <th>12B-1 Fees</th>
-          <th>Expense Ratio</th>
+          <th>Load Fees <i class="fa fa-question-circle"  onmouseover="document.getElementById('load-fees-info').style.display = 'block';" onmouseout="document.getElementById('load-fees-info').style.display = 'none';"></i></th>
+          <th>12B-1 Fees <i class="fa fa-question-circle" onmouseover="document.getElementById('twelve-b-one-info').style.display = 'block';" onmouseout="document.getElementById('twelve-b-one-info').style.display = 'none';"></i></th>
+          <th>Expense Ratio <i class="fa fa-question-circle" onmouseover="document.getElementById('expense-ratio-info').style.display = 'block';" onmouseout="document.getElementById('expense-ratio-info').style.display = 'none';"></i></th>
           <th>Market Value</th>
         </tr>
       </thead>

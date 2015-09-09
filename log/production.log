@@ -7463,3 +7463,4 @@ I, [2015-09-03T04:16:03.130823 #50701]  INFO -- :   Rendered layouts/_nav.html.e
 I, [2015-09-03T04:16:03.131067 #50701]  INFO -- : Completed 200 OK in 384ms (Views: 237.8ms | ActiveRecord: 131.5ms)
 D, [2015-09-03T04:16:29.978819 #50841] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (47.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 D, [2015-09-03T04:16:57.508150 #51183] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (39.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2015-09-08T00:15:18.450964 #17772] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (44.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
