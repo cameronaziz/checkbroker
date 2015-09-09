@@ -7464,3 +7464,15 @@ I, [2015-09-03T04:16:03.131067 #50701]  INFO -- : Completed 200 OK in 384ms (Vie
 D, [2015-09-03T04:16:29.978819 #50841] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (47.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 D, [2015-09-03T04:16:57.508150 #51183] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (39.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 D, [2015-09-08T00:15:18.450964 #17772] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (44.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2015-09-08T23:39:35.894177 #26965] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (513.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2015-09-08T23:39:36.135095 #26965]  INFO -- : Migrating to CreateUserAdvisors (20150908082825)
+D, [2015-09-08T23:39:37.327973 #26965] DEBUG -- :   [1m[35m (1190.5ms)[0m  CREATE TABLE `user_advisors` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `advisor_id` int(11), `is_verified` tinyint(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2015-09-08T23:39:37.432865 #26965] DEBUG -- :   [1m[36m (63.2ms)[0m  [1mBEGIN[0m
+D, [2015-09-08T23:39:37.501277 #26965] DEBUG -- :   [1m[35mSQL (62.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150908082825')
+D, [2015-09-08T23:39:37.661041 #26965] DEBUG -- :   [1m[36m (159.3ms)[0m  [1mCOMMIT[0m
+I, [2015-09-08T23:39:37.661161 #26965]  INFO -- : Migrating to RemoveUserFromAdvisor (20150908083147)
+D, [2015-09-08T23:39:39.580247 #26965] DEBUG -- :   [1m[35m (1918.4ms)[0m  ALTER TABLE `advisors` DROP `user_id`
+D, [2015-09-08T23:39:40.808422 #26965] DEBUG -- :   [1m[36m (1227.7ms)[0m  [1mALTER TABLE `advisors` ADD `has_advisor` tinyint(1)[0m
+D, [2015-09-08T23:39:40.853169 #26965] DEBUG -- :   [1m[35m (44.2ms)[0m  BEGIN
+D, [2015-09-08T23:39:40.917420 #26965] DEBUG -- :   [1m[36mSQL (63.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150908083147')[0m
+D, [2015-09-08T23:39:41.073523 #26965] DEBUG -- :   [1m[35m (155.8ms)[0m  COMMIT

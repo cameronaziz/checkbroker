@@ -9,18 +9,11 @@
 
       <%= javascript_include_tag 'bootstrap' %>
       <%= javascript_include_tag 'eco/jquery-1.11.1.min.js' %>
-
       <%= stylesheet_link_tag 'eco/font-awesome.css' %>
-
-
-
-
       <%= stylesheet_link_tag 'eco/animate.css' %>
       <%= stylesheet_link_tag 'eco/slick' %>
       <%= stylesheet_link_tag 'eco/rs-plugin/css/settings' %>
       <%= stylesheet_link_tag 'eco/bootstrap' %>
-
-
       <%= javascript_include_tag 'eco/modernizr.custom.32033' %>
       <%= stylesheet_link_tag 'eco/eco' %>
 
@@ -28,61 +21,6 @@
 
       <%= yield(:head) %>
       <%= render(partial: 'layouts/shiv') %>
-      <style>
-          .home-ad{
-              position: fixed;
-              right: 20px;
-              top:200px;
-              border: 1px solid #f2f2f2;
-              background: rgb(255, 255, 255);
-              border-radius: 0;
-              z-index: 9999;
-          }
-          .home-ad .close{
-              float: right;
-              color: #FFF;
-              background: #6B6B6B;
-              width: 20px;
-              height: 20px;
-              line-height: 16px;
-              display: inline-block;
-              font-size: 12px;
-              font-weight: normal;
-              text-align: center;
-              text-decoration: none;
-              text-shadow: none;
-              margin-bottom: 5px;
-          }
-          .home-ad div#carbonads {
-              padding: 10px;
-              max-width: 150px;
-          }
-          .home-ad div#carbonads a.carbon-img {
-              display: inline-block;
-              float: left;
-          }
-          .home-ad div#carbonads .carbon-wrap:after {
-              content: "";
-              display: block;
-              clear: both;
-          }
-          .home-ad div#carbonads .carbon-text {
-              font-size: 12px;
-              text-align: left;
-              color: #333;
-              display: block;
-              padding-top: 10px;
-              padding-bottom: 10px;
-              clear: both;
-          }
-          .home-ad div#carbonads .carbon-text:hover {
-              text-decoration: none;
-          }
-          .home-ad div#carbonads .carbon-poweredby {
-              font-size: 75%;
-              color: #bebebe;
-          }
-      </style>
     </head>
     <body>
 
@@ -98,32 +36,32 @@
 </div>
 
 <header>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="fa fa-bars fa-lg"></span>
-      </button>
-      <%= link_to image_tag('logo-white.png', :border => 0), root_path, class: 'navbar-brand' %>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="fa fa-bars fa-lg"></span>
+        </button>
+        <%= link_to image_tag('logo-white.png', :border => 0), root_path, class: 'navbar-brand' %>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">about</a></li>
+          <li><a href="#reviews">reviews</a></li>
+          <% if logged_in? %>
+              <li><%= link_to @user.full_name + ' Profile', profile_path, class: 'getApp' %></li>
+          <% else %>
+              <li><%= link_to 'sign up', register_path, class: 'getApp' %></li>
+              <li><%= link_to 'login', login_path %></li>
+          <% end %>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">about</a></li>
-        <li><a href="#reviews">reviews</a></li>
-        <% if logged_in? %>
-            <li><%= link_to @user.full_name + ' Profile', profile_path, class: 'getApp' %></li>
-        <% else %>
-            <li><%= link_to 'sign up', register_path, class: 'getApp' %></li>
-            <li><%= link_to 'login', login_path %></li>
-        <% end %>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-->
-</nav>
+    <!-- /.container-->
+  </nav>
 <!--RevSlider-->
 <div class="tp-banner-container">
   <div class="tp-banner" >
@@ -406,7 +344,9 @@
   </div>
 </footer>
 </div>
+
 <%= javascript_include_tag 'eco/slick.min' %>
+<%= javascript_include_tag 'eco/bootstrap.min' %>
 <%= javascript_include_tag 'eco/placeholdem.min' %>
 <%= javascript_include_tag 'eco/rs-plugin/js/jquery.themepunch.plugins.min' %>
 <%= javascript_include_tag 'eco/rs-plugin/js/jquery.themepunch.revolution.min' %>
