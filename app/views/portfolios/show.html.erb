@@ -53,9 +53,6 @@
   </table>
 
 </div>
-<div id="load-fees-info" class="info-box" style="display: none;">Load Fees Info</div>
-<div id="twelve-b-one-info" class="info-box" style="display: none;">12b1 Info </div>
-<div id="expense-ratio-info" class="info-box" style="display: none;">Expense Ratio Info</div>
 
 <div class="col-xs-12 col-lg-2" style="margin-top: 40px"><h2>Ad Coming Soon</h2></div>
 <div class="col-xs-10">
@@ -65,9 +62,9 @@
           <th>Symbol</th>
           <th>Shares</th>
           <th>Current Price</th>
-          <th>Load Fees <i class="fa fa-question-circle"  onmouseover="document.getElementById('load-fees-info').style.display = 'block';" onmouseout="document.getElementById('load-fees-info').style.display = 'none';"></i></th>
-          <th>12B-1 Fees <i class="fa fa-question-circle" onmouseover="document.getElementById('twelve-b-one-info').style.display = 'block';" onmouseout="document.getElementById('twelve-b-one-info').style.display = 'none';"></i></th>
-          <th>Expense Ratio <i class="fa fa-question-circle" onmouseover="document.getElementById('expense-ratio-info').style.display = 'block';" onmouseout="document.getElementById('expense-ratio-info').style.display = 'none';"></i></th>
+          <th>Load Fees <i class="fa fa-question-circle" id="load-fees-info" data-toggle="tooltip" data-placement="top" title="Load Fees Info"></i></th>
+          <th>12B-1 Fees <i class="fa fa-question-circle" id="twelve-b-1-info" data-toggle="popover" data-placement="top" title="12-B-1 Info" data-content="Log story of stuff. Log story of stuff. Log story of stuff. Log story of stuff. "></i></th>
+          <th>Expense Ratio <i class="fa fa-question-circle" id="expense-ratio-info" data-toggle="tooltip" data-placement="top" title="Expense Ratio Info"></i></th>
           <th>Market Value</th>
         </tr>
       </thead>

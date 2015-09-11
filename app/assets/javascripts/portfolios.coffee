@@ -1,7 +1,3 @@
-
-
-
-
 jQuery ->
   $('form').on 'click', '.remove_fields', (event) ->
     $(this).prev('input[type=hidden]').val('1')
@@ -16,3 +12,6 @@ jQuery ->
     $(this).before($(this).data('fields').replace(regexp, time))
     event.preventDefault()
 
+  $('#load-fees-info').tooltip();
+  $('#twelve-b-1-info').popover();
+  $('#expense-ratio-info').tooltip();

@@ -17,7 +17,17 @@ class AdvisorsController < ApplicationController
   def create
     @advisor = Advisor.new(advisor_params)
     if @advisor.save
-      redirect_to brokerages_path, notice: 'Investment Advisor was created.'
+      user_advisor = UserAdvisor.new
+      user_advisor.advisor_id = @advisor.id
+      user_advisor.user_id = params[:user][:user_id]
+      user_advisor.is_verified = true
+      user_advisor.save
+      organization_advisor = OrganizationAdvisor.new
+      organization_advisor.advisor_id = @advisor.id
+      organization_advisor.organization_id = params[:organization][:organization_id]
+      organization_advisor.is_verified = true
+      organization_advisor.save
+      redirect_to advisors_path, notice: 'Investment Advisor was created.'
     else
       render 'advisors/new'
     end
