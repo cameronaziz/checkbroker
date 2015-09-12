@@ -1,5 +1,4 @@
 class Brokerage < ActiveRecord::Base
-  mount_uploader :image, BrokerImageUploader
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :phone, length: { is: 10 }

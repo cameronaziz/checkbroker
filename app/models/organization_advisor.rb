@@ -1,4 +1,6 @@
 class OrganizationAdvisor < ActiveRecord::Base
-  has_one :advisor
-  has_one :organization
+  belongs_to :advisor
+  belongs_to :organization
+
+  validates_uniqueness_of :advisor_id, scope: :organization_id
 end

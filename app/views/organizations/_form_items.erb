@@ -1,0 +1,39 @@
+<div class="form-group col-lg-10">
+  <%= f.label :name, class: 'sr-only' %>
+  <%= f.text_field :name, class: 'form-control top-input', placeholder: 'Name' %>
+</div>
+<div class="form-group col-lg-10">
+  <%= f.label :phone, class: 'sr-only'  %>
+  <%= f.text_field :phone, class: 'form-control', placeholder: 'Phone Number' %>
+</div>
+<div class="form-group col-lg-12">
+  <%= f.label :email, class: 'sr-only'  %>
+  <%= f.text_field :email, class: 'form-control', placeholder: 'Email Address' %>
+</div>
+<div class="form-group col-lg-12">
+  <% if params[:action_name] == 'edit' %>
+      <%= image_tag @advisor.image_url.to_s, width: 150 %> <br>
+  <% end %>
+  <%= f.label :image, 'Upload Image', class: 'btn btn-primary trigger'  %>
+  <%= f.file_field :image, style: 'display:none;', class: 'uploadBtn' %>
+</div>
+<div class="form-group col-lg-12">
+  <%= f.label :address1, class: 'sr-only' %>
+  <%= f.text_field :address1, class: 'form-control top-input', placeholder: 'Address' %>
+  <%= f.label :address2, class: 'sr-only' %>
+  <%= f.text_field :address2, class: 'form-control bottom-input', placeholder: 'Address 2'%>
+</div>
+<div class="form-group col-lg-10">
+  <%= f.label :city, class: 'sr-only' %>
+  <%= f.text_field :city, class: 'form-control', placeholder: 'City' %>
+</div>
+<div class="form-group col-lg-12">
+  <div class="col-lg-6">
+    <%= f.label :state, class: 'sr-only' %>
+    <%= f.select :state, options_for_select(us_states), {}, class: 'form-control' %>
+  </div>
+  <div class="col-lg-6">
+    <%= f.label :zip, class: 'sr-only' %>
+    <%= f.text_field :zip, class: 'form-control', placeholder: 'Zip' %>
+  </div>
+</div>

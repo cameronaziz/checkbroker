@@ -1,0 +1,33 @@
+<h1>Organization: <%= @organization.name %></h1>
+Name: <%= @organization.name %> <br>
+Phone: <%= @organization.formatted_phone %> <br>
+Email: <%= @organization.email %> <br>
+Address: <%= @organization.address1 %> <br>
+<% if @organization.address2 %>
+    <%= @organization.address2 %> <br>
+<% end %>
+<%= @organization.city %>, <%= @organization.state %> <%= @organization.zip %> <br>
+<hr>
+<% if @organization.organization_advisors.where(is_verified: false).any? %>
+    <h4>You have outstanding advisor request(s)</h4>
+    <% @organization.advisors.each do |advisor| %>
+        <% unless advisor.organization_advisors.first.is_verified %>
+            <%= link_to 'Approve ' + advisor.full_name, approve_advisors_organization_path(@organization.id, advisor.id) %>
+        <% end %>
+    <% end %>
+<% end %>
+<h2>Advisors</h2>
+<% @organization.advisors.each do |advisor| %>
+    <% if advisor.organization_advisors.first.is_verified %>
+        <h4><%= advisor.full_name %></h4>
+        Advisor ID: <%= advisor.id %><br>
+        Phone: <%= advisor.formatted_phone %><br>
+        Email: <%= advisor.email %><br>
+        Address: <%= advisor.address1 %> <br>
+        <% if advisor.address2 %>
+            <%= advisor.address2 %> <br>
+        <% end %>
+        <%= advisor.city %>, <%= advisor.state %> <%= advisor.zip %> <br>
+        <%= link_to 'Remove ' + advisor.full_name, remove_advisors_organization_path(@organization.id, advisor.id) %>
+    <% end %>
+<% end %>

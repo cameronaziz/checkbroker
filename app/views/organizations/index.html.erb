@@ -1,0 +1,30 @@
+<%= render partial: 'shared/notice' %>
+<h1>Investment Organizations</h1>
+<%= link_to_button 'Create Investment Organization', new_organization_path, 'btn-primary' %>
+<table class='table'>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th colspan="5">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @organizations.each do |organization| %>
+      <tr>
+        <td><%= organization.name %></td>
+        <td><%= organization.formatted_phone %></td>
+        <td><%= link_to 'Show', organization %></td>
+        <% if organization.is_verified %>
+            <td></td>
+        <% else %>
+            <td></td>
+        <% end %>
+        <td><%= link_to 'Add Advisors', add_advisors_organization_path(organization) %></td>
+        <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+        <td><%= link_to 'Delete', organization, method: :delete, data: {confirm: 'Are you sure?'}  %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<br/>

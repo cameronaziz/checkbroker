@@ -18,12 +18,6 @@ Rails.application.routes.draw do
   get 'sign-up' => 'users#register', as: :register
   post 'sign-up' => 'users#create_register'
 
-  #Brokerage Registration
-  get 'brokerage/signup' => 'users#brokerage_registration', as: :brokerages_signup
-  post 'brokerage/signup' => 'users#brokerage_registration_create'
-
-  #User Registration
-
   #Useless Pages
   get 'profile' => 'static_pages#profile'
   get 'legal' => 'static_pages#legal'
@@ -34,12 +28,15 @@ Rails.application.routes.draw do
   get 'reviews' => 'reviews#index'
 
   resources :advisors
+  resources :organizations do
+    member do
+      get 'add_advisors'
+      patch 'add_advisors_create'
+      get 'approve_advisors/:advisors_id' => 'organizations#approve_advisors', as: 'approve_advisors'
+      get 'remove_advisors/:advisors_id' => 'organizations#remove_advisors', as: 'remove_advisors'
 
-  #View Brokerages
-  get 'brokerages/:id/raw' => 'brokerages#raw', as: :brokerage_raw
-  get 'brokerages/:id/verify' => 'brokerages#brokerage_verify', as: :brokerage_verify
-  get 'mutual_fund_update/:ticker' => 'mutual_funds#update_mutual_fund', as: :update_mutual_fund
-  resources :brokerages
+    end
+  end
 
 
   # Example of regular route:

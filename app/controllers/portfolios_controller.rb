@@ -5,7 +5,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio = Portfolio.new
-    @investments = @portfolio.investments.build
+    @portfolio.investments.build
   end
 
   def edit
@@ -37,7 +37,7 @@ class PortfoliosController < ApplicationController
 
     #todo: round values
 
-    pie_data = [ ['Broker Fees', @portfolio.management_fee ],
+    pie_data = [ ['Broker Fees', @portfolio.management_fee],
                  ['Expense Fees', @portfolio.average_expense_ratio],
                  ['Load Fees', @portfolio.average_load_fee],
                  ['12B-1 Fees', @portfolio.average_12b1_fee]
@@ -46,11 +46,6 @@ class PortfoliosController < ApplicationController
     @brokerage = brokerage_ad
   end
 
-
-  def edit_old
-    @investments = @portfolio.investments.build
-    @users = User.all
-  end
 
   def update
     nickname = @portfolio.nickname

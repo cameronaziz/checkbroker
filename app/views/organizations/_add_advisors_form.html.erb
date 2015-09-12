@@ -1,0 +1,5 @@
+<tr>
+  <td><%= f.text_field :advisor_id, class: 'form-control' %></td>
+  <td><%= f.check_box :is_verified %></td>
+  <td><span style="padding-top:-20px;"><%= f.hidden_field :_destroy %><%= link_to 'remove', '#', class: 'remove_fields btn btn-danger' %></span></td>
+</tr>

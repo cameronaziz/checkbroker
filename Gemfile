@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'faker'
 gem 'google_directions'
 gem 'jquery-turbolinks'
 gem 'jquery-ui-rails'
@@ -8,12 +7,11 @@ gem 'jquery-ui-rails'
 #to parse xml
 gem 'nokogiri'
 #fonts
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 #charts
 gem 'chartkick'
 
-#date time picker
 
 #images
 gem 'carrierwave'

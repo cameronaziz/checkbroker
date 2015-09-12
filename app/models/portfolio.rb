@@ -60,6 +60,4 @@ class Portfolio < ActiveRecord::Base
     end
     @average_load_fee = average_load_fee
   end
-
-
 end

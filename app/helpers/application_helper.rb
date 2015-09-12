@@ -118,7 +118,7 @@ module ApplicationHelper
         login_path,
         register_path,
         root_path,
-        brokerages_signup_path,
+        new_organization_path,
         privacy_path,
         legal_path
     ]
